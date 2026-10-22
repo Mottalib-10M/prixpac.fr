@@ -1,6 +1,7 @@
 /** Prix d'une PAC air/air d'après le prix au kW des devis publiés. */
-import { T, eur, type L } from './_kit';
+import { T, eur, moisAnnee, type L } from './_kit';
 import { prixParKw } from '../engine/pac';
+import { P } from '../engine/params';
 import type { MiniSpec } from '../mini-types';
 
 export default (l: L): MiniSpec => ({
@@ -15,7 +16,7 @@ export default (l: L): MiniSpec => ({
         [T(l, '1 devis sur 10 sous', '1 quote in 10 below'), eur(p.bas ?? 0, l)],
         [T(l, '1 devis sur 10 au-dessus de', '1 quote in 10 above'), eur(p.haut ?? 0, l)],
       ],
-      note: T(l, '148 devis air/air, observatoire ScoreSolaire (CC BY 4.0), août 2026.', '148 air-to-air quotes, ScoreSolaire observatory (CC BY 4.0), August 2026.'),
+      note: T(l, `Estimation, pas un prix officiel : ${P.prix_installation.air_air.n} devis air/air publiés par l’observatoire ScoreSolaire (CC BY 4.0), ${moisAnnee(P.prix_installation.date, l)}.`, `Estimate, not an official price: ${P.prix_installation.air_air.n} air-to-air quotes published by the ScoreSolaire observatory (CC BY 4.0), ${moisAnnee(P.prix_installation.date, l)}.`),
     };
   },
 });

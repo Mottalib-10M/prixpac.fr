@@ -5,11 +5,11 @@ const litres = (h: Helpers) => {
   const fr = h.lang === 'fr', E = h.P.energie, R = h.P.rendements;
   const prixL = E.fioul.eur_1000l_ttc / 1000;
   const rows = [1000, 1500, 2000, 2500, 3000].map((l) => {
-    const chaleur = h.M.litresEnKwh(l) * R.chaudiere_hypothese, ae = (chaleur / R.scop.air_eau) * E.electricite.kwh_ttc, ge = (chaleur / R.scop.geo) * E.electricite.kwh_ttc;
+    const chaleur = h.M.litresEnKwh(l) * R.chaudiere_defaut, ae = (chaleur / R.scop.air_eau) * E.electricite.kwh_ttc, ge = (chaleur / R.scop.geo) * E.electricite.kwh_ttc;
     return [h.num(l), h.eur(l * prixL), h.eur(ae), h.eur(l * prixL - ae), h.eur(l * prixL - ge)];
   });
   return h.table(fr ? ['Litres de fioul par an', 'Facture fioul', 'Électricité PAC air/eau', 'Économie air/eau', 'Économie géothermie'] : ['Litres of oil per year', 'Oil bill', 'Air-to-water electricity', 'Air-to-water saving', 'Ground-source saving'], rows,
-    fr ? `Fioul à ${h.num(prixL, 3)} € le litre (moyenne France du ${h.date(E.fioul.date)}, Weekly Oil Bulletin) ; hypothèse de 10 kWh par litre et rendement de chaudière de 86 % ; électricité au tarif bleu Base` : `Oil at €${h.num(prixL, 3)} per litre (France average on ${h.date(E.fioul.date)}, Weekly Oil Bulletin); assumes 10 kWh per litre and 86% boiler efficiency; electricity at the regulated Base tariff`, ['r', 'r', 'r', 'r', 'r']);
+    fr ? `Fioul à ${h.num(prixL, 3)} € le litre (moyenne France du ${h.date(E.fioul.date)}, Weekly Oil Bulletin) ; 1 litre = ${h.num(h.P.energie.fioul.kwh_pci_par_litre)} kWh (Base Carbone ADEME) et rendement de chaudière de ${h.pct(h.P.rendements.chaudiere_defaut, 0)} (minimum européen des chaudières neuves) ; électricité au tarif bleu Base` : `Oil at €${h.num(prixL, 3)} per litre (France average on ${h.date(E.fioul.date)}, Weekly Oil Bulletin); 1 litre = ${h.num(h.P.energie.fioul.kwh_pci_par_litre)} kWh (ADEME Base Carbone) and ${h.pct(h.P.rendements.chaudiere_defaut, 0)} boiler efficiency (EU minimum for new boilers); electricity at the regulated Base tariff`, ['r', 'r', 'r', 'r', 'r']);
 };
 
 /** Litres de fioul et économie selon le climat (moteur du site, maison de 100 m²). */
@@ -17,7 +17,7 @@ const climatFioul = (h: Helpers) => {
   const fr = h.lang === 'fr';
   const rows = ['83', '33', '69', '67', '25'].map((c) => {
     const r = h.M.simuler({ ...h.M.DEFAUT, dep: c, energie: 'fioul' }), d = h.dep(c);
-    return [`${d.nom} (${h.num(d.dju)} DJU)`, h.num(Math.round(r.consoAvant / h.P.energie.fioul.kwh_par_litre_hypothese / 10) * 10), h.eur(r.coutAvant), h.eur(r.economie)];
+    return [`${d.nom} (${h.num(d.dju)} DJU)`, h.num(Math.round(r.consoAvant / h.P.energie.fioul.kwh_pci_par_litre / 10) * 10), h.eur(r.coutAvant), h.eur(r.economie)];
   });
   return h.table(fr ? ['Département', 'Litres par an', 'Facture fioul', 'Économie air/eau'] : ['Département', 'Litres a year', 'Oil bill', 'Air-to-water saving'], rows,
     fr ? 'Maison de 100 m² à isolation moyenne ; degrés-jours Météo-France 2015-2024 ; mêmes hypothèses que le tableau précédent' : 'Averagely insulated 100 m² house; Météo-France degree-days 2015-2024; same assumptions as the previous table', ['l', 'r', 'r', 'r']);
@@ -25,7 +25,7 @@ const climatFioul = (h: Helpers) => {
 /** Sensibilité de l'économie aux prix du fioul et de l'électricité (2 000 litres par an). */
 const sensibilite = (h: Helpers) => {
   const fr = h.lang === 'fr', E = h.P.energie, R = h.P.rendements;
-  const chaleur = h.M.litresEnKwh(2000) * R.chaudiere_hypothese, prixL = E.fioul.eur_1000l_ttc / 1000;
+  const chaleur = h.M.litresEnKwh(2000) * R.chaudiere_defaut, prixL = E.fioul.eur_1000l_ttc / 1000;
   const rows = [0.8, 1, 1.2].map((k) => {
     const fioul = 2000 * prixL * k, pac = (x: number) => (chaleur / R.scop.air_eau) * E.electricite.kwh_ttc * x;
     return [`${h.num(prixL * k, 2)} €`, h.eur(fioul - pac(1)), h.eur(fioul - pac(1.2))];
@@ -51,8 +51,8 @@ export default defineGuide({
     intro: 'Le fioul est le cas où la pompe à chaleur rapporte le plus. Partez de vos litres achetés l’an dernier : le calcul donne l’économie au prix de la semaine.',
     resume: (h) => {
       const E = h.P.energie, prixL = E.fioul.eur_1000l_ttc / 1000;
-      const ch = h.M.litresEnKwh(2000) * h.P.rendements.chaudiere_hypothese, pac = (ch / h.P.rendements.scop.air_eau) * E.electricite.kwh_ttc;
-      return `Le chauffage au fioul est le plus cher par kWh de chaleur, et les chaudières au fioul neuves ne peuvent plus être installées depuis le 1er juillet 2022, sauf exceptions. Le remplacement par une pompe à chaleur air/eau garde les radiateurs à eau et, souvent, la production d’eau chaude. Au prix moyen relevé en France le ${h.date(E.fioul.date)} par le Weekly Oil Bulletin de la Commission européenne, ${h.num(prixL, 3)} € le litre, une maison qui achète ${h.num(2000)} litres par an paie ${h.eur(2000 * prixL)} ; la même chaleur produite par une PAC air/eau coûterait environ ${h.eur(pac)} d’électricité, soit ${h.eur(2000 * prixL - pac)} d’économie par an. Le calcul suppose qu’un litre de fioul contient environ 10 kWh et que la chaudière a un rendement de 86 %, deux hypothèses que vous pouvez ajuster. Côté aides, le remplacement d’une chaudière au fioul ouvre droit au Coup de pouce, qui multiplie la prime CEE par cinq, à MaPrimeRénov’ pour les ménages bleus, jaunes et violets, et à un forfait séparé pour la dépose de la cuve.`;
+      const ch = h.M.litresEnKwh(2000) * h.P.rendements.chaudiere_defaut, pac = (ch / h.P.rendements.scop.air_eau) * E.electricite.kwh_ttc;
+      return `Le chauffage au fioul est le plus cher par kWh de chaleur, et les chaudières au fioul neuves ne peuvent plus être installées depuis le 1er juillet 2022, sauf exceptions. Le remplacement par une pompe à chaleur air/eau garde les radiateurs à eau et, souvent, la production d’eau chaude. Au prix moyen relevé en France le ${h.date(E.fioul.date)} par le Weekly Oil Bulletin de la Commission européenne, ${h.num(prixL, 3)} € le litre, une maison qui achète ${h.num(2000)} litres par an paie ${h.eur(2000 * prixL)} ; la même chaleur produite par une PAC air/eau coûterait environ ${h.eur(pac)} d’électricité, soit ${h.eur(2000 * prixL - pac)} d’économie par an. Le calcul compte ${h.num(h.P.energie.fioul.kwh_pci_par_litre)} kWh par litre de fioul, valeur de la Base Carbone de l’ADEME, et un rendement de chaudière de ${h.pct(h.P.rendements.chaudiere_defaut, 0)}, le minimum européen des chaudières neuves ; une chaudière ancienne fait moins bien, et vous pouvez saisir votre propre rendement. Côté aides, le remplacement d’une chaudière au fioul ouvre droit au Coup de pouce, qui multiplie la prime CEE par cinq, à MaPrimeRénov’ pour les ménages bleus, jaunes et violets, et à un forfait séparé pour la dépose de la cuve.`;
     },
     faqs: (h) => [
       { q: 'Que faire de la cuve à fioul ?', a: `Elle doit être vidée, dégazée et nettoyée par une entreprise spécialisée, puis enlevée ou neutralisée (remplie d’un matériau inerte) si elle est enterrée. MaPrimeRénov’ verse un forfait de dépose de cuve de ${h.eur(h.P.maprimerenov.forfaits.depose_cuve_fioul.bleu)} à ${h.eur(h.P.maprimerenov.forfaits.depose_cuve_fioul.violet)} selon la couleur, sur ${h.eur(h.P.maprimerenov.forfaits.depose_cuve_fioul.plafond_depense)} de dépense au plus. Gardez le certificat de dégazage.` },
@@ -86,8 +86,8 @@ ${sensibilite(h)}
     intro: 'Oil is where a heat pump saves the most. Start from the litres you bought last year: the calculation gives the saving at this week’s price.',
     resume: (h) => {
       const E = h.P.energie, prixL = E.fioul.eur_1000l_ttc / 1000;
-      const ch = h.M.litresEnKwh(2000) * h.P.rendements.chaudiere_hypothese, pac = (ch / h.P.rendements.scop.air_eau) * E.electricite.kwh_ttc;
-      return `Oil heating is the most expensive per kWh of heat, and new oil boilers can no longer be installed since 1 July 2022, with some exceptions. Replacing one with an air-to-water heat pump keeps the water radiators and often the hot water supply. At the French average price recorded on ${h.date(E.fioul.date)} by the European Commission’s Weekly Oil Bulletin, €${h.num(prixL, 3)} per litre, a house buying ${h.num(2000)} litres a year pays ${h.eur(2000 * prixL)}; the same heat from an air-to-water heat pump would cost about ${h.eur(pac)} in electricity, a saving of ${h.eur(2000 * prixL - pac)} a year. The calculation assumes a litre of oil holds about 10 kWh and the boiler is 86% efficient, two assumptions you can adjust. On grants, replacing an oil boiler qualifies for the Coup de pouce, which multiplies the CEE bonus by five, for MaPrimeRénov’ for blue, yellow and purple households, and for a separate flat rate for removing the tank.`;
+      const ch = h.M.litresEnKwh(2000) * h.P.rendements.chaudiere_defaut, pac = (ch / h.P.rendements.scop.air_eau) * E.electricite.kwh_ttc;
+      return `Oil heating is the most expensive per kWh of heat, and new oil boilers can no longer be installed since 1 July 2022, with some exceptions. Replacing one with an air-to-water heat pump keeps the water radiators and often the hot water supply. At the French average price recorded on ${h.date(E.fioul.date)} by the European Commission’s Weekly Oil Bulletin, €${h.num(prixL, 3)} per litre, a house buying ${h.num(2000)} litres a year pays ${h.eur(2000 * prixL)}; the same heat from an air-to-water heat pump would cost about ${h.eur(pac)} in electricity, a saving of ${h.eur(2000 * prixL - pac)} a year. The calculation counts ${h.num(h.P.energie.fioul.kwh_pci_par_litre)} kWh per litre of oil, the value in ADEME’s Base Carbone, and a boiler efficiency of ${h.pct(h.P.rendements.chaudiere_defaut, 0)}, the EU minimum for new boilers; an old boiler does worse, and you can enter your own efficiency. On grants, replacing an oil boiler qualifies for the Coup de pouce, which multiplies the CEE bonus by five, for MaPrimeRénov’ for blue, yellow and purple households, and for a separate flat rate for removing the tank.`;
     },
     faqs: (h) => [
       { q: 'What happens to the oil tank?', a: `It must be emptied, degassed and cleaned by a specialist firm, then removed or neutralised (filled with inert material) if buried. MaPrimeRénov’ pays a tank removal flat rate of ${h.eur(h.P.maprimerenov.forfaits.depose_cuve_fioul.bleu)} to ${h.eur(h.P.maprimerenov.forfaits.depose_cuve_fioul.violet)} depending on colour, on at most ${h.eur(h.P.maprimerenov.forfaits.depose_cuve_fioul.plafond_depense)} of expense. Keep the degassing certificate.` },

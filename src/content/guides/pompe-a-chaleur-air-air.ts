@@ -18,7 +18,7 @@ const climatAirAir = (h: Helpers) => {
     return [`${d.nom} (${h.num(d.dju)} DJU)`, h.eur(r.coutAvant), h.eur(r.economie), r.retourAns === null ? '—' : `${h.num(r.retourAns, 0)} ${fr ? 'ans' : 'yrs'}`];
   });
   return h.table(fr ? ['Département', 'Facture radiateurs', 'Économie / an', 'Retour'] : ['Département', 'Radiator bill', 'Saving / yr', 'Payback'], rows,
-    fr ? `Maison de 100 m² à isolation moyenne ; PAC air/air au prix médian de ${h.eur(h.P.prix_installation.air_air.median_ttc)}, sans aide ; rendement saisonnier supposé de ${h.num(h.P.rendements.scop.air_air_hypothese, 1)}` : `Averagely insulated 100 m² house; air-to-air heat pump at the ${h.eur(h.P.prix_installation.air_air.median_ttc)} median price, no grant; assumed seasonal efficiency ${h.num(h.P.rendements.scop.air_air_hypothese, 1)}`, ['l', 'r', 'r', 'r']);
+    fr ? `Maison de 100 m² à isolation moyenne ; PAC air/air au prix médian de ${h.eur(h.P.prix_installation.air_air.median_ttc)}, sans aide ; rendement par défaut de la méthode DPE (${h.num(h.P.rendements.scop.air_air.H1, 1)} en zones H1 et H2, ${h.num(h.P.rendements.scop.air_air.H3, 1)} en zone H3)` : `Averagely insulated 100 m² house; air-to-air heat pump at the ${h.eur(h.P.prix_installation.air_air.median_ttc)} median price, no grant; DPE method default efficiency (${h.num(h.P.rendements.scop.air_air.H1, 1)} in zones H1 and H2, ${h.num(h.P.rendements.scop.air_air.H3, 1)} in zone H3)`, ['l', 'r', 'r', 'r']);
 };
 
 export default defineGuide({
@@ -34,7 +34,7 @@ export default defineGuide({
     card: 'Prix au kW sur 148 devis, sans MaPrimeRénov’, TVA réduite possible.',
     title: 'Pompe à chaleur air/air prix 2026 : tarif au kW et aides',
     description: 'Pompe à chaleur air/air en 2026 : prix au kW sur 148 devis réels, fourchette selon la puissance, plus de MaPrimeRénov’, TVA réduite à 5,5 % sous conditions.',
-    h1: 'Pompe à chaleur air/air : prix et aides en 2026',
+    h1: 'Pompe à chaleur air/air réversible : prix et aides en 2026',
     intro: 'Une clim réversible chauffe l’hiver et rafraîchit l’été. Elle coûte moins cher qu’une PAC air/eau, mais n’a plus droit à MaPrimeRénov’.',
     resume: (h) => {
       const O = h.P.prix_installation.air_air;
@@ -42,7 +42,7 @@ export default defineGuide({
     },
     faqs: (h) => [
       { q: 'Une clim réversible peut-elle chauffer toute une maison ?', a: 'Oui si chaque pièce à vivre a son unité intérieure ou si un réseau gainable dessert les pièces, et si la puissance totale couvre les déperditions par grand froid. Les chambres fermées et la salle de bains restent souvent mal chauffées avec une seule unité dans le séjour. Pour une maison entière avec radiateurs à eau, la PAC air/eau est l’outil prévu.' },
-      { q: 'Quel rendement attendre d’une PAC air/air ?', a: `Les devis de l’observatoire annoncent un SCOP moyen de 4,5. C’est une valeur annoncée par les fabricants, pas une mesure chez des particuliers. Faute de campagne de mesure publique sur l’air/air, ce site retient par prudence ${h.num(h.P.rendements.scop.air_air_hypothese, 1)}, la valeur mesurée par l’ADEME sur les PAC air/eau. Vous pouvez la remplacer dans le simulateur.` },
+      { q: 'Quel rendement attendre d’une PAC air/air ?', a: `Les devis de l’observatoire annoncent un SCOP moyen de 4,5. C’est une valeur annoncée par les fabricants, pas une mesure chez des particuliers. Faute de campagne de mesure publique sur l’air/air, ce site retient la valeur par défaut de la méthode officielle du DPE pour une PAC air/air posée depuis 2015 : ${h.num(h.P.rendements.scop.air_air.H1, 1)} en zones H1 et H2, ${h.num(h.P.rendements.scop.air_air.H3, 1)} en zone H3. C’est une valeur conventionnelle, pas une mesure ; vous pouvez la remplacer dans le simulateur.` },
       { q: 'Existe-t-il encore une aide pour une PAC air/air en 2026 ?', a: 'Pas de MaPrimeRénov’. Une prime CEE reste possible au titre de la fiche BAR-TH-129, versée par un fournisseur d’énergie qui doit intervenir avant la signature du devis ; demandez son montant écrit. La TVA réduite à 5,5 % s’applique si l’équipement respecte les critères de performance et est posé par une entreprise dans un logement de plus de deux ans.' },
     ],
     body: (h) => `<h2>Prix selon la puissance</h2>
@@ -75,7 +75,7 @@ ${climatAirAir(h)}
     },
     faqs: (h) => [
       { q: 'Can reversible air conditioning heat a whole house?', a: 'Yes if every living room has its own indoor unit or a ducted system serves the rooms, and if the total output covers heat losses in hard frosts. Closed bedrooms and the bathroom often stay cold with a single unit in the living room. For a whole house with water radiators, the air-to-water heat pump is the intended tool.' },
-      { q: 'What efficiency can an air-to-air heat pump achieve?', a: `The observatory’s quotes announce an average SCOP of 4.5. That is a manufacturer’s figure, not a measurement in people’s homes. With no public field campaign on air-to-air units, this site prudently uses ${h.num(h.P.rendements.scop.air_air_hypothese, 1)}, the value ADEME measured on air-to-water heat pumps. You can replace it in the calculator.` },
+      { q: 'What efficiency can an air-to-air heat pump achieve?', a: `The observatory’s quotes announce an average SCOP of 4.5. That is a manufacturer’s figure, not a measurement in people’s homes. With no public field campaign on air-to-air units, this site uses the official DPE method’s default value for an air-to-air unit fitted since 2015: ${h.num(h.P.rendements.scop.air_air.H1, 1)} in zones H1 and H2, ${h.num(h.P.rendements.scop.air_air.H3, 1)} in zone H3. It is a conventional value, not a measurement; you can replace it in the calculator.` },
       { q: 'Is there still any grant for an air-to-air heat pump in 2026?', a: 'No MaPrimeRénov’. A CEE bonus remains possible under sheet BAR-TH-129, paid by an energy supplier that must be involved before you sign the quote; ask for the amount in writing. Reduced 5.5% VAT applies if the equipment meets the performance criteria and is fitted by a firm in a home over two years old.' },
     ],
     body: (h) => `<h2>Price by output</h2>

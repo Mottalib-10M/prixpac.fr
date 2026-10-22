@@ -13,15 +13,15 @@ export default (l: L): MiniSpec => ({
     { id: 'p', label: T(l, 'Prix du litre', 'Price per litre'), def: Math.round(P.energie.fioul.eur_1000l_ttc / 10) / 100, unit: '€', max: 5, decimals: 2 },
   ],
   run: (v) => {
-    const kwh = litresEnKwh(v.l), chaleur = kwh * P.rendements.chaudiere_hypothese, elec = chaleur / scopDefaut('air_eau'), cPac = elec * P.energie.electricite.kwh_ttc, cF = v.l * v.p;
+    const kwh = litresEnKwh(v.l), chaleur = kwh * P.rendements.chaudiere_defaut, elec = chaleur / scopDefaut('air_eau'), cPac = elec * P.energie.electricite.kwh_ttc, cF = v.l * v.p;
     return {
       head: [T(l, 'Économie par an', 'Saving per year'), eur(cF - cPac, l)],
       rows: [
         [T(l, 'Fioul aujourd’hui', 'Oil today'), eur(cF, l)],
         [T(l, 'Électricité de la PAC', 'Heat pump electricity'), `${num(elec, l)} kWh · ${eur(cPac, l)}`],
-        [T(l, 'Prix du kWh de fioul', 'Oil price per kWh'), `${formatDecimal(v.p / P.energie.fioul.kwh_par_litre_hypothese, 3, l)} €`],
+        [T(l, 'Prix du kWh de fioul', 'Oil price per kWh'), `${formatDecimal(v.p / P.energie.fioul.kwh_pci_par_litre, 3, l)} €`],
       ],
-      note: T(l, 'Estimation : 1 litre ≈ 10 kWh, rendement de chaudière 86 %, SCOP 2,9.', 'Estimate: 1 litre ≈ 10 kWh, boiler efficiency 86%, SCOP 2.9.'),
+      note: T(l, `Estimation : 1 litre = ${P.energie.fioul.kwh_pci_par_litre} kWh (Base Carbone ADEME), rendement de chaudière ${formatDecimal(P.rendements.chaudiere_defaut * 100, 0, l)} % (minimum européen des chaudières neuves), SCOP ${formatDecimal(scopDefaut('air_eau'), 1, l)} (mesure ADEME).`, `Estimate: 1 litre = ${P.energie.fioul.kwh_pci_par_litre} kWh (ADEME Base Carbone), boiler efficiency ${formatDecimal(P.rendements.chaudiere_defaut * 100, 0, l)}% (EU minimum for new boilers), SCOP ${formatDecimal(scopDefaut('air_eau'), 1, l)} (ADEME measurement).`),
     };
   },
 });

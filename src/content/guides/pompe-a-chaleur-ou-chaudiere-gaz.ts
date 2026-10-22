@@ -4,15 +4,15 @@ import { defineGuide, type Helpers } from '../../lib/guide-types';
 const kwhUtile = (h: Helpers) => {
   const fr = h.lang === 'fr', E = h.P.energie, R = h.P.rendements;
   const rows: Array<[string, number, number]> = [
-    [fr ? 'Chaudière gaz (rendement 86 %)' : 'Gas boiler (86% efficiency)', E.gaz.kwh_ttc, R.chaudiere_hypothese],
-    [fr ? 'Chaudière fioul (rendement 86 %)' : 'Oil boiler (86% efficiency)', h.M.prixFioulKwh(), R.chaudiere_hypothese],
+    [fr ? `Chaudière gaz (rendement ${h.pct(R.chaudiere_defaut, 0)})` : `Gas boiler (${h.pct(R.chaudiere_defaut, 0)} efficiency)`, E.gaz.kwh_ttc, R.chaudiere_defaut],
+    [fr ? `Chaudière fioul (rendement ${h.pct(R.chaudiere_defaut, 0)})` : `Oil boiler (${h.pct(R.chaudiere_defaut, 0)} efficiency)`, h.M.prixFioulKwh(), R.chaudiere_defaut],
     [fr ? 'Radiateurs électriques' : 'Electric heaters', E.electricite.kwh_ttc, R.radiateur_electrique],
     [fr ? `PAC air/eau (rendement ${h.num(R.scop.air_eau, 1)})` : `Air-to-water heat pump (efficiency ${h.num(R.scop.air_eau, 1)})`, E.electricite.kwh_ttc, R.scop.air_eau],
     [fr ? `PAC géothermique (rendement ${h.num(R.scop.geo, 1)})` : `Ground-source heat pump (efficiency ${h.num(R.scop.geo, 1)})`, E.electricite.kwh_ttc, R.scop.geo],
   ];
   return h.table(fr ? ['Équipement', 'Prix du kWh acheté', 'Prix du kWh de chaleur'] : ['Equipment', 'Price per kWh bought', 'Price per kWh of heat'],
     rows.map(([n, p, r]) => [n, `${h.num(p, 4)} €`, `${h.num(p / r, 4)} €`]),
-    fr ? `Gaz : Eurostat, ${h.periodeGaz} ; électricité : tarif bleu Base au ${h.dateElec} ; fioul : prix moyen France du Weekly Oil Bulletin, avec l’hypothèse de 10 kWh par litre` : `Gas: Eurostat, ${h.periodeGaz}; electricity: regulated Base tariff at ${h.dateElec}; oil: France average from the Weekly Oil Bulletin, assuming 10 kWh per litre`, ['l', 'r', 'r']);
+    fr ? `Gaz : Eurostat, ${h.periodeGaz} ; électricité : tarif bleu Base au ${h.dateElec} ; fioul : prix moyen France du Weekly Oil Bulletin, à ${h.num(h.P.energie.fioul.kwh_pci_par_litre)} kWh par litre (Base Carbone ADEME)` : `Gas: Eurostat, ${h.periodeGaz}; electricity: regulated Base tariff at ${h.dateElec}; oil: France average from the Weekly Oil Bulletin, at ${h.num(h.P.energie.fioul.kwh_pci_par_litre)} kWh per litre (ADEME Base Carbone)`, ['l', 'r', 'r']);
 };
 
 const factures = (h: Helpers) => {
@@ -42,7 +42,7 @@ export default defineGuide({
     intro: 'Votre chaudière gaz arrive en fin de vie. La remplacer à l’identique ou passer à la PAC ? Voici l’écart de facture et d’investissement, avec les chiffres du jour.',
     resume: (h) => {
       const E = h.P.energie, R = h.P.rendements;
-      return `Une chaudière au gaz neuve transforme au mieux environ ${h.pct(R.chaudiere_hypothese, 0)} de l’énergie du gaz en chaleur, le minimum imposé par le règlement européen d’écoconception ; une pompe à chaleur air/eau produit en moyenne ${h.num(R.scop.air_eau, 1)} kWh de chaleur par kWh d’électricité, d’après les mesures de l’ADEME. Le kWh d’électricité coûte ${h.num(E.electricite.kwh_ttc, 4)} € au tarif bleu, le kWh de gaz ${h.num(E.gaz.kwh_ttc, 4)} € en moyenne d’après Eurostat. Ramené à la chaleur produite, le gaz revient à ${h.num(E.gaz.kwh_ttc / R.chaudiere_hypothese, 4)} € le kWh et la PAC à ${h.num(E.electricite.kwh_ttc / R.scop.air_eau, 4)} €. La PAC coûte donc moins cher à l’usage, d’autant plus que le climat est froid, et permet de résilier l’abonnement au gaz. Mais elle coûte plus cher à l’achat : la PAC bénéficie de la TVA à ${h.pct(h.P.tva.pac, 1)}, de MaPrimeRénov’ et de la prime CEE avec Coup de pouce, alors qu’une chaudière gaz paie ${h.pct(h.P.tva.chaudiere_fossile, 0)} de TVA et n’est pas financée par MaPrimeRénov’. Le choix tient à l’écart entre les deux investissements, comparé à l’économie annuelle.`;
+      return `Une chaudière au gaz neuve transforme au mieux environ ${h.pct(R.chaudiere_defaut, 0)} de l’énergie du gaz en chaleur, le minimum imposé par le règlement européen d’écoconception ; une pompe à chaleur air/eau produit en moyenne ${h.num(R.scop.air_eau, 1)} kWh de chaleur par kWh d’électricité, d’après les mesures de l’ADEME. Le kWh d’électricité coûte ${h.num(E.electricite.kwh_ttc, 4)} € au tarif bleu, le kWh de gaz ${h.num(E.gaz.kwh_ttc, 4)} € en moyenne d’après Eurostat. Ramené à la chaleur produite, le gaz revient à ${h.num(E.gaz.kwh_ttc / R.chaudiere_defaut, 4)} € le kWh et la PAC à ${h.num(E.electricite.kwh_ttc / R.scop.air_eau, 4)} €. La PAC coûte donc moins cher à l’usage, d’autant plus que le climat est froid, et permet de résilier l’abonnement au gaz. Mais elle coûte plus cher à l’achat : la PAC bénéficie de la TVA à ${h.pct(h.P.tva.pac, 1)}, de MaPrimeRénov’ et de la prime CEE avec Coup de pouce, alors qu’une chaudière gaz paie ${h.pct(h.P.tva.chaudiere_fossile, 0)} de TVA et n’est pas financée par MaPrimeRénov’. Le choix tient à l’écart entre les deux investissements, comparé à l’économie annuelle.`;
     },
     faqs: (h) => [
       { q: 'Peut-on encore installer une chaudière gaz neuve en 2026 ?', a: 'Oui, dans une maison existante, le remplacement d’une chaudière gaz par une autre reste autorisé. Mais elle n’est pas financée par MaPrimeRénov’, sa pose est taxée à 20 %, et depuis le 1er septembre 2026 une maison qui garde le gaz ne peut plus être financée en rénovation d’ampleur. Dans les logements neufs, la réglementation environnementale RE2020 l’exclut en pratique.' },
@@ -51,7 +51,7 @@ export default defineGuide({
     ],
     body: (h) => `<h2>Le prix du kWh de chaleur</h2>
 ${kwhUtile(h)}
-<p>Un « kWh de chaleur » est l’énergie qui arrive vraiment dans les pièces. C’est la seule unité qui permet de comparer des équipements qui n’utilisent pas la même énergie. Le rendement de 86 % est une hypothèse prudente : c’est le minimum réglementaire pour une chaudière neuve, et une vieille chaudière fait souvent moins bien.</p>
+<p>Un « kWh de chaleur » est l’énergie qui arrive vraiment dans les pièces. C’est la seule unité qui permet de comparer des équipements qui n’utilisent pas la même énergie. Le rendement de ${h.pct(h.P.rendements.chaudiere_defaut, 0)} est le minimum fixé par le règlement européen n° 813/2013 pour une chaudière neuve depuis 2015 ; c’est une valeur favorable à la chaudière, car une vieille chaudière fait souvent moins bien.</p>
 <h2>La facture annuelle selon le climat</h2>
 ${factures(h)}
 <!--mini:gaz-->
@@ -70,7 +70,7 @@ ${factures(h)}
     intro: 'Your gas boiler is nearing the end of its life. Replace it like for like or switch to a heat pump? Here is the gap in bills and outlay, with current figures.',
     resume: (h) => {
       const E = h.P.energie, R = h.P.rendements;
-      return `A new gas boiler turns at best about ${h.pct(R.chaudiere_hypothese, 0)} of the gas’s energy into heat, the minimum set by the EU ecodesign regulation; an air-to-water heat pump produces on average ${h.num(R.scop.air_eau, 1)} kWh of heat per kWh of electricity, according to ADEME’s measurements. Electricity costs €${h.num(E.electricite.kwh_ttc, 4)} per kWh at the regulated tariff, gas €${h.num(E.gaz.kwh_ttc, 4)} on average according to Eurostat. Per kWh of heat produced, gas comes to €${h.num(E.gaz.kwh_ttc / R.chaudiere_hypothese, 4)} and the heat pump to €${h.num(E.electricite.kwh_ttc / R.scop.air_eau, 4)}. The heat pump is therefore cheaper to run, all the more so in a cold climate, and lets you cancel the gas subscription. But it costs more to buy: the heat pump gets ${h.pct(h.P.tva.pac, 1)} VAT, MaPrimeRénov’ and the CEE bonus with Coup de pouce, while a gas boiler pays ${h.pct(h.P.tva.chaudiere_fossile, 0)} VAT and is not funded by MaPrimeRénov’. The choice comes down to the gap between the two outlays, compared with the yearly saving.`;
+      return `A new gas boiler turns at best about ${h.pct(R.chaudiere_defaut, 0)} of the gas’s energy into heat, the minimum set by the EU ecodesign regulation; an air-to-water heat pump produces on average ${h.num(R.scop.air_eau, 1)} kWh of heat per kWh of electricity, according to ADEME’s measurements. Electricity costs €${h.num(E.electricite.kwh_ttc, 4)} per kWh at the regulated tariff, gas €${h.num(E.gaz.kwh_ttc, 4)} on average according to Eurostat. Per kWh of heat produced, gas comes to €${h.num(E.gaz.kwh_ttc / R.chaudiere_defaut, 4)} and the heat pump to €${h.num(E.electricite.kwh_ttc / R.scop.air_eau, 4)}. The heat pump is therefore cheaper to run, all the more so in a cold climate, and lets you cancel the gas subscription. But it costs more to buy: the heat pump gets ${h.pct(h.P.tva.pac, 1)} VAT, MaPrimeRénov’ and the CEE bonus with Coup de pouce, while a gas boiler pays ${h.pct(h.P.tva.chaudiere_fossile, 0)} VAT and is not funded by MaPrimeRénov’. The choice comes down to the gap between the two outlays, compared with the yearly saving.`;
     },
     faqs: (h) => [
       { q: 'Can I still install a new gas boiler in 2026?', a: 'Yes, in an existing house, replacing one gas boiler with another is still allowed. But it is not funded by MaPrimeRénov’, its fitting is taxed at 20%, and since 1 September 2026 a house that keeps gas can no longer be funded under whole-home renovation. In new homes, the RE2020 environmental regulation rules it out in practice.' },
@@ -79,7 +79,7 @@ ${factures(h)}
     ],
     body: (h) => `<h2>The price per kWh of heat</h2>
 ${kwhUtile(h)}
-<p>A “kWh of heat” is the energy that actually reaches the rooms. It is the only unit that lets you compare equipment using different energies. The 86% efficiency is a cautious assumption: it is the regulatory minimum for a new boiler, and an old boiler often does worse.</p>
+<p>A “kWh of heat” is the energy that actually reaches the rooms. It is the only unit that lets you compare equipment using different energies. The ${h.pct(h.P.rendements.chaudiere_defaut, 0)} efficiency is the minimum EU Regulation 813/2013 has set for a new boiler since 2015; it favours the boiler, as an old boiler often does worse.</p>
 <h2>The yearly bill by climate</h2>
 ${factures(h)}
 <!--mini:gaz-->

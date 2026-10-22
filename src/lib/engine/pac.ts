@@ -45,27 +45,28 @@ export function couleur(rfr: number, personnes: number, idf: boolean): Couleur {
 }
 
 /* ---------- Climat, besoin, puissance ---------- */
-export const G = P.climat.g_hypothese as Record<Iso, number>;
+export const G = P.climat.g_estimation as Record<Iso, number>;
 /** Besoin de chauffage utile (kWh/an) = G × volume × DJU × 24 / 1000. */
-export function besoinChauffage(surface: number, iso: Iso, dju: number, hauteur = P.climat.hauteur_sous_plafond_hypothese): number {
+export function besoinChauffage(surface: number, iso: Iso, dju: number, hauteur = P.climat.hauteur_sous_plafond_estimation): number {
   return (G[iso] * surface * hauteur * dju * 24) / 1000;
 }
-/** Puissance demandée (kW) pendant les 3 jours les plus froids d'un hiver typique : GV × (19 − T). */
-export function puissanceFroid(surface: number, iso: Iso, tFroid: number, hauteur = P.climat.hauteur_sous_plafond_hypothese): number {
-  return (G[iso] * surface * hauteur * (P.climat.temperature_interieure_hypothese - tFroid)) / 1000;
+/** Puissance demandée (kW) pendant les 3 jours les plus froids d'un hiver typique : GV × (consigne 19 °C de la méthode DPE − T). */
+export function puissanceFroid(surface: number, iso: Iso, tFroid: number, hauteur = P.climat.hauteur_sous_plafond_estimation): number {
+  return (G[iso] * surface * hauteur * (P.climat.temperature_interieure - tFroid)) / 1000;
 }
 
 /* ---------- Énergie ---------- */
-export const prixFioulKwh = (eur1000l = P.energie.fioul.eur_1000l_ttc) => eur1000l / 1000 / P.energie.fioul.kwh_par_litre_hypothese;
+export const prixFioulKwh = (eur1000l = P.energie.fioul.eur_1000l_ttc) => eur1000l / 1000 / P.energie.fioul.kwh_pci_par_litre;
 export function prixKwh(e: Energie): number {
   if (e === 'elec') return P.energie.electricite.kwh_ttc;
   if (e === 'gaz') return P.energie.gaz.kwh_ttc;
   return prixFioulKwh();
 }
-export const rendementDefaut = (e: Energie) => (e === 'elec' ? P.rendements.radiateur_electrique : P.rendements.chaudiere_hypothese);
-export function scopDefaut(t: TypePac): number {
+export const rendementDefaut = (e: Energie) => (e === 'elec' ? P.rendements.radiateur_electrique : P.rendements.chaudiere_defaut);
+/** SCOP par défaut : mesures ADEME (air/eau, géothermie) ; air/air : valeur conventionnelle de la méthode 3CL-DPE selon la zone. */
+export function scopDefaut(t: TypePac, zone: Zone = 'H1'): number {
   if (t === 'geo') return P.rendements.scop.geo;
-  if (t === 'air_air') return P.rendements.scop.air_air_hypothese;
+  if (t === 'air_air') return P.rendements.scop.air_air[zone];
   return P.rendements.scop.air_eau;
 }
 
@@ -107,7 +108,7 @@ export function ecreter(forfait: number, ceeEur: number, ttc: number, plafondDep
 export function prixDefaut(t: TypePac): number {
   if (t === 'air_eau') return P.prix_installation.air_eau.median_ttc;
   if (t === 'air_air') return P.prix_installation.air_air.median_ttc;
-  return P.prix_installation.geo.depart_ttc;
+  return P.prix_installation.geo.exemple_ttc;
 }
 
 /* ---------- Simulation complète ---------- */
@@ -147,7 +148,7 @@ export function simuler(x: SimIn): SimOut {
   const dep = depByCode(x.dep);
   const dju = x.dju ?? dep.dju;
   const rendement = x.rendement ?? rendementDefaut(x.energie);
-  const scop = x.scop ?? scopDefaut(x.type);
+  const scop = x.scop ?? scopDefaut(x.type, dep.zone);
   const besoin = x.consoConnue && x.consoConnue > 0 ? x.consoConnue * rendement : besoinChauffage(x.surface, x.iso, dju);
   const consoAvant = besoin / rendement;
   const pAvant = x.prixKwhAvant ?? prixKwh(x.energie);
@@ -205,5 +206,5 @@ export function prixParKw(kw: number, t: 'air_air' | 'air_eau'): { median: numbe
   const o = P.prix_installation[t] as { eur_par_kw: number; eur_par_kw_p10?: number; eur_par_kw_p90?: number };
   return { median: kw * o.eur_par_kw, bas: o.eur_par_kw_p10 ? kw * o.eur_par_kw_p10 : undefined, haut: o.eur_par_kw_p90 ? kw * o.eur_par_kw_p90 : undefined };
 }
-/** Fioul : litres par an → kWh, à raison de l'hypothèse de 10 kWh par litre. */
-export const litresEnKwh = (l: number) => l * P.energie.fioul.kwh_par_litre_hypothese;
+/** Fioul : litres par an → kWh PCI (10 kWh par litre, Base Carbone ADEME). */
+export const litresEnKwh = (l: number) => l * P.energie.fioul.kwh_pci_par_litre;

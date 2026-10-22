@@ -23,7 +23,7 @@ export default defineGuide({
     slug: 'maprimerenov-pompe-a-chaleur',
     nav: 'MaPrimeRénov’ PAC 2026',
     card: 'Forfait par couleur, écrêtement, conditions et projet 2027.',
-    title: 'MaPrimeRénov’ pompe à chaleur 2026 : montant et conditions',
+    title: 'MaPrimeRénov’ pompe à chaleur 2026 : simulation et montant',
     description: 'MaPrimeRénov’ 2026 pour une pompe à chaleur air/eau ou géothermique : forfait par couleur, écrêtement par la prime CEE, conditions et projet de fin en 2027.',
     h1: 'MaPrimeRénov’ pour une pompe à chaleur en 2026',
     intro: 'Le forfait affiché par l’Anah n’est pas toujours celui que vous toucherez : la prime CEE peut le réduire. Le simulateur montre la prime réellement versée.',
@@ -38,6 +38,7 @@ export default defineGuide({
         { q: 'Faut-il attendre l’accord de l’Anah avant de signer le devis ?', a: 'Il faut au moins déposer la demande avant de commencer les travaux. Un devis peut être signé avant le dépôt, mais les travaux ne doivent pas démarrer avant. Après l’accord, vous avez deux ans pour les terminer et envoyer la facture. Les ménages bleus peuvent demander une avance, jusqu’à la moitié de la prime.' },
         { q: 'Un propriétaire bailleur peut-il toucher MaPrimeRénov’ pour une PAC ?', a: `Oui, s’il s’engage à louer le logement en résidence principale pendant au moins ${h.num(h.P.maprimerenov.location_annees)} ans. Sa catégorie de revenus est déterminée par son propre revenu fiscal de référence, pas par celui du locataire. Les résidences secondaires sont exclues, et elles le sont aussi du Coup de pouce CEE.` },
         { q: 'Que se passe-t-il si MaPrimeRénov’ PAC disparaît en 2027 ?', a: 'Rien pour un dossier déposé et accordé en 2026 : il reste soumis au barème de 2026. Si le projet de budget est voté tel quel, les dossiers de 2027 n’auraient plus que la prime CEE, éventuellement relevée par l’État. Le tableau de cette page chiffre ce que représenterait la perte pour chaque couleur.' },
+        { q: 'Où faire sa demande MaPrimeRénov’ et quel numéro appeler ?', a: 'Depuis le 17 août 2026, toutes les demandes d’aide de l’Anah, MaPrimeRénov’ comprise, se font depuis un compte personnel unique sur france-renov.gouv.fr ; les ménages qui avaient déjà un compte y sont orientés automatiquement. En cas de difficulté pour créer ou ouvrir ce compte, l’Anah indique le service de relation aux usagers au 0 808 800 700. Le site France Rénov’ donne aussi le conseiller public le plus proche, gratuit.' },
       ];
     },
     body: (h) => {
@@ -71,6 +72,7 @@ ${projet2027(h)}
         { q: 'Must I wait for the Anah’s approval before signing the quote?', a: 'You must at least file the application before the work begins. A quote may be signed before filing, but the work must not start before. Once approved, you have two years to finish and send the invoice. Blue households can ask for an advance of up to half the grant.' },
         { q: 'Can a landlord get MaPrimeRénov’ for a heat pump?', a: `Yes, if the landlord undertakes to let the home as a main residence for at least ${h.num(h.P.maprimerenov.location_annees)} years. The income category depends on the landlord’s own reference tax income, not the tenant’s. Second homes are excluded, and they are also excluded from the CEE Coup de pouce.` },
         { q: 'What happens if the heat pump MaPrimeRénov’ ends in 2027?', a: 'Nothing for an application filed and approved in 2026: it stays under the 2026 scale. If the draft budget is passed as it stands, 2027 applications would only have the CEE bonus, possibly raised by the State. The table on this page shows what the loss would mean for each colour.' },
+        { q: 'Where do I apply for MaPrimeRénov’ and which number do I call?', a: 'Since 17 August 2026, every Anah grant application, MaPrimeRénov’ included, is made from a single personal account on france-renov.gouv.fr; households that already had an account are redirected there automatically. If you have trouble creating or opening the account, the Anah gives its user service number, 0 808 800 700. The France Rénov’ site also lists the nearest free public adviser.' },
       ];
     },
     body: (h) => {

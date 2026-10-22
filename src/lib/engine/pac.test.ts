@@ -121,3 +121,24 @@ describe('besoin, puissance, simulation', () => {
     expect(r.consoAvant).toBeCloseTo(15000, 6);
   });
 });
+
+describe('constantes sourcées le 2026-10-22', () => {
+  it('fioul : 10 kWh PCI par litre (Base Carbone, 3,25 ÷ 0,325)', () => {
+    expect(P.energie.fioul.kwh_pci_par_litre).toBeCloseTo(3.25 / 0.325, 6);
+  });
+  it('méthode 3CL-DPE : consigne 19 °C, effet joule 1, SCOP air/air 3 / 3,3', () => {
+    expect(P.climat.temperature_interieure).toBe(19);
+    expect(P.rendements.radiateur_electrique).toBe(1);
+    expect(P.rendements.scop.air_air).toMatchObject({ H1: 3, H2: 3, H3: 3.3 });
+    expect(M.scopDefaut('air_air', 'H3')).toBe(3.3);
+    expect(M.simuler({ ...M.DEFAUT, dep: '83', type: 'air_air', energie: 'elec' }).scop).toBe(P.rendements.scop.air_air[M.depByCode('83').zone]);
+  });
+  it('règlement 813/2013 : 86 % pour les chaudières neuves', () => {
+    expect(P.rendements.chaudiere_defaut).toBe(0.86);
+  });
+  it('toute source citée a une adresse ; les estimations sont nommées comme telles', () => {
+    for (const s of Object.values(P.sources)) expect(s.url).toMatch(/^https:\/\//);
+    expect(Object.keys(P.climat).filter((k) => /hypothese/.test(k))).toEqual([]);
+    expect(P.climat.g_estimation.moyenne).toBeGreaterThan(0);
+  });
+});

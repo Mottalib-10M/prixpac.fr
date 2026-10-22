@@ -42,7 +42,7 @@ export default defineGuide({
     slug: 'eco-ptz-pompe-a-chaleur',
     nav: 'Éco-PTZ pompe à chaleur',
     card: 'Prêt sans intérêts jusqu’à 15 000 € pour une PAC, sans condition de revenus.',
-    title: 'Éco-PTZ pompe à chaleur 2026 : montant, durée et mensualité',
+    title: 'Éco-PTZ pompe à chaleur 2026 : montant, formulaire, durée',
     description: 'Éco-prêt à taux zéro pour une pompe à chaleur en 2026 : jusqu’à 15 000 € pour une action seule, sur 15 ans au plus, cumul avec MaPrimeRénov’ et mensualité.',
     h1: 'Éco-prêt à taux zéro pour une pompe à chaleur',
     intro: 'Les aides couvrent une partie du prix ; l’éco-PTZ finance le reste sans intérêts. Calculez la mensualité et comparez-la à l’économie de chauffage.',
@@ -54,6 +54,7 @@ export default defineGuide({
       { q: 'Toutes les banques proposent-elles l’éco-PTZ ?', a: 'Seules les banques qui ont signé une convention avec l’État le distribuent, ce qui est le cas des principaux réseaux. Chacune étudie votre capacité de remboursement comme pour un crédit ordinaire et peut refuser. Comparez au moins deux banques, et demandez les frais de dossier et d’assurance, qui ne sont pas couverts par le taux zéro.' },
       { q: 'Peut-on demander l’éco-PTZ après les travaux ?', a: 'Non, il se demande avant, sur la base des devis, avec un formulaire « devis » rempli par l’entreprise. Les travaux doivent ensuite être achevés dans les trois ans qui suivent l’attribution du prêt (prolongation possible dans quelques cas, comme la force majeure), et justifiés par les factures et le formulaire « factures ». Préparez le dossier en même temps que la demande de MaPrimeRénov’.' },
       { q: 'Un propriétaire bailleur peut-il obtenir l’éco-PTZ ?', a: `Oui, s’il loue ou s’engage à louer le logement comme résidence principale. Le prêt reste plafonné à ${h.eur(h.P.eco_ptz.une_action)} pour une seule action. Le logement doit alors être loué dans les six mois qui suivent la fin des travaux.` },
+      { q: 'Quels formulaires faut-il remplir pour l’éco-PTZ ?', a: 'Deux formulaires officiels, à remettre à la banque avec le devis détaillé : le formulaire « Emprunteur », rempli par vous, et le formulaire « Entreprise », rempli par l’installateur RGE (version « actions de rénovation énergétique » pour une pompe à chaleur, version « performance globale » pour une rénovation complète). Ils existent en version à remplir en ligne ou papier, différente en métropole et outre-mer, et doivent être imprimés ; Service-Public.fr les met en téléchargement sur sa fiche de l’éco-PTZ.' },
     ],
     body: (h) => `<h2>Ce que coûte la mensualité, couleur par couleur</h2>
 ${mensualites(h)}
@@ -88,6 +89,7 @@ ${durees(h)}
       { q: 'Do all banks offer the eco-PTZ?', a: 'Only banks that have signed an agreement with the State offer it, which includes the main networks. Each assesses your ability to repay as for an ordinary loan and may refuse. Compare at least two banks, and ask about arrangement and insurance fees, which the zero rate does not cover.' },
       { q: 'Can I apply for the eco-PTZ after the work?', a: 'No, you apply beforehand, on the basis of quotes, with a “quotes” form completed by the firm. The work must then be finished within three years of the loan being granted (extendable in a few cases, such as force majeure), and proven with the invoices and the “invoices” form. Prepare the file at the same time as the MaPrimeRénov’ application.' },
       { q: 'Can a landlord get the eco-PTZ?', a: `Yes, if the home is let, or will be let, as a main residence. The loan is still capped at ${h.eur(h.P.eco_ptz.une_action)} for a single item. The home must then be let within six months of the end of the work.` },
+      { q: 'Which forms are needed for the eco-PTZ?', a: 'Two official forms, handed to the bank with the detailed quote: the “Emprunteur” (borrower) form, filled in by you, and the “Entreprise” (contractor) form, filled in by the RGE installer (the “energy renovation actions” version for a heat pump, the “overall performance” version for a full renovation). They come as fill-in-online or paper versions, different for mainland France and overseas, and must be printed; Service-Public.fr offers them for download on its eco-PTZ page.' },
     ],
     body: (h) => `<h2>The monthly payment, colour by colour</h2>
 ${mensualites(h)}

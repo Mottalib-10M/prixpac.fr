@@ -67,7 +67,7 @@ ${parPersonne(h)}
 <h2>Les pages par couleur</h2>
 <p>Chaque couleur a sa page avec le simulateur réglé sur un revenu type et un foyer de trois personnes : ${h.a('maprimerenov-bleu', 'bleu')}, ${h.a('maprimerenov-jaune', 'jaune')}, ${h.a('maprimerenov-violet', 'violet')} et ${h.a('maprimerenov-rose', 'rose')}.</p>
 <h2>Les autres conditions</h2>
-<p>Être propriétaire occupant (ou bailleur, sous engagement de louer ${h.num(h.P.maprimerenov.location_annees)} ans) ; un logement achevé depuis plus de ${h.num(h.P.maprimerenov.anciennete_logement_ans_pac)} ans pour une PAC ; un installateur RGE ; une demande déposée avant de commencer les travaux, sur le site de l’Anah. Le montant total des aides MaPrimeRénov’ par geste est plafonné à ${h.eur(h.P.maprimerenov.plafond_cumul_5_ans)} par logement sur cinq ans.</p>`,
+<p>Être propriétaire occupant (ou bailleur, sous engagement de louer ${h.num(h.P.maprimerenov.location_annees)} ans) ; un logement achevé depuis plus de ${h.num(h.P.maprimerenov.anciennete_logement_ans_pac)} ans pour une PAC ; un installateur RGE ; une demande déposée avant de commencer les travaux, sur france-renov.gouv.fr, site unique de dépôt de l’Anah depuis le 17 août 2026. Le montant total des aides MaPrimeRénov’ par geste est plafonné à ${h.eur(h.P.maprimerenov.plafond_cumul_5_ans)} par logement sur cinq ans.</p>`,
   },
   en: {
     slug: 'maprimerenov-income-ceilings',
@@ -105,6 +105,6 @@ ${parPersonne(h)}
 <h2>Pages by colour</h2>
 <p>Each colour has a page with the calculator set to a typical income and a three-person household: ${h.a('maprimerenov-bleu', 'blue')}, ${h.a('maprimerenov-jaune', 'yellow')}, ${h.a('maprimerenov-violet', 'purple')} and ${h.a('maprimerenov-rose', 'pink')}.</p>
 <h2>Other conditions</h2>
-<p>Being an owner-occupier (or a landlord, committing to let for ${h.num(h.P.maprimerenov.location_annees)} years); a home completed more than ${h.num(h.P.maprimerenov.anciennete_logement_ans_pac)} years ago for a heat pump; an RGE-certified installer; an application filed before work starts, on the Anah website. Total per-item MaPrimeRénov’ is capped at ${h.eur(h.P.maprimerenov.plafond_cumul_5_ans)} per home over five years.</p>`,
+<p>Being an owner-occupier (or a landlord, committing to let for ${h.num(h.P.maprimerenov.location_annees)} years); a home completed more than ${h.num(h.P.maprimerenov.anciennete_logement_ans_pac)} years ago for a heat pump; an RGE-certified installer; an application filed before work starts, on france-renov.gouv.fr, the Anah’s single application website since 17 August 2026. Total per-item MaPrimeRénov’ is capped at ${h.eur(h.P.maprimerenov.plafond_cumul_5_ans)} per home over five years.</p>`,
   },
 });

@@ -3,6 +3,7 @@ import { T, eur, num, type L } from './_kit';
 import { depOptions, depAt, depIndex, ISOS, isoOptions } from './_pac';
 import { besoinChauffage, scopDefaut } from '../engine/pac';
 import { P } from '../engine/params';
+import { formatDecimal } from '../format';
 import type { MiniSpec } from '../mini-types';
 
 export default (l: L): MiniSpec => ({
@@ -15,15 +16,15 @@ export default (l: L): MiniSpec => ({
   ],
   run: (v) => {
     const d = depAt(v.d), b = besoinChauffage(v.s, ISOS[v.i] ?? 'bonne', d.dju);
-    const gaz = (b / P.rendements.chaudiere_hypothese) * P.energie.gaz.kwh_ttc, pac = (b / scopDefaut('air_eau')) * P.energie.electricite.kwh_ttc;
+    const gaz = (b / P.rendements.chaudiere_defaut) * P.energie.gaz.kwh_ttc, pac = (b / scopDefaut('air_eau')) * P.energie.electricite.kwh_ttc;
     return {
       head: [T(l, 'Écart par an en faveur de la PAC', 'Yearly gap in favour of the heat pump'), eur(gaz - pac, l)],
       rows: [
-        [T(l, 'Chaudière gaz neuve (86 %)', 'New gas boiler (86%)'), eur(gaz, l)],
-        [T(l, 'PAC air/eau (SCOP 2,9)', 'Air-to-water heat pump (SCOP 2.9)'), eur(pac, l)],
+        [T(l, `Chaudière gaz neuve (${formatDecimal(P.rendements.chaudiere_defaut * 100, 0, l)} %)`, `New gas boiler (${formatDecimal(P.rendements.chaudiere_defaut * 100, 0, l)}%)`), eur(gaz, l)],
+        [T(l, `PAC air/eau (SCOP ${formatDecimal(scopDefaut('air_eau'), 1, l)})`, `Air-to-water heat pump (SCOP ${formatDecimal(scopDefaut('air_eau'), 1, l)})`), eur(pac, l)],
         [T(l, 'Chaleur nécessaire', 'Heat needed'), `${num(b, l)} kWh`],
       ],
-      note: T(l, 'Abonnement gaz non compté : le supprimer creuse l’écart.', 'Gas standing charge not counted: dropping it widens the gap.'),
+      note: T(l, 'Estimation : besoin calculé avec le coefficient d’isolation du site. Abonnement gaz non compté : le supprimer creuse l’écart.', 'Estimate: need worked out with the site’s insulation coefficient. Gas standing charge not counted: dropping it widens the gap.'),
     };
   },
 });

@@ -1,5 +1,5 @@
 {
-  "_lisezmoi": "Tous les paramètres du site vivent ici, jamais en dur dans le code (RECETTE-SITE.md §4). Chaque valeur a été relue sur la source citée dans `sources` ; les prix de l'énergie et des CEE sont réécrits par scripts/update-data.mjs. Les valeurs marquées « hypothese » sont des hypothèses de calcul affichées comme telles sur le site, modifiables par le visiteur.",
+  "_lisezmoi": "Tous les paramètres du site vivent ici, jamais en dur dans le code (RECETTE-SITE.md §4). Chaque valeur renvoie à une source de `sources` (champ `lu_le` = date de relecture). Les prix de l'énergie et des CEE sont réécrits par scripts/update-data.mjs. Les rares valeurs sans texte officiel portent le suffixe « _estimation » : elles sont affichées comme estimations sur le site, avec leur méthode, et chacune se remplace par la donnée du visiteur.",
   "year": 2026,
   "retrieved_at": "2026-10-22",
   "valid_from": "2026-09-01",
@@ -89,7 +89,10 @@
       },
       "sans_gaz_maison_depuis": "2026-09-01",
       "verifie_le": "2026-09-01"
-    }
+    },
+    "verifie_le_service_public": "2026-09-01",
+    "relu_le": "2026-10-22",
+    "_etat_2026_10_22": "Relu le 2026-10-22 sur service-public.gouv.fr (F35083, vérifiée le 1er septembre 2026) et france-renov.gouv.fr : parcours par geste ouvert aux PAC air/eau et géothermiques (forfaits et plafonds identiques), air/air exclue du parcours par geste ; plafonds de revenus 2026 identiques ; rénovation d'ampleur sans gaz conservé en maison depuis le 1er septembre 2026 ; demandes sur france-renov.gouv.fr depuis le 17 août 2026 (Anah)."
   },
   "ecretement": {
     "_source": "decret2020",
@@ -310,20 +313,34 @@
       "_source": "wob",
       "date": "2026-10-19",
       "eur_1000l_ttc": 1930.78,
-      "kwh_par_litre_hypothese": 10
+      "kwh_pci_par_litre": 10,
+      "_kwh_source": "baseCarbone",
+      "_kwh_note": "Base Carbone (ADEME), fioul domestique, France continentale : 3,25 kgCO2e/litre (élément 14087) ÷ 0,325 kgCO2e/kWh PCI (élément 14085) = 10,0 kWh PCI par litre ; lu le 2026-10-22"
     }
   },
   "rendements": {
-    "chaudiere_hypothese": 0.86,
+    "chaudiere_defaut": 0.86,
     "_chaudiere_source": "ecodesign",
+    "_chaudiere_note": "Règlement (UE) 813/2013, annexe II 1 a) : efficacité énergétique saisonnière d'au moins 86 % pour les chaudières à combustible ≤ 70 kW mises sur le marché depuis le 26 septembre 2015 ; relu le 2026-10-22. Valeur par défaut favorable à la chaudière : une chaudière ancienne fait moins bien, le visiteur peut saisir son rendement.",
     "radiateur_electrique": 1,
+    "_radiateur_source": "dpe3cl",
+    "_radiateur_note": "Méthode 3CL-DPE 2021, §12.4.1 : rendement de génération d'un générateur à effet joule direct = 1 ; relu le 2026-10-22",
     "scop": {
       "_source": "ademe",
       "air_eau": 2.9,
       "air_eau_min": 1.8,
       "air_eau_max": 4.5,
       "geo": 4.1,
-      "air_air_hypothese": 2.9
+      "geo_min": 2.4,
+      "geo_max": 7.5,
+      "_note": "Moyennes mesurées par l'ADEME sur 90 PAC air/eau (2,9 ; de 1,8 à 4,5) et 10 PAC géothermiques (4,1 ; de 2,4 à 7,5). Le 2026-10-22, la librairie ADEME était en maintenance : valeurs recoupées sur Techniques de l'Ingénieur (17 octobre 2025). Le ministère de l'Économie cite 4,3 pour les PAC eau/eau ; nous gardons 4,1, chiffre de l'avis.",
+      "air_air": {
+        "_source": "dpe3cl",
+        "_note": "Méthode 3CL-DPE 2021, §12.4.2 : SCOP par défaut d'une PAC air/air posée à partir de 2015, 3 en zones H1 et H2, 3,3 en zone H3 (valeur conventionnelle du DPE, pas une mesure) ; relu le 2026-10-22",
+        "H1": 3,
+        "H2": 3,
+        "H3": 3.3
+      }
     }
   },
   "climat": {
@@ -331,14 +348,18 @@
     "dju_base": 18,
     "periode": "2015-2024",
     "annee_recente": 2025,
-    "temperature_interieure_hypothese": 19,
-    "hauteur_sous_plafond_hypothese": 2.5,
-    "g_hypothese": {
+    "temperature_interieure": 19,
+    "_temperature_source": "dpe3cl",
+    "_temperature_note": "Méthode 3CL-DPE 2021, §9.1.1 : consigne conventionnelle de chauffage de 19 °C ; relu le 2026-10-22",
+    "hauteur_sous_plafond_estimation": 2.5,
+    "_hauteur_note": "Estimation : aucun texte ne fixe une hauteur type ; 2,5 m est la hauteur courante des logements récents. Le seul seuil réglementaire est un minimum (2,20 m, décret n° 2002-120, art. 4). Affichée comme estimation.",
+    "g_estimation": {
       "faible": 1.6,
       "moyenne": 1.1,
       "bonne": 0.75,
       "bbc": 0.5
-    }
+    },
+    "_g_note": "Estimation du site, non tirée d'un texte : le coefficient volumique G (W/m³·K) vient des réglementations thermiques de 1974-1982, qui n'existent plus ; les quatre valeurs sont des ordres de grandeur choisis par nous. Affichées comme estimations ; remplacées par la consommation réelle quand le visiteur la saisit."
   },
   "prix_installation": {
     "_source": "observatoire",
@@ -360,9 +381,10 @@
     },
     "geo": {
       "n": 0,
-      "depart_ttc": 18000,
-      "_note": "aucune source ouverte : on part du plafond de dépense MaPrimeRénov' (18 000 €), présenté comme tel"
-    }
+      "_note": "Aucune source ouverte ne publie de prix de PAC géothermique : 18 000 € est le plafond de dépense MaPrimeRénov' (spMpr), utilisé comme exemple de calcul et affiché comme tel, jamais comme un prix ; le visiteur saisit son devis.",
+      "exemple_ttc": 18000
+    },
+    "statut": "estimation : médiane d'un jeu de devis ouvert (non officiel), affichée comme telle ; relu sur data.gouv.fr le 2026-10-22 (fichier daté du 2026-08-07, 170 devis)"
   },
   "sources": {
     "spMpr": {
@@ -370,35 +392,40 @@
       "label": {
         "fr": "Service-Public.fr : MaPrimeRénov' (fiche F35083, vérifiée le 1er septembre 2026)",
         "en": "Service-Public.fr: MaPrimeRénov' (page F35083, checked 1 September 2026)"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "decret2020": {
       "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000041400291",
       "label": {
         "fr": "Décret n° 2020-26 du 14 janvier 2020 relatif à la prime de transition énergétique, art. 3 (version au 1er septembre 2026)",
         "en": "Decree 2020-26 of 14 January 2020 on the energy transition grant, art. 3 (version in force 1 September 2026)"
-      }
+      },
+      "_note": "Légifrance refuse les accès automatisés (403) le 2026-10-22 : texte non relu ce jour"
     },
     "bar171": {
       "url": "https://aida.ineris.fr/sites/default/files/2026-06/BAR-TH-171%20%2B%20annexes_20260529.pdf",
       "label": {
         "fr": "Fiche CEE BAR-TH-171 « Pompe à chaleur de type air/eau » v. A82.5 (arrêté du 29 mai 2026, JO du 30 mai 2026)",
         "en": "CEE sheet BAR-TH-171 “Air-to-water heat pump” v. A82.5 (order of 29 May 2026, Official Journal of 30 May 2026)"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "bar172": {
       "url": "https://aida.ineris.fr/sites/default/files/2026-06/BAR-TH-172%20%2B%20annexes_20260529.pdf",
       "label": {
         "fr": "Fiche CEE BAR-TH-172 « Pompe à chaleur de type eau/eau ou eau glycolée/eau » v. A82.5",
         "en": "CEE sheet BAR-TH-172 “Water-to-water or brine-to-water heat pump” v. A82.5"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "coupDePouce": {
       "url": "https://aida.ineris.fr/reglementation/arrete-290526-modifiant-larrete-22-decembre-2014-definissant-operations",
       "label": {
         "fr": "Arrêté du 29 mai 2026 : Coup de pouce Chauffage, coefficient 5 et agrément du modèle de PAC (décret n° 2026-413)",
         "en": "Order of 29 May 2026: Coup de pouce Chauffage, ×5 coefficient and heat pump model approval (decree 2026-413)"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "coupDePouce2025": {
       "url": "https://aida.ineris.fr/reglementation/arrete-060925-portant-modification-fiches-doperations-standardisees-dispositif",
@@ -412,7 +439,8 @@
       "label": {
         "fr": "Registre national des CEE (Emmy) : prix moyens mensuels des transactions",
         "en": "National CEE registry (Emmy): average monthly transaction prices"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "plf2027": {
       "url": "https://www.budget.gouv.fr/documentation/file-download/34516",
@@ -426,28 +454,32 @@
       "label": {
         "fr": "Service-Public.fr Entreprendre : taux de TVA des travaux dans les logements (F23568)",
         "en": "Service-Public.fr: VAT rates for work on homes (F23568)"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "ecoPtz": {
       "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F19905",
       "label": {
         "fr": "Service-Public.fr : éco-prêt à taux zéro (F19905)",
         "en": "Service-Public.fr: zero-rate eco-loan (F19905)"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "cre": {
       "url": "https://www.data.gouv.fr/datasets/historique-des-tarifs-reglementes-de-vente-delectricite-pour-les-consommateurs-residentiels",
       "label": {
         "fr": "CRE : historique des tarifs réglementés de vente d'électricité (data.gouv.fr)",
         "en": "CRE: history of regulated electricity tariffs (data.gouv.fr)"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "eurostatGaz": {
       "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_202/default/table",
       "label": {
         "fr": "Eurostat nrg_pc_202 : prix du gaz pour les ménages, France, toutes taxes comprises",
         "en": "Eurostat nrg_pc_202: gas prices for household consumers, France, all taxes included"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "wob": {
       "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en",
@@ -461,14 +493,17 @@
       "label": {
         "fr": "ADEME : avis sur les performances réelles des pompes à chaleur (octobre 2025, mesures sur 100 PAC)",
         "en": "ADEME: opinion on the real-world performance of heat pumps (October 2025, 100 measured units)"
-      }
+      },
+      "lu_le": "2026-10-22",
+      "_note": "librairie ADEME en maintenance le 2026-10-22 ; chiffres recoupés sur une source secondaire (voir rendements.scop._note)"
     },
     "observatoire": {
       "url": "https://www.data.gouv.fr/datasets/observatoire-des-devis-de-pompe-a-chaleur-residentielle-en-france-2026",
       "label": {
         "fr": "Observatoire ScoreSolaire des devis de pompe à chaleur (data.gouv.fr, CC BY 4.0, 7 août 2026)",
         "en": "ScoreSolaire heat pump quote observatory (data.gouv.fr, CC BY 4.0, 7 August 2026)"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "meteo": {
       "url": "https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes",
@@ -489,21 +524,48 @@
       "label": {
         "fr": "Arrêté du 26 octobre 2010, annexe I : zones climatiques H1, H2, H3 par département",
         "en": "Order of 26 October 2010, annex I: climate zones H1, H2, H3 by département"
-      }
+      },
+      "_note": "Légifrance refuse les accès automatisés (403) le 2026-10-22 : texte non relu ce jour"
     },
     "ecodesign": {
-      "url": "https://eur-lex.europa.eu/eli/reg/2013/813/oj",
+      "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32013R0813",
       "label": {
         "fr": "Règlement (UE) n° 813/2013, annexe II : efficacité saisonnière minimale de 86 % des chaudières neuves depuis 2015",
         "en": "Regulation (EU) 813/2013, annex II: 86% minimum seasonal efficiency of new boilers since 2015"
-      }
+      },
+      "lu_le": "2026-10-22"
     },
     "franceRenov": {
       "url": "https://france-renov.gouv.fr/",
       "label": {
         "fr": "France Rénov' : simulateur officiel et conseillers publics gratuits",
         "en": "France Rénov': official simulator and free public advisers"
-      }
+      },
+      "lu_le": "2026-10-22"
+    },
+    "dpe3cl": {
+      "url": "https://rt-re-batiment.developpement-durable.gouv.fr/IMG/pdf/consolide_annexe_1_arrete_du_31_03_2021_relatif_aux_methodes_et_procedures_applicables.pdf",
+      "label": {
+        "fr": "Ministère de la Transition écologique : méthode de calcul 3CL-DPE 2021 (annexe 1 de l'arrêté du 31 mars 2021, version consolidée)",
+        "en": "Ministry for the Ecological Transition: 3CL-DPE 2021 calculation method (annex 1 to the order of 31 March 2021, consolidated)"
+      },
+      "lu_le": "2026-10-22"
+    },
+    "baseCarbone": {
+      "url": "https://data.ademe.fr/datasets/base-carboner",
+      "label": {
+        "fr": "ADEME : Base Carbone, facteurs du fioul domestique par litre et par kWh PCI (éléments 14085 et 14087)",
+        "en": "ADEME: Base Carbone, heating oil factors per litre and per kWh (net calorific value), items 14085 and 14087"
+      },
+      "lu_le": "2026-10-22"
+    },
+    "anahFranceRenov": {
+      "url": "https://www.anah.gouv.fr/actualites/france-renov-est-desormais-le-point-d-entree-unique-pour-toutes-les-demandes-d-aide-la",
+      "label": {
+        "fr": "Anah : depuis le 17 août 2026, les demandes de MaPrimeRénov' se font sur france-renov.gouv.fr",
+        "en": "Anah: since 17 August 2026, MaPrimeRénov' applications are made on france-renov.gouv.fr"
+      },
+      "lu_le": "2026-10-22"
     }
   }
 }

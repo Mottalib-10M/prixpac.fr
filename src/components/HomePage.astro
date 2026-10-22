@@ -53,9 +53,9 @@ const plf = route('maprimerenov-pompe-a-chaleur', lang);
     <div class="rounded-lg border border-navy-200 p-4"><p class="text-sm text-navy-600">{fr ? 'Prime CEE Coup de pouce, maison 100 m² (H2)' : 'CEE Coup de pouce bonus, 100 m² house (H2)'}</p><p class="tabular-nums text-2xl font-bold text-navy-900">{eur(c100.eur)}</p><p class="text-sm text-navy-700">{fr ? `${formatNumber(c100.kwhc, 0, lang)} kWh cumac au prix Emmy` : `${formatNumber(c100.kwhc, 0, lang)} kWh cumac at the Emmy price`}</p></div>
   </div>
   <section class="mt-6 rounded-lg bg-accent-50 px-4 py-3 text-navy-800">
-    <p><strong>{fr ? 'Ce site fait mieux que le premier résultat Google parce qu’il' : 'This site does better than the top Google result because it'}</strong> {fr
-      ? 'chiffre en une minute, sans coordonnées, le prix, MaPrimeRénov’ 2026, la prime CEE en kWh cumac officiels, le reste à charge et l’économie annuelle d’une pompe à chaleur avec le climat réel de votre département (DJU Météo-France), là où le premier résultat donne une fourchette nationale et renvoie vers un devis.'
-      : 'works out in a minute, with no contact details, the price, the 2026 MaPrimeRénov’ grant, the CEE bonus in official kWh cumac, the out-of-pocket cost and the yearly saving of a heat pump with your département’s real climate (Météo-France degree days), where the top result gives a national range and sends you to a quote form.'}</p>
+    <p><strong>{fr ? 'Ce site' : 'This site'}</strong> {fr
+      ? 'chiffre en une minute, sans coordonnées, le prix, MaPrimeRénov’ 2026, la prime CEE en kWh cumac officiels, le reste à charge et l’économie annuelle d’une pompe à chaleur avec le climat réel de votre département (DJU Météo-France).'
+      : 'works out in a minute, with no contact details, the price, the 2026 MaPrimeRénov’ grant, the CEE bonus in official kWh cumac, the out-of-pocket cost and the yearly saving of a heat pump with your département’s real climate (Météo-France degree days).'}</p>
   </section>
   <Clamp text={resume} lang={lang} id="clamp-home" sentences={2} class="mt-5" />
   <p class="mt-3 text-sm text-navy-600">{fr ? 'Par' : 'By'} <a href={route('about', lang)} class="underline">{AUTHOR_NAME}</a> · <a href={route('method', lang)} class="underline">{fr ? 'Méthode et sources' : 'Method and sources'}</a> · {fr ? 'données relues le' : 'data reread on'} <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, tag)}</time> · {fr ? `exemple par défaut : ${eur(ex.resteACharge)} de reste à charge` : `default example: ${eur(ex.resteACharge)} out of pocket`}</p>

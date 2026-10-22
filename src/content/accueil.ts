@@ -72,7 +72,7 @@ ${troisClimats(h)}
 <h2>Ce qui change peut-être en 2027</h2>
 <p>L’annexe du projet de loi de finances pour 2027 consacrée à la rénovation énergétique annonce que « les gestes prioritaires de décarbonation, notamment les pompes à chaleur, seront uniquement financés par les certificats d’économie d’énergie ». Si le Parlement suit, la PAC n’aurait plus de MaPrimeRénov’ à partir de 2027, seulement la prime CEE. Ce n’est pas voté au ${h.date(P.retrieved_at)} : nous l’annonçons comme un projet, et la page ${h.a('maprimerenov-pompe-a-chaleur', 'MaPrimeRénov’ pompe à chaleur')} chiffre la différence pour chaque catégorie de revenus.</p>
 <h2>Qui fait ce site</h2>
-<p>Ce site fait mieux que le premier résultat Google parce qu’il chiffre en une minute, sans coordonnées, le prix, MaPrimeRénov’ 2026, la prime CEE en kWh cumac officiels, le reste à charge et l’économie annuelle d’une pompe à chaleur avec le climat réel de votre département, là où le premier résultat donne une fourchette nationale et renvoie vers un devis. Il est édité par Radif Partners, sans lien avec un installateur, un fournisseur d’énergie ou l’Anah, présenté sur la page ${h.a('about', 'À propos')}. Chaque chiffre a sa source, listée dans la ${h.a('method', 'méthode')}.</p>`;
+<p>Ce site chiffre en une minute, sans coordonnées, le prix, MaPrimeRénov’ 2026, la prime CEE en kWh cumac officiels, le reste à charge et l’économie annuelle d’une pompe à chaleur avec le climat réel de votre département. Il est édité par Radif Partners, sans lien avec un installateur, un fournisseur d’énergie ou l’Anah, présenté sur la page ${h.a('about', 'À propos')}. Chaque chiffre a sa source, listée dans la ${h.a('method', 'méthode')}.</p>`;
     },
   },
   en: {
@@ -124,7 +124,7 @@ ${troisClimats(h)}
 <h2>What may change in 2027</h2>
 <p>The annex to the 2027 draft budget on energy renovation states that “priority decarbonisation works, in particular heat pumps, will be funded solely by energy-savings certificates”. If Parliament agrees, heat pumps would get no MaPrimeRénov’ from 2027, only the CEE bonus. It has not been voted as of ${h.date(P.retrieved_at)}: we present it as a plan, and the ${h.a('maprimerenov-pompe-a-chaleur', 'MaPrimeRénov’ heat pump page')} works out the difference for each income category.</p>
 <h2>Who makes this site</h2>
-<p>This site does better than the top Google result because it works out in a minute, with no contact details, the price, the 2026 MaPrimeRénov’ grant, the CEE bonus in official kWh cumac, the out-of-pocket cost and the yearly saving of a heat pump with your département’s real climate, where the top result gives a national range and sends you to a quote form. It is published by Radif Partners, with no link to any installer, energy supplier or the Anah, introduced on the ${h.a('about', 'About page')}. Every figure has its source, listed in the ${h.a('method', 'method')}.</p>`;
+<p>This site works out in a minute, with no contact details, the price, the 2026 MaPrimeRénov’ grant, the CEE bonus in official kWh cumac, the out-of-pocket cost and the yearly saving of a heat pump with your département’s real climate. It is published by Radif Partners, with no link to any installer, energy supplier or the Anah, introduced on the ${h.a('about', 'About page')}. Every figure has its source, listed in the ${h.a('method', 'method')}.</p>`;
     },
   },
 };

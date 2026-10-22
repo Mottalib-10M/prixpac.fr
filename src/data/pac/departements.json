@@ -1,0 +1,9896 @@
+[
+{
+"code": "01",
+"nom": "Ain",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Bourg-en-Bresse",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Ceyzeriat_Sapc",
+"stationAlt": 260,
+"dju": 2357,
+"dju2025": 2247,
+"tbase": -2.7,
+"tbaseStation": "Ceyzeriat_Sapc",
+"stationKm": 3.1,
+"stations": [
+{
+"n": "Amberieu",
+"a": 250,
+"d": 2308,
+"t": -2.6
+},
+{
+"n": "Arbent",
+"a": 534,
+"d": 2861,
+"t": -4.7
+},
+{
+"n": "Balan_Aero",
+"a": 196,
+"d": 2243,
+"t": -2.1
+},
+{
+"n": "Belley",
+"a": 330,
+"d": 2305,
+"t": -1.7
+},
+{
+"n": "Cessy",
+"a": 507,
+"d": 2624,
+"t": -3.0
+},
+{
+"n": "Ceyzeriat_Sapc",
+"a": 260,
+"d": 2357,
+"t": -2.7
+},
+{
+"n": "Divonne Za",
+"a": 467,
+"d": 2651,
+"t": -3.0
+},
+{
+"n": "La Balme Sur Cerdon_Sapc",
+"a": 596,
+"d": 2694,
+"t": -2.8
+},
+{
+"n": "Marlieux",
+"a": 277,
+"d": 2258,
+"t": -2.1
+},
+{
+"n": "Saint Julien Sur Reyssouze",
+"a": 189,
+"d": 2235,
+"t": -2.4
+},
+{
+"n": "Sutrieu",
+"a": 878,
+"d": 3069,
+"t": -4.3
+},
+{
+"n": "Verizieu",
+"a": 281,
+"d": 2284,
+"t": -2.6
+}
+]
+},
+{
+"code": "02",
+"nom": "Aisne",
+"region": "Hauts-de-France",
+"chefLieu": "Laon",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Aulnois-Ss-Laon",
+"stationAlt": 78,
+"dju": 2449,
+"dju2025": 2354,
+"tbase": -2.1,
+"tbaseStation": "Aulnois-Ss-Laon",
+"stationKm": 2.7,
+"stations": [
+{
+"n": "Aulnois-Ss-Laon",
+"a": 78,
+"d": 2449,
+"t": -2.1
+},
+{
+"n": "Blesmes",
+"a": 222,
+"d": 2581,
+"t": -2.3
+},
+{
+"n": "Braine",
+"a": 61,
+"d": 2358,
+"t": -1.9
+},
+{
+"n": "Chauny",
+"a": 83,
+"d": 2417,
+"t": -2.0
+},
+{
+"n": "Fontaine-Les-Vv",
+"a": 186,
+"d": 2612,
+"t": -2.3
+},
+{
+"n": "Nizy-Le-Comte",
+"a": 90,
+"d": 2576,
+"t": -2.6
+},
+{
+"n": "St Quentin",
+"a": 98,
+"d": 2516,
+"t": -2.3
+}
+]
+},
+{
+"code": "03",
+"nom": "Allier",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Moulins",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Yzeure",
+"stationAlt": 242,
+"dju": 2299,
+"dju2025": 2221,
+"tbase": -2.0,
+"tbaseStation": "Yzeure",
+"stationKm": 3.1,
+"stations": [
+{
+"n": "Bourbon_Sapc",
+"a": 270,
+"d": 2243,
+"t": -1.8
+},
+{
+"n": "Chareil-Cintrat_Sapc",
+"a": 286,
+"d": 2272,
+"t": -1.7
+},
+{
+"n": "Charmes_Sapc",
+"a": 330,
+"d": 2261,
+"t": -2.1
+},
+{
+"n": "Diou",
+"a": 220,
+"d": 2255,
+"t": -1.9
+},
+{
+"n": "Durdat-Larequille",
+"a": 500,
+"d": 2518,
+"t": -2.5
+},
+{
+"n": "Echassieres_Sapc",
+"a": 650,
+"d": 2667,
+"t": -3.3
+},
+{
+"n": "Isle-Et-Bardais",
+"a": 262,
+"d": 2274,
+"t": -1.9
+},
+{
+"n": "Lurcy-Levis Sa",
+"a": 225,
+"d": 2337,
+"t": -1.7
+},
+{
+"n": "Montbeugny",
+"a": 275,
+"d": 2325,
+"t": -2.0
+},
+{
+"n": "Montlucon",
+"a": 229,
+"d": 2278,
+"t": -1.8
+},
+{
+"n": "Paray-Sous-Briailles",
+"a": 245,
+"d": 2279,
+"t": -1.7
+},
+{
+"n": "Saint Didier_Sapc",
+"a": 293,
+"d": 2393,
+"t": -2.4
+},
+{
+"n": "St-Leon",
+"a": 376,
+"d": 2337,
+"t": -2.5
+},
+{
+"n": "St-Nicolas",
+"a": 1022,
+"d": 3381,
+"t": -6.0
+},
+{
+"n": "Tortezais_Sapc",
+"a": 256,
+"d": 2286,
+"t": -1.7
+},
+{
+"n": "Vichy-Charmeil",
+"a": 249,
+"d": 2305,
+"t": -1.8
+},
+{
+"n": "Vichy-Ville",
+"a": 255,
+"d": 2127,
+"t": -1.3
+},
+{
+"n": "Yzeure",
+"a": 242,
+"d": 2299,
+"t": -2.0
+}
+]
+},
+{
+"code": "04",
+"nom": "Alpes-de-Haute-Provence",
+"region": "Provence-Alpes-Côte d'Azur",
+"chefLieu": "Digne-les-Bains",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Digne Les Bains",
+"stationAlt": 554,
+"dju": 2278,
+"dju2025": 2172,
+"tbase": -0.8,
+"tbaseStation": "Digne Les Bains",
+"stationKm": 5.7,
+"stations": [
+{
+"n": "Allos_Sapc",
+"a": 1400,
+"d": 3401,
+"t": -5.2
+},
+{
+"n": "Barcelonnette",
+"a": 1155,
+"d": 3470,
+"t": -7.1
+},
+{
+"n": "Castellane",
+"a": 729,
+"d": 2662,
+"t": -2.2
+},
+{
+"n": "Dauphin",
+"a": 427,
+"d": 2161,
+"t": -0.1
+},
+{
+"n": "Digne Les Bains",
+"a": 554,
+"d": 2278,
+"t": -0.8
+},
+{
+"n": "Jausiers-St Anne",
+"a": 1240,
+"d": 2987,
+"t": -5.6
+},
+{
+"n": "La Motte Du Caire",
+"a": 665,
+"d": 2794,
+"t": -3.6
+},
+{
+"n": "La Mure-Argens",
+"a": 920,
+"d": 2885,
+"t": -3.4
+},
+{
+"n": "Meailles_Sapc",
+"a": 1090,
+"d": 2527,
+"t": -1.4
+},
+{
+"n": "Montclar_Sapc",
+"a": 1197,
+"d": 3087,
+"t": -4.6
+},
+{
+"n": "Restefond-Nivose",
+"a": 2550,
+"d": 5800,
+"t": -13.5
+},
+{
+"n": "Sisteron",
+"a": 500,
+"d": 2322,
+"t": -1.3
+},
+{
+"n": "St Auban",
+"a": 458,
+"d": 1951,
+"t": 1.2
+},
+{
+"n": "St Jurs",
+"a": 867,
+"d": 2215,
+"t": -0.8
+},
+{
+"n": "Turriers",
+"a": 1020,
+"d": 2715,
+"t": -3.5
+},
+{
+"n": "Valensole",
+"a": 600,
+"d": 1979,
+"t": 0.9
+}
+]
+},
+{
+"code": "05",
+"nom": "Hautes-Alpes",
+"region": "Provence-Alpes-Côte d'Azur",
+"chefLieu": "Gap",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Gap",
+"stationAlt": 885,
+"dju": 2465,
+"dju2025": 2322,
+"tbase": -2.4,
+"tbaseStation": "Gap",
+"stationKm": 1.5,
+"stations": [
+{
+"n": "Arvieux",
+"a": 1825,
+"d": 4060,
+"t": -7.9
+},
+{
+"n": "Arvieux La Chalp",
+"a": 1690,
+"d": 4069,
+"t": -8.1
+},
+{
+"n": "Ceillac",
+"a": 1665,
+"d": 3945,
+"t": -7.1
+},
+{
+"n": "Ceillac_Nivo",
+"a": 1665,
+"d": 3921,
+"t": -7.5
+},
+{
+"n": "Chapelle-En-Valgaudemar",
+"a": 1270,
+"d": 3645,
+"t": -6.7
+},
+{
+"n": "Col Agnel-Nivose",
+"a": 2627,
+"d": 6051,
+"t": -14.5
+},
+{
+"n": "Embrun",
+"a": 873,
+"d": 2533,
+"t": -2.7
+},
+{
+"n": "Galibier-Nivose",
+"a": 2559,
+"d": 5914,
+"t": -13.1
+},
+{
+"n": "Gap",
+"a": 885,
+"d": 2465,
+"t": -2.4
+},
+{
+"n": "La Faurie",
+"a": 825,
+"d": 2965,
+"t": -4.2
+},
+{
+"n": "Laragne Monteglin",
+"a": 565,
+"d": 2417,
+"t": -2.0
+},
+{
+"n": "Le Monetier Les Bains",
+"a": 1459,
+"d": 3829,
+"t": -7.7
+},
+{
+"n": "Le Saix",
+"a": 801,
+"d": 2836,
+"t": -4.7
+},
+{
+"n": "Les Orres",
+"a": 1457,
+"d": 3599,
+"t": -6.4
+},
+{
+"n": "Les Portes En Valgaudemar_Nivo",
+"a": 1270,
+"d": 3624,
+"t": -7.3
+},
+{
+"n": "Orcieres-Nivose",
+"a": 2280,
+"d": 5278,
+"t": -11.5
+},
+{
+"n": "Parpaillon-Nivose",
+"a": 2545,
+"d": 5867,
+"t": -13.2
+},
+{
+"n": "Ristolas",
+"a": 1670,
+"d": 4458,
+"t": -9.7
+},
+{
+"n": "Rosans",
+"a": 625,
+"d": 2299,
+"t": -1.3
+},
+{
+"n": "St Crepin",
+"a": 906,
+"d": 2934,
+"t": -5.3
+},
+{
+"n": "St Etienne-En-Devoluy",
+"a": 1300,
+"d": 3693,
+"t": -7.6
+},
+{
+"n": "St Firmin",
+"a": 935,
+"d": 2984,
+"t": -4.5
+},
+{
+"n": "St Jean-St-Nicolas",
+"a": 1210,
+"d": 3190,
+"t": -5.5
+},
+{
+"n": "St Veran",
+"a": 1992,
+"d": 4223,
+"t": -8.4
+},
+{
+"n": "Tallard",
+"a": 593,
+"d": 2490,
+"t": -2.7
+},
+{
+"n": "Villar D'Arene",
+"a": 1665,
+"d": 4417,
+"t": -10.5
+},
+{
+"n": "Villar Loubiere",
+"a": 1072,
+"d": 3252,
+"t": -7.1
+},
+{
+"n": "Villar St Pancrace",
+"a": 1310,
+"d": 3269,
+"t": -5.5
+}
+]
+},
+{
+"code": "06",
+"nom": "Alpes-Maritimes",
+"region": "Provence-Alpes-Côte d'Azur",
+"chefLieu": "Nice",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Nice-Rimiez",
+"stationAlt": 238,
+"dju": 1370,
+"dju2025": 1279,
+"tbase": 5.2,
+"tbaseStation": "Nice-Rimiez",
+"stationKm": 4.5,
+"stations": [
+{
+"n": "Antibes_Sapc",
+"a": 32,
+"d": 1286,
+"t": 5.4
+},
+{
+"n": "Ascros",
+"a": 1173,
+"d": 2477,
+"t": -1.1
+},
+{
+"n": "Cannes",
+"a": 2,
+"d": 1265,
+"t": 5.3
+},
+{
+"n": "Carros_Sapc",
+"a": 78,
+"d": 1271,
+"t": 5.2
+},
+{
+"n": "Caussols",
+"a": 1268,
+"d": 2877,
+"t": -2.7
+},
+{
+"n": "Chateauneuf Grasse",
+"a": 379,
+"d": 1489,
+"t": 4.3
+},
+{
+"n": "Coursegoules_Sapc",
+"a": 985,
+"d": 2356,
+"t": 0.0
+},
+{
+"n": "Eze",
+"a": 704,
+"d": 1842,
+"t": 2.6
+},
+{
+"n": "Lantosque_Sapc",
+"a": 550,
+"d": 1751,
+"t": 2.7
+},
+{
+"n": "Le Mas",
+"a": 1525,
+"d": 3121,
+"t": -4.2
+},
+{
+"n": "Levens",
+"a": 691,
+"d": 2026,
+"t": 1.6
+},
+{
+"n": "Mandelieu La Napoule_Sapc",
+"a": 104,
+"d": 1253,
+"t": 5.1
+},
+{
+"n": "Menton",
+"a": 216,
+"d": 994,
+"t": 6.6
+},
+{
+"n": "Millefonts-Nivose",
+"a": 2430,
+"d": 5322,
+"t": -11.5
+},
+{
+"n": "Nice",
+"a": 2,
+"d": 1117,
+"t": 6.7
+},
+{
+"n": "Nice-Rimiez",
+"a": 238,
+"d": 1370,
+"t": 5.2
+},
+{
+"n": "Pegomas",
+"a": 109,
+"d": 1251,
+"t": 5.3
+},
+{
+"n": "Peille",
+"a": 1106,
+"d": 2567,
+"t": -0.9
+},
+{
+"n": "Peira Cava",
+"a": 1443,
+"d": 2975,
+"t": -3.3
+},
+{
+"n": "Peone",
+"a": 1784,
+"d": 3465,
+"t": -5.6
+},
+{
+"n": "Puget Theniers_Sapc",
+"a": 449,
+"d": 1932,
+"t": 1.2
+},
+{
+"n": "Rimplas_Sapc",
+"a": 1130,
+"d": 2302,
+"t": -0.4
+},
+{
+"n": "Sospel",
+"a": 843,
+"d": 1950,
+"t": 1.4
+},
+{
+"n": "St Cezaire Sur Siagne",
+"a": 694,
+"d": 1918,
+"t": 1.9
+},
+{
+"n": "St Etienne De Tinee_Sapc",
+"a": 1150,
+"d": 2707,
+"t": -2.4
+},
+{
+"n": "St Martin D'Entraunes_Sapc",
+"a": 1642,
+"d": 3134,
+"t": -4.4
+},
+{
+"n": "Tende_Sapc",
+"a": 636,
+"d": 2214,
+"t": 0.8
+},
+{
+"n": "Valbonne-Sophia",
+"a": 238,
+"d": 1205,
+"t": 5.5
+}
+]
+},
+{
+"code": "07",
+"nom": "Ardèche",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Privas",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Chomerac Sa_Rce",
+"stationAlt": 216,
+"dju": 1952,
+"dju2025": 1845,
+"tbase": 0.2,
+"tbaseStation": "Chomerac Sa_Rce",
+"stationKm": 4.9,
+"stations": [
+{
+"n": "Alba La Romaine",
+"a": 223,
+"d": 1869,
+"t": 0.8
+},
+{
+"n": "Annonay",
+"a": 336,
+"d": 2214,
+"t": -1.0
+},
+{
+"n": "Aubenas Sa",
+"a": 176,
+"d": 1845,
+"t": 1.3
+},
+{
+"n": "Barnas Rad",
+"a": 480,
+"d": 2167,
+"t": -0.6
+},
+{
+"n": "Berzeme Rad",
+"a": 665,
+"d": 2379,
+"t": -1.7
+},
+{
+"n": "Cheylard Sa",
+"a": 418,
+"d": 2250,
+"t": -0.8
+},
+{
+"n": "Chomerac Sa_Rce",
+"a": 216,
+"d": 1952,
+"t": 0.2
+},
+{
+"n": "Colombier Jeune Rad",
+"a": 566,
+"d": 2353,
+"t": -2.3
+},
+{
+"n": "Croix Millet",
+"a": 779,
+"d": 2452,
+"t": -2.0
+},
+{
+"n": "Cros Georand",
+"a": 1021,
+"d": 3335,
+"t": -5.3
+},
+{
+"n": "Gluiras Rad",
+"a": 760,
+"d": 2517,
+"t": -2.7
+},
+{
+"n": "Grospierres",
+"a": 127,
+"d": 1815,
+"t": 0.6
+},
+{
+"n": "Issanlas",
+"a": 1215,
+"d": 3671,
+"t": -6.9
+},
+{
+"n": "Issanlas_Sapc",
+"a": 1264,
+"d": 3715,
+"t": -7.1
+},
+{
+"n": "Lablachere",
+"a": 295,
+"d": 1868,
+"t": 0.6
+},
+{
+"n": "Lalouvesc",
+"a": 1090,
+"d": 3322,
+"t": -5.5
+},
+{
+"n": "Lanas Syn",
+"a": 265,
+"d": 1868,
+"t": 0.8
+},
+{
+"n": "Les Vans-Sa",
+"a": 140,
+"d": 1910,
+"t": 0.6
+},
+{
+"n": "Loubaresse",
+"a": 1200,
+"d": 3337,
+"t": -5.7
+},
+{
+"n": "Mazan Abbaye Rad",
+"a": 1240,
+"d": 3657,
+"t": -7.0
+},
+{
+"n": "Mirabel Sa",
+"a": 275,
+"d": 1894,
+"t": 0.9
+},
+{
+"n": "Montpezat Sa",
+"a": 602,
+"d": 2133,
+"t": -0.6
+},
+{
+"n": "Orgnac Aven",
+"a": 230,
+"d": 1710,
+"t": 1.5
+},
+{
+"n": "Peaugres Rad",
+"a": 480,
+"d": 2243,
+"t": -1.7
+},
+{
+"n": "Sablieres Oara",
+"a": 540,
+"d": 1760,
+"t": 1.3
+},
+{
+"n": "St-Agreve Rad",
+"a": 1014,
+"d": 3226,
+"t": -5.5
+},
+{
+"n": "St-Etienne Lugdares",
+"a": 1022,
+"d": 3358,
+"t": -5.2
+},
+{
+"n": "St-Laurent Pape",
+"a": 112,
+"d": 1967,
+"t": 0.1
+},
+{
+"n": "St-Marcel Annonay",
+"a": 494,
+"d": 2414,
+"t": -2.3
+},
+{
+"n": "St-Pierreville",
+"a": 560,
+"d": 2364,
+"t": -1.5
+},
+{
+"n": "Vallon Sa",
+"a": 120,
+"d": 1899,
+"t": 0.6
+},
+{
+"n": "Vals-Les-Bains",
+"a": 283,
+"d": 1870,
+"t": 1.2
+},
+{
+"n": "Vernoux",
+"a": 561,
+"d": 2473,
+"t": -1.6
+}
+]
+},
+{
+"code": "08",
+"nom": "Ardennes",
+"region": "Grand Est",
+"chefLieu": "Charleville-Mézières",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Charleville-Mez",
+"stationAlt": 145,
+"dju": 2731,
+"dju2025": 2662,
+"tbase": -2.8,
+"tbaseStation": "Charleville-Mez",
+"stationKm": 6.3,
+"stations": [
+{
+"n": "Banogne-Recouvrance",
+"a": 130,
+"d": 2481,
+"t": -2.2
+},
+{
+"n": "Buzancy_Sapc",
+"a": 199,
+"d": 2585,
+"t": -2.6
+},
+{
+"n": "Charleville-Mez",
+"a": 145,
+"d": 2731,
+"t": -2.8
+},
+{
+"n": "Douzy",
+"a": 153,
+"d": 2691,
+"t": -3.0
+},
+{
+"n": "Ham-Sur-Meuse",
+"a": 109,
+"d": 2413,
+"t": -2.3
+},
+{
+"n": "Juniville",
+"a": 90,
+"d": 2528,
+"t": -2.3
+},
+{
+"n": "Launois-Sur-Vence_Sapc",
+"a": 218,
+"d": 2710,
+"t": -2.8
+},
+{
+"n": "Linay",
+"a": 177,
+"d": 2609,
+"t": -3.3
+},
+{
+"n": "Montcheutin_Sapc",
+"a": 142,
+"d": 2547,
+"t": -2.5
+},
+{
+"n": "Rancennes",
+"a": 162,
+"d": 2588,
+"t": -3.4
+},
+{
+"n": "Rocroi",
+"a": 382,
+"d": 2921,
+"t": -3.3
+},
+{
+"n": "Saulces-Champenoises",
+"a": 147,
+"d": 2522,
+"t": -2.5
+},
+{
+"n": "Signy-Le-Petit_Sapc",
+"a": 309,
+"d": 2793,
+"t": -3.0
+}
+]
+},
+{
+"code": "09",
+"nom": "Ariège",
+"region": "Occitanie",
+"chefLieu": "Foix",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Cos",
+"stationAlt": 519,
+"dju": 2092,
+"dju2025": 2013,
+"tbase": -0.0,
+"tbaseStation": "Cos",
+"stationKm": 3.6,
+"stations": [
+{
+"n": "Ascou Lavail",
+"a": 1090,
+"d": 2983,
+"t": -4.0
+},
+{
+"n": "Aston",
+"a": 1781,
+"d": 4045,
+"t": -8.3
+},
+{
+"n": "Cerizols",
+"a": 374,
+"d": 2112,
+"t": 0.1
+},
+{
+"n": "Cos",
+"a": 519,
+"d": 2092,
+"t": -0.0
+},
+{
+"n": "Le Mas D Azil",
+"a": 292,
+"d": 1911,
+"t": 0.5
+},
+{
+"n": "Leran",
+"a": 391,
+"d": 2093,
+"t": 0.2
+},
+{
+"n": "Montaut",
+"a": 295,
+"d": 1800,
+"t": 0.6
+},
+{
+"n": "Pamiers Ville",
+"a": 283,
+"d": 1645,
+"t": 1.3
+},
+{
+"n": "Port D'Aula-Nivose",
+"a": 2140,
+"d": 4906,
+"t": -9.5
+},
+{
+"n": "St Girons",
+"a": 414,
+"d": 2021,
+"t": 0.3
+}
+]
+},
+{
+"code": "10",
+"nom": "Aube",
+"region": "Grand Est",
+"chefLieu": "Troyes",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Troyes-Barberey",
+"stationAlt": 112,
+"dju": 2394,
+"dju2025": 2374,
+"tbase": -2.5,
+"tbaseStation": "Troyes-Barberey",
+"stationKm": 5.5,
+"stations": [
+{
+"n": "Ailleville_Sapc",
+"a": 195,
+"d": 2375,
+"t": -2.5
+},
+{
+"n": "Bouy-Sur-Orvin",
+"a": 102,
+"d": 2351,
+"t": -1.9
+},
+{
+"n": "Celles-Sur-Ource",
+"a": 275,
+"d": 2442,
+"t": -2.9
+},
+{
+"n": "Chessy-Les-Pres_Sapc",
+"a": 119,
+"d": 2421,
+"t": -2.4
+},
+{
+"n": "Cunfin_Sapc",
+"a": 315,
+"d": 2513,
+"t": -3.1
+},
+{
+"n": "Dosnon",
+"a": 115,
+"d": 2472,
+"t": -2.6
+},
+{
+"n": "Mathaux-Etape",
+"a": 145,
+"d": 2350,
+"t": -2.4
+},
+{
+"n": "Mesnil-St-Pere",
+"a": 142,
+"d": 2358,
+"t": -2.3
+},
+{
+"n": "Metz-Robert_Sapc",
+"a": 140,
+"d": 2474,
+"t": -2.8
+},
+{
+"n": "Romilly",
+"a": 77,
+"d": 2401,
+"t": -2.2
+},
+{
+"n": "St-Mards",
+"a": 227,
+"d": 2417,
+"t": -2.7
+},
+{
+"n": "Troyes-Barberey",
+"a": 112,
+"d": 2394,
+"t": -2.5
+}
+]
+},
+{
+"code": "11",
+"nom": "Aude",
+"region": "Occitanie",
+"chefLieu": "Carcassonne",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Carcassonne",
+"stationAlt": 128,
+"dju": 1605,
+"dju2025": 1454,
+"tbase": 1.7,
+"tbaseStation": "Carcassonne",
+"stationKm": 4.4,
+"stations": [
+{
+"n": "Alaigne",
+"a": 293,
+"d": 1705,
+"t": 1.1
+},
+{
+"n": "Argeliers",
+"a": 31,
+"d": 1343,
+"t": 3.2
+},
+{
+"n": "Arquettes-En-Val",
+"a": 240,
+"d": 1617,
+"t": 1.9
+},
+{
+"n": "Belcaire",
+"a": 980,
+"d": 2866,
+"t": -3.3
+},
+{
+"n": "Carcassonne",
+"a": 128,
+"d": 1605,
+"t": 1.7
+},
+{
+"n": "Castelnaudary",
+"a": 160,
+"d": 1644,
+"t": 1.2
+},
+{
+"n": "Caunes-Minervois",
+"a": 371,
+"d": 1725,
+"t": 1.1
+},
+{
+"n": "Durban-Corbieres",
+"a": 120,
+"d": 1450,
+"t": 2.9
+},
+{
+"n": "Fanjeaux_Sapc",
+"a": 182,
+"d": 1672,
+"t": 1.3
+},
+{
+"n": "Granes",
+"a": 420,
+"d": 1790,
+"t": 1.1
+},
+{
+"n": "Labecede Lauragais_Sapc",
+"a": 408,
+"d": 1914,
+"t": 0.1
+},
+{
+"n": "Les Martys",
+"a": 760,
+"d": 2747,
+"t": -2.5
+},
+{
+"n": "Leucate",
+"a": 42,
+"d": 1212,
+"t": 4.4
+},
+{
+"n": "Lezignan-Corbieres",
+"a": 60,
+"d": 1445,
+"t": 2.9
+},
+{
+"n": "Limoux",
+"a": 230,
+"d": 1739,
+"t": 1.3
+},
+{
+"n": "Mouthoumet",
+"a": 538,
+"d": 2036,
+"t": -0.1
+},
+{
+"n": "Narbonne",
+"a": 110,
+"d": 1374,
+"t": 3.1
+},
+{
+"n": "Villardebelle_Sapc",
+"a": 593,
+"d": 2266,
+"t": -0.8
+}
+]
+},
+{
+"code": "12",
+"nom": "Aveyron",
+"region": "Occitanie",
+"chefLieu": "Rodez",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Rodez-Aveyron",
+"stationAlt": 578,
+"dju": 2512,
+"dju2025": 2407,
+"tbase": -2.1,
+"tbaseStation": "Rodez-Aveyron",
+"stationKm": 9.0,
+"stations": [
+{
+"n": "Alpuech",
+"a": 1107,
+"d": 3408,
+"t": -5.9
+},
+{
+"n": "Aurelle-Verlac_Sapc",
+"a": 1076,
+"d": 3106,
+"t": -5.0
+},
+{
+"n": "Belcastel",
+"a": 444,
+"d": 2311,
+"t": -0.7
+},
+{
+"n": "Brusque_Sapc",
+"a": 858,
+"d": 2547,
+"t": -2.5
+},
+{
+"n": "Canet-De-Salars_Sapc",
+"a": 860,
+"d": 2842,
+"t": -3.4
+},
+{
+"n": "Colombies",
+"a": 647,
+"d": 2387,
+"t": -1.8
+},
+{
+"n": "Cornus",
+"a": 718,
+"d": 2819,
+"t": -2.7
+},
+{
+"n": "Durenque_Sapc",
+"a": 812,
+"d": 2707,
+"t": -2.8
+},
+{
+"n": "Entraygues Sur",
+"a": 292,
+"d": 1999,
+"t": 0.2
+},
+{
+"n": "Millau",
+"a": 712,
+"d": 2450,
+"t": -2.1
+},
+{
+"n": "Millau-Larzac_Sapc",
+"a": 794,
+"d": 2814,
+"t": -3.1
+},
+{
+"n": "Monteils",
+"a": 268,
+"d": 2090,
+"t": -0.8
+},
+{
+"n": "Montlaur",
+"a": 374,
+"d": 2162,
+"t": -0.9
+},
+{
+"n": "Peux-Et-Couffouleux_Sapc",
+"a": 830,
+"d": 2576,
+"t": -2.5
+},
+{
+"n": "Pradinas_Sapc",
+"a": 564,
+"d": 2262,
+"t": -1.2
+},
+{
+"n": "Rodez-Aveyron",
+"a": 578,
+"d": 2512,
+"t": -2.1
+},
+{
+"n": "Salles Curan",
+"a": 959,
+"d": 2973,
+"t": -4.0
+},
+{
+"n": "St-Come-D'Olt",
+"a": 380,
+"d": 2142,
+"t": -0.6
+},
+{
+"n": "Villefranche-De-Rouergue",
+"a": 330,
+"d": 2071,
+"t": -0.4
+}
+]
+},
+{
+"code": "13",
+"nom": "Bouches-du-Rhône",
+"region": "Provence-Alpes-Côte d'Azur",
+"chefLieu": "Marseille",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Marseille",
+"stationAlt": 192,
+"dju": 1370,
+"dju2025": 1240,
+"tbase": 4.1,
+"tbaseStation": "Marseille",
+"stationKm": 8.6,
+"stations": [
+{
+"n": "Aix En Provence",
+"a": 173,
+"d": 1578,
+"t": 2.4
+},
+{
+"n": "Arles",
+"a": 1,
+"d": 1449,
+"t": 2.8
+},
+{
+"n": "Aubagne",
+"a": 130,
+"d": 1514,
+"t": 3.6
+},
+{
+"n": "Cassis",
+"a": 212,
+"d": 1404,
+"t": 4.1
+},
+{
+"n": "Eyragues",
+"a": 17,
+"d": 1544,
+"t": 2.2
+},
+{
+"n": "Istres",
+"a": 23,
+"d": 1383,
+"t": 3.2
+},
+{
+"n": "La Destrousse_Sapc",
+"a": 201,
+"d": 1689,
+"t": 2.4
+},
+{
+"n": "Marignane",
+"a": 6,
+"d": 1375,
+"t": 3.1
+},
+{
+"n": "Marseille",
+"a": 192,
+"d": 1370,
+"t": 4.1
+},
+{
+"n": "Mimet",
+"a": 416,
+"d": 1877,
+"t": 0.8
+},
+{
+"n": "Peyrolles En Provence",
+"a": 217,
+"d": 1799,
+"t": 1.4
+},
+{
+"n": "Salon De Provence",
+"a": 58,
+"d": 1597,
+"t": 2.3
+},
+{
+"n": "St Cannat",
+"a": 249,
+"d": 1827,
+"t": 1.1
+},
+{
+"n": "Trets",
+"a": 264,
+"d": 1702,
+"t": 2.0
+},
+{
+"n": "Vauvenargues",
+"a": 565,
+"d": 2111,
+"t": 0.3
+}
+]
+},
+{
+"code": "14",
+"nom": "Calvados",
+"region": "Normandie",
+"chefLieu": "Caen",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Caen-Carpiquet",
+"stationAlt": 67,
+"dju": 2298,
+"dju2025": 2227,
+"tbase": -0.6,
+"tbaseStation": "Caen-Carpiquet",
+"stationKm": 6.1,
+"stations": [
+{
+"n": "Bayeux",
+"a": 60,
+"d": 2175,
+"t": 0.2
+},
+{
+"n": "Bernieres",
+"a": 2,
+"d": 2201,
+"t": 0.4
+},
+{
+"n": "Caen-Carpiquet",
+"a": 67,
+"d": 2298,
+"t": -0.6
+},
+{
+"n": "Damblainville",
+"a": 155,
+"d": 2269,
+"t": -1.3
+},
+{
+"n": "Englesqueville",
+"a": 38,
+"d": 2176,
+"t": 0.9
+},
+{
+"n": "L Oudon Lieury_Sapc",
+"a": 52,
+"d": 2358,
+"t": -1.3
+},
+{
+"n": "Lassy_Sapc",
+"a": 223,
+"d": 2470,
+"t": -1.1
+},
+{
+"n": "Legast_Sapc",
+"a": 336,
+"d": 2605,
+"t": -1.4
+},
+{
+"n": "Lisieux_Sapc",
+"a": 62,
+"d": 2215,
+"t": -0.6
+},
+{
+"n": "Livry",
+"a": 194,
+"d": 2308,
+"t": -1.0
+},
+{
+"n": "Pierrefitte Cin_Sapc",
+"a": 187,
+"d": 2429,
+"t": -1.3
+},
+{
+"n": "Saint Michel De",
+"a": 140,
+"d": 2290,
+"t": -1.1
+},
+{
+"n": "St Gatien Des B",
+"a": 139,
+"d": 2412,
+"t": -1.0
+},
+{
+"n": "St Sylvain_Sapc",
+"a": 62,
+"d": 2293,
+"t": -1.0
+},
+{
+"n": "Vire Hippodrome",
+"a": 100,
+"d": 2344,
+"t": -0.7
+}
+]
+},
+{
+"code": "15",
+"nom": "Cantal",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Aurillac",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Aurillac - Vill",
+"stationAlt": 707,
+"dju": 2507,
+"dju2025": 2348,
+"tbase": -2.3,
+"tbaseStation": "Aurillac - Vill",
+"stationKm": 0.9,
+"stations": [
+{
+"n": "Aurillac",
+"a": 632,
+"d": 2644,
+"t": -2.6
+},
+{
+"n": "Aurillac - Vill",
+"a": 707,
+"d": 2507,
+"t": -2.3
+},
+{
+"n": "Coltines",
+"a": 979,
+"d": 3473,
+"t": -5.8
+},
+{
+"n": "Deux-Verges",
+"a": 1080,
+"d": 3381,
+"t": -5.9
+},
+{
+"n": "Le Claux",
+"a": 1033,
+"d": 3218,
+"t": -4.9
+},
+{
+"n": "Le Lioran_Sapc",
+"a": 1236,
+"d": 3756,
+"t": -6.7
+},
+{
+"n": "Marcenat",
+"a": 1075,
+"d": 3454,
+"t": -5.9
+},
+{
+"n": "Marmanhac",
+"a": 644,
+"d": 2664,
+"t": -3.1
+},
+{
+"n": "Massiac",
+"a": 533,
+"d": 2472,
+"t": -2.2
+},
+{
+"n": "Mauriac",
+"a": 674,
+"d": 2618,
+"t": -2.5
+},
+{
+"n": "Maurs",
+"a": 480,
+"d": 2203,
+"t": -1.0
+},
+{
+"n": "Prat De Bouc",
+"a": 1405,
+"d": 3960,
+"t": -7.2
+},
+{
+"n": "Riom-Montagnes",
+"a": 837,
+"d": 2918,
+"t": -3.7
+},
+{
+"n": "Saignes",
+"a": 533,
+"d": 2500,
+"t": -1.5
+},
+{
+"n": "Senezergues",
+"a": 530,
+"d": 2171,
+"t": -0.8
+},
+{
+"n": "St Flour",
+"a": 909,
+"d": 3117,
+"t": -4.6
+},
+{
+"n": "St- Poncy_Sapc",
+"a": 805,
+"d": 3019,
+"t": -4.3
+}
+]
+},
+{
+"code": "16",
+"nom": "Charente",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Angoulême",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "La Couronne",
+"stationAlt": 58,
+"dju": 1881,
+"dju2025": 1750,
+"tbase": 0.9,
+"tbaseStation": "La Couronne",
+"stationKm": 4.0,
+"stations": [
+{
+"n": "Angouleme - Brie - Champniers",
+"a": 124,
+"d": 1895,
+"t": 0.6
+},
+{
+"n": "Cognac",
+"a": 30,
+"d": 1754,
+"t": 1.0
+},
+{
+"n": "La Couronne",
+"a": 58,
+"d": 1881,
+"t": 0.9
+},
+{
+"n": "Le Vieux Cerier_Sapc",
+"a": 162,
+"d": 2092,
+"t": -0.0
+},
+{
+"n": "Montemboeuf",
+"a": 247,
+"d": 2010,
+"t": 0.1
+},
+{
+"n": "Passirac",
+"a": 114,
+"d": 1967,
+"t": 0.2
+},
+{
+"n": "Rioux Martin",
+"a": 81,
+"d": 1891,
+"t": 0.6
+},
+{
+"n": "Saulgond_Sapc",
+"a": 228,
+"d": 2103,
+"t": -0.2
+},
+{
+"n": "Segonzac_Sapc",
+"a": 62,
+"d": 1766,
+"t": 0.8
+},
+{
+"n": "Tusson",
+"a": 88,
+"d": 2050,
+"t": 0.3
+}
+]
+},
+{
+"code": "17",
+"nom": "Charente-Maritime",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "La Rochelle",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "La Rochelle-Ile De Re",
+"stationAlt": 20,
+"dju": 1734,
+"dju2025": 1656,
+"tbase": 0.9,
+"tbaseStation": "La Rochelle-Ile De Re",
+"stationKm": 2.2,
+"stations": [
+{
+"n": "Chassiron",
+"a": 11,
+"d": 1581,
+"t": 2.6
+},
+{
+"n": "Chateau D'Oleron",
+"a": 3,
+"d": 1591,
+"t": 2.6
+},
+{
+"n": "La Rochelle-Ile De Re",
+"a": 20,
+"d": 1734,
+"t": 0.9
+},
+{
+"n": "Marans",
+"a": 2,
+"d": 1798,
+"t": 1.0
+},
+{
+"n": "Matha",
+"a": 38,
+"d": 1850,
+"t": 1.0
+},
+{
+"n": "Montlieu_Sapc",
+"a": 89,
+"d": 1869,
+"t": 0.8
+},
+{
+"n": "Mortagne-Sur-Gironde_Sapc",
+"a": 37,
+"d": 1582,
+"t": 1.8
+},
+{
+"n": "Nuaille Sur Boutonne",
+"a": 36,
+"d": 1894,
+"t": 0.6
+},
+{
+"n": "Royan-Medis",
+"a": 12,
+"d": 1710,
+"t": 1.3
+},
+{
+"n": "Saintes",
+"a": 38,
+"d": 1766,
+"t": 1.0
+},
+{
+"n": "St Agnant",
+"a": 18,
+"d": 1757,
+"t": 1.1
+},
+{
+"n": "St Germain De Lusignan",
+"a": 71,
+"d": 1786,
+"t": 0.7
+},
+{
+"n": "St-Laurent Pree-Inrae",
+"a": 3,
+"d": 1801,
+"t": 1.0
+},
+{
+"n": "Villiers_Sapc",
+"a": 106,
+"d": 2017,
+"t": 0.5
+}
+]
+},
+{
+"code": "18",
+"nom": "Cher",
+"region": "Centre-Val de Loire",
+"chefLieu": "Bourges",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Bourges",
+"stationAlt": 161,
+"dju": 2178,
+"dju2025": 2107,
+"tbase": -1.3,
+"tbaseStation": "Bourges",
+"stationKm": 3.6,
+"stations": [
+{
+"n": "Aubigny-Sur-Nere",
+"a": 176,
+"d": 2300,
+"t": -1.7
+},
+{
+"n": "Avord",
+"a": 175,
+"d": 2216,
+"t": -1.5
+},
+{
+"n": "Bourges",
+"a": 161,
+"d": 2178,
+"t": -1.3
+},
+{
+"n": "Chapelle-D'Ang_Sapc",
+"a": 190,
+"d": 2398,
+"t": -1.5
+},
+{
+"n": "Chateaumeillant",
+"a": 243,
+"d": 2241,
+"t": -1.8
+},
+{
+"n": "Dun",
+"a": 160,
+"d": 2213,
+"t": -1.4
+},
+{
+"n": "Gracay",
+"a": 108,
+"d": 2210,
+"t": -0.9
+},
+{
+"n": "Henrichemont",
+"a": 377,
+"d": 2425,
+"t": -2.5
+},
+{
+"n": "Lere",
+"a": 139,
+"d": 2339,
+"t": -1.8
+},
+{
+"n": "Orval Rad",
+"a": 165,
+"d": 2172,
+"t": -1.3
+},
+{
+"n": "Ourouer",
+"a": 221,
+"d": 2244,
+"t": -1.7
+},
+{
+"n": "Preveranges",
+"a": 462,
+"d": 2459,
+"t": -2.3
+},
+{
+"n": "Sancoins",
+"a": 203,
+"d": 2223,
+"t": -1.6
+},
+{
+"n": "St-Martin-D'A.",
+"a": 172,
+"d": 2139,
+"t": -1.1
+},
+{
+"n": "Vierzon - Veves",
+"a": 98,
+"d": 2177,
+"t": -1.3
+}
+]
+},
+{
+"code": "19",
+"nom": "Corrèze",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Tulle",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Tulle",
+"stationAlt": 235,
+"dju": 2134,
+"dju2025": 1932,
+"tbase": 0.2,
+"tbaseStation": "Tulle",
+"stationKm": 3.5,
+"stations": [
+{
+"n": "Argentat",
+"a": 190,
+"d": 2050,
+"t": 0.2
+},
+{
+"n": "Brive",
+"a": 115,
+"d": 1902,
+"t": 0.5
+},
+{
+"n": "Brive-Souillac",
+"a": 295,
+"d": 2126,
+"t": -0.5
+},
+{
+"n": "Bugeat",
+"a": 694,
+"d": 2968,
+"t": -3.3
+},
+{
+"n": "Camps",
+"a": 519,
+"d": 2501,
+"t": -1.6
+},
+{
+"n": "Egletons",
+"a": 610,
+"d": 2617,
+"t": -2.1
+},
+{
+"n": "Lubersac",
+"a": 390,
+"d": 2321,
+"t": -0.8
+},
+{
+"n": "Marcillac",
+"a": 598,
+"d": 2568,
+"t": -2.0
+},
+{
+"n": "Meymac",
+"a": 670,
+"d": 2842,
+"t": -3.0
+},
+{
+"n": "Peyrelevade",
+"a": 827,
+"d": 3036,
+"t": -4.1
+},
+{
+"n": "St-Privat",
+"a": 585,
+"d": 2632,
+"t": -2.0
+},
+{
+"n": "Tulle",
+"a": 235,
+"d": 2134,
+"t": 0.2
+},
+{
+"n": "Ussel-Lamartine",
+"a": 654,
+"d": 2763,
+"t": -2.3
+},
+{
+"n": "Ussel-Thalamy",
+"a": 740,
+"d": 3011,
+"t": -3.6
+},
+{
+"n": "Uzerche",
+"a": 422,
+"d": 2187,
+"t": -0.6
+},
+{
+"n": "Voutezac",
+"a": 124,
+"d": 2157,
+"t": -0.2
+}
+]
+},
+{
+"code": "21",
+"nom": "Côte-d'Or",
+"region": "Bourgogne-Franche-Comté",
+"chefLieu": "Dijon",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Dijon Toison",
+"stationAlt": 270,
+"dju": 2406,
+"dju2025": 2363,
+"tbase": -2.6,
+"tbaseStation": "Dijon Toison",
+"stationKm": 3.1,
+"stations": [
+{
+"n": "Arnay_Sapc",
+"a": 396,
+"d": 2658,
+"t": -3.2
+},
+{
+"n": "Bessey",
+"a": 593,
+"d": 2804,
+"t": -4.1
+},
+{
+"n": "Bure Les Templiers_Sapc",
+"a": 461,
+"d": 2715,
+"t": -4.0
+},
+{
+"n": "Chatillon/Seine",
+"a": 262,
+"d": 2560,
+"t": -3.4
+},
+{
+"n": "Dijon Toison",
+"a": 270,
+"d": 2406,
+"t": -2.6
+},
+{
+"n": "Dijon-Longvic",
+"a": 219,
+"d": 2430,
+"t": -2.8
+},
+{
+"n": "Jours Les Baigneux_Sapc",
+"a": 392,
+"d": 2620,
+"t": -3.7
+},
+{
+"n": "La Rochepot",
+"a": 417,
+"d": 2718,
+"t": -3.7
+},
+{
+"n": "Montbard_Sapc",
+"a": 209,
+"d": 2374,
+"t": -1.9
+},
+{
+"n": "Pagny-Le-Chateau",
+"a": 182,
+"d": 2349,
+"t": -2.2
+},
+{
+"n": "Pouilly En Aux_Sapc",
+"a": 412,
+"d": 2600,
+"t": -3.0
+},
+{
+"n": "Saulieu",
+"a": 586,
+"d": 2838,
+"t": -4.2
+},
+{
+"n": "Savigny Les Bea",
+"a": 246,
+"d": 2418,
+"t": -2.5
+},
+{
+"n": "Semur En Auxois_Sapc",
+"a": 314,
+"d": 2541,
+"t": -2.7
+},
+{
+"n": "St-Martin-Du-M",
+"a": 578,
+"d": 2846,
+"t": -4.4
+},
+{
+"n": "Thorey Sous Charny_Sapc",
+"a": 421,
+"d": 2562,
+"t": -3.0
+},
+{
+"n": "Til-Chatel_Sapc",
+"a": 283,
+"d": 2666,
+"t": -3.4
+}
+]
+},
+{
+"code": "22",
+"nom": "Côtes-d'Armor",
+"region": "Bretagne",
+"chefLieu": "Saint-Brieuc",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "St Brieuc",
+"stationAlt": 135,
+"dju": 2230,
+"dju2025": 2158,
+"tbase": 1.0,
+"tbaseStation": "St Brieuc",
+"stationKm": 7.0,
+"stations": [
+{
+"n": "Belle-Isle-En-Terre",
+"a": 158,
+"d": 2286,
+"t": 0.8
+},
+{
+"n": "Caulnes-Edf",
+"a": 75,
+"d": 2145,
+"t": -0.1
+},
+{
+"n": "Caurel-Edf",
+"a": 150,
+"d": 2267,
+"t": 0.6
+},
+{
+"n": "Collinee-Edf",
+"a": 201,
+"d": 2399,
+"t": -0.5
+},
+{
+"n": "Kerpert",
+"a": 281,
+"d": 2473,
+"t": 0.1
+},
+{
+"n": "Lanleff",
+"a": 78,
+"d": 2180,
+"t": 1.6
+},
+{
+"n": "Lannion_Aero",
+"a": 85,
+"d": 2197,
+"t": 1.8
+},
+{
+"n": "Lanrelas-Edf",
+"a": 112,
+"d": 2229,
+"t": -0.1
+},
+{
+"n": "Mael-Pestivien-Edf",
+"a": 257,
+"d": 2598,
+"t": -0.2
+},
+{
+"n": "Merdrignac",
+"a": 145,
+"d": 2244,
+"t": 0.2
+},
+{
+"n": "Plouguenast",
+"a": 235,
+"d": 2397,
+"t": -0.2
+},
+{
+"n": "Ploumanac'H",
+"a": 55,
+"d": 1929,
+"t": 3.2
+},
+{
+"n": "Pommerit-Jaudy",
+"a": 55,
+"d": 2063,
+"t": 2.0
+},
+{
+"n": "Quintenic",
+"a": 71,
+"d": 2198,
+"t": 0.6
+},
+{
+"n": "Rostrenen",
+"a": 236,
+"d": 2360,
+"t": 0.3
+},
+{
+"n": "Saint-Cast-Le-G",
+"a": 35,
+"d": 1921,
+"t": 2.0
+},
+{
+"n": "St Brieuc",
+"a": 135,
+"d": 2230,
+"t": 1.0
+},
+{
+"n": "St-Gilles-Pligeaux-Edf",
+"a": 266,
+"d": 2500,
+"t": -0.0
+}
+]
+},
+{
+"code": "23",
+"nom": "Creuse",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Guéret",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Gueret-St Laurent",
+"stationAlt": 365,
+"dju": 2491,
+"dju2025": 2393,
+"tbase": -2.1,
+"tbaseStation": "Gueret-St Laurent",
+"stationKm": 6.4,
+"stations": [
+{
+"n": "Aubusson_Sapc",
+"a": 486,
+"d": 2696,
+"t": -2.5
+},
+{
+"n": "Auzances_Sapc",
+"a": 564,
+"d": 2718,
+"t": -2.8
+},
+{
+"n": "Benevent_Sapc",
+"a": 460,
+"d": 2383,
+"t": -1.4
+},
+{
+"n": "Bourganeuf",
+"a": 513,
+"d": 2539,
+"t": -1.8
+},
+{
+"n": "Boussac_Sapc",
+"a": 380,
+"d": 2529,
+"t": -2.0
+},
+{
+"n": "Felletin",
+"a": 635,
+"d": 2644,
+"t": -2.8
+},
+{
+"n": "Genouillac",
+"a": 306,
+"d": 2426,
+"t": -1.4
+},
+{
+"n": "Gueret-St Laurent",
+"a": 365,
+"d": 2491,
+"t": -2.1
+},
+{
+"n": "La Courtine",
+"a": 772,
+"d": 3094,
+"t": -4.1
+},
+{
+"n": "La Souterraine",
+"a": 370,
+"d": 2309,
+"t": -1.1
+},
+{
+"n": "Lupersat_Sapc",
+"a": 610,
+"d": 2603,
+"t": -2.7
+},
+{
+"n": "Pontarion_Sapc",
+"a": 455,
+"d": 2627,
+"t": -2.0
+},
+{
+"n": "Saint-Loup_Sapc",
+"a": 440,
+"d": 2515,
+"t": -2.3
+}
+]
+},
+{
+"code": "24",
+"nom": "Dordogne",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Périgueux",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Coulounieix",
+"stationAlt": 217,
+"dju": 1934,
+"dju2025": 1795,
+"tbase": 0.4,
+"tbaseStation": "Coulounieix",
+"stationKm": 4.6,
+"stations": [
+{
+"n": "Belves",
+"a": 238,
+"d": 1902,
+"t": 0.4
+},
+{
+"n": "Bergerac",
+"a": 49,
+"d": 1898,
+"t": 0.2
+},
+{
+"n": "Coulounieix",
+"a": 217,
+"d": 1934,
+"t": 0.4
+},
+{
+"n": "Les Eyzies De Tayac",
+"a": 112,
+"d": 2053,
+"t": -1.4
+},
+{
+"n": "Salignac-Eyvigues",
+"a": 276,
+"d": 1977,
+"t": 0.3
+},
+{
+"n": "St Martial Viveyrols",
+"a": 166,
+"d": 1818,
+"t": 0.7
+},
+{
+"n": "St Martin  De Fressengeas",
+"a": 277,
+"d": 2138,
+"t": 0.1
+},
+{
+"n": "Thenon",
+"a": 265,
+"d": 2015,
+"t": 0.3
+}
+]
+},
+{
+"code": "25",
+"nom": "Doubs",
+"region": "Bourgogne-Franche-Comté",
+"chefLieu": "Besançon",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Besancon",
+"stationAlt": 306,
+"dju": 2408,
+"dju2025": 2311,
+"tbase": -2.7,
+"tbaseStation": "Besancon",
+"stationKm": 2.2,
+"stations": [
+{
+"n": "Arc-Et-Senans",
+"a": 235,
+"d": 2368,
+"t": -2.7
+},
+{
+"n": "Besancon",
+"a": 306,
+"d": 2408,
+"t": -2.7
+},
+{
+"n": "Branne_Sapc",
+"a": 287,
+"d": 2571,
+"t": -3.3
+},
+{
+"n": "Charquemont",
+"a": 884,
+"d": 3405,
+"t": -6.2
+},
+{
+"n": "Coulans",
+"a": 468,
+"d": 2710,
+"t": -3.9
+},
+{
+"n": "Epenoy",
+"a": 752,
+"d": 3070,
+"t": -5.0
+},
+{
+"n": "Grand'Combe-Chateleu_Sapc",
+"a": 769,
+"d": 3424,
+"t": -8.0
+},
+{
+"n": "La Boissaude Rochejean",
+"a": 1222,
+"d": 3936,
+"t": -7.7
+},
+{
+"n": "Labergement",
+"a": 863,
+"d": 3448,
+"t": -6.6
+},
+{
+"n": "Le Russey",
+"a": 891,
+"d": 3392,
+"t": -6.7
+},
+{
+"n": "Levier_Sapc",
+"a": 713,
+"d": 3237,
+"t": -5.9
+},
+{
+"n": "Maiche",
+"a": 825,
+"d": 3507,
+"t": -7.3
+},
+{
+"n": "Mediere",
+"a": 302,
+"d": 2493,
+"t": -3.2
+},
+{
+"n": "Mouthe",
+"a": 940,
+"d": 3803,
+"t": -8.3
+},
+{
+"n": "Pierrefontaine",
+"a": 695,
+"d": 3238,
+"t": -6.4
+},
+{
+"n": "Pontarlier",
+"a": 808,
+"d": 3133,
+"t": -5.6
+},
+{
+"n": "Sancey-Le-Grand",
+"a": 490,
+"d": 2807,
+"t": -4.5
+}
+]
+},
+{
+"code": "26",
+"nom": "Drôme",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Valence",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Valence-Chabeui",
+"stationAlt": 163,
+"dju": 1977,
+"dju2025": 1869,
+"tbase": -0.0,
+"tbaseStation": "Valence-Chabeui",
+"stationKm": 4.5,
+"stations": [
+{
+"n": "Albon",
+"a": 153,
+"d": 2048,
+"t": -0.3
+},
+{
+"n": "Beaufort-S-Gerv",
+"a": 379,
+"d": 2061,
+"t": -1.0
+},
+{
+"n": "Bellegarde-En-D",
+"a": 1017,
+"d": 2659,
+"t": -2.8
+},
+{
+"n": "Besignan",
+"a": 556,
+"d": 2148,
+"t": -0.2
+},
+{
+"n": "Bourdeaux",
+"a": 432,
+"d": 2310,
+"t": -1.6
+},
+{
+"n": "Chapelle-En-Vercors_Sapc",
+"a": 879,
+"d": 2940,
+"t": -4.3
+},
+{
+"n": "Die",
+"a": 384,
+"d": 2308,
+"t": -1.4
+},
+{
+"n": "Donzere",
+"a": 66,
+"d": 1684,
+"t": 1.8
+},
+{
+"n": "Etoile",
+"a": 145,
+"d": 1893,
+"t": 0.3
+},
+{
+"n": "Glandage_Sapc",
+"a": 1007,
+"d": 2870,
+"t": -3.8
+},
+{
+"n": "Lus L Croix Hte",
+"a": 1059,
+"d": 3105,
+"t": -4.7
+},
+{
+"n": "Mercurol",
+"a": 153,
+"d": 1930,
+"t": 0.5
+},
+{
+"n": "Montelimar",
+"a": 73,
+"d": 1754,
+"t": 1.5
+},
+{
+"n": "Montsegur-S-Lau",
+"a": 146,
+"d": 1720,
+"t": 1.5
+},
+{
+"n": "Puy-St-Martin",
+"a": 211,
+"d": 1823,
+"t": 0.4
+},
+{
+"n": "Rochefort-Samson_Sapc",
+"a": 368,
+"d": 2197,
+"t": -1.3
+},
+{
+"n": "Romans_Sapc",
+"a": 156,
+"d": 1993,
+"t": 0.0
+},
+{
+"n": "Sederon",
+"a": 804,
+"d": 2916,
+"t": -3.3
+},
+{
+"n": "St Roman-Diois",
+"a": 545,
+"d": 2254,
+"t": -1.4
+},
+{
+"n": "St Sauveur En Diois",
+"a": 338,
+"d": 2129,
+"t": -1.3
+},
+{
+"n": "St-Auban-Sur-Ouveze",
+"a": 625,
+"d": 2430,
+"t": -1.1
+},
+{
+"n": "St-Barthelemy-V_Sapc",
+"a": 203,
+"d": 2054,
+"t": -0.2
+},
+{
+"n": "St-Christophe-L_Sapc",
+"a": 452,
+"d": 2285,
+"t": -2.0
+},
+{
+"n": "St-Jean-En-Roya",
+"a": 308,
+"d": 2187,
+"t": -1.2
+},
+{
+"n": "St-Marcel-Les-V-Inrae",
+"a": 190,
+"d": 1957,
+"t": 0.1
+},
+{
+"n": "St-Sorlin-En-Va",
+"a": 237,
+"d": 2048,
+"t": -0.7
+},
+{
+"n": "Valdrome",
+"a": 786,
+"d": 2916,
+"t": -3.9
+},
+{
+"n": "Valence-Chabeui",
+"a": 163,
+"d": 1977,
+"t": -0.0
+},
+{
+"n": "Vinsobres",
+"a": 346,
+"d": 1692,
+"t": 1.3
+}
+]
+},
+{
+"code": "27",
+"nom": "Eure",
+"region": "Normandie",
+"chefLieu": "Évreux",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Guichainville",
+"stationAlt": 147,
+"dju": 2414,
+"dju2025": 2318,
+"tbase": -2.0,
+"tbaseStation": "Guichainville",
+"stationKm": 5.4,
+"stations": [
+{
+"n": "Bernay",
+"a": 166,
+"d": 2497,
+"t": -1.6
+},
+{
+"n": "Boulleville",
+"a": 122,
+"d": 2366,
+"t": -0.9
+},
+{
+"n": "Breteuil",
+"a": 168,
+"d": 2434,
+"t": -1.7
+},
+{
+"n": "Evreux-Huest",
+"a": 138,
+"d": 2393,
+"t": -1.8
+},
+{
+"n": "Guichainville",
+"a": 147,
+"d": 2414,
+"t": -2.0
+},
+{
+"n": "Les Andelys",
+"a": 16,
+"d": 2287,
+"t": -1.2
+},
+{
+"n": "Muids",
+"a": 31,
+"d": 2224,
+"t": -1.0
+}
+]
+},
+{
+"code": "28",
+"nom": "Eure-et-Loir",
+"region": "Centre-Val de Loire",
+"chefLieu": "Chartres",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Chartres",
+"stationAlt": 155,
+"dju": 2332,
+"dju2025": 2304,
+"tbase": -1.6,
+"tbaseStation": "Chartres",
+"stationKm": 1.4,
+"stations": [
+{
+"n": "Bu_Sapc",
+"a": 132,
+"d": 2374,
+"t": -1.5
+},
+{
+"n": "Chapelle-Guillaume_Sapc",
+"a": 197,
+"d": 2515,
+"t": -2.0
+},
+{
+"n": "Chartres",
+"a": 155,
+"d": 2332,
+"t": -1.6
+},
+{
+"n": "Chateaudun",
+"a": 126,
+"d": 2403,
+"t": -1.9
+},
+{
+"n": "Houx",
+"a": 107,
+"d": 2433,
+"t": -1.5
+},
+{
+"n": "La Loupe_Sapc",
+"a": 200,
+"d": 2460,
+"t": -1.7
+},
+{
+"n": "Laons",
+"a": 171,
+"d": 2498,
+"t": -1.9
+},
+{
+"n": "Marville_Sapc",
+"a": 153,
+"d": 2403,
+"t": -1.7
+},
+{
+"n": "Rueil",
+"a": 157,
+"d": 2573,
+"t": -2.5
+},
+{
+"n": "Sainville",
+"a": 149,
+"d": 2374,
+"t": -1.6
+},
+{
+"n": "Senonches",
+"a": 239,
+"d": 2592,
+"t": -2.0
+},
+{
+"n": "Sours_Sapc",
+"a": 147,
+"d": 2366,
+"t": -1.5
+},
+{
+"n": "Thimert",
+"a": 225,
+"d": 2470,
+"t": -2.1
+},
+{
+"n": "Vicheres",
+"a": 235,
+"d": 2447,
+"t": -1.9
+}
+]
+},
+{
+"code": "29",
+"nom": "Finistère",
+"region": "Bretagne",
+"chefLieu": "Quimper",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Quimper",
+"stationAlt": 82,
+"dju": 2069,
+"dju2025": 1944,
+"tbase": 1.7,
+"tbaseStation": "Quimper",
+"stationKm": 5.5,
+"stations": [
+{
+"n": "Batz",
+"a": 32,
+"d": 1913,
+"t": 4.3
+},
+{
+"n": "Brennilis",
+"a": 220,
+"d": 2410,
+"t": 1.0
+},
+{
+"n": "Brest-Guipavas",
+"a": 92,
+"d": 2179,
+"t": 2.1
+},
+{
+"n": "Camaret",
+"a": 40,
+"d": 1874,
+"t": 3.8
+},
+{
+"n": "Coray Chat Eau",
+"a": 242,
+"d": 2265,
+"t": 1.3
+},
+{
+"n": "Landivisiau",
+"a": 109,
+"d": 2192,
+"t": 1.9
+},
+{
+"n": "Lanmeur",
+"a": 53,
+"d": 2112,
+"t": 2.2
+},
+{
+"n": "Lanveoc",
+"a": 81,
+"d": 1986,
+"t": 2.7
+},
+{
+"n": "Ouessant-Stiff",
+"a": 64,
+"d": 1934,
+"t": 4.8
+},
+{
+"n": "Pleyber-Christ Sa",
+"a": 147,
+"d": 2152,
+"t": 1.7
+},
+{
+"n": "Plomelin-Inrae",
+"a": 33,
+"d": 2032,
+"t": 2.0
+},
+{
+"n": "Ploudalmezeau",
+"a": 40,
+"d": 2025,
+"t": 2.9
+},
+{
+"n": "Ploudaniel-Inrae",
+"a": 76,
+"d": 2208,
+"t": 1.9
+},
+{
+"n": "Plovan",
+"a": 10,
+"d": 1889,
+"t": 2.7
+},
+{
+"n": "Pte Du Raz",
+"a": 67,
+"d": 1856,
+"t": 3.8
+},
+{
+"n": "Quimper",
+"a": 82,
+"d": 2069,
+"t": 1.7
+},
+{
+"n": "Sibiril S A",
+"a": 52,
+"d": 2081,
+"t": 2.5
+},
+{
+"n": "Sizun",
+"a": 157,
+"d": 2208,
+"t": 1.9
+},
+{
+"n": "St-Segal S A",
+"a": 89,
+"d": 2113,
+"t": 1.3
+},
+{
+"n": "Tregunc",
+"a": 25,
+"d": 1945,
+"t": 2.2
+}
+]
+},
+{
+"code": "2A",
+"nom": "Corse-du-Sud",
+"region": "Corse",
+"chefLieu": "Ajaccio",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Ajaccio-Milelli_Sapc",
+"stationAlt": 86,
+"dju": 1126,
+"dju2025": 931,
+"tbase": 6.1,
+"tbaseStation": "Ajaccio-Milelli_Sapc",
+"stationKm": 2.1,
+"stations": [
+{
+"n": "Ajaccio",
+"a": 5,
+"d": 1159,
+"t": 6.4
+},
+{
+"n": "Ajaccio-Milelli_Sapc",
+"a": 86,
+"d": 1126,
+"t": 6.1
+},
+{
+"n": "Ajaccio-Parata",
+"a": 124,
+"d": 886,
+"t": 8.0
+},
+{
+"n": "Bocognano",
+"a": 1019,
+"d": 2388,
+"t": -1.1
+},
+{
+"n": "Bocognano-Gare",
+"a": 660,
+"d": 1885,
+"t": 1.4
+},
+{
+"n": "Cap Pertusato",
+"a": 107,
+"d": 958,
+"t": 6.7
+},
+{
+"n": "Conca",
+"a": 253,
+"d": 1074,
+"t": 4.9
+},
+{
+"n": "Evisa-Onf",
+"a": 1030,
+"d": 2755,
+"t": -1.4
+},
+{
+"n": "Figari",
+"a": 20,
+"d": 1237,
+"t": 4.4
+},
+{
+"n": "Isolaccio Di Fiumorbo",
+"a": 198,
+"d": 1505,
+"t": 4.0
+},
+{
+"n": "La Chiappa",
+"a": 57,
+"d": 872,
+"t": 6.9
+},
+{
+"n": "Levie",
+"a": 571,
+"d": 1925,
+"t": 2.4
+},
+{
+"n": "Marignana",
+"a": 515,
+"d": 1379,
+"t": 4.7
+},
+{
+"n": "Peri_Sapc",
+"a": 433,
+"d": 1330,
+"t": 4.7
+},
+{
+"n": "Pila-Canale",
+"a": 407,
+"d": 1296,
+"t": 5.0
+},
+{
+"n": "Quenza",
+"a": 932,
+"d": 2136,
+"t": 0.7
+},
+{
+"n": "Renno",
+"a": 755,
+"d": 2271,
+"t": 1.4
+},
+{
+"n": "Sampolo",
+"a": 837,
+"d": 1994,
+"t": 1.0
+},
+{
+"n": "Sari D'Orcino",
+"a": 407,
+"d": 1237,
+"t": 5.5
+},
+{
+"n": "Sartene",
+"a": 62,
+"d": 1245,
+"t": 5.4
+},
+{
+"n": "Solenzara",
+"a": 12,
+"d": 981,
+"t": 6.2
+},
+{
+"n": "Sponde-Nivose",
+"a": 1971,
+"d": 4312,
+"t": -7.8
+},
+{
+"n": "Tolla_Sapc",
+"a": 698,
+"d": 1828,
+"t": 2.9
+}
+]
+},
+{
+"code": "2B",
+"nom": "Haute-Corse",
+"region": "Corse",
+"chefLieu": "Bastia",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Bastia_Sapc",
+"stationAlt": 26,
+"dju": 933,
+"dju2025": 813,
+"tbase": 6.6,
+"tbaseStation": "Bastia_Sapc",
+"stationKm": 2.6,
+"stations": [
+{
+"n": "Alistro",
+"a": 65,
+"d": 852,
+"t": 6.9
+},
+{
+"n": "Asco_Sapc",
+"a": 1400,
+"d": 3024,
+"t": -3.5
+},
+{
+"n": "Bastia",
+"a": 10,
+"d": 1161,
+"t": 5.5
+},
+{
+"n": "Bastia_Sapc",
+"a": 26,
+"d": 933,
+"t": 6.6
+},
+{
+"n": "Calacuccia",
+"a": 811,
+"d": 2195,
+"t": -0.2
+},
+{
+"n": "Calvi",
+"a": 57,
+"d": 1139,
+"t": 5.4
+},
+{
+"n": "Campile_Sapc",
+"a": 499,
+"d": 1690,
+"t": 2.3
+},
+{
+"n": "Cap Corse",
+"a": 72,
+"d": 929,
+"t": 6.7
+},
+{
+"n": "Cap Sagro",
+"a": 111,
+"d": 938,
+"t": 6.4
+},
+{
+"n": "Corte",
+"a": 350,
+"d": 1815,
+"t": 2.1
+},
+{
+"n": "Ile Rousse",
+"a": 140,
+"d": 926,
+"t": 6.4
+},
+{
+"n": "Oletta",
+"a": 75,
+"d": 1300,
+"t": 4.9
+},
+{
+"n": "Pietralba",
+"a": 510,
+"d": 1707,
+"t": 2.2
+},
+{
+"n": "Scata",
+"a": 185,
+"d": 1547,
+"t": 3.0
+}
+]
+},
+{
+"code": "30",
+"nom": "Gard",
+"region": "Occitanie",
+"chefLieu": "Nîmes",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Nimes-Courbessac",
+"stationAlt": 59,
+"dju": 1418,
+"dju2025": 1334,
+"tbase": 3.0,
+"tbaseStation": "Nimes-Courbessac",
+"stationKm": 5.8,
+"stations": [
+{
+"n": "Aigues-Mortes",
+"a": 1,
+"d": 1236,
+"t": 3.7
+},
+{
+"n": "Alzon",
+"a": 611,
+"d": 2377,
+"t": -0.8
+},
+{
+"n": "Cardet",
+"a": 109,
+"d": 1726,
+"t": 1.6
+},
+{
+"n": "Cavillargues",
+"a": 131,
+"d": 1754,
+"t": 1.9
+},
+{
+"n": "Colognac",
+"a": 589,
+"d": 2289,
+"t": -0.6
+},
+{
+"n": "Deaux",
+"a": 185,
+"d": 1592,
+"t": 2.0
+},
+{
+"n": "Generargues",
+"a": 139,
+"d": 1730,
+"t": 1.5
+},
+{
+"n": "La Grand Combe",
+"a": 499,
+"d": 1855,
+"t": 0.8
+},
+{
+"n": "La Rouviere",
+"a": 79,
+"d": 1658,
+"t": 2.1
+},
+{
+"n": "Le Vigan",
+"a": 222,
+"d": 1850,
+"t": 1.5
+},
+{
+"n": "Mejannes-Le-Clap",
+"a": 313,
+"d": 1938,
+"t": 0.7
+},
+{
+"n": "Mont Aigoual",
+"a": 1567,
+"d": 4162,
+"t": -7.7
+},
+{
+"n": "Montdardier",
+"a": 640,
+"d": 2093,
+"t": -0.1
+},
+{
+"n": "Nimes-Courbessac",
+"a": 59,
+"d": 1418,
+"t": 3.0
+},
+{
+"n": "Nimes-Garons",
+"a": 94,
+"d": 1485,
+"t": 2.6
+},
+{
+"n": "Pujaut",
+"a": 44,
+"d": 1654,
+"t": 2.2
+},
+{
+"n": "Salindres",
+"a": 191,
+"d": 1756,
+"t": 1.4
+},
+{
+"n": "St Christol-Les-Ales",
+"a": 129,
+"d": 1640,
+"t": 1.8
+},
+{
+"n": "St Jean Du Gard",
+"a": 196,
+"d": 1844,
+"t": 1.1
+},
+{
+"n": "St Sauveur Camprieu",
+"a": 1107,
+"d": 3206,
+"t": -4.5
+},
+{
+"n": "Tarascon",
+"a": 15,
+"d": 1463,
+"t": 2.7
+},
+{
+"n": "Uzes",
+"a": 72,
+"d": 1723,
+"t": 2.1
+},
+{
+"n": "Vic Le Fesq",
+"a": 45,
+"d": 1726,
+"t": 1.6
+},
+{
+"n": "Villevieille",
+"a": 41,
+"d": 1576,
+"t": 2.2
+}
+]
+},
+{
+"code": "31",
+"nom": "Haute-Garonne",
+"region": "Occitanie",
+"chefLieu": "Toulouse",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Toulouse-Blagnac",
+"stationAlt": 151,
+"dju": 1666,
+"dju2025": 1524,
+"tbase": 1.0,
+"tbaseStation": "Toulouse-Blagnac",
+"stationKm": 4.9,
+"stations": [
+{
+"n": "Auzeville-Tolosane-Inrae",
+"a": 150,
+"d": 1681,
+"t": 1.1
+},
+{
+"n": "Blajan",
+"a": 325,
+"d": 1960,
+"t": 0.3
+},
+{
+"n": "Clarac",
+"a": 401,
+"d": 2099,
+"t": 0.2
+},
+{
+"n": "Luchon",
+"a": 618,
+"d": 2326,
+"t": -1.1
+},
+{
+"n": "Maupas-Nivose",
+"a": 2417,
+"d": 5352,
+"t": -12.1
+},
+{
+"n": "Muret-Lherm",
+"a": 189,
+"d": 1827,
+"t": 0.5
+},
+{
+"n": "Ondes",
+"a": 109,
+"d": 1717,
+"t": 0.9
+},
+{
+"n": "Palaminy",
+"a": 243,
+"d": 1926,
+"t": 0.6
+},
+{
+"n": "Revel",
+"a": 338,
+"d": 1812,
+"t": 0.6
+},
+{
+"n": "Segreville",
+"a": 212,
+"d": 1785,
+"t": 0.3
+},
+{
+"n": "St-Felix-Lauragais",
+"a": 330,
+"d": 1894,
+"t": -0.1
+},
+{
+"n": "Toulouse-Blagnac",
+"a": 151,
+"d": 1666,
+"t": 1.0
+},
+{
+"n": "Toulouse-Francazal",
+"a": 164,
+"d": 1684,
+"t": 1.0
+}
+]
+},
+{
+"code": "32",
+"nom": "Gers",
+"region": "Occitanie",
+"chefLieu": "Auch",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Auch",
+"stationAlt": 122,
+"dju": 1804,
+"dju2025": 1695,
+"tbase": 0.2,
+"tbaseStation": "Auch",
+"stationKm": 4.2,
+"stations": [
+{
+"n": "Auch",
+"a": 122,
+"d": 1804,
+"t": 0.2
+},
+{
+"n": "Beaucaire",
+"a": 120,
+"d": 1752,
+"t": 0.4
+},
+{
+"n": "Condom",
+"a": 173,
+"d": 1720,
+"t": 0.4
+},
+{
+"n": "Lahas",
+"a": 251,
+"d": 1763,
+"t": 0.4
+},
+{
+"n": "Le Houga",
+"a": 141,
+"d": 1733,
+"t": 0.7
+},
+{
+"n": "Maumusson",
+"a": 164,
+"d": 1635,
+"t": 0.9
+},
+{
+"n": "Mauroux",
+"a": 201,
+"d": 1705,
+"t": 0.6
+},
+{
+"n": "Mirande",
+"a": 184,
+"d": 1750,
+"t": 0.6
+},
+{
+"n": "Peyrusse-Grande",
+"a": 254,
+"d": 1740,
+"t": 0.4
+},
+{
+"n": "Sadeillan",
+"a": 263,
+"d": 1768,
+"t": 0.6
+}
+]
+},
+{
+"code": "33",
+"nom": "Gironde",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Bordeaux",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Bordeaux-Paulin",
+"stationAlt": 10,
+"dju": 1491,
+"dju2025": 1358,
+"tbase": 2.0,
+"tbaseStation": "Bordeaux-Paulin",
+"stationKm": 1.4,
+"stations": [
+{
+"n": "Belin Beliet",
+"a": 45,
+"d": 1723,
+"t": 1.1
+},
+{
+"n": "Bordeaux-Merignac",
+"a": 47,
+"d": 1608,
+"t": 1.4
+},
+{
+"n": "Bordeaux-Paulin",
+"a": 10,
+"d": 1491,
+"t": 2.0
+},
+{
+"n": "Cadaujac-Inrae",
+"a": 25,
+"d": 1663,
+"t": 1.5
+},
+{
+"n": "Cap-Ferret",
+"a": 8,
+"d": 1387,
+"t": 2.6
+},
+{
+"n": "Cazats",
+"a": 114,
+"d": 1754,
+"t": 0.6
+},
+{
+"n": "Cazaux",
+"a": 23,
+"d": 1661,
+"t": 1.3
+},
+{
+"n": "Lacanau",
+"a": 16,
+"d": 1622,
+"t": 2.2
+},
+{
+"n": "Pauillac",
+"a": 26,
+"d": 1653,
+"t": 1.8
+},
+{
+"n": "Pierroton-Inrae",
+"a": 60,
+"d": 1774,
+"t": 0.9
+},
+{
+"n": "Sauternes",
+"a": 65,
+"d": 1679,
+"t": 0.8
+},
+{
+"n": "St Emilion",
+"a": 38,
+"d": 1703,
+"t": 0.9
+},
+{
+"n": "St Gervais",
+"a": 42,
+"d": 1688,
+"t": 1.0
+},
+{
+"n": "St Sulpice De Pommiers",
+"a": 82,
+"d": 1735,
+"t": 0.6
+},
+{
+"n": "Vendays-Montalive",
+"a": 6,
+"d": 1836,
+"t": 1.2
+},
+{
+"n": "Villenave D'Ornon-Inrae",
+"a": 25,
+"d": 1578,
+"t": 1.7
+}
+]
+},
+{
+"code": "34",
+"nom": "Hérault",
+"region": "Occitanie",
+"chefLieu": "Montpellier",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Villeneuve-Les-Mag-Inrae",
+"stationAlt": 20,
+"dju": 1373,
+"dju2025": 1272,
+"tbase": 3.3,
+"tbaseStation": "Villeneuve-Les-Mag-Inrae",
+"stationKm": 8.1,
+"stations": [
+{
+"n": "Bedarieux",
+"a": 373,
+"d": 1820,
+"t": 1.3
+},
+{
+"n": "Beziers-Courtade",
+"a": 25,
+"d": 1420,
+"t": 2.6
+},
+{
+"n": "Beziers-Vias",
+"a": 15,
+"d": 1426,
+"t": 2.9
+},
+{
+"n": "Cambon-Et-Salvergues",
+"a": 955,
+"d": 2822,
+"t": -2.4
+},
+{
+"n": "Castanet Le Haut_Sapc",
+"a": 424,
+"d": 2056,
+"t": -0.1
+},
+{
+"n": "La Vacquerie_Sapc",
+"a": 620,
+"d": 2307,
+"t": -0.7
+},
+{
+"n": "Le Caylar_Sapc",
+"a": 729,
+"d": 2639,
+"t": -2.1
+},
+{
+"n": "Les Aires",
+"a": 190,
+"d": 1841,
+"t": 1.2
+},
+{
+"n": "Les Plans",
+"a": 846,
+"d": 2768,
+"t": -2.8
+},
+{
+"n": "Marseillan-Inrae",
+"a": 1,
+"d": 1322,
+"t": 3.6
+},
+{
+"n": "Marsillargues",
+"a": 4,
+"d": 1505,
+"t": 2.8
+},
+{
+"n": "Montarnaud",
+"a": 148,
+"d": 1583,
+"t": 2.2
+},
+{
+"n": "Montpellier-Aeroport",
+"a": 1,
+"d": 1401,
+"t": 3.1
+},
+{
+"n": "Murat Sur Vebre",
+"a": 1022,
+"d": 3050,
+"t": -4.3
+},
+{
+"n": "Murviel Les Beziers",
+"a": 140,
+"d": 1472,
+"t": 2.8
+},
+{
+"n": "Pezenas-Tourbes",
+"a": 40,
+"d": 1386,
+"t": 3.3
+},
+{
+"n": "Prades Le Lez",
+"a": 69,
+"d": 1699,
+"t": 1.5
+},
+{
+"n": "Roujan-Inrae",
+"a": 73,
+"d": 1651,
+"t": 2.2
+},
+{
+"n": "Sete",
+"a": 75,
+"d": 1240,
+"t": 4.2
+},
+{
+"n": "Soumont",
+"a": 252,
+"d": 1441,
+"t": 3.0
+},
+{
+"n": "St Andre De Sangonis",
+"a": 86,
+"d": 1455,
+"t": 2.8
+},
+{
+"n": "St Jean De Minervois",
+"a": 258,
+"d": 1505,
+"t": 2.3
+},
+{
+"n": "St Martin De Londres",
+"a": 214,
+"d": 1791,
+"t": 0.9
+},
+{
+"n": "Villeneuve-Les-Mag-Inrae",
+"a": 20,
+"d": 1373,
+"t": 3.3
+}
+]
+},
+{
+"code": "35",
+"nom": "Ille-et-Vilaine",
+"region": "Bretagne",
+"chefLieu": "Rennes",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Rennes-St Jacques",
+"stationAlt": 36,
+"dju": 2071,
+"dju2025": 2003,
+"tbase": 0.1,
+"tbaseStation": "Rennes-St Jacques",
+"stationKm": 6.2,
+"stations": [
+{
+"n": "Arbrissel",
+"a": 75,
+"d": 2152,
+"t": -0.2
+},
+{
+"n": "Dinard",
+"a": 65,
+"d": 2140,
+"t": 0.6
+},
+{
+"n": "Feins  Sa",
+"a": 87,
+"d": 2189,
+"t": 0.0
+},
+{
+"n": "La-Chapelle-Bouexic",
+"a": 42,
+"d": 2177,
+"t": -0.2
+},
+{
+"n": "La-Noe-Blanche",
+"a": 89,
+"d": 2050,
+"t": 0.1
+},
+{
+"n": "Le Rheu-Inrae",
+"a": 38,
+"d": 2078,
+"t": 0.4
+},
+{
+"n": "Louvigne-Du-Desert",
+"a": 153,
+"d": 2313,
+"t": -0.3
+},
+{
+"n": "Rennes-St Jacques",
+"a": 36,
+"d": 2071,
+"t": 0.1
+}
+]
+},
+{
+"code": "36",
+"nom": "Indre",
+"region": "Centre-Val de Loire",
+"chefLieu": "Châteauroux",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Chateauroux  Deols",
+"stationAlt": 158,
+"dju": 2224,
+"dju2025": 2178,
+"tbase": -1.4,
+"tbaseStation": "Chateauroux  Deols",
+"stationKm": 8.4,
+"stations": [
+{
+"n": "Chaillac_Sapc",
+"a": 126,
+"d": 2251,
+"t": -0.8
+},
+{
+"n": "Chateauroux  Deols",
+"a": 158,
+"d": 2224,
+"t": -1.4
+},
+{
+"n": "Eguzon",
+"a": 272,
+"d": 2160,
+"t": -1.0
+},
+{
+"n": "Le Blanc",
+"a": 117,
+"d": 1930,
+"t": -0.7
+},
+{
+"n": "Levroux - Treg.",
+"a": 169,
+"d": 2261,
+"t": -1.7
+},
+{
+"n": "Martizay",
+"a": 80,
+"d": 2124,
+"t": -1.2
+},
+{
+"n": "Montgivray",
+"a": 204,
+"d": 2219,
+"t": -1.3
+},
+{
+"n": "Pellevoisin",
+"a": 161,
+"d": 2081,
+"t": -0.9
+},
+{
+"n": "Rosnay",
+"a": 109,
+"d": 2065,
+"t": -0.7
+},
+{
+"n": "St-Christophe",
+"a": 265,
+"d": 2275,
+"t": -1.7
+},
+{
+"n": "Ste-Severe",
+"a": 302,
+"d": 2180,
+"t": -1.3
+},
+{
+"n": "Tendu_Sapc",
+"a": 155,
+"d": 2148,
+"t": -0.9
+}
+]
+},
+{
+"code": "37",
+"nom": "Indre-et-Loire",
+"region": "Centre-Val de Loire",
+"chefLieu": "Tours",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Tours",
+"stationAlt": 108,
+"dju": 2094,
+"dju2025": 2057,
+"tbase": -0.7,
+"tbaseStation": "Tours",
+"stationKm": 6.1,
+"stations": [
+{
+"n": "Beaumont_Sapc",
+"a": 126,
+"d": 2215,
+"t": -1.3
+},
+{
+"n": "Ferriere-Larcon",
+"a": 116,
+"d": 2121,
+"t": -0.8
+},
+{
+"n": "Lignieres-De-T.",
+"a": 32,
+"d": 2219,
+"t": -1.4
+},
+{
+"n": "Reignac",
+"a": 90,
+"d": 2157,
+"t": -0.8
+},
+{
+"n": "Saunay",
+"a": 109,
+"d": 2220,
+"t": -1.1
+},
+{
+"n": "Savigny - Veron",
+"a": 33,
+"d": 1977,
+"t": -0.0
+},
+{
+"n": "St-Christophe-Sur-Nais",
+"a": 107,
+"d": 2135,
+"t": -0.8
+},
+{
+"n": "Sublaines",
+"a": 111,
+"d": 2155,
+"t": -1.0
+},
+{
+"n": "Tours",
+"a": 108,
+"d": 2094,
+"t": -0.7
+}
+]
+},
+{
+"code": "38",
+"nom": "Isère",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Grenoble",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Grenoble - Lvd",
+"stationAlt": 220,
+"dju": 2196,
+"dju2025": 2047,
+"tbase": -0.9,
+"tbaseStation": "Grenoble - Lvd",
+"stationKm": 11.0,
+"stations": [
+{
+"n": "Aigleton-Nivose",
+"a": 2240,
+"d": 5281,
+"t": -11.9
+},
+{
+"n": "Allemond",
+"a": 1270,
+"d": 3302,
+"t": -6.1
+},
+{
+"n": "Alpe-D'Huez",
+"a": 1860,
+"d": 4461,
+"t": -9.9
+},
+{
+"n": "Besse",
+"a": 1520,
+"d": 3440,
+"t": -6.6
+},
+{
+"n": "Bourgoin",
+"a": 358,
+"d": 2219,
+"t": -2.2
+},
+{
+"n": "Chamrousse",
+"a": 1730,
+"d": 4211,
+"t": -8.8
+},
+{
+"n": "Charavines",
+"a": 510,
+"d": 2527,
+"t": -2.2
+},
+{
+"n": "Chatte_Sapc",
+"a": 272,
+"d": 2228,
+"t": -1.1
+},
+{
+"n": "Col De Porte-Nivose",
+"a": 1325,
+"d": 3788,
+"t": -7.5
+},
+{
+"n": "Coublevie",
+"a": 300,
+"d": 2100,
+"t": -0.5
+},
+{
+"n": "Grande-Chartreuse",
+"a": 945,
+"d": 3244,
+"t": -5.1
+},
+{
+"n": "Grenoble - Lvd",
+"a": 220,
+"d": 2196,
+"t": -0.9
+},
+{
+"n": "Grenoble-St Geoirs",
+"a": 376,
+"d": 2479,
+"t": -2.4
+},
+{
+"n": "La Mure- Radome",
+"a": 885,
+"d": 3295,
+"t": -5.5
+},
+{
+"n": "Lavaldens",
+"a": 1070,
+"d": 3420,
+"t": -6.5
+},
+{
+"n": "Le Gua-Nivose",
+"a": 1646,
+"d": 4165,
+"t": -8.3
+},
+{
+"n": "Les Ecrins-Nivose",
+"a": 2970,
+"d": 6645,
+"t": -15.2
+},
+{
+"n": "Monestier",
+"a": 806,
+"d": 2915,
+"t": -4.3
+},
+{
+"n": "Pellafol-Sautet",
+"a": 800,
+"d": 2833,
+"t": -3.9
+},
+{
+"n": "Pipay_Sapc",
+"a": 1578,
+"d": 4090,
+"t": -8.2
+},
+{
+"n": "Pont-De-Beauvoisin",
+"a": 284,
+"d": 2286,
+"t": -2.0
+},
+{
+"n": "Revel",
+"a": 645,
+"d": 2473,
+"t": -2.6
+},
+{
+"n": "Reventin",
+"a": 295,
+"d": 2088,
+"t": -1.2
+},
+{
+"n": "Sablons",
+"a": 136,
+"d": 1924,
+"t": 0.0
+},
+{
+"n": "St Aupre_Sapc",
+"a": 450,
+"d": 2590,
+"t": -2.3
+},
+{
+"n": "St Christophe En Oisans_Sapc",
+"a": 1564,
+"d": 3724,
+"t": -7.3
+},
+{
+"n": "St Hilaire-Nivose",
+"a": 1756,
+"d": 4085,
+"t": -8.1
+},
+{
+"n": "St-Baudille",
+"a": 1040,
+"d": 3077,
+"t": -5.2
+},
+{
+"n": "St-Pierre-Les Egaux",
+"a": 950,
+"d": 3250,
+"t": -5.3
+},
+{
+"n": "Villard-De-Lans",
+"a": 1027,
+"d": 3506,
+"t": -6.5
+}
+]
+},
+{
+"code": "39",
+"nom": "Jura",
+"region": "Bourgogne-Franche-Comté",
+"chefLieu": "Lons-le-Saunier",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Lons Le Saunier",
+"stationAlt": 298,
+"dju": 2301,
+"dju2025": 2225,
+"tbase": -2.8,
+"tbaseStation": "Lons Le Saunier",
+"stationKm": 3.6,
+"stations": [
+{
+"n": "Arbois_Sapc",
+"a": 313,
+"d": 2313,
+"t": -2.8
+},
+{
+"n": "Champagnole",
+"a": 537,
+"d": 3011,
+"t": -4.6
+},
+{
+"n": "Chaux-Des-Pres-Inrae",
+"a": 854,
+"d": 3816,
+"t": -8.3
+},
+{
+"n": "Cogna",
+"a": 577,
+"d": 2671,
+"t": -3.6
+},
+{
+"n": "Colonne",
+"a": 244,
+"d": 2318,
+"t": -2.8
+},
+{
+"n": "Dole",
+"a": 212,
+"d": 2297,
+"t": -2.2
+},
+{
+"n": "Fraisans",
+"a": 254,
+"d": 2375,
+"t": -2.5
+},
+{
+"n": "La Pesse",
+"a": 1133,
+"d": 3744,
+"t": -7.0
+},
+{
+"n": "Le Fied_Sapc",
+"a": 522,
+"d": 2853,
+"t": -4.5
+},
+{
+"n": "Lons Le Saunier",
+"a": 298,
+"d": 2301,
+"t": -2.8
+},
+{
+"n": "St Julien - Sa",
+"a": 361,
+"d": 2648,
+"t": -3.0
+},
+{
+"n": "Tavaux Sa",
+"a": 195,
+"d": 2363,
+"t": -2.3
+}
+]
+},
+{
+"code": "40",
+"nom": "Landes",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Mont-de-Marsan",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Mont-De-Marsan",
+"stationAlt": 59,
+"dju": 1710,
+"dju2025": 1613,
+"tbase": 0.5,
+"tbaseStation": "Mont-De-Marsan",
+"stationKm": 1.9,
+"stations": [
+{
+"n": "Biscarrosse",
+"a": 35,
+"d": 1414,
+"t": 2.5
+},
+{
+"n": "Capbreton",
+"a": 11,
+"d": 1478,
+"t": 2.3
+},
+{
+"n": "Captieux-Retjons",
+"a": 131,
+"d": 1790,
+"t": 0.1
+},
+{
+"n": "Creon D'Armagnac",
+"a": 150,
+"d": 1926,
+"t": -0.2
+},
+{
+"n": "Dax",
+"a": 31,
+"d": 1531,
+"t": 1.6
+},
+{
+"n": "Mont-De-Marsan",
+"a": 59,
+"d": 1710,
+"t": 0.5
+},
+{
+"n": "Pissos",
+"a": 56,
+"d": 1820,
+"t": -0.2
+},
+{
+"n": "Rion-Des-Landes",
+"a": 77,
+"d": 1716,
+"t": 1.0
+},
+{
+"n": "Sabres",
+"a": 81,
+"d": 1756,
+"t": 0.6
+},
+{
+"n": "Soorts-Hossegor",
+"a": 10,
+"d": 1357,
+"t": 2.3
+},
+{
+"n": "St M Hinx Stna-Inrae",
+"a": 37,
+"d": 1530,
+"t": 1.8
+},
+{
+"n": "Urgons",
+"a": 146,
+"d": 1642,
+"t": 1.1
+}
+]
+},
+{
+"code": "41",
+"nom": "Loir-et-Cher",
+"region": "Centre-Val de Loire",
+"chefLieu": "Blois",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Blois",
+"stationAlt": 119,
+"dju": 2251,
+"dju2025": 2197,
+"tbase": -1.4,
+"tbaseStation": "Blois",
+"stationKm": 12.8,
+"stations": [
+{
+"n": "Blois",
+"a": 119,
+"d": 2251,
+"t": -1.4
+},
+{
+"n": "Cheverny",
+"a": 99,
+"d": 2186,
+"t": -1.6
+},
+{
+"n": "Choue",
+"a": 163,
+"d": 2285,
+"t": -1.5
+},
+{
+"n": "Droue - Morache",
+"a": 206,
+"d": 2419,
+"t": -2.1
+},
+{
+"n": "Lamotte-Beuvron",
+"a": 117,
+"d": 2325,
+"t": -1.8
+},
+{
+"n": "Montrieux",
+"a": 96,
+"d": 2267,
+"t": -1.5
+},
+{
+"n": "Ouzouer",
+"a": 128,
+"d": 2291,
+"t": -1.8
+},
+{
+"n": "Romorantin",
+"a": 83,
+"d": 2307,
+"t": -1.5
+}
+]
+},
+{
+"code": "42",
+"nom": "Loire",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Saint-Étienne",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Saint-Etienne",
+"stationAlt": 640,
+"dju": 2481,
+"dju2025": 2430,
+"tbase": -2.9,
+"tbaseStation": "Saint-Etienne",
+"stationKm": 1.3,
+"stations": [
+{
+"n": "Bourg-Argental",
+"a": 514,
+"d": 2262,
+"t": -1.4
+},
+{
+"n": "Chalmazel_Ra",
+"a": 990,
+"d": 3370,
+"t": -5.3
+},
+{
+"n": "Chazelles-Lyon",
+"a": 632,
+"d": 2627,
+"t": -3.4
+},
+{
+"n": "Col De La Loge_Sapc",
+"a": 1261,
+"d": 3721,
+"t": -7.2
+},
+{
+"n": "Feurs",
+"a": 347,
+"d": 2250,
+"t": -2.0
+},
+{
+"n": "Fourneaux",
+"a": 510,
+"d": 2348,
+"t": -2.5
+},
+{
+"n": "Grammond_Sapc",
+"a": 803,
+"d": 2735,
+"t": -4.2
+},
+{
+"n": "Nandax",
+"a": 374,
+"d": 2295,
+"t": -1.9
+},
+{
+"n": "Pilat Graix",
+"a": 1164,
+"d": 3481,
+"t": -6.5
+},
+{
+"n": "Roanne-Riorges_Aero",
+"a": 337,
+"d": 2342,
+"t": -2.0
+},
+{
+"n": "Saint-Etienne",
+"a": 640,
+"d": 2481,
+"t": -2.9
+},
+{
+"n": "Savigneux",
+"a": 370,
+"d": 2486,
+"t": -2.3
+},
+{
+"n": "St Etienne-Boutheon",
+"a": 395,
+"d": 2372,
+"t": -2.1
+},
+{
+"n": "St-Bonnet-Le-Chateau_Sapc",
+"a": 822,
+"d": 2800,
+"t": -4.2
+},
+{
+"n": "St-Chamond-P",
+"a": 394,
+"d": 2210,
+"t": -1.6
+},
+{
+"n": "St-Just-En-Chev",
+"a": 612,
+"d": 2878,
+"t": -3.9
+},
+{
+"n": "Tarentaise",
+"a": 1090,
+"d": 3323,
+"t": -5.7
+}
+]
+},
+{
+"code": "43",
+"nom": "Haute-Loire",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Le Puy-en-Velay",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Le Puy-Chadrac",
+"stationAlt": 714,
+"dju": 2674,
+"dju2025": 2562,
+"tbase": -3.2,
+"tbaseStation": "Le Puy-Chadrac",
+"stationKm": 2.9,
+"stations": [
+{
+"n": "Allegre",
+"a": 1035,
+"d": 3236,
+"t": -5.1
+},
+{
+"n": "Autrac",
+"a": 807,
+"d": 2668,
+"t": -3.8
+},
+{
+"n": "Bas-En-Basset",
+"a": 446,
+"d": 2424,
+"t": -1.5
+},
+{
+"n": "Chavaniac-Lafayette",
+"a": 715,
+"d": 2645,
+"t": -3.6
+},
+{
+"n": "Felines_Sapc",
+"a": 1014,
+"d": 3526,
+"t": -5.8
+},
+{
+"n": "Fix-St-Geneys",
+"a": 1102,
+"d": 3341,
+"t": -5.9
+},
+{
+"n": "Fontannes",
+"a": 435,
+"d": 2382,
+"t": -2.3
+},
+{
+"n": "Landos-Charbon",
+"a": 1148,
+"d": 3581,
+"t": -6.6
+},
+{
+"n": "Le Pertuis_Sapc",
+"a": 1020,
+"d": 3164,
+"t": -5.5
+},
+{
+"n": "Le Puy-Chadrac",
+"a": 714,
+"d": 2674,
+"t": -3.2
+},
+{
+"n": "Le Puy-Loudes",
+"a": 831,
+"d": 3032,
+"t": -4.3
+},
+{
+"n": "Les Estables_Sapc",
+"a": 1350,
+"d": 3904,
+"t": -7.6
+},
+{
+"n": "Mazet-Volamont",
+"a": 1130,
+"d": 3435,
+"t": -6.2
+},
+{
+"n": "Monistrol-Sur-Loire",
+"a": 777,
+"d": 2770,
+"t": -4.0
+},
+{
+"n": "Saint Didier Sur Doulon",
+"a": 675,
+"d": 2680,
+"t": -3.2
+},
+{
+"n": "Saugues-Sa",
+"a": 945,
+"d": 3331,
+"t": -5.4
+},
+{
+"n": "Solignac-Sur-Lo",
+"a": 832,
+"d": 2955,
+"t": -4.3
+},
+{
+"n": "St-Pal-De-Chalencon",
+"a": 960,
+"d": 3128,
+"t": -4.6
+},
+{
+"n": "St-Romain-Lachalm",
+"a": 902,
+"d": 3069,
+"t": -5.2
+},
+{
+"n": "Tiranges",
+"a": 603,
+"d": 2555,
+"t": -2.3
+},
+{
+"n": "Yssingeaux",
+"a": 873,
+"d": 2951,
+"t": -4.4
+}
+]
+},
+{
+"code": "44",
+"nom": "Loire-Atlantique",
+"region": "Pays de la Loire",
+"chefLieu": "Nantes",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Nantes-Bouguenais",
+"stationAlt": 26,
+"dju": 1937,
+"dju2025": 1880,
+"tbase": 0.6,
+"tbaseStation": "Nantes-Bouguenais",
+"stationKm": 10.5,
+"stations": [
+{
+"n": "Herbignac",
+"a": 22,
+"d": 1905,
+"t": 1.0
+},
+{
+"n": "Le Pallet_Sapc",
+"a": 35,
+"d": 1943,
+"t": 0.3
+},
+{
+"n": "Nantes-Bouguenais",
+"a": 26,
+"d": 1937,
+"t": 0.6
+},
+{
+"n": "Nort-Sur-Erdre",
+"a": 13,
+"d": 2016,
+"t": 0.2
+},
+{
+"n": "Pornic",
+"a": 25,
+"d": 1830,
+"t": 0.4
+},
+{
+"n": "St Nazaire-Montoir",
+"a": 3,
+"d": 1914,
+"t": 0.7
+},
+{
+"n": "St-Meme-Le-Tenu",
+"a": 4,
+"d": 1956,
+"t": 0.7
+}
+]
+},
+{
+"code": "45",
+"nom": "Loiret",
+"region": "Centre-Val de Loire",
+"chefLieu": "Orléans",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Orleans",
+"stationAlt": 123,
+"dju": 2305,
+"dju2025": 2279,
+"tbase": -1.9,
+"tbaseStation": "Orleans",
+"stationKm": 16.4,
+"stations": [
+{
+"n": "Amilly",
+"a": 91,
+"d": 2300,
+"t": -1.9
+},
+{
+"n": "Chambon-La-F.",
+"a": 143,
+"d": 2383,
+"t": -2.3
+},
+{
+"n": "Orleans",
+"a": 123,
+"d": 2305,
+"t": -1.9
+},
+{
+"n": "Pithiviers-Le-V",
+"a": 120,
+"d": 2257,
+"t": -1.6
+},
+{
+"n": "St-Benoit/Loire",
+"a": 112,
+"d": 2205,
+"t": -1.7
+},
+{
+"n": "Villemurlin",
+"a": 144,
+"d": 2339,
+"t": -1.9
+}
+]
+},
+{
+"code": "46",
+"nom": "Lot",
+"region": "Occitanie",
+"chefLieu": "Cahors",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Le Montat",
+"stationAlt": 260,
+"dju": 1894,
+"dju2025": 1776,
+"tbase": -0.0,
+"tbaseStation": "Le Montat",
+"stationKm": 9.2,
+"stations": [
+{
+"n": "Anglars",
+"a": 104,
+"d": 1794,
+"t": 0.3
+},
+{
+"n": "Comiac",
+"a": 562,
+"d": 2369,
+"t": -1.4
+},
+{
+"n": "Faycelles",
+"a": 342,
+"d": 2033,
+"t": -0.5
+},
+{
+"n": "Gourdon",
+"a": 260,
+"d": 1971,
+"t": -0.2
+},
+{
+"n": "Latronquiere",
+"a": 658,
+"d": 2478,
+"t": -2.3
+},
+{
+"n": "Le Montat",
+"a": 260,
+"d": 1894,
+"t": -0.0
+},
+{
+"n": "Lunegarde",
+"a": 383,
+"d": 2102,
+"t": -0.8
+},
+{
+"n": "Montcuq - Rouil",
+"a": 193,
+"d": 1873,
+"t": 0.0
+}
+]
+},
+{
+"code": "47",
+"nom": "Lot-et-Garonne",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Agen",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Agen-La Garenne",
+"stationAlt": 58,
+"dju": 1759,
+"dju2025": 1659,
+"tbase": 0.3,
+"tbaseStation": "Agen-La Garenne",
+"stationKm": 4.3,
+"stations": [
+{
+"n": "Agen-La Garenne",
+"a": 58,
+"d": 1759,
+"t": 0.3
+},
+{
+"n": "Aiguillon",
+"a": 32,
+"d": 1717,
+"t": 0.5
+},
+{
+"n": "Bourran-Inrae",
+"a": 55,
+"d": 1698,
+"t": 0.7
+},
+{
+"n": "Duras",
+"a": 112,
+"d": 1694,
+"t": 0.8
+},
+{
+"n": "Fargues-Sur-Ourbise",
+"a": 124,
+"d": 1964,
+"t": -0.6
+},
+{
+"n": "Lacapelle-Biron",
+"a": 235,
+"d": 1809,
+"t": 0.4
+},
+{
+"n": "Laroque-Timbaut",
+"a": 186,
+"d": 1788,
+"t": 0.4
+},
+{
+"n": "Mauvezin-Sur-Gupie",
+"a": 95,
+"d": 1710,
+"t": 0.8
+},
+{
+"n": "Prayssas",
+"a": 196,
+"d": 1766,
+"t": 0.6
+},
+{
+"n": "Reaup",
+"a": 158,
+"d": 1732,
+"t": 0.5
+},
+{
+"n": "Saint-Martin-Curto",
+"a": 144,
+"d": 1751,
+"t": 0.6
+},
+{
+"n": "Villeneuve-Sur-Lot",
+"a": 59,
+"d": 1765,
+"t": 0.3
+}
+]
+},
+{
+"code": "48",
+"nom": "Lozère",
+"region": "Occitanie",
+"chefLieu": "Mende",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Mende-Ville",
+"stationAlt": 710,
+"dju": 2736,
+"dju2025": 2614,
+"tbase": -3.3,
+"tbaseStation": "Mende-Ville",
+"stationKm": 2.0,
+"stations": [
+{
+"n": "Altier",
+"a": 900,
+"d": 2705,
+"t": -3.2
+},
+{
+"n": "Bassurels",
+"a": 1042,
+"d": 3069,
+"t": -4.1
+},
+{
+"n": "Fau De Peyre",
+"a": 1163,
+"d": 3421,
+"t": -5.9
+},
+{
+"n": "Florac",
+"a": 618,
+"d": 2410,
+"t": -1.4
+},
+{
+"n": "Gatuzieres_Sapc",
+"a": 965,
+"d": 2888,
+"t": -3.7
+},
+{
+"n": "La Panouse_Sapc",
+"a": 1260,
+"d": 3715,
+"t": -7.0
+},
+{
+"n": "La Salle Prunet",
+"a": 903,
+"d": 2807,
+"t": -3.1
+},
+{
+"n": "Le Bleymard_Sapc",
+"a": 1418,
+"d": 3796,
+"t": -7.5
+},
+{
+"n": "Le Buisson",
+"a": 1088,
+"d": 3553,
+"t": -6.2
+},
+{
+"n": "Le Collet-Sauveplane",
+"a": 490,
+"d": 1971,
+"t": 0.5
+},
+{
+"n": "Le Pont-De-Montvert",
+"a": 875,
+"d": 2725,
+"t": -2.6
+},
+{
+"n": "Mende",
+"a": 932,
+"d": 2877,
+"t": -3.8
+},
+{
+"n": "Mende-Ville",
+"a": 710,
+"d": 2736,
+"t": -3.3
+},
+{
+"n": "Montrodat",
+"a": 746,
+"d": 2789,
+"t": -3.2
+},
+{
+"n": "Paulhac En Margeride_Sapc",
+"a": 1170,
+"d": 3546,
+"t": -6.6
+},
+{
+"n": "Rousses_Sapc",
+"a": 812,
+"d": 2666,
+"t": -2.5
+},
+{
+"n": "St Pierre-Des-Tripiers",
+"a": 929,
+"d": 2875,
+"t": -3.2
+},
+{
+"n": "St-Etienne-Vallee-Francaise",
+"a": 518,
+"d": 1835,
+"t": 0.9
+},
+{
+"n": "Villefort",
+"a": 620,
+"d": 2259,
+"t": -0.2
+}
+]
+},
+{
+"code": "49",
+"nom": "Maine-et-Loire",
+"region": "Pays de la Loire",
+"chefLieu": "Angers",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Angers Ville",
+"stationAlt": 35,
+"dju": 1836,
+"dju2025": 1811,
+"tbase": 0.3,
+"tbaseStation": "Angers Ville",
+"stationKm": 3.2,
+"stations": [
+{
+"n": "Angers Ville",
+"a": 35,
+"d": 1836,
+"t": 0.3
+},
+{
+"n": "Angrie",
+"a": 65,
+"d": 2140,
+"t": -0.3
+},
+{
+"n": "Beaucouze",
+"a": 50,
+"d": 1991,
+"t": -0.1
+},
+{
+"n": "Beaulieu-S-Lay",
+"a": 78,
+"d": 1992,
+"t": -0.3
+},
+{
+"n": "Begrolles",
+"a": 100,
+"d": 2111,
+"t": -0.1
+},
+{
+"n": "Cholet",
+"a": 134,
+"d": 2085,
+"t": -0.4
+},
+{
+"n": "Fontaine-Guerin",
+"a": 41,
+"d": 2015,
+"t": -0.4
+},
+{
+"n": "Marce",
+"a": 53,
+"d": 2153,
+"t": -0.6
+},
+{
+"n": "Martigne-Briand",
+"a": 73,
+"d": 2040,
+"t": -0.3
+},
+{
+"n": "Mont-Bellay-Inrae",
+"a": 58,
+"d": 1975,
+"t": -0.2
+},
+{
+"n": "Pouance_Sapc",
+"a": 96,
+"d": 2127,
+"t": -0.2
+},
+{
+"n": "Saumur",
+"a": 69,
+"d": 1905,
+"t": -0.2
+},
+{
+"n": "Segre_Sapc",
+"a": 25,
+"d": 2033,
+"t": 0.1
+},
+{
+"n": "St Georges Gard",
+"a": 203,
+"d": 2110,
+"t": -0.8
+}
+]
+},
+{
+"code": "50",
+"nom": "Manche",
+"region": "Normandie",
+"chefLieu": "Saint-Lô",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Cerisy La Salle",
+"stationAlt": 134,
+"dju": 2283,
+"dju2025": 2181,
+"tbase": -0.1,
+"tbaseStation": "Cerisy La Salle",
+"stationKm": 17.9,
+"stations": [
+{
+"n": "Barfleur",
+"a": 13,
+"d": 2281,
+"t": 2.1
+},
+{
+"n": "Cerisy La Salle",
+"a": 134,
+"d": 2283,
+"t": -0.1
+},
+{
+"n": "Chaulieu_Sapc",
+"a": 278,
+"d": 2560,
+"t": -1.9
+},
+{
+"n": "Coulouvray-Boisbenatre",
+"a": 268,
+"d": 2546,
+"t": -0.9
+},
+{
+"n": "Coutances",
+"a": 80,
+"d": 2184,
+"t": 0.5
+},
+{
+"n": "Gonneville",
+"a": 134,
+"d": 2394,
+"t": 1.4
+},
+{
+"n": "Gouville",
+"a": 7,
+"d": 2039,
+"t": 0.7
+},
+{
+"n": "Longueville",
+"a": 5,
+"d": 2153,
+"t": 0.1
+},
+{
+"n": "Pontorson",
+"a": 33,
+"d": 2126,
+"t": 0.4
+},
+{
+"n": "Pte De La Hague",
+"a": 6,
+"d": 2002,
+"t": 3.2
+},
+{
+"n": "St-Hilaire-Du-H",
+"a": 95,
+"d": 2250,
+"t": -0.1
+},
+{
+"n": "Ste Marie Du Mo",
+"a": 5,
+"d": 2220,
+"t": 1.1
+}
+]
+},
+{
+"code": "51",
+"nom": "Marne",
+"region": "Grand Est",
+"chefLieu": "Châlons-en-Champagne",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Fagnieres-Inrae",
+"stationAlt": 105,
+"dju": 2424,
+"dju2025": 2337,
+"tbase": -2.3,
+"tbaseStation": "Fagnieres-Inrae",
+"stationKm": 6.0,
+"stations": [
+{
+"n": "Argers",
+"a": 152,
+"d": 2543,
+"t": -2.7
+},
+{
+"n": "Chouilly",
+"a": 172,
+"d": 2431,
+"t": -2.6
+},
+{
+"n": "Esternay",
+"a": 185,
+"d": 2470,
+"t": -2.2
+},
+{
+"n": "Fagnieres-Inrae",
+"a": 105,
+"d": 2424,
+"t": -2.3
+},
+{
+"n": "Frignicourt",
+"a": 113,
+"d": 2368,
+"t": -2.0
+},
+{
+"n": "Mourmelon-Grand",
+"a": 115,
+"d": 2657,
+"t": -3.9
+},
+{
+"n": "Reims-Prunay",
+"a": 95,
+"d": 2523,
+"t": -2.9
+},
+{
+"n": "Sommesous",
+"a": 167,
+"d": 2475,
+"t": -2.8
+},
+{
+"n": "Vatry-Aero",
+"a": 179,
+"d": 2540,
+"t": -2.9
+}
+]
+},
+{
+"code": "52",
+"nom": "Haute-Marne",
+"region": "Grand Est",
+"chefLieu": "Chaumont",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Chaumont-Semoutiers",
+"stationAlt": 294,
+"dju": 2721,
+"dju2025": 2719,
+"tbase": -3.9,
+"tbaseStation": "Chaumont-Semoutiers",
+"stationKm": 8.2,
+"stations": [
+{
+"n": "Auberive_Sapc",
+"a": 349,
+"d": 2888,
+"t": -4.0
+},
+{
+"n": "Blecourt",
+"a": 348,
+"d": 2634,
+"t": -3.7
+},
+{
+"n": "Bourdons_Sapc",
+"a": 304,
+"d": 2842,
+"t": -4.3
+},
+{
+"n": "Breuvannes_Sapc",
+"a": 323,
+"d": 2807,
+"t": -4.1
+},
+{
+"n": "Busson_Sapc",
+"a": 387,
+"d": 2723,
+"t": -4.4
+},
+{
+"n": "Chaumont-Semoutiers",
+"a": 294,
+"d": 2721,
+"t": -3.9
+},
+{
+"n": "Chevillon_Sapc",
+"a": 170,
+"d": 2475,
+"t": -2.8
+},
+{
+"n": "Cirfontaines_Sapc",
+"a": 379,
+"d": 2716,
+"t": -4.2
+},
+{
+"n": "Coublanc",
+"a": 258,
+"d": 2551,
+"t": -3.3
+},
+{
+"n": "Fayl-Billot_Sapc",
+"a": 347,
+"d": 2696,
+"t": -4.0
+},
+{
+"n": "Is-En-Bassigny",
+"a": 403,
+"d": 2813,
+"t": -4.4
+},
+{
+"n": "Langres",
+"a": 466,
+"d": 2727,
+"t": -4.2
+},
+{
+"n": "Neuilly-L'Eveque_Sapc",
+"a": 353,
+"d": 2825,
+"t": -3.7
+},
+{
+"n": "Saint-Loup-Sur-Aujon_Sapc",
+"a": 310,
+"d": 2706,
+"t": -3.8
+},
+{
+"n": "St-Dizier",
+"a": 139,
+"d": 2342,
+"t": -2.3
+},
+{
+"n": "Val-De-Meuse",
+"a": 380,
+"d": 2814,
+"t": -4.4
+}
+]
+},
+{
+"code": "53",
+"nom": "Mayenne",
+"region": "Pays de la Loire",
+"chefLieu": "Laval",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Laval-Etronnier",
+"stationAlt": 100,
+"dju": 2179,
+"dju2025": 2121,
+"tbase": -0.6,
+"tbaseStation": "Laval-Etronnier",
+"stationKm": 3.5,
+"stations": [
+{
+"n": "Cosse-Le-Vivien",
+"a": 95,
+"d": 2211,
+"t": -0.6
+},
+{
+"n": "Coudray",
+"a": 55,
+"d": 2120,
+"t": -0.2
+},
+{
+"n": "Courcite_Sapc",
+"a": 172,
+"d": 2448,
+"t": -1.1
+},
+{
+"n": "Ernee",
+"a": 168,
+"d": 2302,
+"t": -0.7
+},
+{
+"n": "Evron",
+"a": 107,
+"d": 2302,
+"t": -1.1
+},
+{
+"n": "Grez-En-Bouere",
+"a": 93,
+"d": 2229,
+"t": -0.6
+},
+{
+"n": "Laval-Etronnier",
+"a": 100,
+"d": 2179,
+"t": -0.6
+},
+{
+"n": "Le Horps",
+"a": 268,
+"d": 2469,
+"t": -1.4
+},
+{
+"n": "Mayenne",
+"a": 138,
+"d": 2212,
+"t": -0.7
+},
+{
+"n": "Montourtier_Sapc",
+"a": 107,
+"d": 2394,
+"t": -0.9
+},
+{
+"n": "Pre-En-Pail_Sapc",
+"a": 277,
+"d": 2427,
+"t": -1.4
+}
+]
+},
+{
+"code": "54",
+"nom": "Meurthe-et-Moselle",
+"region": "Grand Est",
+"chefLieu": "Nancy",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Nancy-Essey",
+"stationAlt": 212,
+"dju": 2518,
+"dju2025": 2497,
+"tbase": -3.9,
+"tbaseStation": "Nancy-Essey",
+"stationKm": 3.5,
+"stations": [
+{
+"n": "Badonviller",
+"a": 336,
+"d": 2669,
+"t": -4.3
+},
+{
+"n": "Champenoux-Arbo-Inrae",
+"a": 255,
+"d": 2640,
+"t": -4.0
+},
+{
+"n": "Doncourt-Les-Conflans",
+"a": 235,
+"d": 2654,
+"t": -3.7
+},
+{
+"n": "Errouville_Sapc",
+"a": 373,
+"d": 2919,
+"t": -4.2
+},
+{
+"n": "Nancy-Essey",
+"a": 212,
+"d": 2518,
+"t": -3.9
+},
+{
+"n": "Nancy-Ochey",
+"a": 336,
+"d": 2627,
+"t": -4.2
+},
+{
+"n": "St Maurice",
+"a": 305,
+"d": 2698,
+"t": -4.8
+},
+{
+"n": "Villette",
+"a": 345,
+"d": 2788,
+"t": -3.6
+}
+]
+},
+{
+"code": "55",
+"nom": "Meuse",
+"region": "Grand Est",
+"chefLieu": "Bar-le-Duc",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Behonne_Sapc",
+"stationAlt": 301,
+"dju": 2577,
+"dju2025": 2488,
+"tbase": -3.1,
+"tbaseStation": "Behonne_Sapc",
+"stationKm": 3.8,
+"stations": [
+{
+"n": "Aubreville_Sapc",
+"a": 202,
+"d": 2610,
+"t": -3.3
+},
+{
+"n": "Behonne_Sapc",
+"a": 301,
+"d": 2577,
+"t": -3.1
+},
+{
+"n": "Bonzee_Sapc",
+"a": 235,
+"d": 2712,
+"t": -4.2
+},
+{
+"n": "Chaumont_Sapc",
+"a": 294,
+"d": 2629,
+"t": -3.2
+},
+{
+"n": "Conde_Sapc",
+"a": 265,
+"d": 2536,
+"t": -2.9
+},
+{
+"n": "Erneville Aux Bois_Sapc",
+"a": 313,
+"d": 2792,
+"t": -4.1
+},
+{
+"n": "Houdelaincourt",
+"a": 390,
+"d": 2739,
+"t": -4.1
+},
+{
+"n": "Mouzay",
+"a": 166,
+"d": 2633,
+"t": -2.8
+},
+{
+"n": "Nonsard",
+"a": 230,
+"d": 2647,
+"t": -3.9
+},
+{
+"n": "Rouvres-En-Woevre",
+"a": 226,
+"d": 2707,
+"t": -3.7
+},
+{
+"n": "Septsarges",
+"a": 293,
+"d": 2706,
+"t": -3.2
+},
+{
+"n": "Triaucourt_Sapc",
+"a": 185,
+"d": 2570,
+"t": -2.8
+},
+{
+"n": "Vassincourt",
+"a": 187,
+"d": 2437,
+"t": -2.4
+}
+]
+},
+{
+"code": "56",
+"nom": "Morbihan",
+"region": "Bretagne",
+"chefLieu": "Vannes",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Vannes-Sene",
+"stationAlt": 3,
+"dju": 1942,
+"dju2025": 1851,
+"tbase": 1.1,
+"tbaseStation": "Vannes-Sene",
+"stationKm": 6.4,
+"stations": [
+{
+"n": "Arzal",
+"a": 26,
+"d": 2003,
+"t": 0.8
+},
+{
+"n": "Auray",
+"a": 26,
+"d": 1924,
+"t": 1.6
+},
+{
+"n": "Belle Ile-Le Talut",
+"a": 37,
+"d": 1707,
+"t": 3.1
+},
+{
+"n": "Bignan",
+"a": 112,
+"d": 2188,
+"t": 0.5
+},
+{
+"n": "Ile De Groix",
+"a": 41,
+"d": 1720,
+"t": 3.0
+},
+{
+"n": "Lorient-Lann Bihoue",
+"a": 45,
+"d": 2065,
+"t": 1.5
+},
+{
+"n": "Naizin-Inrae",
+"a": 132,
+"d": 2214,
+"t": 0.4
+},
+{
+"n": "Pleucadeuc",
+"a": 65,
+"d": 2204,
+"t": 0.2
+},
+{
+"n": "Ploermel",
+"a": 65,
+"d": 2107,
+"t": 0.4
+},
+{
+"n": "Plouay-Sa",
+"a": 75,
+"d": 2177,
+"t": 0.9
+},
+{
+"n": "Pontivy Aerodrome",
+"a": 125,
+"d": 2163,
+"t": 0.3
+},
+{
+"n": "Sarzeau Sa",
+"a": 35,
+"d": 1912,
+"t": 1.5
+},
+{
+"n": "Vannes-Meucon",
+"a": 132,
+"d": 2173,
+"t": 0.4
+},
+{
+"n": "Vannes-Sene",
+"a": 3,
+"d": 1942,
+"t": 1.1
+}
+]
+},
+{
+"code": "57",
+"nom": "Moselle",
+"region": "Grand Est",
+"chefLieu": "Metz",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Metz-Frescaty",
+"stationAlt": 192,
+"dju": 2527,
+"dju2025": 2492,
+"tbase": -3.3,
+"tbaseStation": "Metz-Frescaty",
+"stationKm": 6.5,
+"stations": [
+{
+"n": "Aeroport Metz-Nancy-Lorraine",
+"a": 260,
+"d": 2583,
+"t": -3.8
+},
+{
+"n": "Buhl-Lorraine",
+"a": 258,
+"d": 2777,
+"t": -4.9
+},
+{
+"n": "Kappelkinger_Sapc",
+"a": 224,
+"d": 2673,
+"t": -4.2
+},
+{
+"n": "Lesse_Sapc",
+"a": 233,
+"d": 2690,
+"t": -4.2
+},
+{
+"n": "Malancourt",
+"a": 346,
+"d": 2654,
+"t": -3.5
+},
+{
+"n": "Metz-Frescaty",
+"a": 192,
+"d": 2527,
+"t": -3.3
+},
+{
+"n": "Mouterhouse",
+"a": 265,
+"d": 2765,
+"t": -4.7
+},
+{
+"n": "Nitting_Sapc",
+"a": 266,
+"d": 2749,
+"t": -5.0
+},
+{
+"n": "Phalsbourg_Sapc",
+"a": 377,
+"d": 2708,
+"t": -4.8
+},
+{
+"n": "Rodalbe",
+"a": 258,
+"d": 2695,
+"t": -4.3
+},
+{
+"n": "Seingbouse",
+"a": 347,
+"d": 2709,
+"t": -3.9
+},
+{
+"n": "Turquestein-Blancrupt_Sapc",
+"a": 352,
+"d": 2857,
+"t": -5.2
+},
+{
+"n": "Volmunster",
+"a": 358,
+"d": 2812,
+"t": -5.0
+}
+]
+},
+{
+"code": "58",
+"nom": "Nièvre",
+"region": "Bourgogne-Franche-Comté",
+"chefLieu": "Nevers",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Nevers-Marzy",
+"stationAlt": 175,
+"dju": 2361,
+"dju2025": 2321,
+"tbase": -2.1,
+"tbaseStation": "Nevers-Marzy",
+"stationKm": 3.8,
+"stations": [
+{
+"n": "Avree",
+"a": 302,
+"d": 2409,
+"t": -2.3
+},
+{
+"n": "Chateau Chinon",
+"a": 598,
+"d": 2661,
+"t": -3.3
+},
+{
+"n": "Clamecy",
+"a": 215,
+"d": 2379,
+"t": -2.3
+},
+{
+"n": "Dornes",
+"a": 220,
+"d": 2477,
+"t": -2.6
+},
+{
+"n": "Dun_Sapc",
+"a": 598,
+"d": 2812,
+"t": -3.7
+},
+{
+"n": "Lormes_Sapc",
+"a": 485,
+"d": 2478,
+"t": -2.6
+},
+{
+"n": "Nevers-Marzy",
+"a": 175,
+"d": 2361,
+"t": -2.1
+},
+{
+"n": "Premery",
+"a": 260,
+"d": 2460,
+"t": -2.3
+},
+{
+"n": "St Pierre Le Moutier",
+"a": 218,
+"d": 2107,
+"t": -1.2
+},
+{
+"n": "Varzy_Sapc",
+"a": 226,
+"d": 2432,
+"t": -2.7
+}
+]
+},
+{
+"code": "59",
+"nom": "Nord",
+"region": "Hauts-de-France",
+"chefLieu": "Lille",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Lille-Lesquin",
+"stationAlt": 47,
+"dju": 2359,
+"dju2025": 2292,
+"tbase": -1.6,
+"tbaseStation": "Lille-Lesquin",
+"stationKm": 7.7,
+"stations": [
+{
+"n": "Douai",
+"a": 26,
+"d": 2357,
+"t": -1.6
+},
+{
+"n": "Dunkerque",
+"a": 11,
+"d": 2168,
+"t": 0.5
+},
+{
+"n": "Lille-Lesquin",
+"a": 47,
+"d": 2359,
+"t": -1.6
+},
+{
+"n": "St-Hilaire-Sur-Helpe",
+"a": 185,
+"d": 2639,
+"t": -2.8
+},
+{
+"n": "Steenvoorde",
+"a": 42,
+"d": 2389,
+"t": -0.8
+},
+{
+"n": "Valenciennes",
+"a": 50,
+"d": 2467,
+"t": -2.3
+},
+{
+"n": "Watten",
+"a": 7,
+"d": 2335,
+"t": -1.1
+}
+]
+},
+{
+"code": "60",
+"nom": "Oise",
+"region": "Hauts-de-France",
+"chefLieu": "Beauvais",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Beauvais-Tille",
+"stationAlt": 89,
+"dju": 2506,
+"dju2025": 2435,
+"tbase": -2.4,
+"tbaseStation": "Beauvais-Tille",
+"stationKm": 2.9,
+"stations": [
+{
+"n": "Beauvais-Tille",
+"a": 89,
+"d": 2506,
+"t": -2.4
+},
+{
+"n": "Godenvillers",
+"a": 92,
+"d": 2373,
+"t": -2.1
+},
+{
+"n": "Jamericourt",
+"a": 113,
+"d": 2479,
+"t": -2.1
+},
+{
+"n": "Margny-Les-Compiegne",
+"a": 92,
+"d": 2408,
+"t": -1.9
+},
+{
+"n": "Plessis-Belleville",
+"a": 116,
+"d": 2384,
+"t": -1.9
+},
+{
+"n": "Rouvroy-Les-Merles",
+"a": 94,
+"d": 2551,
+"t": -2.8
+},
+{
+"n": "Saint-Arnoult",
+"a": 206,
+"d": 2645,
+"t": -2.3
+}
+]
+},
+{
+"code": "61",
+"nom": "Orne",
+"region": "Normandie",
+"chefLieu": "Alençon",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Alencon",
+"stationAlt": 143,
+"dju": 2364,
+"dju2025": 2309,
+"tbase": -1.5,
+"tbaseStation": "Alencon",
+"stationKm": 2.1,
+"stations": [
+{
+"n": "Alencon",
+"a": 143,
+"d": 2364,
+"t": -1.5
+},
+{
+"n": "Argentan",
+"a": 170,
+"d": 2441,
+"t": -1.7
+},
+{
+"n": "Bagnoles-De-L_Orne",
+"a": 151,
+"d": 2436,
+"t": -1.1
+},
+{
+"n": "Belleme_Sapc",
+"a": 168,
+"d": 2332,
+"t": -1.3
+},
+{
+"n": "Flers",
+"a": 195,
+"d": 2587,
+"t": -1.5
+},
+{
+"n": "Fresnaye-Au-Sauvage_Sapc",
+"a": 229,
+"d": 2447,
+"t": -1.5
+},
+{
+"n": "L Aigle",
+"a": 232,
+"d": 2615,
+"t": -2.0
+},
+{
+"n": "Le Merlerault_Sapc",
+"a": 236,
+"d": 2498,
+"t": -1.7
+},
+{
+"n": "Pin Au Haras-Inrae",
+"a": 202,
+"d": 2532,
+"t": -1.9
+},
+{
+"n": "St Bomer-Les-Forges",
+"a": 226,
+"d": 2480,
+"t": -1.2
+},
+{
+"n": "St-Fraimbault",
+"a": 158,
+"d": 2394,
+"t": -1.0
+},
+{
+"n": "St-Hilaire",
+"a": 242,
+"d": 2454,
+"t": -1.9
+},
+{
+"n": "Ticheville_Sapc",
+"a": 225,
+"d": 2460,
+"t": -1.6
+},
+{
+"n": "Tourouvre_Sapc",
+"a": 217,
+"d": 2564,
+"t": -1.9
+}
+]
+},
+{
+"code": "62",
+"nom": "Pas-de-Calais",
+"region": "Hauts-de-France",
+"chefLieu": "Arras",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Arras",
+"stationAlt": 74,
+"dju": 2486,
+"dju2025": 2419,
+"tbase": -2.1,
+"tbaseStation": "Arras",
+"stationKm": 8.1,
+"stations": [
+{
+"n": "Arras",
+"a": 74,
+"d": 2486,
+"t": -2.1
+},
+{
+"n": "Bainghen_Sapc",
+"a": 117,
+"d": 2439,
+"t": -0.9
+},
+{
+"n": "Boulogne-Sem",
+"a": 73,
+"d": 2340,
+"t": -0.1
+},
+{
+"n": "Calais-Marck",
+"a": 2,
+"d": 2339,
+"t": -0.3
+},
+{
+"n": "Cambrai-Epinoy",
+"a": 76,
+"d": 2445,
+"t": -2.1
+},
+{
+"n": "Cap-Gris-Nez",
+"a": 48,
+"d": 2318,
+"t": 0.0
+},
+{
+"n": "Fiefs",
+"a": 180,
+"d": 2661,
+"t": -2.3
+},
+{
+"n": "Humieres_Sapc",
+"a": 127,
+"d": 2554,
+"t": -1.7
+},
+{
+"n": "Le-Touquet",
+"a": 5,
+"d": 2340,
+"t": -0.6
+},
+{
+"n": "Lillers",
+"a": 19,
+"d": 2415,
+"t": -1.2
+},
+{
+"n": "Nielles-Les-Blequin_Sapc",
+"a": 145,
+"d": 2573,
+"t": -1.4
+},
+{
+"n": "Radinghem",
+"a": 115,
+"d": 2567,
+"t": -1.5
+},
+{
+"n": "Saulty",
+"a": 174,
+"d": 2606,
+"t": -2.2
+}
+]
+},
+{
+"code": "63",
+"nom": "Puy-de-Dôme",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Clermont-Ferrand",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Clermont-Fd",
+"stationAlt": 331,
+"dju": 2166,
+"dju2025": 2128,
+"tbase": -1.8,
+"tbaseStation": "Clermont-Fd",
+"stationKm": 2.8,
+"stations": [
+{
+"n": "Ambert",
+"a": 555,
+"d": 2766,
+"t": -3.3
+},
+{
+"n": "Anzat-Le-Luguet_Sapc",
+"a": 1270,
+"d": 3671,
+"t": -7.2
+},
+{
+"n": "Chastreix",
+"a": 1385,
+"d": 3921,
+"t": -7.5
+},
+{
+"n": "Clermont-Fd",
+"a": 331,
+"d": 2166,
+"t": -1.8
+},
+{
+"n": "Courpiere",
+"a": 455,
+"d": 2335,
+"t": -2.5
+},
+{
+"n": "Cunlhat",
+"a": 700,
+"d": 2723,
+"t": -3.9
+},
+{
+"n": "Fayet-Le-Chatea",
+"a": 585,
+"d": 2430,
+"t": -3.3
+},
+{
+"n": "Fontaine-Du-Ber_Sapc",
+"a": 971,
+"d": 3309,
+"t": -5.4
+},
+{
+"n": "Gelles",
+"a": 784,
+"d": 2938,
+"t": -4.5
+},
+{
+"n": "Issoire",
+"a": 372,
+"d": 2278,
+"t": -1.9
+},
+{
+"n": "Laqueuille-Inrae",
+"a": 1095,
+"d": 3341,
+"t": -5.8
+},
+{
+"n": "Le Mont-Dore_Sapc",
+"a": 1220,
+"d": 3607,
+"t": -6.4
+},
+{
+"n": "Menat",
+"a": 410,
+"d": 2713,
+"t": -2.8
+},
+{
+"n": "Pionsat",
+"a": 524,
+"d": 2755,
+"t": -2.4
+},
+{
+"n": "Plauzat_Sapc",
+"a": 495,
+"d": 2393,
+"t": -2.5
+},
+{
+"n": "Saint Avit_Sapc",
+"a": 724,
+"d": 2861,
+"t": -3.8
+},
+{
+"n": "Sayat_Sapc",
+"a": 547,
+"d": 2469,
+"t": -2.9
+},
+{
+"n": "St-Antheme",
+"a": 1263,
+"d": 3814,
+"t": -7.2
+},
+{
+"n": "St-Genes-Chplle-Inrae",
+"a": 893,
+"d": 3193,
+"t": -5.3
+},
+{
+"n": "St-Germain-L He",
+"a": 1070,
+"d": 3455,
+"t": -6.0
+},
+{
+"n": "St-Gervais-D Au",
+"a": 705,
+"d": 2829,
+"t": -3.7
+},
+{
+"n": "St-Sulpice",
+"a": 851,
+"d": 3005,
+"t": -4.3
+},
+{
+"n": "Superbesse",
+"a": 1287,
+"d": 3709,
+"t": -7.1
+},
+{
+"n": "Tauves",
+"a": 851,
+"d": 2931,
+"t": -4.7
+},
+{
+"n": "Vernines",
+"a": 1045,
+"d": 3281,
+"t": -5.6
+}
+]
+},
+{
+"code": "64",
+"nom": "Pyrénées-Atlantiques",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Pau",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Pau-Uzein",
+"stationAlt": 183,
+"dju": 1687,
+"dju2025": 1530,
+"tbase": 0.9,
+"tbaseStation": "Pau-Uzein",
+"stationKm": 9.1,
+"stations": [
+{
+"n": "Aicirits",
+"a": 75,
+"d": 1544,
+"t": 1.6
+},
+{
+"n": "Asson",
+"a": 337,
+"d": 1880,
+"t": 0.5
+},
+{
+"n": "Benejacq",
+"a": 255,
+"d": 1815,
+"t": 0.7
+},
+{
+"n": "Biarritz-Pays-Basque",
+"a": 71,
+"d": 1428,
+"t": 2.2
+},
+{
+"n": "Bidache",
+"a": 45,
+"d": 1485,
+"t": 1.9
+},
+{
+"n": "Bustince - St Jean",
+"a": 189,
+"d": 1655,
+"t": 1.6
+},
+{
+"n": "Cambo-Les-Bains",
+"a": 71,
+"d": 1379,
+"t": 2.7
+},
+{
+"n": "Ger",
+"a": 410,
+"d": 2078,
+"t": -0.6
+},
+{
+"n": "Lagor",
+"a": 125,
+"d": 1636,
+"t": 0.9
+},
+{
+"n": "Laruns-Hourat",
+"a": 522,
+"d": 2066,
+"t": 0.1
+},
+{
+"n": "Lasseube_Sapc",
+"a": 247,
+"d": 1704,
+"t": 1.1
+},
+{
+"n": "Lembeye",
+"a": 310,
+"d": 1690,
+"t": 0.5
+},
+{
+"n": "Mendive_Sapc",
+"a": 292,
+"d": 1608,
+"t": 1.6
+},
+{
+"n": "Monein",
+"a": 241,
+"d": 1621,
+"t": 1.4
+},
+{
+"n": "Oloron",
+"a": 295,
+"d": 1861,
+"t": 0.4
+},
+{
+"n": "Orthez",
+"a": 96,
+"d": 1658,
+"t": 1.3
+},
+{
+"n": "Pau-Uzein",
+"a": 183,
+"d": 1687,
+"t": 0.9
+},
+{
+"n": "Pomps",
+"a": 130,
+"d": 1624,
+"t": 0.9
+},
+{
+"n": "Socoa",
+"a": 21,
+"d": 1244,
+"t": 3.6
+},
+{
+"n": "St-Gladie",
+"a": 73,
+"d": 1562,
+"t": 1.6
+},
+{
+"n": "Urepel_Sapc",
+"a": 410,
+"d": 1911,
+"t": 1.0
+}
+]
+},
+{
+"code": "65",
+"nom": "Hautes-Pyrénées",
+"region": "Occitanie",
+"chefLieu": "Tarbes",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Tarbes-Lourdes-Pyrenees",
+"stationAlt": 360,
+"dju": 1957,
+"dju2025": 1862,
+"tbase": -0.1,
+"tbaseStation": "Tarbes-Lourdes-Pyrenees",
+"stationKm": 7.7,
+"stations": [
+{
+"n": "Adast",
+"a": 446,
+"d": 2010,
+"t": 0.6
+},
+{
+"n": "Bazus-Aure",
+"a": 767,
+"d": 2618,
+"t": -2.2
+},
+{
+"n": "Campistrous",
+"a": 593,
+"d": 2176,
+"t": -0.9
+},
+{
+"n": "Castelnau Magnoac",
+"a": 298,
+"d": 1940,
+"t": 0.3
+},
+{
+"n": "Cauterets_Sapc",
+"a": 1535,
+"d": 3803,
+"t": -6.7
+},
+{
+"n": "Gavarnie_Sapc",
+"a": 1410,
+"d": 3268,
+"t": -5.4
+},
+{
+"n": "La Mongie_Sapc",
+"a": 1779,
+"d": 4251,
+"t": -8.0
+},
+{
+"n": "Lac D'Ardiden-Nivose",
+"a": 2445,
+"d": 5390,
+"t": -12.3
+},
+{
+"n": "Lannemezan",
+"a": 638,
+"d": 2154,
+"t": -0.9
+},
+{
+"n": "Lomne_Sapc",
+"a": 447,
+"d": 2053,
+"t": 0.1
+},
+{
+"n": "Loudervielle",
+"a": 1587,
+"d": 3287,
+"t": -5.7
+},
+{
+"n": "Luz Saint Sauveur",
+"a": 910,
+"d": 2224,
+"t": -1.3
+},
+{
+"n": "Maubourguet",
+"a": 177,
+"d": 1732,
+"t": 0.9
+},
+{
+"n": "Pic Du Midi - Observatoire",
+"a": 2880,
+"d": 6372,
+"t": -14.7
+},
+{
+"n": "Tarbes-Lourdes-Pyrenees",
+"a": 360,
+"d": 1957,
+"t": -0.1
+},
+{
+"n": "Tournay",
+"a": 267,
+"d": 1836,
+"t": 1.1
+},
+{
+"n": "Vic En Bigorre",
+"a": 219,
+"d": 1852,
+"t": 0.5
+}
+]
+},
+{
+"code": "66",
+"nom": "Pyrénées-Orientales",
+"region": "Occitanie",
+"chefLieu": "Perpignan",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Perpignan",
+"stationAlt": 42,
+"dju": 1212,
+"dju2025": 1161,
+"tbase": 4.3,
+"tbaseStation": "Perpignan",
+"stationKm": 5.0,
+"stations": [
+{
+"n": "Caixas",
+"a": 347,
+"d": 1400,
+"t": 3.3
+},
+{
+"n": "Cap Bear",
+"a": 72,
+"d": 1120,
+"t": 5.2
+},
+{
+"n": "Eus",
+"a": 321,
+"d": 1720,
+"t": 2.1
+},
+{
+"n": "Formigueres",
+"a": 1495,
+"d": 3544,
+"t": -6.1
+},
+{
+"n": "Le Perthus",
+"a": 295,
+"d": 1387,
+"t": 3.2
+},
+{
+"n": "Le Tech La Llau_Sapc",
+"a": 927,
+"d": 2009,
+"t": 0.4
+},
+{
+"n": "Perpignan",
+"a": 42,
+"d": 1212,
+"t": 4.3
+},
+{
+"n": "Puigmal-Nivose",
+"a": 2461,
+"d": 5230,
+"t": -11.3
+},
+{
+"n": "Serralongue",
+"a": 700,
+"d": 1918,
+"t": 1.0
+},
+{
+"n": "St Paul De Fenouillet",
+"a": 300,
+"d": 1554,
+"t": 2.6
+},
+{
+"n": "Taurinya",
+"a": 770,
+"d": 1888,
+"t": 0.9
+},
+{
+"n": "Torreilles",
+"a": 7,
+"d": 1352,
+"t": 3.6
+},
+{
+"n": "Vives",
+"a": 261,
+"d": 1267,
+"t": 3.6
+}
+]
+},
+{
+"code": "67",
+"nom": "Bas-Rhin",
+"region": "Grand Est",
+"chefLieu": "Strasbourg",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Strasbourg - Botanique",
+"stationAlt": 139,
+"dju": 2267,
+"dju2025": 2305,
+"tbase": -3.2,
+"tbaseStation": "Strasbourg - Botanique",
+"stationKm": 1.5,
+"stations": [
+{
+"n": "Belmont",
+"a": 1065,
+"d": 3856,
+"t": -7.9
+},
+{
+"n": "Berg",
+"a": 350,
+"d": 2740,
+"t": -4.7
+},
+{
+"n": "Erckartswiller_Sapc",
+"a": 245,
+"d": 2820,
+"t": -4.8
+},
+{
+"n": "Grandfontaine_Sapc",
+"a": 736,
+"d": 3123,
+"t": -5.6
+},
+{
+"n": "Le Hohwald_Sapc",
+"a": 591,
+"d": 3147,
+"t": -5.8
+},
+{
+"n": "Scheibenhard",
+"a": 144,
+"d": 2412,
+"t": -3.8
+},
+{
+"n": "Selestat Sa",
+"a": 173,
+"d": 2433,
+"t": -4.0
+},
+{
+"n": "Strasbourg - Botanique",
+"a": 139,
+"d": 2267,
+"t": -3.2
+},
+{
+"n": "Strasbourg-Entzheim",
+"a": 150,
+"d": 2392,
+"t": -4.0
+},
+{
+"n": "Ville",
+"a": 264,
+"d": 2451,
+"t": -3.7
+},
+{
+"n": "Waltenheim-Sur-Zorn",
+"a": 252,
+"d": 2535,
+"t": -4.4
+},
+{
+"n": "Wangenbourg_Sapc",
+"a": 460,
+"d": 2789,
+"t": -5.3
+}
+]
+},
+{
+"code": "68",
+"nom": "Haut-Rhin",
+"region": "Grand Est",
+"chefLieu": "Colmar",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Colmar-Inrae",
+"stationAlt": 202,
+"dju": 2437,
+"dju2025": 2398,
+"tbase": -3.8,
+"tbaseStation": "Colmar-Inrae",
+"stationKm": 7.1,
+"stations": [
+{
+"n": "Bale-Mulhouse",
+"a": 263,
+"d": 2496,
+"t": -4.2
+},
+{
+"n": "Bergheim-Inrae",
+"a": 309,
+"d": 2415,
+"t": -4.2
+},
+{
+"n": "Carspach",
+"a": 332,
+"d": 2598,
+"t": -4.1
+},
+{
+"n": "Colmar-Inrae",
+"a": 202,
+"d": 2437,
+"t": -3.8
+},
+{
+"n": "Colmar-Meyenheim",
+"a": 207,
+"d": 2422,
+"t": -4.5
+},
+{
+"n": "Geishouse_Sapc",
+"a": 618,
+"d": 2766,
+"t": -4.6
+},
+{
+"n": "Guebwiller",
+"a": 273,
+"d": 2407,
+"t": -3.8
+},
+{
+"n": "Kruth_Sapc",
+"a": 512,
+"d": 2886,
+"t": -5.0
+},
+{
+"n": "Linthal_Sapc",
+"a": 488,
+"d": 2937,
+"t": -5.4
+},
+{
+"n": "Lucelle_Sapc",
+"a": 690,
+"d": 2972,
+"t": -5.5
+},
+{
+"n": "Markstein Crete",
+"a": 1184,
+"d": 3978,
+"t": -8.1
+},
+{
+"n": "Mulhouse",
+"a": 245,
+"d": 2502,
+"t": -4.1
+},
+{
+"n": "Munster_Sapc",
+"a": 420,
+"d": 2734,
+"t": -5.0
+},
+{
+"n": "Orbey Lac Blanc_Sapc",
+"a": 1080,
+"d": 3806,
+"t": -7.5
+},
+{
+"n": "Sewen - Lac Alfeld_Sapc",
+"a": 620,
+"d": 2882,
+"t": -5.2
+},
+{
+"n": "Trois-Epis_Sapc",
+"a": 656,
+"d": 2844,
+"t": -5.1
+}
+]
+},
+{
+"code": "69",
+"nom": "Rhône",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Lyon",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "St-Genis-Laval",
+"stationAlt": 290,
+"dju": 2058,
+"dju2025": 1982,
+"tbase": -1.1,
+"tbaseStation": "St-Genis-Laval",
+"stationKm": 8.1,
+"stations": [
+{
+"n": "Brindas",
+"a": 317,
+"d": 2245,
+"t": -1.7
+},
+{
+"n": "Cours La Ville_Sapc",
+"a": 578,
+"d": 2461,
+"t": -2.4
+},
+{
+"n": "Les Sauvages",
+"a": 831,
+"d": 2951,
+"t": -4.7
+},
+{
+"n": "Liergues_Sapc",
+"a": 290,
+"d": 2208,
+"t": -2.3
+},
+{
+"n": "Lyon-Bron",
+"a": 202,
+"d": 2030,
+"t": -1.1
+},
+{
+"n": "Lyon-St Exupery",
+"a": 235,
+"d": 2081,
+"t": -1.8
+},
+{
+"n": "Monsols",
+"a": 525,
+"d": 2570,
+"t": -3.4
+},
+{
+"n": "Mornant",
+"a": 343,
+"d": 2233,
+"t": -1.7
+},
+{
+"n": "Saint-Verand",
+"a": 390,
+"d": 2250,
+"t": -1.9
+},
+{
+"n": "St-Didier-Beauj",
+"a": 345,
+"d": 2512,
+"t": -3.1
+},
+{
+"n": "St-Genis-Laval",
+"a": 290,
+"d": 2058,
+"t": -1.1
+},
+{
+"n": "St-Georges-Ren",
+"a": 190,
+"d": 2264,
+"t": -2.2
+},
+{
+"n": "St-Symphorien-C",
+"a": 610,
+"d": 2649,
+"t": -3.1
+},
+{
+"n": "Vauxrenard",
+"a": 740,
+"d": 2887,
+"t": -4.3
+},
+{
+"n": "Villefranche",
+"a": 174,
+"d": 1887,
+"t": -0.8
+}
+]
+},
+{
+"code": "70",
+"nom": "Haute-Saône",
+"region": "Bourgogne-Franche-Comté",
+"chefLieu": "Vesoul",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Vesoul Ville",
+"stationAlt": 242,
+"dju": 2460,
+"dju2025": 2330,
+"tbase": -3.3,
+"tbaseStation": "Vesoul Ville",
+"stationKm": 2.0,
+"stations": [
+{
+"n": "Aillevillers",
+"a": 275,
+"d": 2647,
+"t": -4.1
+},
+{
+"n": "Ballon De Servance",
+"a": 1213,
+"d": 3987,
+"t": -7.4
+},
+{
+"n": "Belfahy_Sapc",
+"a": 847,
+"d": 3095,
+"t": -4.8
+},
+{
+"n": "Bucey-Les-Gy",
+"a": 215,
+"d": 2306,
+"t": -2.4
+},
+{
+"n": "Chargey-Les-Gray",
+"a": 244,
+"d": 2448,
+"t": -2.7
+},
+{
+"n": "Combeaufontaine",
+"a": 252,
+"d": 2652,
+"t": -3.8
+},
+{
+"n": "Fougerolles_Sapc",
+"a": 315,
+"d": 2618,
+"t": -4.0
+},
+{
+"n": "Frotey_Sapc",
+"a": 360,
+"d": 2477,
+"t": -3.8
+},
+{
+"n": "Luxeuil",
+"a": 271,
+"d": 2607,
+"t": -4.1
+},
+{
+"n": "Plancher-Les-Mi",
+"a": 529,
+"d": 2932,
+"t": -5.0
+},
+{
+"n": "Rioz",
+"a": 275,
+"d": 2529,
+"t": -3.2
+},
+{
+"n": "Venisey",
+"a": 243,
+"d": 2558,
+"t": -3.6
+},
+{
+"n": "Vesoul Ville",
+"a": 242,
+"d": 2460,
+"t": -3.3
+},
+{
+"n": "Villersexel Sa",
+"a": 290,
+"d": 2577,
+"t": -3.4
+}
+]
+},
+{
+"code": "71",
+"nom": "Saône-et-Loire",
+"region": "Bourgogne-Franche-Comté",
+"chefLieu": "Mâcon",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Macon",
+"stationAlt": 219,
+"dju": 2182,
+"dju2025": 2160,
+"tbase": -2.0,
+"tbaseStation": "Macon",
+"stationKm": 3.7,
+"stations": [
+{
+"n": "Autun",
+"a": 303,
+"d": 2600,
+"t": -2.6
+},
+{
+"n": "Baudemont_Sapc",
+"a": 396,
+"d": 2447,
+"t": -2.6
+},
+{
+"n": "Chalon-Champfo",
+"a": 187,
+"d": 2418,
+"t": -2.5
+},
+{
+"n": "Charolles",
+"a": 309,
+"d": 2466,
+"t": -3.0
+},
+{
+"n": "Gueugnon",
+"a": 305,
+"d": 2277,
+"t": -2.1
+},
+{
+"n": "Jalogny_Sapc",
+"a": 246,
+"d": 2479,
+"t": -2.7
+},
+{
+"n": "Macon",
+"a": 219,
+"d": 2182,
+"t": -2.0
+},
+{
+"n": "Matour_Sapc",
+"a": 415,
+"d": 2518,
+"t": -3.1
+},
+{
+"n": "Mt-St-Vincent",
+"a": 601,
+"d": 2695,
+"t": -4.0
+},
+{
+"n": "Simard",
+"a": 211,
+"d": 2259,
+"t": -2.0
+},
+{
+"n": "St Yan",
+"a": 242,
+"d": 2377,
+"t": -2.3
+},
+{
+"n": "St-Maurice-Les-Couches_Sapc",
+"a": 300,
+"d": 2439,
+"t": -2.7
+},
+{
+"n": "St-Symphorien De Marmagne",
+"a": 349,
+"d": 2451,
+"t": -2.2
+},
+{
+"n": "Varennes-St-Sa",
+"a": 207,
+"d": 2271,
+"t": -2.4
+}
+]
+},
+{
+"code": "72",
+"nom": "Sarthe",
+"region": "Pays de la Loire",
+"chefLieu": "Le Mans",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Le Mans",
+"stationAlt": 51,
+"dju": 2047,
+"dju2025": 1950,
+"tbase": -0.7,
+"tbaseStation": "Le Mans",
+"stationKm": 4.0,
+"stations": [
+{
+"n": "Commerveil_Sapc",
+"a": 105,
+"d": 2268,
+"t": -1.0
+},
+{
+"n": "Cormes",
+"a": 122,
+"d": 2325,
+"t": -1.3
+},
+{
+"n": "La Fresnaye",
+"a": 146,
+"d": 2490,
+"t": -2.1
+},
+{
+"n": "Le Luart",
+"a": 112,
+"d": 2221,
+"t": -1.1
+},
+{
+"n": "Le Mans",
+"a": 51,
+"d": 2047,
+"t": -0.7
+},
+{
+"n": "Luche-Pringe",
+"a": 92,
+"d": 2106,
+"t": -0.8
+},
+{
+"n": "Marolles Les Br",
+"a": 65,
+"d": 2204,
+"t": -1.0
+},
+{
+"n": "Rouesse-Vasse",
+"a": 206,
+"d": 2312,
+"t": -1.4
+},
+{
+"n": "Sable Sur Sarth",
+"a": 41,
+"d": 2072,
+"t": -0.3
+},
+{
+"n": "Saint Corneille",
+"a": 62,
+"d": 2212,
+"t": -1.1
+},
+{
+"n": "Saint Germain_Sapc",
+"a": 85,
+"d": 2224,
+"t": -0.9
+},
+{
+"n": "Thoree Les Pins",
+"a": 78,
+"d": 2148,
+"t": -0.9
+},
+{
+"n": "Tresson_Sapc",
+"a": 154,
+"d": 2288,
+"t": -1.4
+}
+]
+},
+{
+"code": "73",
+"nom": "Savoie",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Chambéry",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Challes Les Eaux",
+"stationAlt": 298,
+"dju": 2260,
+"dju2025": 2157,
+"tbase": -1.5,
+"tbaseStation": "Challes Les Eaux",
+"stationKm": 5.3,
+"stations": [
+{
+"n": "Allant-Nivose",
+"a": 1684,
+"d": 4157,
+"t": -8.5
+},
+{
+"n": "Aussois-Clim",
+"a": 1467,
+"d": 3716,
+"t": -8.4
+},
+{
+"n": "Avrieux",
+"a": 1104,
+"d": 3304,
+"t": -6.8
+},
+{
+"n": "Beaufort-Sur-Doron",
+"a": 1036,
+"d": 3163,
+"t": -6.1
+},
+{
+"n": "Bellecote-Nivose",
+"a": 2992,
+"d": 6988,
+"t": -16.2
+},
+{
+"n": "Bessans-Clim",
+"a": 1731,
+"d": 4753,
+"t": -12.9
+},
+{
+"n": "Bonneval-Nivose",
+"a": 2741,
+"d": 6351,
+"t": -14.5
+},
+{
+"n": "Bourg St Maurice",
+"a": 865,
+"d": 2670,
+"t": -4.0
+},
+{
+"n": "Bourget En Huile_Sapc",
+"a": 820,
+"d": 3371,
+"t": -6.8
+},
+{
+"n": "Bessans",
+"a": 1713,
+"d": 4789,
+"t": -13.4
+},
+{
+"n": "Challes Les Eaux",
+"a": 298,
+"d": 2260,
+"t": -1.5
+},
+{
+"n": "Chambery-Aix",
+"a": 235,
+"d": 2300,
+"t": -0.5
+},
+{
+"n": "Col-Des-Saisies",
+"a": 1614,
+"d": 4454,
+"t": -9.5
+},
+{
+"n": "Feclaz_Sapc",
+"a": 1328,
+"d": 3877,
+"t": -7.5
+},
+{
+"n": "Jarsy_Sapc",
+"a": 832,
+"d": 2997,
+"t": -4.7
+},
+{
+"n": "Les Rochilles-Nivose",
+"a": 2444,
+"d": 5820,
+"t": -12.9
+},
+{
+"n": "Lescheraines",
+"a": 591,
+"d": 2989,
+"t": -4.7
+},
+{
+"n": "Mont Du Chat",
+"a": 1496,
+"d": 4012,
+"t": -8.1
+},
+{
+"n": "Montmelian",
+"a": 264,
+"d": 2243,
+"t": -1.3
+},
+{
+"n": "Moutiers",
+"a": 480,
+"d": 2370,
+"t": -3.0
+},
+{
+"n": "Novalaise",
+"a": 460,
+"d": 2526,
+"t": -2.5
+},
+{
+"n": "St Jean D'Arves_Sapc",
+"a": 1573,
+"d": 3547,
+"t": -6.5
+},
+{
+"n": "St Michel Maur_Sapc",
+"a": 698,
+"d": 2581,
+"t": -3.8
+},
+{
+"n": "St-Alban Des Hurtieres",
+"a": 610,
+"d": 2510,
+"t": -3.1
+},
+{
+"n": "St-Martin De Belleville",
+"a": 1443,
+"d": 3846,
+"t": -8.5
+},
+{
+"n": "St-Michel De Maurienne Le Thyl",
+"a": 1345,
+"d": 3283,
+"t": -6.3
+},
+{
+"n": "Ste Marie Cuines",
+"a": 460,
+"d": 2375,
+"t": -2.5
+},
+{
+"n": "Termignon-Clim",
+"a": 1280,
+"d": 3632,
+"t": -8.1
+},
+{
+"n": "Tignes_Sapc",
+"a": 2084,
+"d": 5231,
+"t": -12.5
+},
+{
+"n": "Ugine",
+"a": 539,
+"d": 2361,
+"t": -2.1
+},
+{
+"n": "Val D'Isere Jos",
+"a": 1850,
+"d": 4892,
+"t": -11.5
+},
+{
+"n": "Valloire Forest",
+"a": 1460,
+"d": 3697,
+"t": -7.7
+}
+]
+},
+{
+"code": "74",
+"nom": "Haute-Savoie",
+"region": "Auvergne-Rhône-Alpes",
+"chefLieu": "Annecy",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Cran-Gevrier",
+"stationAlt": 426,
+"dju": 2475,
+"dju2025": 2318,
+"tbase": -1.9,
+"tbaseStation": "Cran-Gevrier",
+"stationKm": 1.7,
+"stations": [
+{
+"n": "Aiguilles Rouges-Nivose",
+"a": 2365,
+"d": 5548,
+"t": -12.4
+},
+{
+"n": "Ayze",
+"a": 449,
+"d": 2600,
+"t": -3.3
+},
+{
+"n": "Bloye",
+"a": 375,
+"d": 2498,
+"t": -1.6
+},
+{
+"n": "Bonneville",
+"a": 453,
+"d": 2624,
+"t": -3.4
+},
+{
+"n": "Chamonix",
+"a": 1042,
+"d": 3430,
+"t": -6.9
+},
+{
+"n": "Chapelle Saint-Maurice_Sapc",
+"a": 970,
+"d": 3143,
+"t": -5.4
+},
+{
+"n": "Clusaz (La)",
+"a": 1180,
+"d": 3696,
+"t": -8.4
+},
+{
+"n": "Combloux",
+"a": 1183,
+"d": 3300,
+"t": -6.0
+},
+{
+"n": "Contamine-Sur- Arve",
+"a": 452,
+"d": 2481,
+"t": -2.5
+},
+{
+"n": "Contamines Mj",
+"a": 1180,
+"d": 3374,
+"t": -6.4
+},
+{
+"n": "Cran-Gevrier",
+"a": 426,
+"d": 2475,
+"t": -1.9
+},
+{
+"n": "Douvaine Sa",
+"a": 470,
+"d": 2423,
+"t": -2.0
+},
+{
+"n": "Evian",
+"a": 395,
+"d": 2382,
+"t": -1.2
+},
+{
+"n": "Evian Sa",
+"a": 725,
+"d": 2966,
+"t": -4.2
+},
+{
+"n": "Flaine_Sapc",
+"a": 1611,
+"d": 4117,
+"t": -9.1
+},
+{
+"n": "Gaillard",
+"a": 399,
+"d": 2419,
+"t": -1.8
+},
+{
+"n": "Gets (Les)",
+"a": 1172,
+"d": 3711,
+"t": -6.8
+},
+{
+"n": "Giez",
+"a": 478,
+"d": 2614,
+"t": -2.7
+},
+{
+"n": "Grand Bornand",
+"a": 1300,
+"d": 3616,
+"t": -7.2
+},
+{
+"n": "Groisy_Sapc",
+"a": 670,
+"d": 2767,
+"t": -3.3
+},
+{
+"n": "Houches (Les)",
+"a": 1004,
+"d": 3503,
+"t": -8.2
+},
+{
+"n": "Le Bouchet_Sapc",
+"a": 925,
+"d": 2955,
+"t": -4.7
+},
+{
+"n": "Le Grand-Bornand",
+"a": 1430,
+"d": 3852,
+"t": -7.9
+},
+{
+"n": "Le Pleney",
+"a": 1515,
+"d": 3899,
+"t": -7.2
+},
+{
+"n": "Le Tour",
+"a": 1500,
+"d": 3805,
+"t": -7.5
+},
+{
+"n": "Les Carroz",
+"a": 1151,
+"d": 3385,
+"t": -6.0
+},
+{
+"n": "Megeve",
+"a": 1080,
+"d": 3515,
+"t": -6.8
+},
+{
+"n": "Meythet",
+"a": 455,
+"d": 2534,
+"t": -2.1
+},
+{
+"n": "Mont Arbois",
+"a": 1833,
+"d": 4550,
+"t": -9.6
+},
+{
+"n": "Sallanches",
+"a": 542,
+"d": 2695,
+"t": -3.9
+},
+{
+"n": "Samoens",
+"a": 785,
+"d": 2928,
+"t": -4.6
+},
+{
+"n": "Servoz",
+"a": 815,
+"d": 2935,
+"t": -5.4
+},
+{
+"n": "St Sigismond",
+"a": 1020,
+"d": 3170,
+"t": -5.4
+},
+{
+"n": "Thones",
+"a": 630,
+"d": 2853,
+"t": -4.6
+},
+{
+"n": "Thonon-Inrae",
+"a": 376,
+"d": 2404,
+"t": -0.8
+},
+{
+"n": "Usinens Sa",
+"a": 452,
+"d": 2393,
+"t": -1.8
+},
+{
+"n": "Vacheresse",
+"a": 790,
+"d": 3378,
+"t": -6.9
+}
+]
+},
+{
+"code": "75",
+"nom": "Paris",
+"region": "Île-de-France",
+"chefLieu": "Paris",
+"zone": "H1",
+"idf": true,
+"emprunt": false,
+"station": "Luxembourg",
+"stationAlt": 50,
+"dju": 1835,
+"dju2025": 1816,
+"tbase": -0.1,
+"tbaseStation": "Luxembourg",
+"stationKm": 1.7,
+"stations": [
+{
+"n": "Longchamp",
+"a": 27,
+"d": 2161,
+"t": -1.0
+},
+{
+"n": "Luxembourg",
+"a": 50,
+"d": 1835,
+"t": -0.1
+},
+{
+"n": "Paris-Montsouris",
+"a": 75,
+"d": 1975,
+"t": -0.4
+},
+{
+"n": "Paris-Montsouris-Double",
+"a": 75,
+"d": 1978,
+"t": -0.4
+},
+{
+"n": "Tour Eiffel",
+"a": 330,
+"d": 2449,
+"t": -2.2
+}
+]
+},
+{
+"code": "76",
+"nom": "Seine-Maritime",
+"region": "Normandie",
+"chefLieu": "Rouen",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Rouen - Jardin",
+"stationAlt": 21,
+"dju": 2077,
+"dju2025": 2024,
+"tbase": -0.4,
+"tbaseStation": "Rouen - Jardin",
+"stationKm": 2.3,
+"stations": [
+{
+"n": "Bouelles",
+"a": 232,
+"d": 2568,
+"t": -1.3
+},
+{
+"n": "Cap-De-La-Heve",
+"a": 100,
+"d": 2143,
+"t": 0.2
+},
+{
+"n": "Cuy Saint Fiacre_Sapc",
+"a": 104,
+"d": 2543,
+"t": -2.2
+},
+{
+"n": "Dieppe",
+"a": 40,
+"d": 2276,
+"t": -0.2
+},
+{
+"n": "Ectot Les Baons",
+"a": 150,
+"d": 2524,
+"t": -1.4
+},
+{
+"n": "Eu",
+"a": 13,
+"d": 2276,
+"t": -0.6
+},
+{
+"n": "Fecamp",
+"a": 104,
+"d": 2281,
+"t": 0.3
+},
+{
+"n": "Goderville",
+"a": 118,
+"d": 2387,
+"t": -0.4
+},
+{
+"n": "Jumieges",
+"a": 30,
+"d": 2098,
+"t": -0.7
+},
+{
+"n": "La Chapelle-Saint-Ouen_Sapc",
+"a": 197,
+"d": 2548,
+"t": -1.9
+},
+{
+"n": "Notre-Dame De Bliquetuit",
+"a": 4,
+"d": 2275,
+"t": -0.4
+},
+{
+"n": "Octeville",
+"a": 90,
+"d": 2249,
+"t": -0.2
+},
+{
+"n": "Rouen - Jardin",
+"a": 21,
+"d": 2077,
+"t": -0.4
+},
+{
+"n": "Rouen-Boos",
+"a": 156,
+"d": 2455,
+"t": -1.8
+},
+{
+"n": "Vinnemerville",
+"a": 86,
+"d": 2350,
+"t": -0.5
+}
+]
+},
+{
+"code": "77",
+"nom": "Seine-et-Marne",
+"region": "Île-de-France",
+"chefLieu": "Melun",
+"zone": "H1",
+"idf": true,
+"emprunt": false,
+"station": "Melun",
+"stationAlt": 91,
+"dju": 2284,
+"dju2025": 2272,
+"tbase": -1.5,
+"tbaseStation": "Melun",
+"stationKm": 7.8,
+"stations": [
+{
+"n": "Changis",
+"a": 70,
+"d": 2222,
+"t": -1.5
+},
+{
+"n": "Chevru",
+"a": 158,
+"d": 2459,
+"t": -2.4
+},
+{
+"n": "Fontainebleau_Sapc",
+"a": 84,
+"d": 2423,
+"t": -2.0
+},
+{
+"n": "La Brosse-Mx",
+"a": 77,
+"d": 2233,
+"t": -1.6
+},
+{
+"n": "Melun",
+"a": 91,
+"d": 2284,
+"t": -1.5
+},
+{
+"n": "Mouroux_Sapc",
+"a": 148,
+"d": 2401,
+"t": -2.0
+},
+{
+"n": "Nangis",
+"a": 128,
+"d": 2376,
+"t": -1.7
+},
+{
+"n": "Nemours",
+"a": 73,
+"d": 2187,
+"t": -1.6
+},
+{
+"n": "Torcy",
+"a": 43,
+"d": 2169,
+"t": -1.1
+},
+{
+"n": "Voulton_Sapc",
+"a": 175,
+"d": 2384,
+"t": -2.1
+}
+]
+},
+{
+"code": "78",
+"nom": "Yvelines",
+"region": "Île-de-France",
+"chefLieu": "Versailles",
+"zone": "H1",
+"idf": true,
+"emprunt": false,
+"station": "Versailles- Inrae",
+"stationAlt": 121,
+"dju": 2324,
+"dju2025": 2247,
+"tbase": -1.4,
+"tbaseStation": "Versailles- Inrae",
+"stationKm": 2.1,
+"stations": [
+{
+"n": "Acheres",
+"a": 31,
+"d": 2294,
+"t": -1.7
+},
+{
+"n": "Magnanville",
+"a": 123,
+"d": 2318,
+"t": -1.7
+},
+{
+"n": "Maule",
+"a": 33,
+"d": 2256,
+"t": -1.3
+},
+{
+"n": "St-Leger_Sapc",
+"a": 176,
+"d": 2449,
+"t": -1.9
+},
+{
+"n": "Toussus Le Noble",
+"a": 154,
+"d": 2333,
+"t": -1.6
+},
+{
+"n": "Trappes",
+"a": 167,
+"d": 2339,
+"t": -1.6
+},
+{
+"n": "Versailles- Inrae",
+"a": 121,
+"d": 2324,
+"t": -1.4
+},
+{
+"n": "Villacoublay",
+"a": 174,
+"d": 2311,
+"t": -1.6
+}
+]
+},
+{
+"code": "79",
+"nom": "Deux-Sèvres",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Niort",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Niort",
+"stationAlt": 57,
+"dju": 1954,
+"dju2025": 1924,
+"tbase": 0.6,
+"tbaseStation": "Niort",
+"stationKm": 4.9,
+"stations": [
+{
+"n": "Bouille-Loretz",
+"a": 55,
+"d": 2041,
+"t": -0.3
+},
+{
+"n": "Bressuire",
+"a": 191,
+"d": 2177,
+"t": -0.6
+},
+{
+"n": "Glenay_Sapc",
+"a": 121,
+"d": 2062,
+"t": -0.5
+},
+{
+"n": "Mauleon_Sapc",
+"a": 150,
+"d": 2144,
+"t": -0.6
+},
+{
+"n": "Melle",
+"a": 136,
+"d": 1989,
+"t": 0.3
+},
+{
+"n": "Menigoute_Sapc",
+"a": 138,
+"d": 2119,
+"t": -0.2
+},
+{
+"n": "Niort",
+"a": 57,
+"d": 1954,
+"t": 0.6
+},
+{
+"n": "Parthenay_Sapc",
+"a": 159,
+"d": 2121,
+"t": -0.4
+},
+{
+"n": "Pougne-Herisson_Sapc",
+"a": 196,
+"d": 2254,
+"t": -0.6
+},
+{
+"n": "Saint-Maixent-L-Ecole_Sapc",
+"a": 83,
+"d": 1912,
+"t": 0.6
+},
+{
+"n": "Scille",
+"a": 247,
+"d": 2206,
+"t": -0.5
+},
+{
+"n": "Surin_Sapc",
+"a": 100,
+"d": 1898,
+"t": 0.7
+},
+{
+"n": "Thenezay Stna",
+"a": 132,
+"d": 2142,
+"t": -1.0
+},
+{
+"n": "Thouars-Stna",
+"a": 81,
+"d": 1957,
+"t": -0.4
+}
+]
+},
+{
+"code": "80",
+"nom": "Somme",
+"region": "Hauts-de-France",
+"chefLieu": "Amiens",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Amiens-Glisy",
+"stationAlt": 60,
+"dju": 2363,
+"dju2025": 2374,
+"tbase": -2.0,
+"tbaseStation": "Amiens-Glisy",
+"stationKm": 7.6,
+"stations": [
+{
+"n": "Abbeville",
+"a": 69,
+"d": 2381,
+"t": -1.2
+},
+{
+"n": "Amiens-Glisy",
+"a": 60,
+"d": 2363,
+"t": -2.0
+},
+{
+"n": "Bernaville",
+"a": 146,
+"d": 2610,
+"t": -1.7
+},
+{
+"n": "Cayeux-Sur-Mer",
+"a": 4,
+"d": 2335,
+"t": -0.7
+},
+{
+"n": "Epehy_Sapc",
+"a": 117,
+"d": 2582,
+"t": -2.6
+},
+{
+"n": "Estrees-Mons-Inrae",
+"a": 87,
+"d": 2474,
+"t": -2.2
+},
+{
+"n": "Meaulte",
+"a": 107,
+"d": 2529,
+"t": -2.4
+},
+{
+"n": "Oisemont_Sapc",
+"a": 121,
+"d": 2372,
+"t": -1.6
+},
+{
+"n": "Rouvroy-En-Santerre",
+"a": 95,
+"d": 2518,
+"t": -2.3
+}
+]
+},
+{
+"code": "81",
+"nom": "Tarn",
+"region": "Occitanie",
+"chefLieu": "Albi",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Albi",
+"stationAlt": 172,
+"dju": 1834,
+"dju2025": 1679,
+"tbase": 0.1,
+"tbaseStation": "Albi",
+"stationKm": 2.0,
+"stations": [
+{
+"n": "Albi",
+"a": 172,
+"d": 1834,
+"t": 0.1
+},
+{
+"n": "Dourgne",
+"a": 234,
+"d": 1747,
+"t": 0.5
+},
+{
+"n": "Labastide-Rouairoux",
+"a": 448,
+"d": 2171,
+"t": -0.7
+},
+{
+"n": "Lacaune",
+"a": 811,
+"d": 2838,
+"t": -3.5
+},
+{
+"n": "Lavaur",
+"a": 131,
+"d": 1849,
+"t": 0.3
+},
+{
+"n": "Montredon-Labessonnie",
+"a": 566,
+"d": 2196,
+"t": -1.5
+},
+{
+"n": "Puycelsi",
+"a": 260,
+"d": 1933,
+"t": -0.2
+},
+{
+"n": "Tanus",
+"a": 537,
+"d": 2252,
+"t": -1.3
+}
+]
+},
+{
+"code": "82",
+"nom": "Tarn-et-Garonne",
+"region": "Occitanie",
+"chefLieu": "Montauban",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Montauban",
+"stationAlt": 106,
+"dju": 1777,
+"dju2025": 1686,
+"tbase": 0.5,
+"tbaseStation": "Montauban",
+"stationKm": 1.2,
+"stations": [
+{
+"n": "Castelsarrasin",
+"a": 73,
+"d": 1820,
+"t": 0.3
+},
+{
+"n": "Caylus",
+"a": 274,
+"d": 2002,
+"t": -0.8
+},
+{
+"n": "Lauzerte",
+"a": 231,
+"d": 1850,
+"t": 0.1
+},
+{
+"n": "Montauban",
+"a": 106,
+"d": 1777,
+"t": 0.5
+},
+{
+"n": "Savenes",
+"a": 156,
+"d": 1837,
+"t": 0.6
+},
+{
+"n": "Serignac",
+"a": 151,
+"d": 1719,
+"t": 0.7
+},
+{
+"n": "St-Vincent",
+"a": 191,
+"d": 1771,
+"t": 0.4
+}
+]
+},
+{
+"code": "83",
+"nom": "Var",
+"region": "Provence-Alpes-Côte d'Azur",
+"chefLieu": "Toulon",
+"zone": "H3",
+"idf": false,
+"emprunt": false,
+"station": "Toulon",
+"stationAlt": 3,
+"dju": 1100,
+"dju2025": 969,
+"tbase": 6.1,
+"tbaseStation": "Toulon",
+"stationKm": 3.6,
+"stations": [
+{
+"n": "Aups",
+"a": 497,
+"d": 1889,
+"t": 1.6
+},
+{
+"n": "Bormes Les Mimosas",
+"a": 88,
+"d": 1504,
+"t": 3.6
+},
+{
+"n": "Cogolin_Sapc",
+"a": 31,
+"d": 1312,
+"t": 4.6
+},
+{
+"n": "Collobrieres_Sapc",
+"a": 128,
+"d": 1562,
+"t": 3.4
+},
+{
+"n": "Comps-Sur-Artuby",
+"a": 892,
+"d": 2515,
+"t": -0.8
+},
+{
+"n": "Cuers",
+"a": 72,
+"d": 1441,
+"t": 3.8
+},
+{
+"n": "Draguignan_Sapc",
+"a": 173,
+"d": 1458,
+"t": 3.3
+},
+{
+"n": "Entrecasteaux",
+"a": 279,
+"d": 1593,
+"t": 2.9
+},
+{
+"n": "Frejus",
+"a": 7,
+"d": 1256,
+"t": 5.2
+},
+{
+"n": "Frejus Mont Vinaigre",
+"a": 560,
+"d": 1657,
+"t": 2.8
+},
+{
+"n": "Hyeres",
+"a": 2,
+"d": 1218,
+"t": 5.8
+},
+{
+"n": "Ile Du Levant",
+"a": 118,
+"d": 1004,
+"t": 7.0
+},
+{
+"n": "Le Castellet-Aero",
+"a": 417,
+"d": 1748,
+"t": 2.8
+},
+{
+"n": "Le Castellet_Sapc",
+"a": 66,
+"d": 1410,
+"t": 4.8
+},
+{
+"n": "Le Luc",
+"a": 80,
+"d": 1407,
+"t": 3.5
+},
+{
+"n": "Les Arcs_Sapc",
+"a": 55,
+"d": 1421,
+"t": 3.6
+},
+{
+"n": "Les Mayons_Sapc",
+"a": 147,
+"d": 1480,
+"t": 2.9
+},
+{
+"n": "Meounes Les Montrieux_Sapc",
+"a": 309,
+"d": 1819,
+"t": 1.9
+},
+{
+"n": "Montfort-Sur-Argens_Sapc",
+"a": 141,
+"d": 1569,
+"t": 3.3
+},
+{
+"n": "Plan D'Aups - Ste Baume_Sapc",
+"a": 605,
+"d": 1802,
+"t": 1.3
+},
+{
+"n": "Porquerolles",
+"a": 143,
+"d": 1015,
+"t": 6.4
+},
+{
+"n": "Regusse",
+"a": 561,
+"d": 1985,
+"t": 1.0
+},
+{
+"n": "Seillans",
+"a": 278,
+"d": 1565,
+"t": 3.1
+},
+{
+"n": "St Maximin La Ste Baume",
+"a": 294,
+"d": 1863,
+"t": 1.7
+},
+{
+"n": "Toulon",
+"a": 3,
+"d": 1100,
+"t": 6.1
+},
+{
+"n": "Varages",
+"a": 348,
+"d": 1754,
+"t": 2.1
+},
+{
+"n": "Vidauban",
+"a": 282,
+"d": 1388,
+"t": 3.5
+},
+{
+"n": "Vinon Sur Verdon",
+"a": 271,
+"d": 1949,
+"t": 1.0
+}
+]
+},
+{
+"code": "84",
+"nom": "Vaucluse",
+"region": "Provence-Alpes-Côte d'Azur",
+"chefLieu": "Avignon",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Avignon",
+"stationAlt": 34,
+"dju": 1645,
+"dju2025": 1561,
+"tbase": 1.7,
+"tbaseStation": "Avignon",
+"stationKm": 6.5,
+"stations": [
+{
+"n": "Apt",
+"a": 222,
+"d": 1927,
+"t": 0.4
+},
+{
+"n": "Apt-Viton",
+"a": 242,
+"d": 1789,
+"t": 0.9
+},
+{
+"n": "Avignon",
+"a": 34,
+"d": 1645,
+"t": 1.7
+},
+{
+"n": "Cabrieres D'Avignon",
+"a": 142,
+"d": 1794,
+"t": 1.0
+},
+{
+"n": "Cadenet",
+"a": 152,
+"d": 1744,
+"t": 1.1
+},
+{
+"n": "Carpentras",
+"a": 98,
+"d": 1670,
+"t": 1.7
+},
+{
+"n": "La Bastide Des Jourdans",
+"a": 381,
+"d": 1892,
+"t": 1.5
+},
+{
+"n": "Murs",
+"a": 488,
+"d": 1984,
+"t": 0.4
+},
+{
+"n": "Oppede Crete Du Petit  Luberon",
+"a": 672,
+"d": 2145,
+"t": -1.1
+},
+{
+"n": "Orange",
+"a": 57,
+"d": 1648,
+"t": 1.9
+},
+{
+"n": "Puymeras",
+"a": 392,
+"d": 1760,
+"t": 1.2
+},
+{
+"n": "St Christol",
+"a": 836,
+"d": 2791,
+"t": -2.1
+},
+{
+"n": "Visan",
+"a": 141,
+"d": 1760,
+"t": 1.3
+}
+]
+},
+{
+"code": "85",
+"nom": "Vendée",
+"region": "Pays de la Loire",
+"chefLieu": "La Roche-sur-Yon",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "La Roche Sur Yon",
+"stationAlt": 88,
+"dju": 2025,
+"dju2025": 1942,
+"tbase": 0.0,
+"tbaseStation": "La Roche Sur Yon",
+"stationKm": 5.1,
+"stations": [
+{
+"n": "Chantonnay",
+"a": 93,
+"d": 1893,
+"t": 0.6
+},
+{
+"n": "Chateau-D'Olonne",
+"a": 27,
+"d": 1804,
+"t": 1.3
+},
+{
+"n": "Fontenay",
+"a": 20,
+"d": 1947,
+"t": 0.8
+},
+{
+"n": "Grues",
+"a": 2,
+"d": 1893,
+"t": 0.7
+},
+{
+"n": "L Ile D Yeu",
+"a": 32,
+"d": 1665,
+"t": 2.6
+},
+{
+"n": "La Mothe Achard",
+"a": 58,
+"d": 1898,
+"t": 0.7
+},
+{
+"n": "La Roche Sur Yon",
+"a": 88,
+"d": 2025,
+"t": 0.0
+},
+{
+"n": "Le Perrier",
+"a": 2,
+"d": 1858,
+"t": 1.1
+},
+{
+"n": "Mouchamps_Sapc",
+"a": 82,
+"d": 2065,
+"t": 0.3
+},
+{
+"n": "Noirmoutier En",
+"a": 3,
+"d": 1700,
+"t": 2.2
+},
+{
+"n": "Palluau",
+"a": 51,
+"d": 1978,
+"t": 0.2
+},
+{
+"n": "Pouzauges Sa",
+"a": 153,
+"d": 2005,
+"t": 0.4
+},
+{
+"n": "Rocheserviere",
+"a": 43,
+"d": 2025,
+"t": 0.1
+},
+{
+"n": "Sainte Gemme La Plaine_Sapc",
+"a": 3,
+"d": 1867,
+"t": 1.1
+},
+{
+"n": "St-Fulgent_Sapc",
+"a": 62,
+"d": 2061,
+"t": 0.1
+}
+]
+},
+{
+"code": "86",
+"nom": "Vienne",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Poitiers",
+"zone": "H2",
+"idf": false,
+"emprunt": false,
+"station": "Poitiers-Biard",
+"stationAlt": 125,
+"dju": 2106,
+"dju2025": 2071,
+"tbase": -0.7,
+"tbaseStation": "Poitiers-Biard",
+"stationKm": 4.5,
+"stations": [
+{
+"n": "Archigny",
+"a": 138,
+"d": 2107,
+"t": -0.7
+},
+{
+"n": "Benassay_Sapc",
+"a": 150,
+"d": 2137,
+"t": -0.6
+},
+{
+"n": "Brux_Sapc",
+"a": 148,
+"d": 2120,
+"t": -0.1
+},
+{
+"n": "Civray",
+"a": 143,
+"d": 2035,
+"t": 0.1
+},
+{
+"n": "La Ferriere Airoux_Sapc",
+"a": 122,
+"d": 2073,
+"t": -0.1
+},
+{
+"n": "Le-Vigeant",
+"a": 117,
+"d": 2077,
+"t": -0.1
+},
+{
+"n": "Loudun",
+"a": 96,
+"d": 2052,
+"t": -0.7
+},
+{
+"n": "Lusignan-Inrae",
+"a": 152,
+"d": 2126,
+"t": -0.4
+},
+{
+"n": "Montmorillon",
+"a": 153,
+"d": 2020,
+"t": -0.4
+},
+{
+"n": "Neuville De Poi",
+"a": 110,
+"d": 2090,
+"t": -0.7
+},
+{
+"n": "Poitiers-Biard",
+"a": 125,
+"d": 2106,
+"t": -0.7
+}
+]
+},
+{
+"code": "87",
+"nom": "Haute-Vienne",
+"region": "Nouvelle-Aquitaine",
+"chefLieu": "Limoges",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Limoges-Bellegarde",
+"stationAlt": 402,
+"dju": 2254,
+"dju2025": 2108,
+"tbase": -0.8,
+"tbaseStation": "Limoges-Bellegarde",
+"stationKm": 4.0,
+"stations": [
+{
+"n": "Beaumont Du Lac",
+"a": 670,
+"d": 2674,
+"t": -2.7
+},
+{
+"n": "Chalus_Sapc",
+"a": 403,
+"d": 2243,
+"t": -0.6
+},
+{
+"n": "Cheronnac_Sapc",
+"a": 295,
+"d": 2174,
+"t": -0.1
+},
+{
+"n": "Eymoutiers",
+"a": 557,
+"d": 2379,
+"t": -1.6
+},
+{
+"n": "Le Palais Sur Vienne",
+"a": 286,
+"d": 2257,
+"t": -0.4
+},
+{
+"n": "Limoges-Bellegarde",
+"a": 402,
+"d": 2254,
+"t": -0.8
+},
+{
+"n": "Magnac-Laval",
+"a": 246,
+"d": 2186,
+"t": -0.5
+},
+{
+"n": "Nantiat",
+"a": 335,
+"d": 2225,
+"t": -0.8
+},
+{
+"n": "Nexon",
+"a": 336,
+"d": 2271,
+"t": -0.8
+},
+{
+"n": "St Junien",
+"a": 271,
+"d": 2198,
+"t": -0.4
+},
+{
+"n": "St Leger La Montagne_Sapc",
+"a": 664,
+"d": 2702,
+"t": -3.0
+},
+{
+"n": "St Yrieix La Pe",
+"a": 404,
+"d": 2426,
+"t": -1.0
+}
+]
+},
+{
+"code": "88",
+"nom": "Vosges",
+"region": "Grand Est",
+"chefLieu": "Épinal",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Epinal",
+"stationAlt": 317,
+"dju": 2697,
+"dju2025": 2657,
+"tbase": -4.5,
+"tbaseStation": "Epinal",
+"stationKm": 5.8,
+"stations": [
+{
+"n": "Ban-De-Sapt",
+"a": 590,
+"d": 2820,
+"t": -4.4
+},
+{
+"n": "Bussang",
+"a": 615,
+"d": 3101,
+"t": -4.3
+},
+{
+"n": "Dommartin-Aux-Bois_Sapc",
+"a": 396,
+"d": 2710,
+"t": -4.6
+},
+{
+"n": "Epinal",
+"a": 317,
+"d": 2697,
+"t": -4.5
+},
+{
+"n": "Gerardmer",
+"a": 669,
+"d": 3093,
+"t": -3.7
+},
+{
+"n": "Isches_Sapc",
+"a": 342,
+"d": 2717,
+"t": -4.3
+},
+{
+"n": "La_Bresse_Sapc",
+"a": 772,
+"d": 3224,
+"t": -4.7
+},
+{
+"n": "Le Roulier_Sapc",
+"a": 449,
+"d": 2847,
+"t": -4.5
+},
+{
+"n": "Ligneville",
+"a": 433,
+"d": 2796,
+"t": -4.8
+},
+{
+"n": "Mirecourt-Inrae",
+"a": 289,
+"d": 2741,
+"t": -4.6
+},
+{
+"n": "Rollainville",
+"a": 372,
+"d": 2791,
+"t": -4.8
+},
+{
+"n": "Roville",
+"a": 278,
+"d": 2680,
+"t": -4.5
+},
+{
+"n": "St Ouen-Les-Parey_Sapc",
+"a": 329,
+"d": 2861,
+"t": -4.7
+},
+{
+"n": "Vagney",
+"a": 805,
+"d": 3267,
+"t": -5.3
+}
+]
+},
+{
+"code": "89",
+"nom": "Yonne",
+"region": "Bourgogne-Franche-Comté",
+"chefLieu": "Auxerre",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Auxerre-Perrigny",
+"stationAlt": 152,
+"dju": 2287,
+"dju2025": 2280,
+"tbase": -2.2,
+"tbaseStation": "Auxerre-Perrigny",
+"stationKm": 4.2,
+"stations": [
+{
+"n": "Aillant",
+"a": 124,
+"d": 2353,
+"t": -2.8
+},
+{
+"n": "Auxerre-Perrigny",
+"a": 152,
+"d": 2287,
+"t": -2.2
+},
+{
+"n": "Chablis_Sapc",
+"a": 141,
+"d": 2327,
+"t": -2.2
+},
+{
+"n": "Cruzy_Sapc",
+"a": 291,
+"d": 2484,
+"t": -3.1
+},
+{
+"n": "Cudot_Sapc",
+"a": 170,
+"d": 2345,
+"t": -2.4
+},
+{
+"n": "Grandchamp_Sapc",
+"a": 180,
+"d": 2388,
+"t": -2.2
+},
+{
+"n": "Molesmes_Sapc",
+"a": 355,
+"d": 2506,
+"t": -3.3
+},
+{
+"n": "Noyers_Sapc",
+"a": 266,
+"d": 2393,
+"t": -2.8
+},
+{
+"n": "Saint Prive",
+"a": 198,
+"d": 2439,
+"t": -2.1
+},
+{
+"n": "Savigny/Clairis",
+"a": 184,
+"d": 2404,
+"t": -2.3
+},
+{
+"n": "Sens",
+"a": 70,
+"d": 2225,
+"t": -1.7
+},
+{
+"n": "St Andre",
+"a": 300,
+"d": 2471,
+"t": -2.7
+},
+{
+"n": "St Fargeau_Sapc",
+"a": 258,
+"d": 2476,
+"t": -2.4
+},
+{
+"n": "Tonnerre Joudre",
+"a": 200,
+"d": 2363,
+"t": -2.5
+}
+]
+},
+{
+"code": "90",
+"nom": "Territoire de Belfort",
+"region": "Bourgogne-Franche-Comté",
+"chefLieu": "Belfort",
+"zone": "H1",
+"idf": false,
+"emprunt": false,
+"station": "Dorans",
+"stationAlt": 401,
+"dju": 2645,
+"dju2025": 2565,
+"tbase": -4.3,
+"tbaseStation": "Dorans",
+"stationKm": 6.0,
+"stations": [
+{
+"n": "Ballon_Sapc",
+"a": 1153,
+"d": 3911,
+"t": -7.6
+},
+{
+"n": "Dorans",
+"a": 401,
+"d": 2645,
+"t": -4.3
+},
+{
+"n": "Felon_Sapc",
+"a": 383,
+"d": 2814,
+"t": -4.7
+},
+{
+"n": "Giromagny_Sapc",
+"a": 473,
+"d": 2747,
+"t": -4.9
+},
+{
+"n": "Joncherey",
+"a": 359,
+"d": 2630,
+"t": -4.1
+},
+{
+"n": "Novillard_Sapc",
+"a": 366,
+"d": 2729,
+"t": -4.3
+},
+{
+"n": "St Dizier-L'Eveque_Sapc",
+"a": 553,
+"d": 2796,
+"t": -5.2
+}
+]
+},
+{
+"code": "91",
+"nom": "Essonne",
+"region": "Île-de-France",
+"chefLieu": "Évry-Courcouronnes",
+"zone": "H1",
+"idf": true,
+"emprunt": false,
+"station": "Bretigny_Sapc",
+"stationAlt": 78,
+"dju": 2222,
+"dju2025": 2147,
+"tbase": -1.3,
+"tbaseStation": "Bretigny_Sapc",
+"stationKm": 8.3,
+"stations": [
+{
+"n": "Bretigny_Sapc",
+"a": 78,
+"d": 2222,
+"t": -1.3
+},
+{
+"n": "Courdimanche",
+"a": 71,
+"d": 2364,
+"t": -1.8
+},
+{
+"n": "Dourdan",
+"a": 116,
+"d": 2383,
+"t": -1.6
+},
+{
+"n": "Gometz-Le-Chat.",
+"a": 159,
+"d": 2395,
+"t": -1.7
+},
+{
+"n": "Orly",
+"a": 86,
+"d": 2165,
+"t": -1.1
+}
+]
+},
+{
+"code": "92",
+"nom": "Hauts-de-Seine",
+"region": "Île-de-France",
+"chefLieu": "Nanterre",
+"zone": "H1",
+"idf": true,
+"emprunt": true,
+"station": "Longchamp",
+"stationAlt": 27,
+"dju": 2161,
+"dju2025": 2175,
+"tbase": -1.0,
+"tbaseStation": "Longchamp",
+"stationKm": 5.3,
+"stations": [
+{
+"n": "Acheres",
+"a": 31,
+"d": 2294,
+"t": -1.7
+},
+{
+"n": "Longchamp",
+"a": 27,
+"d": 2161,
+"t": -1.0
+},
+{
+"n": "Tour Eiffel",
+"a": 330,
+"d": 2449,
+"t": -2.2
+}
+]
+},
+{
+"code": "93",
+"nom": "Seine-Saint-Denis",
+"region": "Île-de-France",
+"chefLieu": "Bobigny",
+"zone": "H1",
+"idf": true,
+"emprunt": false,
+"station": "Neuilly-Sur-M.",
+"stationAlt": 30,
+"dju": 2211,
+"dju2025": 2085,
+"tbase": -1.5,
+"tbaseStation": "Neuilly-Sur-M.",
+"stationKm": 9.2,
+"stations": [
+{
+"n": "Neuilly-Sur-M.",
+"a": 30,
+"d": 2211,
+"t": -1.5
+}
+]
+},
+{
+"code": "94",
+"nom": "Val-de-Marne",
+"region": "Île-de-France",
+"chefLieu": "Créteil",
+"zone": "H1",
+"idf": true,
+"emprunt": false,
+"station": "Joinville",
+"stationAlt": 37,
+"dju": 1921,
+"dju2025": null,
+"tbase": -0.5,
+"tbaseStation": "Joinville",
+"stationKm": 3.3,
+"stations": [
+{
+"n": "Joinville",
+"a": 37,
+"d": 1921,
+"t": -0.5
+},
+{
+"n": "St-Maur",
+"a": 48,
+"d": 2020,
+"t": -0.7
+}
+]
+},
+{
+"code": "95",
+"nom": "Val-d'Oise",
+"region": "Île-de-France",
+"chefLieu": "Pontoise",
+"zone": "H1",
+"idf": true,
+"emprunt": false,
+"station": "Pontoise - Aero",
+"stationAlt": 87,
+"dju": 2397,
+"dju2025": 2344,
+"tbase": -2.0,
+"tbaseStation": "Pontoise - Aero",
+"stationKm": 7.0,
+"stations": [
+{
+"n": "Le Bourget",
+"a": 49,
+"d": 2151,
+"t": -1.3
+},
+{
+"n": "Le Plessis Gassot",
+"a": 108,
+"d": 2261,
+"t": -1.6
+},
+{
+"n": "Pontoise - Aero",
+"a": 87,
+"d": 2397,
+"t": -2.0
+},
+{
+"n": "Roissy",
+"a": 108,
+"d": 2179,
+"t": -1.5
+},
+{
+"n": "St Witz",
+"a": 141,
+"d": 2296,
+"t": -1.8
+},
+{
+"n": "Wy-Dit",
+"a": 126,
+"d": 2448,
+"t": -1.9
+}
+]
+}
+]

@@ -1,0 +1,22 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'fr';
+---
+<PageLayout title={`Contact – ${SITE_NAMES[lang]}`} description="Écrire à l’éditeur de Calcul PAC : signaler un barème périmé, un prix d’énergie faux, une question sur la méthode de calcul ou intégrer le simulateur de pompe à chaleur." lang={lang} noindex={true} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Contact</h1>
+    <p>Une seule adresse, lue chaque semaine : <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Il n’y a pas de ligne téléphonique et nous ne rappelons personne : ce site ne vend rien, ne transmet aucune demande à un installateur et ne fait aucun devis.</p>
+    <h2>Signaler une erreur</h2>
+    <p>Pour un barème (MaPrimeRénov’, plafonds de revenus, fiche CEE, Coup de pouce), joignez le texte ou la page officielle qui le contredit, avec sa date. Pour un prix de l’énergie, indiquez la source et la période. Pour un calcul, collez le lien de partage du simulateur : il reprend vos choix, rien d’autre. La procédure est décrite dans la <a href={route('editorial', lang)}>charte éditoriale</a>.</p>
+    <h2>Ce que nous ne pouvons pas faire</h2>
+    <p>Nous ne déposons aucun dossier, ne connaissons pas l’état de votre demande à l’Anah et ne recommandons aucune entreprise. Pour votre dossier, passez par le site officiel de MaPrimeRénov’ ; pour un conseil gratuit et neutre, par un conseiller France Rénov’. Pour vérifier qu’une entreprise est RGE, l’annuaire public de France Rénov’ fait foi.</p>
+    <h2>Intégrer le simulateur</h2>
+    <p>Associations de consommateurs, rédactions locales, espaces d’information sur l’énergie : le simulateur s’intègre gratuitement en iframe. Le code est sur la page <a href={route('widget', lang)}>Intégrer le simulateur</a>.</p>
+    <h2>Éditeur</h2>
+    <LegalIdentity lang={lang} />
+    <p>{AUTHOR_NAME} répond du contenu de Calcul PAC ; l’identité complète figure dans les <a href={route('terms', lang)}>mentions légales</a>. Page revue le {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

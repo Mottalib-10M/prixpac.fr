@@ -1,0 +1,21 @@
+{
+ "name": "Calcul PAC",
+ "short_name": "Calcul PAC",
+ "description": "Prix, MaPrimeRénov' 2026, prime CEE, reste à charge et économie d'une pompe à chaleur, calculés avec le climat de votre département (Météo-France), sans devis.",
+ "start_url": "/fr/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#0F6E5A",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

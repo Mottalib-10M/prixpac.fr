@@ -1,0 +1,20 @@
+{
+ "accent": "#0F6E5A",
+ "symbol": "PAC",
+ "variants": [
+  {
+   "file": "og-fr.png",
+   "title": "Pompe à chaleur :\nprix, aides, économie",
+   "subtitle": "Département · MaPrimeRénov' · CEE · Reste à charge",
+   "badge": "Climat Météo-France, barèmes 2026 sourcés",
+   "brand": "Calcul PAC"
+  },
+  {
+   "file": "og-en.png",
+   "title": "Heat pump in France:\nprice, grants, savings",
+   "subtitle": "Département · MaPrimeRénov' · CEE · Out of pocket",
+   "badge": "Météo-France climate, sourced 2026 rates",
+   "brand": "Calcul PAC"
+  }
+ ]
+}

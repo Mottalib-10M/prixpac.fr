@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'fr';
+---
+<PageLayout title={`Charte éditoriale – ${SITE_NAMES[lang]}`} description="D’où viennent les barèmes, les prix de l’énergie et les données climatiques publiés ici, qui en répond, à quel rythme ils sont relus et ce qui se passe quand l’un d’eux est faux." lang={lang} noindex={true} breadcrumbs={[{ label: 'Charte éditoriale' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Charte éditoriale et politique de correction</h1>
+    <p>Un barème périmé fait signer un devis sur une aide qui n’existe plus ; une prime CEE gonflée fait croire à un reste à charge qui n’arrivera pas. Voici d’où viennent nos chiffres et ce que nous faisons quand l’un d’eux est faux.</p>
+    <h2>Responsabilité</h2><p>{AUTHOR_NAME} répond de chaque barème appliqué, de chaque prix de l’énergie et de chaque calcul du simulateur. Un chiffre qui ne correspond pas à sa source se signale à <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Sources primaires uniquement</h2>
+    <ul>
+      <li><strong>les barèmes officiels</strong> : fiches Service-Public (MaPrimeRénov’, TVA, éco-PTZ), décret n° 2020-26 sur Légifrance, fiches CEE et arrêtés Coup de pouce publiés au Journal officiel ;</li>
+      <li><strong>les prix publics</strong> : registre national des CEE (Emmy), tarifs réglementés de la CRE, Eurostat pour le gaz, Weekly Oil Bulletin de la Commission européenne pour le fioul ;</li>
+      <li><strong>les mesures</strong> : relevés quotidiens de Météo-France (Licence Ouverte 2.0), campagne de mesure de l’ADEME sur les PAC ;</li>
+      <li><strong>un observatoire ouvert</strong> des prix de devis de PAC (CC BY 4.0), cité comme estimation et remplaçable par votre devis.</li>
+    </ul>
+    <p>Aucun chiffre n’est repris d’un installateur, d’un site de mise en relation ou d’un forum. Un montant que nous n’avons pas pu relire dans le texte en vigueur (la prime CEE d’une PAC air/air, par exemple) n’est pas chiffré.</p>
+    <h2>Des estimations, jamais des promesses</h2><p>Seule l’Anah fixe MaPrimeRénov’, et la prime CEE est celle que l’entreprise écrit avant signature. Les hypothèses de calcul (isolation, rendement d’une chaudière, contenu énergétique d’un litre de fioul) sont affichées comme telles, et chacune se remplace par votre propre donnée.</p>
+    <h2>Contrôles avant publication</h2><p>Chaque mise à jour rejoue les tests du moteur : forfaits et plafonds relus, kWh cumac des fiches, écrêtement du décret, bornes des degrés-jours. Un test qui échoue bloque la publication.</p>
+    <h2>Calendrier de mise à jour</h2><p>Prix des CEE : chaque mois. Prix de l’énergie : à chaque publication de la source (hebdomadaire pour le fioul, semestrielle pour le gaz). Barèmes : à chaque modification des textes. Climat : une fois par an. La date de relecture est affichée sur chaque page.</p>
+    <h2>Traitement des erreurs</h2>
+    <ol><li>Vérification contre la source primaire.</li><li>Correction des paramètres ou du code, ajout d’un test.</li><li>Nouvelle date sur les pages concernées.</li></ol>
+    <h2>Indépendance</h2><p>Aucun lien commercial avec un installateur, un fabricant, un fournisseur d’énergie ou un mandataire CEE. Aucun lien affilié. Toute relation commerciale serait indiquée dans le texte.</p>
+    <p>Voir aussi la <a href={route('method', lang)}>méthode</a>. Version : {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

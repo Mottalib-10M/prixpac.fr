@@ -1,0 +1,25 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate } from '../../lib/format';
+const lang = 'fr';
+---
+<PageLayout title="Pompe à chaleur : qui édite Calcul PAC, avec quelles sources" description="Qui édite Calcul PAC, pourquoi un simulateur neutre de pompe à chaleur sans devis, d’où viennent les barèmes et le climat, et comment signaler une erreur." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Accueil', path: route('home', lang) }, { name: 'À propos', path: route('about', lang) }])]} breadcrumbs={[{ label: 'À propos' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">À propos de Calcul PAC</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>Calcul PAC est édité par Radif Partners. Il répond à la question que se posent chaque mois des dizaines de milliers de propriétaires qui songent à remplacer leur chaudière : combien me coûtera vraiment une pompe à chaleur, aides déduites, et combien me fera-t-elle gagner chez moi ?</p>
+    <h2>Pourquoi ce site existe</h2>
+    <p>Sur cette question, les premiers résultats sont des annuaires d’artisans qui donnent une fourchette nationale avant de demander vos coordonnées, des sites de primes qui affichent un montant après création d’un compte et promesse de rappel, et des articles qui recopient des barèmes d’une autre année. Ce site fait mieux que le premier résultat Google parce qu’il chiffre en une minute, sans coordonnées, le prix, MaPrimeRénov’ 2026, la prime CEE en kWh cumac officiels, le reste à charge et l’économie annuelle d’une pompe à chaleur avec le climat réel de votre département (DJU Météo-France), là où le premier résultat donne une fourchette nationale et renvoie vers un devis.</p>
+    <h2>D’où viennent les chiffres</h2>
+    <p>Les barèmes viennent des fiches Service-Public, du décret n° 2020-26 sur Légifrance et des fiches CEE publiées au Journal officiel. Le prix des CEE vient du registre national Emmy, ceux de l’énergie de la CRE, d’Eurostat et de la Commission européenne. Le climat de chaque département a été calculé par nos soins à partir de dix ans de relevés quotidiens de Météo-France. Le rendement réel des PAC vient de la campagne de mesure de l’ADEME. Tout est détaillé, avec les limites, dans la <a href={route('method', lang)}>méthode</a>.</p>
+    <h2>Ce que nous ne sommes pas</h2>
+    <p>Radif Partners n’est ni l’Anah, ni France Rénov’, ni un fournisseur d’énergie, ni un installateur, ni un mandataire CEE. Nous ne déposons aucun dossier, ne transmettons votre projet à personne, ne touchons aucune commission et ne demandons aucune coordonnée. Seule l’Anah fixe MaPrimeRénov’, et la prime CEE est celle que l’entreprise vous écrit avant signature.</p>
+    <h2>Financement et données</h2><p>Le site est gratuit et sans inscription. Le calcul se fait dans votre navigateur : vos revenus, votre surface ou votre consommation ne sont envoyés nulle part. S’il affiche un jour de la publicité, elle ne sera jamais placée au-dessus du simulateur ni présentée comme une recommandation, et aucun installateur ne pourra payer pour apparaître.</p>
+    <h2>Une version anglaise</h2><p>Chaque page existe en anglais, pour les propriétaires étrangers installés en France, souvent dans des maisons anciennes chauffées au fioul, qui découvrent MaPrimeRénov’, les certificats d’économies d’énergie et le revenu fiscal de référence : les termes français y sont expliqués, les montants restent en euros.</p>
+    <h2>Nous écrire</h2><p>Un barème qui a changé, un prix de l’énergie dépassé, un calcul qui vous semble faux : <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Voir aussi la <a href={route('editorial', lang)}>charte éditoriale</a> et les <a href={route('terms', lang)}>mentions légales</a>.</p>
+    <p class="text-sm text-navy-600">Données relues le <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, 'fr-FR')}</time>.</p>
+  </div>
+</PageLayout>

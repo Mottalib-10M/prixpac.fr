@@ -1,0 +1,509 @@
+{
+  "_lisezmoi": "Tous les paramètres du site vivent ici, jamais en dur dans le code (RECETTE-SITE.md §4). Chaque valeur a été relue sur la source citée dans `sources` ; les prix de l'énergie et des CEE sont réécrits par scripts/update-data.mjs. Les valeurs marquées « hypothese » sont des hypothèses de calcul affichées comme telles sur le site, modifiables par le visiteur.",
+  "year": 2026,
+  "retrieved_at": "2026-10-22",
+  "valid_from": "2026-09-01",
+  "valid_to": "2026-12-31",
+  "maprimerenov": {
+    "_source": "spMpr",
+    "verifie_le": "2026-09-01",
+    "forfaits": {
+      "air_eau": {
+        "bleu": 5000,
+        "jaune": 4000,
+        "violet": 3000,
+        "rose": 0,
+        "plafond_depense": 12000
+      },
+      "geo": {
+        "bleu": 11000,
+        "jaune": 9000,
+        "violet": 6000,
+        "rose": 0,
+        "plafond_depense": 18000
+      },
+      "air_air": {
+        "bleu": 0,
+        "jaune": 0,
+        "violet": 0,
+        "rose": 0,
+        "plafond_depense": 0
+      },
+      "depose_cuve_fioul": {
+        "bleu": 1200,
+        "jaune": 800,
+        "violet": 400,
+        "rose": 0,
+        "plafond_depense": 4000
+      },
+      "reseau_chaleur": {
+        "bleu": 1200,
+        "jaune": 800,
+        "violet": 400,
+        "rose": 0,
+        "plafond_depense": 1800
+      },
+      "audit": {
+        "bleu": 500,
+        "jaune": 400,
+        "violet": 300,
+        "rose": 0,
+        "plafond_depense": 800
+      }
+    },
+    "anciennete_logement_ans_pac": 2,
+    "anciennete_logement_ans_autres": 15,
+    "location_annees": 6,
+    "plafond_cumul_5_ans": 20000,
+    "avance_bleu_max": 0.5,
+    "delai_travaux_ans": 2,
+    "ampleur": {
+      "taux_ht": {
+        "bleu": 0.8,
+        "jaune": 0.6,
+        "violet": 0.45,
+        "rose": 0.1
+      },
+      "plafond_2_classes": 30000,
+      "plafond_3_classes": 40000,
+      "ecretement_ttc": {
+        "bleu": 1,
+        "jaune": 0.9,
+        "violet": 0.8,
+        "rose": 0.5
+      },
+      "dpe_avant": [
+        "E",
+        "F",
+        "G"
+      ],
+      "gestes_isolation_min": 2,
+      "part_surface_geste_min": 0.25,
+      "accompagnateur_plafond": 2000,
+      "accompagnateur_plafond_precarite": 4000,
+      "accompagnateur_taux": {
+        "bleu": 1,
+        "jaune": 0.8,
+        "violet": 0.4,
+        "rose": 0.2
+      },
+      "sans_gaz_maison_depuis": "2026-09-01",
+      "verifie_le": "2026-09-01"
+    }
+  },
+  "ecretement": {
+    "_source": "decret2020",
+    "reste_a_charge_min": {
+      "bleu": 0.1,
+      "jaune": 0.25,
+      "violet": 0.4,
+      "rose": 0.6
+    }
+  },
+  "plafonds_rfr": {
+    "_source": "spMpr",
+    "_note": "Revenu fiscal de référence (avis 2026 sur les revenus 2025). Index 0 = 1 personne … index 4 = 5 personnes ; « plus » par personne au-delà. Au-dessus du plafond violet : catégorie rose.",
+    "hors_idf": {
+      "bleu": {
+        "base": [
+          17363,
+          25393,
+          30540,
+          35676,
+          40835
+        ],
+        "plus": 5151
+      },
+      "jaune": {
+        "base": [
+          22259,
+          32553,
+          39148,
+          45735,
+          52348
+        ],
+        "plus": 6598
+      },
+      "violet": {
+        "base": [
+          31185,
+          45842,
+          55196,
+          64550,
+          73907
+        ],
+        "plus": 9357
+      }
+    },
+    "idf": {
+      "bleu": {
+        "base": [
+          24031,
+          35270,
+          42357,
+          49455,
+          56580
+        ],
+        "plus": 7116
+      },
+      "jaune": {
+        "base": [
+          29253,
+          42933,
+          51564,
+          60208,
+          68877
+        ],
+        "plus": 8663
+      },
+      "violet": {
+        "base": [
+          40851,
+          60051,
+          71846,
+          84562,
+          96817
+        ],
+        "plus": 12257
+      }
+    }
+  },
+  "cee": {
+    "_source": "bar171",
+    "bar_th_171": {
+      "version": "A82.5",
+      "duree_vie_ans": 17,
+      "etas_min_basse_temperature": 1.26,
+      "etas_min_moyenne_haute_temperature": 1.11,
+      "maison": {
+        "etas_bas": 90900,
+        "etas_haut": 109200,
+        "seuil_etas_haut": 1.4,
+        "surface": [
+          [
+            70,
+            0.5
+          ],
+          [
+            90,
+            0.7
+          ],
+          [
+            null,
+            1
+          ]
+        ]
+      },
+      "appartement": {
+        "etas_bas": 48700,
+        "etas_haut": 58900,
+        "seuil_etas_haut": 1.4,
+        "surface": [
+          [
+            35,
+            0.5
+          ],
+          [
+            60,
+            0.7
+          ],
+          [
+            null,
+            1
+          ]
+        ]
+      }
+    },
+    "bar_th_172": {
+      "version": "A82.5",
+      "duree_vie_ans": 20,
+      "maison": {
+        "etas_bas": 101400,
+        "etas_haut": 119400,
+        "seuil_etas_haut": 1.7,
+        "surface": [
+          [
+            70,
+            0.5
+          ],
+          [
+            90,
+            0.7
+          ],
+          [
+            null,
+            1
+          ]
+        ]
+      }
+    },
+    "zone": {
+      "H1": 1.2,
+      "H2": 1,
+      "H3": 0.7
+    },
+    "coup_de_pouce": {
+      "_source": "coupDePouce",
+      "coefficient": 5,
+      "jusqu_au": "2030-12-31",
+      "agrement_modele_depuis": "2026-09-01"
+    },
+    "prix_mwh": {
+      "_source": "emmy",
+      "mois": "2026-09",
+      "classique": 8.82,
+      "precarite": 14.64,
+      "classique_2026": [
+        8.48,
+        8.82
+      ],
+      "precarite_2026": [
+        10.83,
+        13.49,
+        12.03,
+        11.33,
+        15.6,
+        12.91,
+        16.85,
+        17.12,
+        14.64
+      ]
+    }
+  },
+  "plf2027": {
+    "_source": "plf2027",
+    "statut": "projet de loi de finances, non voté au 2026-10-22",
+    "citation": "les gestes prioritaires de décarbonation, notamment les pompes à chaleur, seront uniquement financés par les certificats d'économie d'énergie",
+    "page": 9
+  },
+  "tva": {
+    "_source": "tva",
+    "pac": 0.055,
+    "chaudiere_fossile": 0.2,
+    "anciennete_ans": 2,
+    "verifie_le": "2026-02-21"
+  },
+  "eco_ptz": {
+    "_source": "ecoPtz",
+    "une_action": 15000,
+    "deux_actions": 25000,
+    "trois_actions": 30000,
+    "complementaire": 50000,
+    "duree_max_ans": 15,
+    "jusqu_au": "2027-12-31",
+    "verifie_le": "2026-09-01"
+  },
+  "energie": {
+    "electricite": {
+      "_source": "cre",
+      "date": "2026-08-01",
+      "kwh_ttc": 0.1985,
+      "abonnement_9kva_ttc": 239.84,
+      "option": "Base 9 kVA, tarif réglementé"
+    },
+    "gaz": {
+      "_source": "eurostatGaz",
+      "periode": "2026-S1",
+      "kwh_ttc": 0.1347
+    },
+    "fioul": {
+      "_source": "wob",
+      "date": "2026-10-19",
+      "eur_1000l_ttc": 1930.78,
+      "kwh_par_litre_hypothese": 10
+    }
+  },
+  "rendements": {
+    "chaudiere_hypothese": 0.86,
+    "_chaudiere_source": "ecodesign",
+    "radiateur_electrique": 1,
+    "scop": {
+      "_source": "ademe",
+      "air_eau": 2.9,
+      "air_eau_min": 1.8,
+      "air_eau_max": 4.5,
+      "geo": 4.1,
+      "air_air_hypothese": 2.9
+    }
+  },
+  "climat": {
+    "_source": "meteo",
+    "dju_base": 18,
+    "periode": "2015-2024",
+    "annee_recente": 2025,
+    "temperature_interieure_hypothese": 19,
+    "hauteur_sous_plafond_hypothese": 2.5,
+    "g_hypothese": {
+      "faible": 1.6,
+      "moyenne": 1.1,
+      "bonne": 0.75,
+      "bbc": 0.5
+    }
+  },
+  "prix_installation": {
+    "_source": "observatoire",
+    "date": "2026-08-07",
+    "n_devis": 170,
+    "air_air": {
+      "n": 148,
+      "median_ttc": 7618,
+      "eur_par_kw": 1030,
+      "eur_par_kw_p10": 707,
+      "eur_par_kw_p90": 1530
+    },
+    "air_eau": {
+      "n": 22,
+      "median_ttc": 15788,
+      "eur_par_kw": 1697,
+      "min": 4400,
+      "max": 28800
+    },
+    "geo": {
+      "n": 0,
+      "depart_ttc": 18000,
+      "_note": "aucune source ouverte : on part du plafond de dépense MaPrimeRénov' (18 000 €), présenté comme tel"
+    }
+  },
+  "sources": {
+    "spMpr": {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F35083",
+      "label": {
+        "fr": "Service-Public.fr : MaPrimeRénov' (fiche F35083, vérifiée le 1er septembre 2026)",
+        "en": "Service-Public.fr: MaPrimeRénov' (page F35083, checked 1 September 2026)"
+      }
+    },
+    "decret2020": {
+      "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000041400291",
+      "label": {
+        "fr": "Décret n° 2020-26 du 14 janvier 2020 relatif à la prime de transition énergétique, art. 3 (version au 1er septembre 2026)",
+        "en": "Decree 2020-26 of 14 January 2020 on the energy transition grant, art. 3 (version in force 1 September 2026)"
+      }
+    },
+    "bar171": {
+      "url": "https://aida.ineris.fr/sites/default/files/2026-06/BAR-TH-171%20%2B%20annexes_20260529.pdf",
+      "label": {
+        "fr": "Fiche CEE BAR-TH-171 « Pompe à chaleur de type air/eau » v. A82.5 (arrêté du 29 mai 2026, JO du 30 mai 2026)",
+        "en": "CEE sheet BAR-TH-171 “Air-to-water heat pump” v. A82.5 (order of 29 May 2026, Official Journal of 30 May 2026)"
+      }
+    },
+    "bar172": {
+      "url": "https://aida.ineris.fr/sites/default/files/2026-06/BAR-TH-172%20%2B%20annexes_20260529.pdf",
+      "label": {
+        "fr": "Fiche CEE BAR-TH-172 « Pompe à chaleur de type eau/eau ou eau glycolée/eau » v. A82.5",
+        "en": "CEE sheet BAR-TH-172 “Water-to-water or brine-to-water heat pump” v. A82.5"
+      }
+    },
+    "coupDePouce": {
+      "url": "https://aida.ineris.fr/reglementation/arrete-290526-modifiant-larrete-22-decembre-2014-definissant-operations",
+      "label": {
+        "fr": "Arrêté du 29 mai 2026 : Coup de pouce Chauffage, coefficient 5 et agrément du modèle de PAC (décret n° 2026-413)",
+        "en": "Order of 29 May 2026: Coup de pouce Chauffage, ×5 coefficient and heat pump model approval (decree 2026-413)"
+      }
+    },
+    "coupDePouce2025": {
+      "url": "https://aida.ineris.fr/reglementation/arrete-060925-portant-modification-fiches-doperations-standardisees-dispositif",
+      "label": {
+        "fr": "Arrêté du 6 septembre 2025 : bonification ×5 du 1er octobre 2025 au 31 décembre 2030, résidences secondaires exclues",
+        "en": "Order of 6 September 2025: ×5 bonus from 1 October 2025 to 31 December 2030, second homes excluded"
+      }
+    },
+    "emmy": {
+      "url": "https://www.emmy.fr/public/donnees-mensuelles",
+      "label": {
+        "fr": "Registre national des CEE (Emmy) : prix moyens mensuels des transactions",
+        "en": "National CEE registry (Emmy): average monthly transaction prices"
+      }
+    },
+    "plf2027": {
+      "url": "https://www.budget.gouv.fr/documentation/file-download/34516",
+      "label": {
+        "fr": "PLF 2027, annexe « Effort financier de l'État en faveur de la rénovation énergétique des bâtiments », p. 9",
+        "en": "2027 draft budget, annex on State spending for building energy renovation, p. 9"
+      }
+    },
+    "tva": {
+      "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F23568",
+      "label": {
+        "fr": "Service-Public.fr Entreprendre : taux de TVA des travaux dans les logements (F23568)",
+        "en": "Service-Public.fr: VAT rates for work on homes (F23568)"
+      }
+    },
+    "ecoPtz": {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F19905",
+      "label": {
+        "fr": "Service-Public.fr : éco-prêt à taux zéro (F19905)",
+        "en": "Service-Public.fr: zero-rate eco-loan (F19905)"
+      }
+    },
+    "cre": {
+      "url": "https://www.data.gouv.fr/datasets/historique-des-tarifs-reglementes-de-vente-delectricite-pour-les-consommateurs-residentiels",
+      "label": {
+        "fr": "CRE : historique des tarifs réglementés de vente d'électricité (data.gouv.fr)",
+        "en": "CRE: history of regulated electricity tariffs (data.gouv.fr)"
+      }
+    },
+    "eurostatGaz": {
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_202/default/table",
+      "label": {
+        "fr": "Eurostat nrg_pc_202 : prix du gaz pour les ménages, France, toutes taxes comprises",
+        "en": "Eurostat nrg_pc_202: gas prices for household consumers, France, all taxes included"
+      }
+    },
+    "wob": {
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en",
+      "label": {
+        "fr": "Commission européenne : Weekly Oil Bulletin (prix du fioul de chauffage, France, taxes comprises)",
+        "en": "European Commission: Weekly Oil Bulletin (heating gas oil, France, taxes included)"
+      }
+    },
+    "ademe": {
+      "url": "https://librairie.ademe.fr/batiment/8634-avis-sur-les-performances-reelles-des-pompes-a-chaleur.html",
+      "label": {
+        "fr": "ADEME : avis sur les performances réelles des pompes à chaleur (octobre 2025, mesures sur 100 PAC)",
+        "en": "ADEME: opinion on the real-world performance of heat pumps (October 2025, 100 measured units)"
+      }
+    },
+    "observatoire": {
+      "url": "https://www.data.gouv.fr/datasets/observatoire-des-devis-de-pompe-a-chaleur-residentielle-en-france-2026",
+      "label": {
+        "fr": "Observatoire ScoreSolaire des devis de pompe à chaleur (data.gouv.fr, CC BY 4.0, 7 août 2026)",
+        "en": "ScoreSolaire heat pump quote observatory (data.gouv.fr, CC BY 4.0, 7 August 2026)"
+      }
+    },
+    "meteo": {
+      "url": "https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes",
+      "label": {
+        "fr": "Météo-France : données climatologiques de base quotidiennes (Licence Ouverte 2.0)",
+        "en": "Météo-France: basic daily climate data (Licence Ouverte 2.0)"
+      }
+    },
+    "geoApi": {
+      "url": "https://geo.api.gouv.fr/decoupage-administratif",
+      "label": {
+        "fr": "API Découpage administratif (départements, chefs-lieux)",
+        "en": "Administrative boundaries API (départements, prefectures)"
+      }
+    },
+    "zones": {
+      "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000022959397",
+      "label": {
+        "fr": "Arrêté du 26 octobre 2010, annexe I : zones climatiques H1, H2, H3 par département",
+        "en": "Order of 26 October 2010, annex I: climate zones H1, H2, H3 by département"
+      }
+    },
+    "ecodesign": {
+      "url": "https://eur-lex.europa.eu/eli/reg/2013/813/oj",
+      "label": {
+        "fr": "Règlement (UE) n° 813/2013, annexe II : efficacité saisonnière minimale de 86 % des chaudières neuves depuis 2015",
+        "en": "Regulation (EU) 813/2013, annex II: 86% minimum seasonal efficiency of new boilers since 2015"
+      }
+    },
+    "franceRenov": {
+      "url": "https://france-renov.gouv.fr/",
+      "label": {
+        "fr": "France Rénov' : simulateur officiel et conseillers publics gratuits",
+        "en": "France Rénov': official simulator and free public advisers"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, CLARITY_ID, CONTACT_EMAIL, GA4_ID, LAST_UPDATED, LEGAL, SITE_NAMES, SITE_URL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'fr';
+---
+<PageLayout title={`Mentions légales – ${SITE_NAMES[lang]}`} description="Éditeur, directeur de la publication, hébergeur, propriété intellectuelle, réutilisation des données Météo-France, CRE et Emmy, limites de responsabilité et droit applicable du site." lang={lang} noindex={true} breadcrumbs={[{ label: 'Mentions légales' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Mentions légales</h1>
+    <p>Informations publiées en application de l’article 6 III-1 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.</p>
+    <h2>Éditeur du site</h2>
+    <LegalIdentity lang={lang} />
+    <p>Directeur de la publication : {AUTHOR_NAME}, responsable des contenus publiés sur {SITE_URL}.</p>
+    <h2>Hébergeur</h2>
+    <LegalIdentity mode="hosting" lang={lang} />
+    <h2>Objet du site et absence de conseil</h2>
+    <p>Le site calcule gratuitement le prix, les aides (MaPrimeRénov’, prime CEE), le reste à charge et l’économie annuelle d’une pompe à chaleur à partir des barèmes publiés et des saisies du visiteur. Ces résultats sont des estimations : ce ne sont ni un devis, ni une offre, ni une décision d’attribution, ni un conseil personnalisé. Le site est indépendant : il n’est affilié ni à l’Anah, ni à France Rénov’, ni à un fournisseur d’énergie ou un installateur, ne reprend aucun logo officiel et ne transmet aucune demande. Seule l’Anah fixe MaPrimeRénov’. Méthode et limites : <a href={route('method', lang)}>méthode</a>.</p>
+    <h2>Données réutilisées</h2>
+    <p>Climat : données climatologiques de base quotidiennes de Météo-France publiées sur data.gouv.fr, réutilisées sous <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence" rel="nofollow noopener" target="_blank">Licence Ouverte 2.0 (Etalab)</a> ; degrés-jours et températures calculés par l’éditeur. Tarifs réglementés de l’électricité (CRE) et départements (geo.api.gouv.fr) : même licence. Prix des devis : observatoire ScoreSolaire, réutilisé sous licence CC BY 4.0 (attribution : ScoreSolaire, scoresolaire.com). Prix des CEE : registre Emmy, cité comme valeur de marché et non comme indice de référence. Gaz : Eurostat ; fioul : Weekly Oil Bulletin de la Commission européenne, source mentionnée. Règles : fiches Service-Public et textes publiés sur Légifrance et au Journal officiel.</p>
+    <h2>Limites de responsabilité</h2>
+    <p>Les données sont relevées automatiquement et contrôlées, sans garantie d’absence d’erreur ni de disponibilité permanente. L’éditeur ne peut être tenu responsable d’une décision prise sur la seule base d’un montant estimé ici. Une erreur se signale par la page <a href={route('contact', lang)}>contact</a>.</p>
+    <h2>Propriété intellectuelle</h2>
+    <p>Textes, graphismes et code sont protégés et restent la propriété de l’éditeur ; courtes citations autorisées avec un lien vers la page d’origine.</p>
+    <h2>Intégration du comparateur</h2><p>L’outil des prix peut être intégré gratuitement en iframe, lien visible conservé : voir la <a href={route('widget', lang)}>page widget</a>.</p>
+    {/* gen-legal-pages:terms */}
+    <h2>Données personnelles et cookies</h2>
+    {GA4_ID ? (<p>Les saisies des calculateurs ne quittent pas votre navigateur. Le site dépose des cookies de mesure d’audience Google Analytics (<code>_ga</code>, <code>_ga_{GA4_ID.replace('G-', '')}</code>, 13 mois au plus), sans publicité{CLARITY_ID && ' ; la stabilité des pages est mesurée avec Microsoft Clarity, sans cookie'}. Détails, base juridique et moyens de vous y opposer : <a href={route('privacy', lang)}>politique de confidentialité</a> et page <a href={route('cookies', lang)}>cookies</a>.</p>) : (<p>Les saisies des calculateurs ne quittent pas votre navigateur et le site ne dépose aucun cookie{CLARITY_ID && ' ; la stabilité des pages est mesurée de façon anonyme avec Microsoft Clarity, sans cookie'}. Voir la <a href={route('privacy', lang)}>politique de confidentialité</a> et la page <a href={route('cookies', lang)}>cookies</a>.</p>)}
+    {/* /gen-legal-pages:terms */}
+    <h2>Signalement</h2><p>Contenu illicite : <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, avec l’adresse de la page et le motif.</p>
+    <h2>Droit applicable</h2><p>Droit français. À défaut d’accord amiable, les juridictions compétentes de {LEGAL.jurisdiction}. Mise à jour : {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

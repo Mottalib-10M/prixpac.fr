@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Editorial policy – ${SITE_NAMES[lang]}`} description="Where the grant scales, energy prices and climate data published here come from, who answers for them, how often they are reread, and what happens when one of them is wrong." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Editorial policy and corrections</h1>
+    <p>An outdated scale gets a quote signed on a grant that no longer exists; an inflated CEE bonus promises an out-of-pocket cost that will never materialise. Here is where our figures come from and what we do when one of them is wrong.</p>
+    <h2>Responsibility</h2><p>{AUTHOR_NAME} answers for every scale applied, every energy price and every calculation in the calculator. A figure that does not match its source can be reported to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Primary sources only</h2>
+    <ul>
+      <li><strong>official scales</strong>: Service-Public pages (MaPrimeRénov’, VAT, eco-loan), decree 2020-26 on Légifrance, CEE sheets and Coup de pouce orders published in the Official Journal;</li>
+      <li><strong>public prices</strong>: the national CEE registry (Emmy), CRE regulated tariffs, Eurostat for gas, the European Commission’s Weekly Oil Bulletin for heating oil;</li>
+      <li><strong>measurements</strong>: Météo-France daily records (Licence Ouverte 2.0), ADEME’s field measurement campaign on heat pumps;</li>
+      <li><strong>an open observatory</strong> of heat pump quote prices (CC BY 4.0), cited as an estimate and replaceable by your own quote.</li>
+    </ul>
+    <p>No figure is taken from an installer, a lead-generation site or a forum. An amount we could not reread in the text in force (the CEE bonus for an air-to-air unit, for instance) is not calculated.</p>
+    <h2>Estimates, never promises</h2><p>Only the Anah sets MaPrimeRénov’, and the CEE bonus is the one the firm writes down before you sign. Calculation assumptions (insulation, boiler efficiency, energy content of a litre of heating oil) are shown as such, and each can be replaced by your own figure.</p>
+    <h2>Checks before publication</h2><p>Each update replays the engine’s tests: flat rates and ceilings reread, kWh cumac from the sheets, the decree’s cap, degree-day bounds. A failing test blocks publication.</p>
+    <h2>Update schedule</h2><p>CEE prices: monthly. Energy prices: whenever the source publishes (weekly for heating oil, twice a year for gas). Scales: whenever the texts change. Climate: once a year. The review date is shown on every page.</p>
+    <h2>Handling errors</h2>
+    <ol><li>Check against the primary source.</li><li>Fix the parameters or code, add a test.</li><li>New date on the pages concerned.</li></ol>
+    <h2>Independence</h2><p>No commercial link with any installer, manufacturer, energy supplier or CEE agent. No affiliate links. Any commercial relationship would be stated in the text.</p>
+    <p>See also the <a href={route('method', lang)}>method</a>. Version: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

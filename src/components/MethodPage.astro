@@ -1,0 +1,108 @@
+---
+/** Méthode et sources (page de confiance, RECETTE §8.2) : données, calculs, hypothèses, tests, limites, mises à jour. */
+import PageLayout from '../layouts/PageLayout.astro';
+import { route, type Locale } from '../i18n/routes';
+import { P } from '../lib/engine/params';
+import * as M from '../lib/engine/index';
+import { formatMoney, formatPercent, formatNumber, formatDecimal, displayDate } from '../lib/format';
+import { breadcrumbSchema, webPageSchema } from '../lib/seo';
+import { LAST_UPDATED, CONTACT_EMAIL } from '../data/site-config';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const fr = lang === 'fr';
+const tag = fr ? 'fr-FR' : 'en-GB';
+const $ = (n: number) => formatMoney(n, 0, lang);
+const pc = (x: number) => formatPercent(x, 0, lang);
+const n0 = (x: number) => formatNumber(Math.round(x), 0, lang);
+const d1 = (x: number, k = 1) => formatDecimal(x, k, lang);
+const d = (iso: string) => displayDate(iso, tag);
+const title = fr ? 'Méthode : comment nous chiffrons une pompe à chaleur' : 'Method: how we work out a heat pump’s cost in France';
+const description = fr ? 'Méthode du simulateur : degrés-jours Météo-France par département, besoin de chauffage, rendement mesuré, MaPrimeRénov’, kWh cumac, écrêtement, tests, limites.' : 'How the calculator works: Météo-France degree days by département, heating need, measured efficiency, MaPrimeRénov’, kWh cumac, the grant cap, tests and limits.';
+const h1 = fr ? 'Méthode et sources' : 'Method and sources';
+const path = route('method', lang);
+const sources = Object.values(P.sources);
+const G = P.climat.g_hypothese;
+const nSt = M.DEPARTEMENTS.reduce((a, x) => a + x.stations.length, 0);
+const emprunt = M.DEPARTEMENTS.filter((x) => x.emprunt).map((x) => `${x.nom} (${x.station})`).join(', ');
+const ex = M.simuler(M.DEFAUT);
+const exC = M.cee({ type: 'air_eau', logement: 'maison', surface: 100, zone: 'H1', etasHaut: false, coupDePouce: true, couleur: ex.couleur });
+const E = P.ecretement.reste_a_charge_min;
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: h1, description, path, lang }), breadcrumbSchema([{ name: fr ? 'Accueil' : 'Home', path: route('home', lang) }, { name: h1, path }])]} breadcrumbs={[{ label: h1 }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1></header>
+  {fr ? (
+  <div class="prose prose-slate max-w-none">
+    <p>Le simulateur enchaîne six calculs : le climat de votre département, la chaleur dont votre logement a besoin, ce que cette chaleur coûte aujourd’hui et avec une pompe à chaleur, le prix de l’installation, les aides et ce qui reste à payer. Chaque paramètre est écrit une seule fois, dans <code>src/data/params-2026.json</code>, avec sa source ; les pages citent les chiffres que calcule le moteur et changent avec eux. Les hypothèses (ce que nous supposons faute de mieux) sont nommées comme telles, et chacune se remplace par votre propre donnée dans le volet « Affiner ».</p>
+    <h2>1. Le climat : degrés-jours Météo-France</h2>
+    <p>Les degrés-jours unifiés (DJU) additionnent, jour après jour, l’écart entre 18 °C et la température moyenne extérieure ((minimale + maximale) / 2) quand elle est plus basse. Nous les avons calculés pour {n0(nSt)} stations de métropole à partir des données climatologiques de base quotidiennes de Météo-France (Licence Ouverte 2.0), en moyenne sur {P.climat.periode} pour les stations qui ont au moins huit années complètes, et pour l’année {P.climat.annee_recente} seule. Chaque département prend par défaut la station la plus proche de son chef-lieu ; vous pouvez choisir une autre station du département. Les DJU vont de {n0(M.parDju()[0].dju)} ({M.parDju()[0].station}) à {n0(M.parDju().at(-1)!.dju)} ({M.parDju().at(-1)!.station}). Départements sans station retenue, qui empruntent la plus proche : {emprunt}. La Corse est partagée entre les deux départements selon la préfecture la plus proche.</p>
+    <p>Pour la puissance, nous calculons pour chaque station la température moyenne des trois jours consécutifs les plus froids de chaque hiver, de 2014-2015 à 2023-2024, puis la moyenne de ces dix valeurs. C’est un froid « d’hiver typique », plus doux que la température de base de la norme NF EN 12831 qu’utilise l’installateur : la puissance que nous affichons est un ordre de grandeur, pas un dimensionnement.</p>
+    <h2>2. Le besoin de chauffage</h2>
+    <p>Besoin (kWh par an) = G × surface × {d1(P.climat.hauteur_sous_plafond_hypothese)} m × DJU × 24 / 1 000. G est le coefficient de déperdition du logement par mètre cube et par degré d’écart ; sa valeur dépend de l’isolation. Faute de mesure chez vous, nous retenons quatre hypothèses : {d1(G.faible, 2)} W/m³·K pour une isolation faible, {d1(G.moyenne, 2)} pour une isolation moyenne, {d1(G.bonne, 2)} pour une bonne isolation, {d1(G.bbc, 2)} pour un logement très performant. Ce sont des ordres de grandeur, pas des valeurs réglementaires. Si vous connaissez votre consommation réelle, saisissez-la : le besoin devient alors consommation × rendement de l’appareil actuel, et l’hypothèse G n’est plus utilisée.</p>
+    <h2>3. Consommation et facture, avant et après</h2>
+    <ul>
+      <li>Chaudière actuelle : besoin ÷ {pc(P.rendements.chaudiere_hypothese)}. Ce rendement est le minimum imposé depuis 2015 aux chaudières neuves par le règlement européen n° 813/2013 ; une chaudière ancienne fait moins bien, donc l’économie réelle est souvent plus forte que celle affichée. Radiateurs électriques : rendement de 100 %.</li>
+      <li>Pompe à chaleur : besoin ÷ rendement saisonnier. Par défaut, les valeurs mesurées sur le terrain par l’ADEME : {d1(P.rendements.scop.air_eau)} pour une PAC air/eau, {d1(P.rendements.scop.geo)} pour une PAC géothermique. Pour l’air/air, aucune mesure publique comparable : nous reprenons {d1(P.rendements.scop.air_air_hypothese)} par prudence.</li>
+      <li>Prix : électricité {d1(P.energie.electricite.kwh_ttc, 4)} € TTC le kWh (tarif réglementé Base 9 kVA, CRE, au {d(P.energie.electricite.date)}) ; gaz {d1(P.energie.gaz.kwh_ttc, 4)} € (Eurostat, ménages, {P.energie.gaz.periode}) ; fioul {$(P.energie.fioul.eur_1000l_ttc)} les 1 000 litres (Weekly Oil Bulletin, semaine du {d(P.energie.fioul.date)}), converti à raison d’environ {n0(P.energie.fioul.kwh_par_litre_hypothese)} kWh par litre, ordre de grandeur usuel du pouvoir calorifique du fioul domestique. Les abonnements ne sont pas comptés.</li>
+    </ul>
+    <h2>4. Le prix de l’installation</h2>
+    <p>Sans devis, nous partons de la médiane des devis réels publiés par l’observatoire ScoreSolaire (data.gouv.fr, licence CC BY 4.0, mise à jour du {d(P.prix_installation.date)}) : {$(P.prix_installation.air_eau.median_ttc)} TTC pour une PAC air/eau ({n0(P.prix_installation.air_eau.n)} devis seulement, donc indicatif), {$(P.prix_installation.air_air.median_ttc)} pour une PAC air/air ({n0(P.prix_installation.air_air.n)} devis). Aucune source ouverte ne publie de prix de PAC géothermique : nous partons du plafond de dépense de MaPrimeRénov’ ({$(P.prix_installation.geo.depart_ttc)}), qui n’est pas un prix, et vous invitons à saisir votre devis.</p>
+    <h2>5. Les aides</h2>
+    <p><strong>Catégorie de revenus.</strong> Revenu fiscal de référence comparé aux plafonds 2026 de l’Anah, Île-de-France ou hors Île-de-France selon le département, plafond inclus.</p>
+    <p><strong>MaPrimeRénov’ par geste.</strong> Forfait du barème 2026 (fiche Service-Public F35083 vérifiée le 1er septembre 2026), à condition que le logement ait plus de {n0(P.maprimerenov.anciennete_logement_ans_pac)} ans et soit une résidence principale. Air/air : aucun forfait. Rose : aucun forfait.</p>
+    <p><strong>Prime CEE.</strong> kWh cumac = montant de la fiche (BAR-TH-171 pour l’air/eau, BAR-TH-172 pour la géothermie, version A82.5) × facteur de surface × facteur de zone × {n0(P.cee.coup_de_pouce.coefficient)} si le Coup de pouce s’applique (résidence principale, chaudière charbon, fioul ou gaz remplacée, modèle agréé depuis le 1er septembre 2026). Valeur en euros = kWh cumac ÷ 1 000 × prix moyen Emmy du mois ({d1(P.cee.prix_mwh.classique, 2)} €/MWh, ou {d1(P.cee.prix_mwh.precarite, 2)} € pour les certificats précarité des ménages bleus et jaunes). Le registre précise que ce prix n’est pas un indice de référence : nous l’affichons comme une valeur de marché. Exemple : maison de 100 m² en zone H1, Coup de pouce, {n0(exC.kwhc)} kWh cumac, soit {$(exC.eur)}.</p>
+    <p><strong>Écrêtement.</strong> Décret n° 2020-26, article 3 : MaPrimeRénov’ ≤ (1 − reste à charge minimal) × min(prix TTC, plafond de dépense) − prime CEE, avec un reste à charge minimal de {pc(E.bleu)}, {pc(E.jaune)}, {pc(E.violet)} et {pc(E.rose)} selon la couleur.</p>
+    <p><strong>Temps de retour.</strong> Reste à charge ÷ économie annuelle, à prix de l’énergie constants, sans entretien ni remplacement.</p>
+    <h2>Les tests</h2>
+    <p>Chaque mise à jour lance les tests du moteur (<code>src/lib/engine/pac.test.ts</code>) : forfaits et kWh cumac recopiés des textes, plafonds de revenus aux bornes (un revenu égal au plafond reste dans la catégorie), facteurs de surface aux seuils de 35, 60, 70 et 90 m², écrêtement jamais négatif, 96 départements avec des DJU et une zone plausibles, cohérence de la simulation complète. Un test qui échoue bloque la publication.</p>
+    <h2>Ce que le site ne fait pas</h2>
+    <ul>
+      <li>Il ne chiffre pas la prime CEE d’une PAC air/air (fiche BAR-TH-129) ni d’une PAC géothermique en appartement : nous n’avons pas relu le texte en vigueur.</li>
+      <li>Il ne compte pas l’eau chaude sanitaire, l’entretien annuel, l’abonnement gaz supprimé ni le changement de puissance du compteur électrique.</li>
+      <li>Il ne traite pas l’outre-mer, dont les barèmes diffèrent.</li>
+      <li>Il ne remplace ni l’étude thermique ni la note de dimensionnement de l’installateur, obligatoire pour la prime CEE.</li>
+    </ul>
+    <h2>Mises à jour</h2>
+    <p>Le script <code>scripts/update-data.mjs</code> relit le prix des CEE (registre Emmy, chaque mois), le tarif réglementé de l’électricité (CRE), le prix du gaz (Eurostat) et celui du fioul (Weekly Oil Bulletin), puis réécrit les paramètres et la date ; une tâche planifiée le lance, rejoue les tests et reconstruit le site. Barèmes : à chaque modification des textes. Climat : chaque année, avec l’année écoulée. Une erreur signalée à <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> est vérifiée sur la source, corrigée et transformée en test. Voir la <a href={route('editorial', lang)}>charte éditoriale</a>.</p>
+    <h2>Toutes les sources</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label.fr}</a></li>)}</ul>
+    <p class="text-sm text-navy-600">Données relues le <time datetime={LAST_UPDATED}>{d(LAST_UPDATED)}</time> · barèmes relus le <time datetime={P.retrieved_at}>{d(P.retrieved_at)}</time>.</p>
+  </div>
+  ) : (
+  <div class="prose prose-slate max-w-none">
+    <p>The calculator chains six steps: your département’s climate, the heat your home needs, what that heat costs today and with a heat pump, the installation price, the grants, and what is left to pay. Each parameter is written once, in <code>src/data/params-2026.json</code>, with its source; the pages quote the figures the engine works out and change with them. Assumptions (what we suppose for want of better) are named as such, and each can be replaced by your own figure in the “Refine” panel.</p>
+    <h2>1. Climate: Météo-France degree days</h2>
+    <p>Heating degree days (DJU) add up, day after day, the gap between 18 °C and the mean outdoor temperature ((minimum + maximum) / 2) when it is lower. We computed them for {n0(nSt)} mainland stations from Météo-France’s basic daily climate data (Licence Ouverte 2.0), averaged over {P.climat.periode} for stations with at least eight complete years, and for {P.climat.annee_recente} alone. Each département uses by default the station nearest its prefecture; you can pick another station in the département. Degree days range from {n0(M.parDju()[0].dju)} ({M.parDju()[0].station}) to {n0(M.parDju().at(-1)!.dju)} ({M.parDju().at(-1)!.station}). Départements with no qualifying station, which borrow the nearest: {emprunt}. Corsica is split between its two départements by nearest prefecture.</p>
+    <p>For output, we compute at each station the mean temperature of the three coldest consecutive days of each winter from 2014-2015 to 2023-2024, then average those ten values. That is a “typical winter” cold, milder than the NF EN 12831 design temperature the installer uses: the output we show is an order of magnitude, not a sizing.</p>
+    <h2>2. Heating need</h2>
+    <p>Need (kWh a year) = G × floor area × {d1(P.climat.hauteur_sous_plafond_hypothese)} m × DJU × 24 / 1,000. G is the home’s heat-loss coefficient per cubic metre and per degree of difference; its value depends on insulation. With no measurement of your home, we use four assumptions: {d1(G.faible, 2)} W/m³·K for poor insulation, {d1(G.moyenne, 2)} for average, {d1(G.bonne, 2)} for good, {d1(G.bbc, 2)} for a very efficient home. They are orders of magnitude, not regulatory values. If you know your real consumption, enter it: the need then becomes consumption × efficiency of your current system, and the G assumption is no longer used.</p>
+    <h2>3. Consumption and bill, before and after</h2>
+    <ul>
+      <li>Current boiler: need ÷ {pc(P.rendements.chaudiere_hypothese)}. That efficiency is the minimum European Regulation 813/2013 has required of new boilers since 2015; an old boiler does worse, so the real saving is often larger than shown. Electric heaters: 100% efficiency.</li>
+      <li>Heat pump: need ÷ seasonal efficiency. By default, ADEME’s field-measured values: {d1(P.rendements.scop.air_eau)} for an air-to-water unit, {d1(P.rendements.scop.geo)} for ground-source. For air-to-air there is no comparable public measurement: we use {d1(P.rendements.scop.air_air_hypothese)} to be prudent.</li>
+      <li>Prices: electricity €{d1(P.energie.electricite.kwh_ttc, 4)} per kWh incl. tax (regulated Base tariff 9 kVA, CRE, from {d(P.energie.electricite.date)}); gas €{d1(P.energie.gaz.kwh_ttc, 4)} (Eurostat, households, {P.energie.gaz.periode}); heating oil {$(P.energie.fioul.eur_1000l_ttc)} per 1,000 litres (Weekly Oil Bulletin, week of {d(P.energie.fioul.date)}), converted at about {n0(P.energie.fioul.kwh_par_litre_hypothese)} kWh per litre, the usual order of magnitude for heating oil’s calorific value. Standing charges are not counted.</li>
+    </ul>
+    <h2>4. Installation price</h2>
+    <p>Without a quote, we start from the median of real quotes published by the ScoreSolaire observatory (data.gouv.fr, CC BY 4.0 licence, updated {d(P.prix_installation.date)}): {$(P.prix_installation.air_eau.median_ttc)} incl. VAT for an air-to-water unit (only {n0(P.prix_installation.air_eau.n)} quotes, so indicative), {$(P.prix_installation.air_air.median_ttc)} for air-to-air ({n0(P.prix_installation.air_air.n)} quotes). No open source publishes ground-source prices: we start from the MaPrimeRénov’ expense ceiling ({$(P.prix_installation.geo.depart_ttc)}), which is not a price, and invite you to enter your quote.</p>
+    <h2>5. Grants</h2>
+    <p><strong>Income category.</strong> Reference tax income compared with the Anah’s 2026 ceilings, Île-de-France or elsewhere depending on the département, ceiling included.</p>
+    <p><strong>Per-item MaPrimeRénov’.</strong> Flat rate from the 2026 scale (Service-Public page F35083, checked 1 September 2026), provided the home is over {n0(P.maprimerenov.anciennete_logement_ans_pac)} years old and a main residence. Air-to-air: no grant. Pink: no grant.</p>
+    <p><strong>CEE bonus.</strong> kWh cumac = sheet amount (BAR-TH-171 for air-to-water, BAR-TH-172 for ground-source, version A82.5) × area factor × zone factor × {n0(P.cee.coup_de_pouce.coefficient)} if the Coup de pouce applies (main residence, coal, oil or gas boiler replaced, approved model since 1 September 2026). Value in euros = kWh cumac ÷ 1,000 × Emmy average monthly price (€{d1(P.cee.prix_mwh.classique, 2)}/MWh, or €{d1(P.cee.prix_mwh.precarite, 2)} for fuel-poverty certificates from blue and yellow households). The registry states this price is not a benchmark: we show it as a market value. Example: 100 m² house in zone H1, Coup de pouce, {n0(exC.kwhc)} kWh cumac, i.e. {$(exC.eur)}.</p>
+    <p><strong>Cap.</strong> Decree 2020-26, article 3: MaPrimeRénov’ ≤ (1 − minimum out-of-pocket share) × min(price incl. VAT, expense ceiling) − CEE bonus, with a minimum share of {pc(E.bleu)}, {pc(E.jaune)}, {pc(E.violet)} and {pc(E.rose)} by colour.</p>
+    <p><strong>Payback.</strong> Out-of-pocket cost ÷ yearly saving, at constant energy prices, with no servicing or replacement.</p>
+    <h2>Tests</h2>
+    <p>Each update runs the engine’s tests (<code>src/lib/engine/pac.test.ts</code>): flat rates and kWh cumac copied from the texts, income ceilings at their bounds (an income equal to the ceiling stays in the category), area factors at the 35, 60, 70 and 90 m² thresholds, a cap that never goes negative, 96 départements with plausible degree days and zones, and consistency of the full simulation. A failing test blocks publication.</p>
+    <h2>What the site does not do</h2>
+    <ul>
+      <li>It does not calculate the CEE bonus for an air-to-air unit (sheet BAR-TH-129) or a ground-source unit in a flat: we have not reread the text in force.</li>
+      <li>It leaves out domestic hot water, yearly servicing, the gas standing charge you drop and any change of electricity meter rating.</li>
+      <li>It does not cover the overseas départements, whose scales differ.</li>
+      <li>It does not replace the installer’s heat-loss study or the sizing note required for the CEE bonus.</li>
+    </ul>
+    <h2>Updates</h2>
+    <p>The script <code>scripts/update-data.mjs</code> rereads the CEE price (Emmy registry, monthly), the regulated electricity tariff (CRE), the gas price (Eurostat) and heating oil (Weekly Oil Bulletin), then rewrites the parameters and the date; a scheduled job runs it, replays the tests and rebuilds the site. Scales: whenever the texts change. Climate: every year, with the year just ended. An error reported to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> is checked against the source, corrected and turned into a test. See the <a href={route('editorial', lang)}>editorial policy</a>.</p>
+    <h2>All sources</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label.en}</a></li>)}</ul>
+    <p class="text-sm text-navy-600">Data reread on <time datetime={LAST_UPDATED}>{d(LAST_UPDATED)}</time> · scales reread on <time datetime={P.retrieved_at}>{d(P.retrieved_at)}</time>.</p>
+  </div>
+  )}
+</PageLayout>

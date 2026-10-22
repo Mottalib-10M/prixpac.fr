@@ -1,0 +1,25 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate } from '../../lib/format';
+const lang = 'en';
+---
+<PageLayout title="Heat pump calculator: who runs Calcul PAC, and its sources" description="Who publishes Calcul PAC, why a neutral heat pump calculator with no quote form, where the French grant scales and climate data come from, how to report errors." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">About Calcul PAC</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>Calcul PAC is published by Radif Partners. It answers the question tens of thousands of French homeowners ask every month when they think of replacing their boiler: what will a heat pump really cost me after grants, and how much will it save in my home?</p>
+    <h2>Why this site exists</h2>
+    <p>On that question, the top results are trade directories that give a national range before asking for your details, grant sites that show an amount only after you create an account and agree to a call back, and articles that copy another year’s scales. This site does better than the top Google result because it works out in a minute, with no contact details, the price, the 2026 MaPrimeRénov’ grant, the CEE bonus in official kWh cumac, the out-of-pocket cost and the yearly saving of a heat pump with your département’s real climate (Météo-France degree days), where the top result gives a national range and sends you to a quote form.</p>
+    <h2>Where the figures come from</h2>
+    <p>Scales come from the Service-Public pages, decree 2020-26 on Légifrance and the CEE sheets published in the Official Journal. CEE prices come from the national Emmy registry, energy prices from the CRE, Eurostat and the European Commission. We computed each département’s climate ourselves from ten years of Météo-France daily records. Real-world heat pump efficiency comes from ADEME’s measurement campaign. Everything is set out, with its limits, in the <a href={route('method', lang)}>method</a>.</p>
+    <h2>What we are not</h2>
+    <p>Radif Partners is not the Anah, France Rénov’, an energy supplier, an installer or a CEE agent. We file no applications, pass your project to no one, take no commission and ask for no contact details. Only the Anah sets MaPrimeRénov’, and the CEE bonus is the one the firm puts in writing before you sign.</p>
+    <h2>Funding and data</h2><p>The site is free and needs no sign-up. The calculation runs in your browser: your income, floor area or consumption are sent nowhere. If it ever shows advertising, it will never sit above the calculator or be presented as a recommendation, and no installer will be able to pay to appear.</p>
+    <h2>Why an English version</h2><p>Every page exists in English for foreign homeowners settled in France, often in older oil-heated houses, who are meeting MaPrimeRénov’, energy-savings certificates and the reference tax income for the first time: the French terms are explained, amounts stay in euros.</p>
+    <h2>Write to us</h2><p>A scale that has changed, an outdated energy price, a calculation that looks wrong: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. See also the <a href={route('editorial', lang)}>editorial policy</a> and the <a href={route('terms', lang)}>legal notice</a>.</p>
+    <p class="text-sm text-navy-600">Data reread on <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, 'en-GB')}</time>.</p>
+  </div>
+</PageLayout>

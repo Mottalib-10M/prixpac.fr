@@ -6,11 +6,11 @@ import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema }
 import { displayDate } from '../../lib/format';
 const lang = 'fr';
 ---
-<PageLayout title="Pompe à chaleur : qui édite Calcul PAC, avec quelles sources" description="Qui édite Calcul PAC, pourquoi un simulateur neutre de pompe à chaleur sans devis, d’où viennent les barèmes et le climat, et comment signaler une erreur." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Accueil', path: route('home', lang) }, { name: 'À propos', path: route('about', lang) }])]} breadcrumbs={[{ label: 'À propos' }]}>
-  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">À propos de Calcul PAC</h1></header>
+<PageLayout title="Pompe à chaleur : qui édite Prix PAC, avec quelles sources" description="Qui édite Prix PAC, pourquoi un simulateur neutre de pompe à chaleur sans devis, d’où viennent les barèmes et le climat, et comment signaler une erreur." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Accueil', path: route('home', lang) }, { name: 'À propos', path: route('about', lang) }])]} breadcrumbs={[{ label: 'À propos' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">À propos de Prix PAC</h1></header>
   <div class="prose prose-slate max-w-none">
     <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
-    <p>Calcul PAC est édité par Radif Partners. Il répond à la question que se posent chaque mois des dizaines de milliers de propriétaires qui songent à remplacer leur chaudière : combien me coûtera vraiment une pompe à chaleur, aides déduites, et combien me fera-t-elle gagner chez moi ?</p>
+    <p>Prix PAC est édité par Radif Partners. Il répond à la question que se posent chaque mois des dizaines de milliers de propriétaires qui songent à remplacer leur chaudière : combien me coûtera vraiment une pompe à chaleur, aides déduites, et combien me fera-t-elle gagner chez moi ?</p>
     <h2>Pourquoi ce site existe</h2>
     <p>Sur cette question, les premiers résultats sont des annuaires d’artisans qui donnent une fourchette nationale avant de demander vos coordonnées, des sites de primes qui affichent un montant après création d’un compte et promesse de rappel, et des articles qui recopient des barèmes d’une autre année. Ce site chiffre en une minute, sans coordonnées, le prix, MaPrimeRénov’ 2026, la prime CEE en kWh cumac officiels, le reste à charge et l’économie annuelle d’une pompe à chaleur avec le climat réel de votre département (DJU Météo-France).</p>
     <h2>D’où viennent les chiffres</h2>

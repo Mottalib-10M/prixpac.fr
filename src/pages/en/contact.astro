@@ -5,7 +5,7 @@ import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES } from '../../data
 import { route } from '../../i18n/routes';
 const lang = 'en';
 ---
-<PageLayout title={`Contact – ${SITE_NAMES[lang]}`} description="Write to the publisher of Calcul PAC: report an outdated grant scale, a wrong energy price, a question on the calculation method, or embed the heat pump calculator." lang={lang} noindex={true} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+<PageLayout title={`Contact – ${SITE_NAMES[lang]}`} description="Write to the publisher of Prix PAC: report an outdated grant scale, a wrong energy price, a question on the calculation method, or embed the heat pump calculator." lang={lang} noindex={true} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
   <div class="prose prose-slate max-w-none">
     <h1>Contact</h1>
     <p>One address, read every week: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. There is no phone line and we call nobody back: this site sells nothing, passes no request to any installer and makes no quotes.</p>
@@ -17,6 +17,6 @@ const lang = 'en';
     <p>Consumer associations, local newsrooms, energy advice centres: the calculator can be embedded free of charge in an iframe. The code is on the <a href={route('widget', lang)}>Embed the calculator</a> page.</p>
     <h2>Publisher</h2>
     <LegalIdentity lang={lang} />
-    <p>{AUTHOR_NAME} is responsible for Calcul PAC’s content; full identity in the <a href={route('terms', lang)}>legal notice</a>. Page reviewed on {LAST_UPDATED}.</p>
+    <p>{AUTHOR_NAME} is responsible for Prix PAC’s content; full identity in the <a href={route('terms', lang)}>legal notice</a>. Page reviewed on {LAST_UPDATED}.</p>
   </div>
 </PageLayout>

@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /*?*
 
-Sitemap: https://fr-pompe-a-chaleur.example/sitemap-index.xml
+Sitemap: https://prixpac.fr/sitemap-index.xml

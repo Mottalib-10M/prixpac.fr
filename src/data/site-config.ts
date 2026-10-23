@@ -1,7 +1,7 @@
 /** Configuration centrale du site (générée par new-site.py). */
 import FICHIER from './pac/fichier.json';
-export const SITE_URL = "https://fr-pompe-a-chaleur.example";
-export const SITE_NAMES: Record<string, string> = {"fr": "Calcul PAC", "en": "Calcul PAC"};
+export const SITE_URL = "https://prixpac.fr";
+export const SITE_NAMES: Record<string, string> = {"fr": "Prix PAC", "en": "Prix PAC"};
 /** Une locale par langue (RECETTE §4) : les nombres anglais s'écrivent « €1,234 », jamais « 1 234 € ». */
 export const LOCALE_BY_LANG: Record<string, string> = { fr: 'fr-FR', en: 'en-GB' };
 export const LANG_TAGS: Record<string, string> = {"fr": "fr-FR", "en": "en-FR"};
@@ -20,7 +20,7 @@ export const AUTHOR_DESC: Record<string, string> = {"fr": "Radif Partners calcul
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"fr": ["MaPrimeRénov' 2026 pour une pompe à chaleur", "Prime CEE et Coup de pouce chauffage (BAR-TH-171)", "Degrés-jours unifiés par département", "Consommation réelle d'une pompe à chaleur (SCOP)", "Plafonds de ressources de l'ANAH"], "en": ["MaPrimeRénov' 2026 for a heat pump", "Energy-savings certificates and the Coup de pouce heating bonus", "Heating degree days by French département", "Real-world heat pump efficiency (SCOP)", "ANAH income ceilings"]};
-export const CONTACT_EMAIL = "contact@fr-pompe-a-chaleur.example";
+export const CONTACT_EMAIL = "contact@prixpac.fr";
 export const THEME_COLOR = '#0F6E5A';
 export const LOGO_SYMBOL = 'PAC';
 export const BING_VERIFY_CODE = '';

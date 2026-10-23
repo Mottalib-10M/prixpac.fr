@@ -6,11 +6,11 @@ import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema }
 import { displayDate } from '../../lib/format';
 const lang = 'en';
 ---
-<PageLayout title="Heat pump calculator: who runs Calcul PAC, and its sources" description="Who publishes Calcul PAC, why a neutral heat pump calculator with no quote form, where the French grant scales and climate data come from, how to report errors." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
-  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">About Calcul PAC</h1></header>
+<PageLayout title="Heat pump calculator: who runs Prix PAC, and its sources" description="Who publishes Prix PAC, why a neutral heat pump calculator with no quote form, where the French grant scales and climate data come from, how to report errors." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">About Prix PAC</h1></header>
   <div class="prose prose-slate max-w-none">
     <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
-    <p>Calcul PAC is published by Radif Partners. It answers the question tens of thousands of French homeowners ask every month when they think of replacing their boiler: what will a heat pump really cost me after grants, and how much will it save in my home?</p>
+    <p>Prix PAC is published by Radif Partners. It answers the question tens of thousands of French homeowners ask every month when they think of replacing their boiler: what will a heat pump really cost me after grants, and how much will it save in my home?</p>
     <h2>Why this site exists</h2>
     <p>On that question, the top results are trade directories that give a national range before asking for your details, grant sites that show an amount only after you create an account and agree to a call back, and articles that copy another year’s scales. This site works out in a minute, with no contact details, the price, the 2026 MaPrimeRénov’ grant, the CEE bonus in official kWh cumac, the out-of-pocket cost and the yearly saving of a heat pump with your département’s real climate (Météo-France degree days).</p>
     <h2>Where the figures come from</h2>

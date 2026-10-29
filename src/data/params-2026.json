@@ -311,8 +311,8 @@
     },
     "fioul": {
       "_source": "wob",
-      "date": "2026-10-19",
-      "eur_1000l_ttc": 1930.78,
+      "date": "2026-10-26",
+      "eur_1000l_ttc": 1951.75,
       "kwh_pci_par_litre": 10,
       "_kwh_source": "baseCarbone",
       "_kwh_note": "Base Carbone (ADEME), fioul domestique, France continentale : 3,25 kgCO2e/litre (élément 14087) ÷ 0,325 kgCO2e/kWh PCI (élément 14085) = 10,0 kWh PCI par litre ; lu le 2026-10-22"

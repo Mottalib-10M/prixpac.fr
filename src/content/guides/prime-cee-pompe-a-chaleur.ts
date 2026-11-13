@@ -28,7 +28,7 @@ export default defineGuide({
     title: 'Prime CEE pompe à chaleur 2026 : kWh cumac et montant réel',
     description: 'Prime CEE pour une pompe à chaleur en 2026 : kWh cumac de la fiche BAR-TH-171, Coup de pouce ×5, zone et surface, valeur en euros au prix du registre Emmy.',
     h1: 'Prime CEE pour une pompe à chaleur : le calcul officiel',
-    intro: 'Les sites de primes affichent un montant « jusqu’à ». Voici le volume que fixe la fiche officielle pour votre maison, et ce qu’il vaut sur le marché.',
+    intro: 'Pour la prime CEE d’une pompe à chaleur, les sites de primes affichent un montant « jusqu’à ». Voici le volume que fixe la fiche officielle pour votre maison, et ce qu’il vaut sur le marché.',
     resume: (h) => {
       const C = h.P.cee;
       return `La prime CEE d’une pompe à chaleur air/eau se calcule en kilowattheures cumac, avec la fiche d’opération standardisée BAR-TH-171 publiée au Journal officiel. Pour une maison, le volume est de ${h.num(C.bar_th_171.maison.etas_bas)} kWh cumac si l’efficacité saisonnière de la PAC est comprise entre 111 et 140 %, et de ${h.num(C.bar_th_171.maison.etas_haut)} au-delà ; il est multiplié par 0,5 sous 70 m² chauffés, 0,7 de 70 à 89 m², puis par 1,2 en zone climatique H1, 1 en H2 et 0,7 en H3. Le Coup de pouce Chauffage multiplie le tout par ${h.num(C.coup_de_pouce.coefficient)} quand la PAC remplace une chaudière au charbon, au fioul ou au gaz dans une résidence principale. Une entreprise rachète ces certificats au prix qu’elle choisit ; au prix moyen du registre Emmy en ${h.moisCee}, ${h.num(C.prix_mwh.classique, 2)} € le mégawattheure cumac, une maison de 100 m² en zone H2 avec Coup de pouce représente ${h.eur(h.M.cee({ type: 'air_eau', logement: 'maison', surface: 100, zone: 'H2', etasHaut: false, coupDePouce: true, couleur: 'violet' }).eur)}.`;
@@ -56,7 +56,7 @@ ${grille(h)}
 <h2>Du kWh cumac à l’euro</h2>
 <p>Les certificats s’échangent entre entreprises. Le registre national Emmy publie chaque mois le prix moyen des transactions : ${h.num(C.prix_mwh.classique, 2)} € par mégawattheure cumac pour les certificats classiques en ${h.moisCee}, ${h.num(C.prix_mwh.precarite, 2)} € pour les certificats « précarité énergétique », qui naissent des travaux chez les ménages aux revenus modestes et très modestes. Le registre rappelle que ce prix moyen n’est pas un indice de référence : nous l’utilisons pour donner un ordre de grandeur, pas pour prédire l’offre que vous recevrez.</p>
 <p>Une offre honnête se compare en euros par kWh cumac. Une prime de ${h.eur(4000)} pour ${h.num(454500)} kWh cumac, c’est ${h.num(4000 / 454.5, 2)} € par mégawattheure : en dessous du prix moyen. Certains installateurs intègrent la prime au devis sous forme de remise ; vérifiez alors que le prix avant remise n’a pas été gonflé d’autant, en comparant avec la ${h.a('prix-pompe-a-chaleur', 'médiane des devis publiés')}.</p>
-<h2>Prime CEE et MaPrimeRénov’ : l’écrêtement</h2>
+<h2>Prime CEE de la pompe à chaleur et MaPrimeRénov’ : l’écrêtement</h2>
 <p>La prime CEE se cumule avec MaPrimeRénov’, mais pas sans limite : les deux ensemble ne peuvent pas dépasser 90 % de la dépense éligible pour un ménage bleu, 75 % pour un jaune et 60 % pour un violet. Une prime CEE élevée réduit donc MaPrimeRénov’. Le calcul complet, avec votre devis et vos revenus, est sur la page ${h.a('ecretement-maprimerenov', 'de l’écrêtement')} et dans le ${h.a('home', 'simulateur')}.</p>`;
     },
   },
@@ -67,7 +67,7 @@ ${grille(h)}
     title: 'CEE heat pump bonus France 2026: kWh cumac and real value',
     description: 'CEE energy-savings bonus for a heat pump in France in 2026: kWh cumac from sheet BAR-TH-171, Coup de pouce ×5, zone and area, value at the Emmy registry price.',
     h1: 'CEE bonus for a heat pump: the official calculation',
-    intro: 'Grant sites show an “up to” amount. Here is the volume the official sheet sets for your house, and what it is worth on the market.',
+    intro: 'Grant sites show an “up to” amount for the CEE heat pump bonus. Here is the volume the official sheet sets for your house, and what it is worth on the market.',
     resume: (h) => {
       const C = h.P.cee;
       return `The CEE bonus for an air-to-water heat pump is calculated in cumulative discounted kilowatt-hours (kWh cumac), using standardised operation sheet BAR-TH-171 published in the French Official Journal. For a house the volume is ${h.num(C.bar_th_171.maison.etas_bas)} kWh cumac if the heat pump’s seasonal efficiency is between 111% and 140%, and ${h.num(C.bar_th_171.maison.etas_haut)} above that; it is multiplied by 0.5 below 70 m² heated, 0.7 from 70 to 89 m², then by 1.2 in climate zone H1, 1 in H2 and 0.7 in H3. The Coup de pouce Chauffage multiplies the whole by ${h.num(C.coup_de_pouce.coefficient)} when the heat pump replaces a coal, oil or gas boiler in a main residence. A firm buys these certificates at the price it chooses; at the Emmy registry’s average price in ${h.moisCee}, €${h.num(C.prix_mwh.classique, 2)} per cumac megawatt-hour, a 100 m² house in zone H2 with the Coup de pouce is worth ${h.eur(h.M.cee({ type: 'air_eau', logement: 'maison', surface: 100, zone: 'H2', etasHaut: false, coupDePouce: true, couleur: 'violet' }).eur)}.`;
@@ -95,7 +95,7 @@ ${grille(h)}
 <h2>From kWh cumac to euros</h2>
 <p>Certificates are traded between companies. The national Emmy registry publishes the average transaction price every month: €${h.num(C.prix_mwh.classique, 2)} per cumac megawatt-hour for standard certificates in ${h.moisCee}, €${h.num(C.prix_mwh.precarite, 2)} for “fuel poverty” certificates, which arise from work in low and very-low-income households. The registry points out that this average is not a benchmark index: we use it for an order of magnitude, not to predict the offer you will receive.</p>
 <p>A fair offer is compared in euros per kWh cumac. A ${h.eur(4000)} bonus for ${h.num(454500)} kWh cumac is €${h.num(4000 / 454.5, 2)} per megawatt-hour: below the average price. Some installers fold the bonus into the quote as a discount; then check that the price before discount has not been inflated by the same amount, against the ${h.a('prix-pompe-a-chaleur', 'median of published quotes')}.</p>
-<h2>CEE bonus and MaPrimeRénov’: the cap</h2>
+<h2>CEE heat pump bonus and MaPrimeRénov’: the cap</h2>
 <p>The CEE bonus can be combined with MaPrimeRénov’, but not without limit: together they may not exceed 90% of the eligible expense for a blue household, 75% for yellow and 60% for purple. A high CEE bonus therefore cuts MaPrimeRénov’. The full calculation, with your quote and income, is on the ${h.a('ecretement-maprimerenov', 'grant cap page')} and in the ${h.a('home', 'calculator')}.</p>`;
     },
   },

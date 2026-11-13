@@ -45,7 +45,7 @@ export default defineGuide({
     title: 'Éco-PTZ pompe à chaleur 2026 : montant, formulaire, durée',
     description: 'Éco-prêt à taux zéro pour une pompe à chaleur en 2026 : jusqu’à 15 000 € pour une action seule, sur 15 ans au plus, cumul avec MaPrimeRénov’ et mensualité.',
     h1: 'Éco-prêt à taux zéro pour une pompe à chaleur',
-    intro: 'Les aides couvrent une partie du prix ; l’éco-PTZ finance le reste sans intérêts. Calculez la mensualité et comparez-la à l’économie de chauffage.',
+    intro: 'Les aides couvrent une partie du prix de la pompe à chaleur ; l’éco-PTZ finance le reste sans intérêts. Calculez la mensualité et comparez-la à l’économie de chauffage.',
     resume: (h) => {
       const E = h.P.eco_ptz;
       return `L’éco-prêt à taux zéro (éco-PTZ) est un prêt bancaire sans intérêts, dont l’État prend les intérêts à sa charge. Il finance des travaux de rénovation énergétique dans une résidence principale achevée depuis plus de deux ans, réalisés par une entreprise RGE. Il n’a aucune condition de revenus. Pour une seule action, comme l’installation d’une pompe à chaleur, il peut atteindre ${h.eur(E.une_action)} ; ${h.eur(E.deux_actions)} pour deux actions et ${h.eur(E.trois_actions)} pour trois ou plus. Le remboursement s’étale sur ${h.num(E.duree_max_ans)} ans au plus. L’éco-PTZ se cumule avec MaPrimeRénov’ et la prime CEE ; comme c’est un prêt, il n’entre pas dans le plafond d’écrêtement des aides. L’intérêt est simple : une mensualité sans intérêts qui, pour une PAC qui remplace du fioul ou de l’électricité, peut être couverte en grande partie par l’économie de chauffage. La banque reste libre d’accepter ou non le dossier, selon votre capacité de remboursement.`;
@@ -60,7 +60,7 @@ export default defineGuide({
 ${mensualites(h)}
 <p>Pour la maison type du tableau, chauffée au gaz, l’économie mensuelle ${couvre(h) ? 'dépasse la mensualité sur quinze ans, quelle que soit la couleur' : 'ne couvre qu’une partie de la mensualité'}. Avec une chaudière au fioul ou des radiateurs électriques, l’économie est plus forte : changez l’énergie dans le simulateur pour le voir. Ces chiffres sont des estimations : votre consommation réelle et vos devis les remplacent.</p>
 <!--mini:ecoptz-->
-<h2>Les montants et la durée</h2>
+<h2>Les montants et la durée de l’éco-PTZ pour une pompe à chaleur</h2>
 <p>Le plafond dépend du nombre d’« actions » de travaux financées : une action (par exemple la PAC seule) ${h.eur(h.P.eco_ptz.une_action)} ; deux actions ${h.eur(h.P.eco_ptz.deux_actions)} ; trois actions ou plus ${h.eur(h.P.eco_ptz.trois_actions)}. Un éco-PTZ « performance énergétique globale » peut aller jusqu’à ${h.eur(h.P.eco_ptz.complementaire)} sur 20 ans, si un audit énergétique montre un gain d’au moins deux classes de DPE. Un éco-PTZ complémentaire peut aussi être demandé dans les cinq ans qui suivent l’offre du premier, jusqu’au ${h.date(h.P.eco_ptz.jusqu_au)}, dans la limite de ${h.eur(h.P.eco_ptz.complementaire)} au total. Les conditions détaillées sont sur ${h.src('ecoPtz', 'Service-Public.fr')}.</p>
 <h2>Éco-PTZ ou avance de MaPrimeRénov’ ?</h2>
 <p>Pour un ménage bleu, l’Anah peut verser une avance sur MaPrimeRénov’. L’éco-PTZ vient en plus, pour la part non couverte par les aides. Pour un ménage violet ou rose, l’éco-PTZ est souvent le seul moyen d’étaler le coût sans intérêts. Un prêt avance mutation (prêt hypothécaire remboursé à la vente du bien) existe aussi pour les ménages modestes, mais ses intérêts ne sont pas nuls.</p>
@@ -95,7 +95,7 @@ ${durees(h)}
 ${mensualites(h)}
 <p>For the gas-heated house in the table, the monthly saving ${couvre(h) ? 'exceeds the fifteen-year payment, whatever the colour' : 'covers only part of the payment'}. With an oil boiler or electric heaters the saving is larger: change the energy in the calculator to see it. These figures are estimates: your real consumption and quotes replace them.</p>
 <!--mini:ecoptz-->
-<h2>Amounts and term</h2>
+<h2>Eco-PTZ heat pump loan: amounts and term</h2>
 <p>The ceiling depends on the number of work “items” funded: one item (for example the heat pump alone) ${h.eur(h.P.eco_ptz.une_action)}; two items ${h.eur(h.P.eco_ptz.deux_actions)}; three or more ${h.eur(h.P.eco_ptz.trois_actions)}. An “overall energy performance” eco-PTZ can reach ${h.eur(h.P.eco_ptz.complementaire)} over 20 years, if an energy audit shows a gain of at least two energy-rating classes. A supplementary eco-PTZ can also be requested within five years of the first offer, until ${h.date(h.P.eco_ptz.jusqu_au)}, within ${h.eur(h.P.eco_ptz.complementaire)} in total. Detailed conditions are on ${h.src('ecoPtz', 'Service-Public.fr')}.</p>
 <h2>Eco-PTZ or MaPrimeRénov’ advance?</h2>
 <p>For a blue household, Anah can pay an advance on MaPrimeRénov’. The eco-PTZ comes on top, for the part grants do not cover. For a purple or pink household, the eco-PTZ is often the only way to spread the cost without interest. A “prêt avance mutation” (a mortgage-backed loan repaid when the home is sold) also exists for low-income households, but its interest is not zero.</p>

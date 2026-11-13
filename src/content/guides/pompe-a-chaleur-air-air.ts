@@ -35,7 +35,7 @@ export default defineGuide({
     title: 'Pompe à chaleur air/air prix 2026 : tarif au kW et aides',
     description: 'Pompe à chaleur air/air en 2026 : prix au kW sur 148 devis réels, fourchette selon la puissance, plus de MaPrimeRénov’, TVA réduite à 5,5 % sous conditions.',
     h1: 'Pompe à chaleur air/air réversible : prix et aides en 2026',
-    intro: 'Une clim réversible chauffe l’hiver et rafraîchit l’été. Elle coûte moins cher qu’une PAC air/eau, mais n’a plus droit à MaPrimeRénov’.',
+    intro: 'Une clim réversible, ou pompe à chaleur air/air, chauffe l’hiver et rafraîchit l’été. Elle coûte moins cher qu’une PAC air/eau, mais n’a plus droit à MaPrimeRénov’.',
     resume: (h) => {
       const O = h.P.prix_installation.air_air;
       return `Une pompe à chaleur air/air prend la chaleur de l’air extérieur et la souffle directement dans les pièces par des unités murales, en console ou gainables ; réversible, elle sert aussi de climatisation. D’après les ${h.num(O.n)} devis air/air publiés par l’observatoire ScoreSolaire (licence CC BY 4.0), le prix médian d’une installation est de ${h.eur(O.median_ttc)} TTC, soit ${h.eur(O.eur_par_kw)} par kilowatt de puissance ; un devis sur dix est sous ${h.eur(O.eur_par_kw_p10)} par kilowatt, un sur dix au-dessus de ${h.eur(O.eur_par_kw_p90)}. Elle coûte donc nettement moins qu’une PAC air/eau, mais ne chauffe pas l’eau sanitaire et ne se branche pas sur des radiateurs. MaPrimeRénov’ par geste ne la finance plus : le barème en vigueur au 1er septembre 2026 ne l’a pas réintroduite. Elle peut bénéficier de la TVA à 5,5 % si l’équipement respecte les critères de performance, et d’une prime CEE au titre d’une fiche distincte que nous ne chiffrons pas, faute d’en avoir relu le texte en vigueur.`;
@@ -45,7 +45,7 @@ export default defineGuide({
       { q: 'Quel rendement attendre d’une PAC air/air ?', a: `Les devis de l’observatoire annoncent un SCOP moyen de 4,5. C’est une valeur annoncée par les fabricants, pas une mesure chez des particuliers. Faute de campagne de mesure publique sur l’air/air, ce site retient la valeur par défaut de la méthode officielle du DPE pour une PAC air/air posée depuis 2015 : ${h.num(h.P.rendements.scop.air_air.H1, 1)} en zones H1 et H2, ${h.num(h.P.rendements.scop.air_air.H3, 1)} en zone H3. C’est une valeur conventionnelle, pas une mesure ; vous pouvez la remplacer dans le simulateur.` },
       { q: 'Existe-t-il encore une aide pour une PAC air/air en 2026 ?', a: 'Pas de MaPrimeRénov’. Une prime CEE reste possible au titre de la fiche BAR-TH-129, versée par un fournisseur d’énergie qui doit intervenir avant la signature du devis ; demandez son montant écrit. La TVA réduite à 5,5 % s’applique si l’équipement respecte les critères de performance et est posé par une entreprise dans un logement de plus de deux ans.' },
     ],
-    body: (h) => `<h2>Prix selon la puissance</h2>
+    body: (h) => `<h2>Prix d’une pompe à chaleur air/air selon la puissance</h2>
 <p>Le prix d’une installation air/air dépend d’abord de la puissance et du nombre d’unités intérieures : un mono-split pour une pièce, un multi-split avec un groupe extérieur pour trois ou quatre unités, ou un gainable qui distribue l’air par des conduits dans les combles. L’observatoire publie un prix médian par kilowatt, qui permet de comparer des devis de tailles différentes :</p>
 ${grille(h)}
 <p>Le rapport de 2,2 entre le premier et le dernier décile, à puissance égale, montre l’intérêt de demander deux ou trois devis. Le mini-simulateur ci-dessous fait le calcul pour la puissance de votre devis.</p>
@@ -78,7 +78,7 @@ ${climatAirAir(h)}
       { q: 'What efficiency can an air-to-air heat pump achieve?', a: `The observatory’s quotes announce an average SCOP of 4.5. That is a manufacturer’s figure, not a measurement in people’s homes. With no public field campaign on air-to-air units, this site uses the official DPE method’s default value for an air-to-air unit fitted since 2015: ${h.num(h.P.rendements.scop.air_air.H1, 1)} in zones H1 and H2, ${h.num(h.P.rendements.scop.air_air.H3, 1)} in zone H3. It is a conventional value, not a measurement; you can replace it in the calculator.` },
       { q: 'Is there still any grant for an air-to-air heat pump in 2026?', a: 'No MaPrimeRénov’. A CEE bonus remains possible under sheet BAR-TH-129, paid by an energy supplier that must be involved before you sign the quote; ask for the amount in writing. Reduced 5.5% VAT applies if the equipment meets the performance criteria and is fitted by a firm in a home over two years old.' },
     ],
-    body: (h) => `<h2>Price by output</h2>
+    body: (h) => `<h2>Air-to-air heat pump price by output</h2>
 <p>The price of an air-to-air installation depends first on output and the number of indoor units: a single split for one room, a multi-split with one outdoor unit for three or four indoor units, or a ducted system distributing air through ducts in the loft. The observatory publishes a median price per kilowatt, which lets you compare quotes of different sizes:</p>
 ${grille(h)}
 <p>The 2.2 ratio between the bottom and top deciles, at equal output, shows why two or three quotes are worth getting. The mini calculator below does the sum for the output on your quote.</p>

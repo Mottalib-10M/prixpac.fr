@@ -25,7 +25,7 @@ export default defineGuide({
     title: 'Prix pompe à chaleur 2026 : devis médians, prix après aides',
     description: 'Prix d’une pompe à chaleur en 2026 : médiane des devis réels air/eau et air/air, prix au kW, TVA à 5,5 %, puis MaPrimeRénov’ et prime CEE déduites chez vous.',
     h1: 'Prix d’une pompe à chaleur en 2026, avant et après aides',
-    intro: 'Le prix médian des devis réellement reçus par des particuliers, puis ce qu’il reste à payer chez vous une fois les aides déduites. Saisissez votre devis pour le vérifier.',
+    intro: 'Le prix médian des devis de pompe à chaleur réellement reçus par des particuliers, puis ce qu’il reste à payer chez vous une fois les aides déduites. Saisissez votre devis pour le vérifier.',
     resume: (h) => {
       const O = h.P.prix_installation;
       return `Une pompe à chaleur air/eau, qui remplace une chaudière sur un circuit de chauffage central, coûte ${h.eur(O.air_eau.median_ttc)} TTC en médiane d’après les ${h.num(O.air_eau.n)} devis de ce type publiés par l’observatoire ScoreSolaire (licence ouverte CC BY 4.0, mise à jour du ${h.date(O.date)}), entre ${h.eur(O.air_eau.min)} et ${h.eur(O.air_eau.max)}. Une PAC air/air, c’est-à-dire une climatisation réversible à une ou plusieurs unités intérieures, coûte ${h.eur(O.air_air.median_ttc)} en médiane sur ${h.num(O.air_air.n)} devis, soit ${h.eur(O.air_air.eur_par_kw)} par kilowatt de puissance. Aucune source ouverte ne publie de prix pour la géothermie. Ces prix s’entendent TVA à 5,5 % comprise, le taux réduit des équipements de rénovation énergétique dans un logement de plus de deux ans. Le prix payé est bien plus bas une fois MaPrimeRénov’ et la prime CEE déduites : le simulateur de cette page part du prix médian, ou de votre devis, et calcule le reste à charge avec vos revenus et votre département.`;
@@ -44,7 +44,7 @@ export default defineGuide({
 <p>Plutôt que de recopier des fourchettes d’installateurs, nous partons d’un jeu de données ouvert : l’observatoire ScoreSolaire agrège des devis de PAC reçus par des particuliers et analysés un par un. Il est petit (${h.num(O.n_devis)} devis), surtout pour l’air/eau, et nous le disons. Mais c’est un prix observé, pas un prix d’appel.</p>
 ${tableau(h)}
 <p>La médiane air/eau repose sur ${h.num(O.air_eau.n)} devis seulement : elle est indicative. Elle sert de point de départ au simulateur, et votre devis la remplace dès que vous le saisissez dans « Affiner ».</p>
-<h2>Ce qui fait varier le prix</h2>
+<h2>Ce qui fait varier le prix d’une pompe à chaleur</h2>
 <p>La puissance d’abord : une maison mal isolée dans un département froid demande une machine plus puissante, donc plus chère. Ensuite ce que le devis inclut : ballon d’eau chaude intégré ou séparé, dépose de l’ancienne chaudière, neutralisation ou dépose d’une cuve à fioul, adaptation des radiateurs, mise à niveau du tableau électrique. Enfin la température d’eau : une PAC haute température, qui alimente de vieux radiateurs, coûte plus cher qu’une PAC basse température sur un plancher chauffant. Le ${h.a('puissance-pompe-a-chaleur', 'calcul de puissance')} donne l’ordre de grandeur pour votre logement.</p>
 <h2>La TVA à 5,5 %</h2>
 <p>Les PAC posées par une entreprise dans un logement de plus de deux ans bénéficient du taux réduit de ${h.pct(h.P.tva.pac, 1)}, au lieu de ${h.pct(h.P.tva.chaudiere_fossile, 0)} pour une chaudière au fioul ou au gaz. Sur un devis de ${h.eur(12000)} hors taxes, l’écart représente ${h.eur(12000 * (h.P.tva.chaudiere_fossile - h.P.tva.pac))}.</p>
@@ -60,7 +60,7 @@ ${tableau(h)}
     title: 'Heat pump price France 2026: median quotes and net cost',
     description: 'Heat pump prices in France in 2026: median of real air-to-water and air-to-air quotes, price per kW, 5.5% VAT, then MaPrimeRénov’ and the CEE bonus deducted.',
     h1: 'Heat pump prices in France in 2026, before and after grants',
-    intro: 'The median of quotes actually received by households, then what is left to pay in your case once grants are deducted. Enter your own quote to check it.',
+    intro: 'The median heat pump price from quotes actually received by households, then what is left to pay in your case once grants are deducted. Enter your own quote to check it.',
     resume: (h) => {
       const O = h.P.prix_installation;
       return `An air-to-water heat pump, which replaces a boiler on a central heating circuit, costs ${h.eur(O.air_eau.median_ttc)} including VAT at the median of the ${h.num(O.air_eau.n)} quotes of that type published by the ScoreSolaire observatory (open CC BY 4.0 licence, updated ${h.date(O.date)}), ranging from ${h.eur(O.air_eau.min)} to ${h.eur(O.air_eau.max)}. An air-to-air heat pump, that is, reversible air conditioning with one or more indoor units, costs a median ${h.eur(O.air_air.median_ttc)} across ${h.num(O.air_air.n)} quotes, or ${h.eur(O.air_air.eur_par_kw)} per kilowatt of output. No open source publishes ground-source prices. These prices include VAT at 5.5%, the reduced rate for energy-renovation equipment in a home over two years old. The price you pay is far lower once MaPrimeRénov’ and the CEE bonus are deducted: the calculator on this page starts from the median price, or your quote, and works out the out-of-pocket cost from your income and département.`;
@@ -79,7 +79,7 @@ ${tableau(h)}
 <p>Rather than copying installers’ price ranges, we start from an open dataset: the ScoreSolaire observatory pools heat pump quotes received by households and analysed one by one. It is small (${h.num(O.n_devis)} quotes), especially for air-to-water, and we say so. But it is an observed price, not a teaser price.</p>
 ${tableau(h)}
 <p>The air-to-water median rests on only ${h.num(O.air_eau.n)} quotes: treat it as indicative. It is the calculator’s starting point, and your own quote replaces it as soon as you enter it under “Refine”.</p>
-<h2>What makes the price vary</h2>
+<h2>What makes the heat pump price vary</h2>
 <p>Output first: a poorly insulated house in a cold département needs a more powerful machine, so a dearer one. Then what the quote includes: built-in or separate hot-water cylinder, removal of the old boiler, decommissioning or removal of an oil tank, radiator changes, an upgrade of the fuse box. Finally the water temperature: a high-temperature heat pump feeding old radiators costs more than a low-temperature one on underfloor heating. The ${h.a('puissance-pompe-a-chaleur', 'output calculation')} gives the order of magnitude for your home.</p>
 <h2>VAT at 5.5%</h2>
 <p>Heat pumps fitted by a firm in a home over two years old get the reduced rate of ${h.pct(h.P.tva.pac, 1)}, instead of ${h.pct(h.P.tva.chaudiere_fossile, 0)} for an oil or gas boiler. On a quote of ${h.eur(12000)} before tax, the difference is ${h.eur(12000 * (h.P.tva.chaudiere_fossile - h.P.tva.pac))}.</p>

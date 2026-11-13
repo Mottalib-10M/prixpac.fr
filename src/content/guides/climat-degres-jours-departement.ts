@@ -43,7 +43,7 @@ export default defineGuide({
       { q: 'Ma commune est en altitude : les DJU du département conviennent-ils ?', a: 'Pas forcément. La station de référence est celle du chef-lieu, souvent en plaine. En montagne, chaque centaine de mètres en plus ajoute des degrés-jours. Dans le simulateur, ouvrez « Affiner » et choisissez une autre station du département, plus proche de chez vous en distance et en altitude.' },
       { q: 'Pourquoi la zone climatique ne suit-elle pas les DJU ?', a: 'Les zones H1, H2 et H3 datent de la réglementation thermique de 2010 et sont fixées par département, avec quelques ajustements. Elles servent aux CEE et à la réglementation. Les DJU mesurent le climat réel récent. Un département peut donc être en H2 avec plus de degrés-jours qu’un département en H1, comme les Alpes-de-Haute-Provence face à Paris.' },
     ],
-    body: (h) => `<h2>Les départements les plus doux et les plus froids</h2>
+    body: (h) => `<h2>Degrés-jours : les départements les plus doux et les plus froids</h2>
 ${extremes(h)}
 <p>Le classement complet des 96 départements, avec l’économie qu’une PAC y permet, est sur la page ${h.a('pompe-a-chaleur-par-departement', 'pompe à chaleur par département')}.</p>
 <!--mini:dju-->
@@ -72,7 +72,7 @@ ${recent(h)}
       { q: 'My town is at altitude: do the département figures apply?', a: 'Not necessarily. The reference station is the main town’s, often in a valley. In the mountains, each extra hundred metres adds degree-days. In the calculator, open “Refine” and choose another station in the département, closer to you in distance and altitude.' },
       { q: 'Why does the climate zone not follow degree-days?', a: 'Zones H1, H2 and H3 date from the 2010 thermal regulation and are set by département, with a few adjustments. They are used for CEE and regulation. Degree-days measure the actual recent climate. A département can therefore be in H2 with more degree-days than one in H1, as with Alpes-de-Haute-Provence compared with Paris.' },
     ],
-    body: (h) => `<h2>The mildest and coldest départements</h2>
+    body: (h) => `<h2>Heating degree-days: the mildest and coldest départements</h2>
 ${extremes(h)}
 <p>The full ranking of all 96 départements, with the saving a heat pump brings there, is on the ${h.a('pompe-a-chaleur-par-departement', 'heat pump by département')} page.</p>
 <!--mini:dju-->

@@ -37,7 +37,7 @@ export default defineGuide({
       { q: 'Quel rendement le site retient-il pour l’air/air ?', a: `L’étude de terrain de l’ADEME porte sur les PAC air/eau et géothermiques ; il n’existe pas de mesure publique équivalente pour l’air/air. Le site reprend donc la valeur par défaut de la méthode officielle du DPE (3CL-DPE 2021) pour une PAC air/air posée depuis 2015 : ${h.num(h.P.rendements.scop.air_air.H1, 1)} en zones H1 et H2, ${h.num(h.P.rendements.scop.air_air.H3, 1)} en zone H3. C’est une valeur conventionnelle, pas une mesure chez vous. Les fabricants annoncent souvent plus ; vous pouvez saisir le rendement de votre devis dans « Affiner ».` },
       { q: 'La climatisation l’été fait-elle grimper la facture ?', a: 'Une PAC air/air réversible peut rafraîchir en été, ce qui ajoute une consommation que le calcul du site ne compte pas. Elle reste modeste dans la plupart des régions si la consigne est raisonnable, autour de 26 °C. L’économie annoncée par le simulateur porte sur le chauffage seul.' },
     ],
-    body: (h) => `<h2>L’économie selon la surface et le climat</h2>
+    body: (h) => `<h2>Remplacer ses radiateurs électriques : l’économie selon la surface et le climat</h2>
 ${eco(h)}
 <p>L’économie est proportionnelle au chauffage consommé : elle augmente des deux tiers entre Marseille et Strasbourg. En appartement, choisissez une isolation « bonne » si vous avez des voisins au-dessus et en dessous, ou saisissez votre consommation réelle de chauffage dans « Affiner ».</p>
 <h2>Air/air ou air/eau</h2>
@@ -62,7 +62,7 @@ ${eco(h)}
       { q: 'What efficiency does the site use for air-to-air?', a: `ADEME’s field study covers air-to-water and ground-source heat pumps; there is no equivalent public measurement for air-to-air. The site therefore uses the default value of the official DPE method (3CL-DPE 2021) for an air-to-air unit fitted since 2015: ${h.num(h.P.rendements.scop.air_air.H1, 1)} in zones H1 and H2, ${h.num(h.P.rendements.scop.air_air.H3, 1)} in zone H3. It is a conventional value, not a measurement in your home. Manufacturers often claim more; you can enter the efficiency on your quote under “Refine”.` },
       { q: 'Does summer cooling push the bill up?', a: 'A reversible air-to-air heat pump can cool in summer, which adds consumption the site’s calculation does not count. It stays modest in most regions if the setting is reasonable, around 26 °C. The saving shown by the calculator covers heating only.' },
     ],
-    body: (h) => `<h2>The saving by area and climate</h2>
+    body: (h) => `<h2>The saving from replacing electric heaters, by area and climate</h2>
 ${eco(h)}
 <p>The saving is proportional to the heating used: it rises by two thirds between Marseille and Strasbourg. In a flat, choose “good” insulation if you have neighbours above and below, or enter your real heating consumption under “Refine”.</p>
 <h2>Air-to-air or air-to-water</h2>

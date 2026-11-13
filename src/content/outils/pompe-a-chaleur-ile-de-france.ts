@@ -38,7 +38,7 @@ export default defineGuide({
     title: 'Pompe à chaleur en Île-de-France : aides et économie 2026',
     description: 'Pompe à chaleur en Île-de-France : plafonds MaPrimeRénov’ franciliens, prime CEE, climat Météo-France et économie annuelle dans les 8 départements franciliens.',
     h1: 'Pompe à chaleur en Île-de-France : les 8 départements',
-    intro: 'Le tableau est filtré sur l’Île-de-France : changez la surface, l’énergie ou l’isolation, ou choisissez une autre région.',
+    intro: 'Le tableau est filtré sur l’Île-de-France : changez la surface, l’énergie ou l’isolation pour voir ce que rapporte une pompe à chaleur, ou choisissez une autre région.',
     resume: (h) => {
       const e = exemple(h), p = h.dep('75'), m = h.dep('95');
       return `L’Île-de-France est la seule région où MaPrimeRénov’ applique des plafonds de revenus à part, plus hauts de 30 à 40 % que dans le reste du pays. Un même ménage peut donc changer de couleur, et de forfait, en traversant la limite de la région. Exemple : un foyer de ${e.personnes} personnes avec ${h.eur(e.rfr)} de revenu fiscal de référence est ${nc(h, e.idf.couleur)} en Seine-et-Marne et ${nc(h, e.autre.couleur)} dans l’Oise, à quelques kilomètres ; pour une PAC air/eau, il touche ${h.eur(e.idf.aides)} d’aides au total dans le premier cas et ${h.eur(e.autre.aides)} dans le second. Les huit départements sont tous en zone climatique H1, ce qui donne le facteur de prime CEE le plus fort. Le climat, lui, varie : Paris profite de l’îlot de chaleur urbain avec ${h.num(p.dju)} degrés-jours à la station du Luxembourg, quand le Val-d’Oise en compte ${h.num(m.dju)} à Pontoise. Le tableau calcule pour chaque département la consommation de la PAC, l’économie et la prime, aux prix de l’énergie d’aujourd’hui.`;
@@ -56,7 +56,7 @@ ${tableRegion(h, CODES)}
 <h2>Des plafonds de revenus propres à la région</h2>
 ${plafonds(h)}
 <p>Avec ${h.eur(e.rfr)} de revenu pour ${e.personnes} personnes, le ménage de l’exemple est ${nc(h, e.idf.couleur)} en Île-de-France : forfait de ${h.eur(e.idf.forfait)} pour une PAC air/eau et prime CEE de ${h.eur(e.idf.cee.eur)}, soit un reste à charge de ${h.eur(e.idf.resteACharge)} sur un devis de ${h.eur(e.idf.prixTtc)}. Dans l’Oise, il serait ${nc(h, e.autre.couleur)} : forfait de ${h.eur(e.autre.forfait)}, prime de ${h.eur(e.autre.cee.eur)}, reste à charge de ${h.eur(e.autre.resteACharge)}. Les plafonds viennent de la ${h.src('spMpr', 'page Service-Public sur MaPrimeRénov’')} ; le détail par couleur est sur la page ${h.a('plafonds-revenus-maprimerenov', 'plafonds de revenus')}.</p>
-<h2>Maison en grande couronne, appartement en petite couronne</h2>
+<h2>Pompe à chaleur en Île-de-France : maison en grande couronne, appartement en petite couronne</h2>
 <p>La prime CEE suit la fiche ${h.src('bar171', 'BAR-TH-171')} : elle est presque deux fois plus forte pour une maison que pour un appartement, à surface comparable. La grande couronne, faite de maisons individuelles, concentre donc les primes les plus hautes ; Paris et la petite couronne relèvent surtout du collectif, traité sur la page ${h.a('pompe-a-chaleur-appartement', 'PAC en appartement')}.</p>`;
     },
   },
@@ -67,7 +67,7 @@ ${plafonds(h)}
     title: 'Heat pump in Île-de-France: grants and savings for 2026',
     description: 'Heat pumps in Île-de-France: the region’s own MaPrimeRénov’ ceilings, CEE bonus, Météo-France climate and yearly saving across all 8 of its départements.',
     h1: 'Heat pumps in Île-de-France: the 8 départements',
-    intro: 'The table is filtered on Île-de-France: change the floor area, energy or insulation, or pick another region.',
+    intro: 'The table is filtered on Île-de-France: change the floor area, energy or insulation to see what a heat pump saves, or pick another region.',
     resume: (h) => {
       const e = exemple(h), p = h.dep('75'), m = h.dep('95');
       return `Île-de-France is the only region where MaPrimeRénov’ applies separate income ceilings, 30 to 40 % higher than in the rest of the country. The same household can therefore change colour, and flat rate, by crossing the regional border. Example: a household of ${e.personnes} with ${h.eur(e.rfr)} of reference tax income is ${nc(h, e.idf.couleur)} in Seine-et-Marne and ${nc(h, e.autre.couleur)} in Oise, a few kilometres away; for an air-to-water heat pump it receives ${h.eur(e.idf.aides)} of grants in all in the first case and ${h.eur(e.autre.aides)} in the second. All eight départements are in climate zone H1, which gives the highest CEE bonus factor. Climate does vary: Paris benefits from the urban heat island with ${h.num(p.dju)} degree-days at the Luxembourg station, while Val-d’Oise has ${h.num(m.dju)} at Pontoise. The table works out the heat pump’s consumption, the saving and the bonus for each département, at today’s energy prices.`;
@@ -85,7 +85,7 @@ ${tableRegion(h, CODES)}
 <h2>Income ceilings specific to the region</h2>
 ${plafonds(h)}
 <p>With ${h.eur(e.rfr)} of income for ${e.personnes} people, the example household is ${nc(h, e.idf.couleur)} in Île-de-France: a ${h.eur(e.idf.forfait)} flat rate for an air-to-water heat pump and a ${h.eur(e.idf.cee.eur)} CEE bonus, leaving ${h.eur(e.idf.resteACharge)} to pay on a ${h.eur(e.idf.prixTtc)} quote. In Oise it would be ${nc(h, e.autre.couleur)}: a ${h.eur(e.autre.forfait)} flat rate, a ${h.eur(e.autre.cee.eur)} bonus, ${h.eur(e.autre.resteACharge)} left to pay. The ceilings come from the ${h.src('spMpr', 'Service-Public page on MaPrimeRénov’')}; the detail by colour is on the ${h.a('plafonds-revenus-maprimerenov', 'income ceilings')} page.</p>
-<h2>Houses in the outer ring, flats in the inner ring</h2>
+<h2>Heat pump in Île-de-France: houses in the outer ring, flats in the inner ring</h2>
 <p>The CEE bonus follows sheet ${h.src('bar171', 'BAR-TH-171')}: it is almost twice as high for a house as for a flat of similar size. The outer ring, made of detached houses, therefore gets the highest bonuses; Paris and the inner ring are mostly apartment buildings, covered on the ${h.a('pompe-a-chaleur-appartement', 'apartment heat pump')} page.</p>`;
     },
   },

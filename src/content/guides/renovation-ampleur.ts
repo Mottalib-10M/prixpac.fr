@@ -46,7 +46,7 @@ export default defineGuide({
     title: 'Rénovation d’ampleur 2026 : PAC et isolation, taux, plafonds',
     description: 'MaPrimeRénov’ rénovation d’ampleur 2026 : pompe à chaleur et isolation dans un même projet, 80 à 10 % du coût hors taxes selon les revenus, conditions de DPE.',
     h1: 'Rénovation d’ampleur : la pompe à chaleur dans un projet complet',
-    intro: 'Changer seulement le chauffage relève de MaPrimeRénov’ par geste. Isoler en même temps ouvre une autre aide, calculée en pourcentage du coût.',
+    intro: 'Changer seulement le chauffage relève de MaPrimeRénov’ par geste. Isoler en même temps ouvre une autre aide, la rénovation d’ampleur, calculée en pourcentage du coût.',
     resume: (h) => {
       const A = h.P.maprimerenov.ampleur;
       return `MaPrimeRénov’ rénovation d’ampleur finance un projet de travaux qui fait gagner au moins deux classes au diagnostic de performance énergétique (DPE). Elle est réservée aux logements classés ${A.dpe_avant.join(', ')} avant travaux, achevés depuis au moins ${h.num(h.P.maprimerenov.anciennete_logement_ans_autres)} ans. Le projet doit comprendre au moins ${h.num(A.gestes_isolation_min)} travaux d’isolation parmi les murs, les planchers bas, la toiture et les fenêtres, chacun sur au moins ${h.pct(A.part_surface_geste_min, 0)} de la surface concernée ; la pompe à chaleur s’y ajoute. L’aide est un pourcentage du coût hors taxes : ${h.pct(A.taux_ht.bleu, 0)} pour un ménage bleu, ${h.pct(A.taux_ht.jaune, 0)} pour un jaune, ${h.pct(A.taux_ht.violet, 0)} pour un violet et ${h.pct(A.taux_ht.rose, 0)} pour un rose, sur ${h.eur(A.plafond_2_classes)} au plus pour deux classes gagnées et ${h.eur(A.plafond_3_classes)} pour trois ou plus. Un accompagnateur Rénov’ est obligatoire. Depuis le 1er septembre 2026, une maison qui garde un chauffage au gaz, ou une PAC hybride avec appoint fossile, n’est plus financée. Le simulateur du site chiffre la PAC seule ; le mini-calcul de cette page, le bouquet complet.`;
@@ -56,7 +56,7 @@ export default defineGuide({
       { q: 'Combien coûte l’accompagnateur Rénov’ ?', a: `Sa mission est financée par l’Anah selon les revenus : ${h.pct(h.P.maprimerenov.ampleur.accompagnateur_taux.bleu, 0)} pour un ménage bleu, ${h.pct(h.P.maprimerenov.ampleur.accompagnateur_taux.jaune, 0)} pour un jaune, ${h.pct(h.P.maprimerenov.ampleur.accompagnateur_taux.violet, 0)} pour un violet et ${h.pct(h.P.maprimerenov.ampleur.accompagnateur_taux.rose, 0)} pour un rose, dans la limite de ${h.eur(h.P.maprimerenov.ampleur.accompagnateur_plafond)} (${h.eur(h.P.maprimerenov.ampleur.accompagnateur_plafond_precarite)} dans certains logements très dégradés). Demandez le prix de sa prestation avant de signer.` },
       { q: 'Une PAC hybride gaz est-elle encore financée en rénovation d’ampleur ?', a: 'Non, depuis le 1er septembre 2026 : l’aide ne peut plus être accordée pour une maison individuelle qui garde un chauffage au gaz après travaux, et les pompes à chaleur hybrides avec appoint au gaz ou au fioul ne sont plus finançables. Une PAC air/eau ou géothermique seule reste éligible, avec l’isolation exigée.' },
     ],
-    body: (h) => `<h2>Le barème 2026</h2>
+    body: (h) => `<h2>Le barème 2026 de la rénovation d’ampleur</h2>
 ${bareme(h, 45000)}
 <p>La dernière colonne est l’écrêtement propre à la rénovation d’ampleur : toutes les aides réunies ne peuvent pas dépasser cette part du coût TTC. Il est plus large que celui des gestes, et le ménage bleu peut en théorie être aidé à ${h.pct(h.P.maprimerenov.ampleur.ecretement_ttc.bleu, 0)}.</p>
 <!--mini:ampleur-->
@@ -78,7 +78,7 @@ ${budgets(h)}
     title: 'Whole-home renovation grant 2026: heat pump and insulation',
     description: 'MaPrimeRénov’ whole-home renovation in 2026: a heat pump and insulation in one project, 80% to 10% of the cost before VAT by income, and the rating rules.',
     h1: 'Whole-home renovation: the heat pump in a full project',
-    intro: 'Changing only the heating falls under per-item MaPrimeRénov’. Insulating at the same time opens another grant, worked out as a share of the cost.',
+    intro: 'Changing only the heating falls under per-item MaPrimeRénov’. Insulating at the same time opens a whole-home renovation grant, worked out as a share of the cost.',
     resume: (h) => {
       const A = h.P.maprimerenov.ampleur;
       return `Whole-home MaPrimeRénov’ (“rénovation d’ampleur”) funds a project gaining at least two classes on the energy performance certificate (DPE). It is reserved for homes rated ${A.dpe_avant.join(', ')} before work and completed at least ${h.num(h.P.maprimerenov.anciennete_logement_ans_autres)} years ago. The project must include at least ${h.num(A.gestes_isolation_min)} insulation jobs among walls, low floors, roof and windows, each covering at least ${h.pct(A.part_surface_geste_min, 0)} of the area concerned; the heat pump comes on top. The grant is a share of the cost before VAT: ${h.pct(A.taux_ht.bleu, 0)} for a blue household, ${h.pct(A.taux_ht.jaune, 0)} for yellow, ${h.pct(A.taux_ht.violet, 0)} for purple and ${h.pct(A.taux_ht.rose, 0)} for pink, on at most ${h.eur(A.plafond_2_classes)} for two classes gained and ${h.eur(A.plafond_3_classes)} for three or more. A Mon Accompagnateur Rénov’ adviser is mandatory. Since 1 September 2026, a house keeping gas heating, or a hybrid heat pump with fossil backup, is no longer funded. The site’s calculator costs the heat pump alone; this page’s mini-calculator costs the full package.`;
@@ -88,7 +88,7 @@ ${budgets(h)}
       { q: 'How much does the renovation adviser cost?', a: `The adviser’s work is funded by Anah according to income: ${h.pct(h.P.maprimerenov.ampleur.accompagnateur_taux.bleu, 0)} for blue, ${h.pct(h.P.maprimerenov.ampleur.accompagnateur_taux.jaune, 0)} for yellow, ${h.pct(h.P.maprimerenov.ampleur.accompagnateur_taux.violet, 0)} for purple and ${h.pct(h.P.maprimerenov.ampleur.accompagnateur_taux.rose, 0)} for pink households, up to ${h.eur(h.P.maprimerenov.ampleur.accompagnateur_plafond)} (${h.eur(h.P.maprimerenov.ampleur.accompagnateur_plafond_precarite)} in some badly degraded homes). Ask for the price of the service before signing.` },
       { q: 'Is a gas hybrid heat pump still funded in a whole-home renovation?', a: 'No, since 1 September 2026: the grant can no longer be given for a house that keeps gas heating after the work, and hybrid heat pumps with gas or oil backup can no longer be funded. A standalone air-to-water or ground-source heat pump remains eligible, with the required insulation.' },
     ],
-    body: (h) => `<h2>The 2026 scale</h2>
+    body: (h) => `<h2>The 2026 whole-home renovation grant scale</h2>
 ${bareme(h, 45000)}
 <p>The last column is the whole-home cap: all grants together cannot exceed that share of the cost including VAT. It is wider than the per-item cap, and a blue household can in theory be funded up to ${h.pct(h.P.maprimerenov.ampleur.ecretement_ttc.bleu, 0)}.</p>
 <!--mini:ampleur-->

@@ -39,7 +39,7 @@ export default defineGuide({
     title: 'Plafonds de revenus MaPrimeRénov’ 2026 : bleu, jaune, violet',
     description: 'Plafonds de revenus MaPrimeRénov’ 2026 : barèmes bleu, jaune, violet et rose selon le revenu fiscal de référence et la taille du foyer, Île-de-France ou non.',
     h1: 'Plafonds de revenus MaPrimeRénov’ 2026 : trouver sa couleur',
-    intro: 'Votre couleur fixe le montant de MaPrimeRénov’, le taux de rachat des CEE et la part que vous paierez au minimum. Elle se lit sur votre avis d’impôt.',
+    intro: 'Votre couleur fixe le montant de MaPrimeRénov’, le taux de rachat des CEE et la part que vous paierez au minimum. Elle se lit sur votre avis d’impôt, face aux plafonds de revenus.',
     resume: (h) => {
       const p = h.M.plafondsRfr(3, false), q = h.M.plafondsRfr(3, true);
       return `MaPrimeRénov’ classe les ménages en quatre catégories de revenus, désignées par une couleur : bleu (très modestes), jaune (modestes), violet (intermédiaires) et rose (supérieurs). La couleur dépend du revenu fiscal de référence du foyer, inscrit sur l’avis d’imposition, du nombre de personnes qui y vivent, et du lieu du logement : les plafonds sont plus élevés en Île-de-France. Pour un foyer de trois personnes hors Île-de-France, on est bleu jusqu’à ${h.eur(p.bleu)}, jaune jusqu’à ${h.eur(p.jaune)}, violet jusqu’à ${h.eur(p.violet)}, rose au-delà ; en Île-de-France, les seuils sont ${h.eur(q.bleu)}, ${h.eur(q.jaune)} et ${h.eur(q.violet)}. Le plafond est inclus : un revenu égal au seuil reste dans la catégorie. La couleur règle trois choses pour une pompe à chaleur : le forfait MaPrimeRénov’ (${h.eur(h.P.maprimerenov.forfaits.air_eau.bleu)} pour un ménage bleu en air/eau, rien pour un rose), le prix de rachat de la prime CEE (« précarité » pour bleu et jaune) et la part minimale de la dépense que le ménage paie lui-même.`;
@@ -49,7 +49,7 @@ export default defineGuide({
       { q: 'Que se passe-t-il si mon revenu est égal au plafond ?', a: 'Vous restez dans la catégorie : les plafonds sont des maximums inclus. Un foyer de trois personnes hors Île-de-France qui déclare exactement le plafond bleu est bleu. Un euro de plus le fait passer jaune. Le simulateur du site applique la même règle.' },
       { q: 'Un ménage rose a-t-il droit à une aide pour une pompe à chaleur ?', a: `Pas à MaPrimeRénov’ par geste : le forfait rose vaut ${h.eur(h.P.maprimerenov.forfaits.air_eau.rose)} en 2026. Il garde la prime CEE, avec le Coup de pouce s’il remplace une chaudière au gaz ou au fioul, la TVA à 5,5 % et l’éco-prêt à taux zéro. En rénovation d’ampleur, MaPrimeRénov’ lui verse ${h.pct(h.P.maprimerenov.ampleur.taux_ht.rose, 0)} du coût hors taxes plafonné.` },
     ],
-    body: (h) => `<h2>Les plafonds hors Île-de-France</h2>
+    body: (h) => `<h2>Les plafonds de revenus hors Île-de-France</h2>
 ${plafonds(h, false)}
 <h2>Les plafonds en Île-de-France</h2>
 <p>Paris, les Hauts-de-Seine, la Seine-Saint-Denis, le Val-de-Marne, la Seine-et-Marne, les Yvelines, l’Essonne et le Val-d’Oise ont leur propre barème, plus élevé :</p>
@@ -76,7 +76,7 @@ ${parPersonne(h)}
     title: 'MaPrimeRénov’ income ceilings 2026: blue, yellow and purple',
     description: 'MaPrimeRénov’ income ceilings for 2026: blue, yellow, purple and pink bands by reference tax income and household size, in Île-de-France or elsewhere in France.',
     h1: 'MaPrimeRénov’ 2026 income ceilings: finding your colour',
-    intro: 'Your colour sets the MaPrimeRénov’ amount, the CEE buy-back price and the minimum share you will pay. It is read from your tax notice.',
+    intro: 'Your colour sets the MaPrimeRénov’ amount, the CEE buy-back price and the minimum share you will pay. It is read from your tax notice, against the income ceilings below.',
     resume: (h) => {
       const p = h.M.plafondsRfr(3, false), q = h.M.plafondsRfr(3, true);
       return `MaPrimeRénov’ sorts households into four income bands, each named by a colour: blue (very low income), yellow (low), purple (middle) and pink (higher). The colour depends on the household’s reference tax income, shown on the tax notice, the number of people living there, and where the home is: ceilings are higher in Île-de-France. For a three-person household outside Île-de-France, you are blue up to ${h.eur(p.bleu)}, yellow up to ${h.eur(p.jaune)}, purple up to ${h.eur(p.violet)}, pink above; in Île-de-France the thresholds are ${h.eur(q.bleu)}, ${h.eur(q.jaune)} and ${h.eur(q.violet)}. The ceiling is inclusive: an income equal to the threshold stays in the band. The colour sets three things for a heat pump: the MaPrimeRénov’ flat rate (${h.eur(h.P.maprimerenov.forfaits.air_eau.bleu)} for a blue household for air-to-water, nothing for pink), the CEE buy-back price (“fuel poverty” for blue and yellow) and the minimum share of the expense the household pays itself.`;
@@ -86,7 +86,7 @@ ${parPersonne(h)}
       { q: 'What if my income equals the ceiling?', a: 'You stay in the band: the ceilings are inclusive maximums. A three-person household outside Île-de-France declaring exactly the blue ceiling is blue. One euro more makes it yellow. The site’s calculator applies the same rule, and so do the per-colour pages below.' },
       { q: 'Does a pink household get any help for a heat pump?', a: `Not per-item MaPrimeRénov’: the pink flat rate is ${h.eur(h.P.maprimerenov.forfaits.air_eau.rose)} in 2026. It keeps the CEE bonus, with the Coup de pouce if it replaces a gas or oil boiler, 5.5% VAT and the zero-rate eco-loan. For a whole-home renovation, MaPrimeRénov’ pays it ${h.pct(h.P.maprimerenov.ampleur.taux_ht.rose, 0)} of the capped cost before VAT.` },
     ],
-    body: (h) => `<h2>Ceilings outside Île-de-France</h2>
+    body: (h) => `<h2>Income ceilings outside Île-de-France</h2>
 ${plafonds(h, false)}
 <h2>Ceilings in Île-de-France</h2>
 <p>Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne, Seine-et-Marne, Yvelines, Essonne and Val-d’Oise have their own, higher scale:</p>

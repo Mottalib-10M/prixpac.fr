@@ -31,7 +31,7 @@ export default defineGuide({
     title: 'Puissance pompe à chaleur : kW selon surface et département',
     description: 'Puissance d’une pompe à chaleur : kW nécessaires selon la surface, l’isolation et le froid réel de votre département (Météo-France 2015-2024), et prix au kW.',
     h1: 'Puissance d’une pompe à chaleur : combien de kW pour votre maison',
-    intro: 'La règle « 100 W par m² » ignore votre climat et votre isolation. Voici la puissance que demande votre maison pendant les jours les plus froids de chez vous.',
+    intro: 'La règle « 100 W par m² » ignore votre climat et votre isolation. Voici la puissance de pompe à chaleur que demande votre maison pendant les jours les plus froids de chez vous.',
     resume: (h) => {
       const d1 = h.dep('06'), d2 = h.dep('25');
       return `La puissance d’une pompe à chaleur se choisit pour couvrir les déperditions de la maison quand il fait le plus froid. On la calcule avec le coefficient de déperdition du logement (G, en watts par mètre cube et par degré d’écart), le volume chauffé et l’écart entre 19 °C à l’intérieur et la température extérieure de référence. Le site prend comme froid de référence la moyenne des trois jours consécutifs les plus froids de chaque hiver, mesurée par Météo-France de 2015 à 2024 à la station du chef-lieu : ${h.num(d1.tbase, 1)} °C dans les Alpes-Maritimes, ${h.num(d2.tbase, 1)} °C dans le Doubs. Pour une maison moyenne de 100 m², il faut alors ${h.num(h.M.puissanceFroid(100, 'moyenne', d1.tbase), 1)} kW à Nice et ${h.num(h.M.puissanceFroid(100, 'moyenne', d2.tbase), 1)} kW à Besançon. C’est un ordre de grandeur : l’installateur dimensionne avec la température de base de la norme, plus basse, et doit vous remettre une étude thermique. Une PAC trop puissante coûte plus cher et s’use en marche-arrêt ; trop faible, elle laisse la résistance d’appoint chauffer.`;
@@ -41,7 +41,7 @@ export default defineGuide({
       { q: 'Faut-il prendre une PAC plus puissante par sécurité ?', a: 'Non. Une pompe à chaleur surdimensionnée coûte plus cher à l’achat, démarre et s’arrête sans cesse en mi-saison, ce qui use le compresseur et dégrade le rendement. On la dimensionne en général pour couvrir 80 à 100 % des besoins au froid de base, une résistance d’appoint prenant le relais les rares jours les plus froids.' },
       { q: 'Quelle est la différence entre le froid typique du site et la température de base ?', a: 'La température de base de la norme NF EN 12831 est un froid extrême, de l’ordre de −5 à −15 °C selon la zone et l’altitude, que l’installateur utilise pour dimensionner. Le site, faute de table ouverte, mesure le froid typique de chaque hiver sur les relevés Météo-France. Il donne donc une puissance plus basse, utile pour juger un devis, pas pour le remplacer.' },
     ],
-    body: (h) => `<h2>Le calcul, pas à pas</h2>
+    body: (h) => `<h2>Le calcul de la puissance d’une pompe à chaleur, pas à pas</h2>
 <p>La puissance demandée est égale à G × volume × (19 °C − froid de référence). Le volume vaut la surface chauffée multipliée par la hauteur sous plafond, 2,5 m par défaut. Le coefficient G résume l’isolation : c’est le nombre de watts que perd chaque mètre cube pour un degré d’écart entre l’intérieur et l’extérieur. Le site retient quatre valeurs usuelles :</p>
 ${G(h)}
 <p>Ces coefficients sont des hypothèses, pas des mesures de votre maison. Le seul moyen d’avoir le vrai chiffre est une étude thermique pièce par pièce, que l’installateur doit faire avant de proposer une puissance. Si votre devis annonce une puissance sans aucun calcul, demandez-le.</p>
@@ -64,7 +64,7 @@ ${grille(h)}
     title: 'Heat pump sizing France: kW by floor area and département',
     description: 'Heat pump sizing in France: kW needed by floor area, insulation and the real cold of your département (Météo-France 2015-2024), plus the price per kW installed.',
     h1: 'Heat pump sizing: how many kW your house needs',
-    intro: 'The “100 W per m²” rule ignores your climate and insulation. Here is the output your house needs during the coldest days where you live.',
+    intro: 'The “100 W per m²” heat pump sizing rule ignores your climate and insulation. Here is the output your house needs during the coldest days where you live.',
     resume: (h) => {
       const d1 = h.dep('06'), d2 = h.dep('25');
       return `A heat pump’s output is chosen to cover the house’s heat losses when it is coldest. It is worked out from the home’s heat-loss coefficient (G, in watts per cubic metre per degree of difference), the heated volume and the gap between 19 °C indoors and the reference outdoor temperature. The site takes as its reference cold the average of the three coldest consecutive days of each winter, measured by Météo-France from 2015 to 2024 at the station of the département’s main town: ${h.num(d1.tbase, 1)} °C in the Alpes-Maritimes, ${h.num(d2.tbase, 1)} °C in the Doubs. An average 100 m² house then needs ${h.num(h.M.puissanceFroid(100, 'moyenne', d1.tbase), 1)} kW in Nice and ${h.num(h.M.puissanceFroid(100, 'moyenne', d2.tbase), 1)} kW in Besançon. This is an order of magnitude: the installer sizes with the standard’s design temperature, which is lower, and must give you a heat-loss study. An oversized heat pump costs more and wears out cycling on and off; an undersized one leaves the backup heater doing the work.`;
@@ -74,7 +74,7 @@ ${grille(h)}
       { q: 'Should I buy a more powerful heat pump to be safe?', a: 'No. An oversized heat pump costs more to buy, starts and stops constantly in spring and autumn, which wears the compressor and lowers efficiency. It is usually sized to cover 80 to 100% of needs at the design temperature, with a backup heater taking over on the few coldest days of the year.' },
       { q: 'How does the site’s typical cold differ from the design temperature?', a: 'The design temperature of standard NF EN 12831 is an extreme cold, around −5 to −15 °C depending on zone and altitude, which installers use for sizing. Lacking an open table, the site measures each winter’s typical cold from Météo-France records. It therefore gives a lower output, useful for judging a quote, not for replacing the study.' },
     ],
-    body: (h) => `<h2>The calculation, step by step</h2>
+    body: (h) => `<h2>Heat pump sizing, step by step</h2>
 <p>The output needed equals G × volume × (19 °C − reference cold). Volume is the heated floor area times the ceiling height, 2.5 m by default. The G coefficient sums up insulation: it is how many watts each cubic metre loses per degree of difference between inside and outside. The site uses four usual values:</p>
 ${G(h)}
 <p>These coefficients are assumptions, not measurements of your house. The only way to get the real figure is a room-by-room heat-loss study, which the installer should carry out before proposing an output. If your quote states an output with no calculation at all, ask for it.</p>

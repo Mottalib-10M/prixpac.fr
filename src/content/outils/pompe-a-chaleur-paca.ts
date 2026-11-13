@@ -39,7 +39,7 @@ export default defineGuide({
     title: 'Pompe à chaleur en PACA : économie et prime CEE en 2026',
     description: 'Pompe à chaleur en Provence-Alpes-Côte d’Azur : trois zones climatiques, prime CEE, air/air ou air/eau, économie annuelle dans les 6 départements, du Var à Gap.',
     h1: 'Pompe à chaleur en PACA : de la côte à la montagne',
-    intro: 'Le tableau est filtré sur Provence-Alpes-Côte d’Azur : changez la surface, l’énergie ou l’isolation, ou choisissez une autre région.',
+    intro: 'Le tableau est filtré sur Provence-Alpes-Côte d’Azur (PACA) : changez la surface, l’énergie ou l’isolation de votre projet de pompe à chaleur, ou choisissez une autre région.',
     resume: (h) => {
       const v = h.dep('83'), g = h.dep('05');
       const ev = h.M.simuler({ ...h.M.DEFAUT, dep: '83' }).economie, eg = h.M.simuler({ ...h.M.DEFAUT, dep: '05' }).economie;
@@ -56,7 +56,7 @@ ${tableRegion(h, CODES)}
 <h2>Trois zones, trois primes CEE</h2>
 ${primes(h)}
 <p>À projet égal, un ménage des Hautes-Alpes touche une prime ${h.num(h.P.cee.zone.H1 / h.P.cee.zone.H3, 1)} fois plus forte qu’un ménage du Var. Le détail du calcul est sur la page ${h.a('prime-cee-pompe-a-chaleur', 'prime CEE')}, et les règles du ${h.src('coupDePouce', 'Coup de pouce chauffage')} s’appliquent partout.</p>
-<h2>Sur la côte : air/air ou air/eau ?</h2>
+<h2>Pompe à chaleur sur la côte de PACA : air/air ou air/eau ?</h2>
 ${varTypes(h)}
 <p>L’air/air coûte moins cher mais ne reçoit pas MaPrimeRénov’ ; l’air/eau, aidée, demande des radiateurs à eau ou un plancher chauffant, ce qui exclut souvent la maison chauffée par convecteurs. Le site prend le même rendement saisonnier pour les deux faute de mesure publique pour l’air/air ; la page ${h.a('pompe-a-chaleur-air-air', 'PAC air/air')} détaille ce choix et celle sur le ${h.a('remplacer-radiateurs-electriques', 'remplacement des radiateurs électriques')} les travaux à prévoir.</p>`,
   },
@@ -67,7 +67,7 @@ ${varTypes(h)}
     title: 'Heat pump in PACA, France: savings and CEE bonus for 2026',
     description: 'Heat pumps in Provence-Alpes-Côte d’Azur: three climate zones, CEE bonus, air-to-air or air-to-water, yearly saving in all 6 départements, Var to Gap.',
     h1: 'Heat pumps in PACA: from the coast to the mountains',
-    intro: 'The table is filtered on Provence-Alpes-Côte d’Azur: change the floor area, energy or insulation, or pick another region.',
+    intro: 'The table is filtered on Provence-Alpes-Côte d’Azur (PACA): change the floor area, energy or insulation of your heat pump project, or pick another region.',
     resume: (h) => {
       const v = h.dep('83'), g = h.dep('05');
       const ev = h.M.simuler({ ...h.M.DEFAUT, dep: '83' }).economie, eg = h.M.simuler({ ...h.M.DEFAUT, dep: '05' }).economie;
@@ -84,7 +84,7 @@ ${tableRegion(h, CODES)}
 <h2>Three zones, three CEE bonuses</h2>
 ${primes(h)}
 <p>For the same project, a household in the Hautes-Alpes gets a bonus ${h.num(h.P.cee.zone.H1 / h.P.cee.zone.H3, 1)} times as high as one in the Var. The calculation is detailed on the ${h.a('prime-cee-pompe-a-chaleur', 'CEE bonus')} page, and the ${h.src('coupDePouce', 'Coup de pouce chauffage')} rules apply everywhere.</p>
-<h2>On the coast: air-to-air or air-to-water?</h2>
+<h2>Heat pump on the PACA coast: air-to-air or air-to-water?</h2>
 ${varTypes(h)}
 <p>Air-to-air costs less but gets no MaPrimeRénov’; air-to-water, which is subsidised, needs water radiators or underfloor heating, which often rules out a house heated by convectors. The site uses the same seasonal efficiency for both for lack of a public measurement for air-to-air; the ${h.a('pompe-a-chaleur-air-air', 'air-to-air heat pump')} page explains this choice and the one on ${h.a('remplacer-radiateurs-electriques', 'replacing electric radiators')} the work involved.</p>`,
   },

@@ -42,7 +42,7 @@ export default defineGuide({
     title: 'Pompe à chaleur en Hauts-de-France : économie et aides 2026',
     description: 'Pompe à chaleur en Hauts-de-France : degrés-jours Météo-France, puissance par grand froid, économie, prime CEE dans le Nord, le Pas-de-Calais, la Somme, l’Oise.',
     h1: 'Pompe à chaleur en Hauts-de-France : les 5 départements',
-    intro: 'Le tableau est filtré sur les Hauts-de-France : changez la surface, l’énergie ou l’isolation, ou passez à une autre région.',
+    intro: 'Le tableau des économies d’une pompe à chaleur est filtré sur les Hauts-de-France : changez la surface, l’énergie ou l’isolation, ou passez à une autre région.',
     resume: (h) => {
       const all = CODES.map((c) => h.dep(c)).sort((a, b) => a.dju - b.dju), lo = all[0], hi = all[all.length - 1];
       const e = h.M.simuler({ ...h.M.DEFAUT, dep: hi.code }), f = h.M.simuler({ ...h.M.DEFAUT, dep: hi.code, energie: 'fioul' });
@@ -59,7 +59,7 @@ ${tableRegion(h, CODES)}
 <h2>Entre la côte et l’intérieur</h2>
 ${ecarts(h)}
 <p>Si vous habitez loin du chef-lieu, choisissez la station la plus proche de chez vous dans le simulateur de la page d’accueil : il reprend toutes les stations Météo-France du département. La méthode est sur la page ${h.a('climat-degres-jours-departement', 'degrés-jours par département')}.</p>
-<h2>La puissance à prévoir par grand froid</h2>
+<h2>Pompe à chaleur dans les Hauts-de-France : la puissance à prévoir par grand froid</h2>
 ${puissances(h)}
 <p>Ces puissances sont un ordre de grandeur pour comparer les départements, pas un dimensionnement : la page ${h.a('puissance-pompe-a-chaleur', 'puissance d’une pompe à chaleur')} explique le calcul et pourquoi l’étude thermique de l’installateur reste nécessaire.</p>`,
   },
@@ -70,7 +70,7 @@ ${puissances(h)}
     title: 'Heat pump in Hauts-de-France: savings and grants for 2026',
     description: 'Heat pumps in Hauts-de-France: Météo-France degree-days, output needed in the cold, yearly saving and CEE bonus in Nord, Pas-de-Calais, Somme, Oise and Aisne.',
     h1: 'Heat pumps in Hauts-de-France: the 5 départements',
-    intro: 'The table is filtered on Hauts-de-France: change the floor area, energy or insulation, or switch to another region.',
+    intro: 'The table of heat pump savings is filtered on Hauts-de-France: change the floor area, energy or insulation, or switch to another region.',
     resume: (h) => {
       const all = CODES.map((c) => h.dep(c)).sort((a, b) => a.dju - b.dju), lo = all[0], hi = all[all.length - 1];
       const e = h.M.simuler({ ...h.M.DEFAUT, dep: hi.code }), f = h.M.simuler({ ...h.M.DEFAUT, dep: hi.code, energie: 'fioul' });
@@ -87,7 +87,7 @@ ${tableRegion(h, CODES)}
 <h2>Between the coast and inland</h2>
 ${ecarts(h)}
 <p>If you live far from the main town, pick the station nearest you in the calculator on the home page: it includes every Météo-France station in the département. The method is on the ${h.a('climat-degres-jours-departement', 'degree-days by département')} page.</p>
-<h2>Output needed in a cold snap</h2>
+<h2>Heat pump output needed in a Hauts-de-France cold snap</h2>
 ${puissances(h)}
 <p>These outputs are an order of magnitude to compare départements, not a sizing: the ${h.a('puissance-pompe-a-chaleur', 'heat pump output')} page explains the calculation and why the installer’s heat-loss study is still needed.</p>`,
   },

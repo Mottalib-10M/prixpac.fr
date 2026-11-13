@@ -28,7 +28,7 @@ export default defineGuide({
     title: 'Consommation pompe à chaleur : kWh et coût par département',
     description: 'Consommation d’une pompe à chaleur : kWh d’électricité par an et coût selon les degrés-jours du département, le rendement mesuré par l’ADEME, tarif bleu 2026.',
     h1: 'Consommation d’une pompe à chaleur : le calcul selon votre climat',
-    intro: 'Une PAC ne consomme pas la même chose à Nice et à Strasbourg. Le calcul part des degrés-jours mesurés par Météo-France dans votre département.',
+    intro: 'Une pompe à chaleur ne consomme pas la même chose à Nice et à Strasbourg. Le calcul part des degrés-jours mesurés par Météo-France dans votre département.',
     resume: (h) => {
       const d = h.dep('69'), b = h.M.besoinChauffage(100, 'moyenne', d.dju), k = b / h.P.rendements.scop.air_eau;
       return `La consommation d’une pompe à chaleur se calcule en deux temps. D’abord la chaleur dont la maison a besoin sur l’année, qui dépend de sa surface, de son isolation et du climat, mesuré en degrés-jours unifiés (DJU) : la somme, jour après jour, de l’écart entre 18 °C et la température extérieure moyenne. Ensuite le rendement annuel de la PAC, ou SCOP : le nombre de kWh de chaleur produits pour un kWh d’électricité consommé. L’ADEME a mesuré sur des installations réelles un rendement moyen de ${h.num(h.P.rendements.scop.air_eau, 1)} pour l’air/eau, avec des écarts de ${h.num(h.P.rendements.scop.air_eau_min, 1)} à ${h.num(h.P.rendements.scop.air_eau_max, 1)} selon la pose et le réglage, et de ${h.num(h.P.rendements.scop.geo, 1)} pour la géothermie. Pour une maison de 100 m² moyennement isolée dans le Rhône (${h.num(d.dju)} DJU), il faut environ ${h.num(b)} kWh de chaleur, soit ${h.num(k)} kWh d’électricité en air/eau : ${h.eur(k * h.P.energie.electricite.kwh_ttc)} par an au tarif bleu. Ce sont des estimations ; votre consommation actuelle, saisie dans le simulateur, les remplace.`;
@@ -44,7 +44,7 @@ ${grille(h)}
 <!--mini:conso-->
 <h2>Le rendement réel, pas celui de la fiche technique</h2>
 <p>Les fabricants affichent un coefficient de performance (COP) mesuré en laboratoire, à une température extérieure de 7 °C, souvent supérieur à 4. Le rendement annuel réel est plus bas : il intègre les jours froids, le dégivrage, l’eau chaude des radiateurs et les arrêts. C’est pour cela que le site part des mesures de l’${h.src('ademe', 'ADEME')} sur des maisons habitées. Si votre installateur vous annonce un SCOP, vous pouvez le saisir dans « Affiner » ; le simulateur recalcule la consommation.</p>
-<h2>Ce qui fait baisser la consommation</h2>
+<h2>Ce qui fait baisser la consommation d’une pompe à chaleur</h2>
 <p>Une température d’eau basse : plus l’eau des radiateurs est chaude, plus la PAC peine. Les planchers chauffants et les radiateurs surdimensionnés sont les meilleurs émetteurs. Une loi d’eau bien réglée, qui adapte la température de l’eau à la température extérieure. Un dimensionnement juste (voir ${h.a('puissance-pompe-a-chaleur', 'la puissance d’une PAC')}). Et, bien sûr, l’isolation : passer d’une maison moyenne à une maison bien isolée réduit le besoin de chauffage d’environ un tiers dans le calcul du site.</p>
 <h2>Comparer avec votre facture actuelle</h2>
 <p>La consommation seule ne dit pas si la PAC est intéressante : il faut la comparer à ce que vous payez aujourd’hui en gaz, en fioul ou en électricité. C’est l’objet du simulateur et des pages ${h.a('pompe-a-chaleur-ou-chaudiere-gaz', 'PAC ou chaudière gaz')} et ${h.a('rentabilite-pompe-a-chaleur', 'rentabilité')}.</p>`,
@@ -72,7 +72,7 @@ ${grille(h)}
 <!--mini:conso-->
 <h2>Real efficiency, not the data-sheet figure</h2>
 <p>Manufacturers quote a coefficient of performance (COP) measured in a laboratory at an outdoor temperature of 7 °C, often above 4. Real yearly efficiency is lower: it includes cold days, defrosting, hot radiator water and stoppages. That is why the site starts from ${h.src('ademe', 'ADEME')}’s measurements in occupied houses. If your installer gives you a SCOP, you can enter it under “Refine”; the calculator recomputes the consumption.</p>
-<h2>What lowers consumption</h2>
+<h2>What lowers the heat pump running cost</h2>
 <p>Low water temperature: the hotter the radiator water, the harder the heat pump works. Underfloor heating and oversized radiators are the best emitters. A well-set weather compensation curve, which adapts water temperature to outdoor temperature. Correct sizing (see ${h.a('puissance-pompe-a-chaleur', 'heat pump sizing')}). And of course insulation: going from an average to a well insulated house cuts the heating need by about a third in the site’s calculation.</p>
 <h2>Compare with your current bill</h2>
 <p>Consumption alone does not tell you whether a heat pump is worthwhile: it must be compared with what you pay today for gas, oil or electricity. That is the job of the calculator and of the ${h.a('pompe-a-chaleur-ou-chaudiere-gaz', 'heat pump or gas boiler')} and ${h.a('rentabilite-pompe-a-chaleur', 'payback')} pages.</p>`,

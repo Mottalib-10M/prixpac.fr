@@ -48,7 +48,7 @@ export default defineGuide({
     title: 'Remplacer une chaudière fioul par une PAC : économie, aides',
     description: 'Remplacer une chaudière fioul par une pompe à chaleur en 2026 : économie selon vos litres, prix du fioul de la semaine, Coup de pouce ×5 et aide pour la cuve.',
     h1: 'Remplacer une chaudière fioul par une pompe à chaleur',
-    intro: 'Le fioul est le cas où la pompe à chaleur rapporte le plus. Partez de vos litres achetés l’an dernier : le calcul donne l’économie au prix de la semaine.',
+    intro: 'Le fioul est le cas où remplacer sa chaudière par une PAC rapporte le plus. Partez de vos litres achetés l’an dernier : le calcul donne l’économie au prix de la semaine.',
     resume: (h) => {
       const E = h.P.energie, prixL = E.fioul.eur_1000l_ttc / 1000;
       const ch = h.M.litresEnKwh(2000) * h.P.rendements.chaudiere_defaut, pac = (ch / h.P.rendements.scop.air_eau) * E.electricite.kwh_ttc;
@@ -63,7 +63,7 @@ export default defineGuide({
 ${litres(h)}
 <p>Le prix du fioul change chaque semaine : le site le met à jour à partir du Weekly Oil Bulletin, qui publie un prix moyen national toutes taxes comprises pour 1 000 litres. Les livraisons réelles varient selon la quantité commandée et la région.</p>
 <!--mini:fioul-->
-<h2>Les aides du remplacement</h2>
+<h2>Les aides pour remplacer une chaudière fioul par une PAC</h2>
 <p>Le fioul cumule les aides les plus fortes : le Coup de pouce multiplie par cinq la prime CEE (voir ${h.a('coup-de-pouce-chauffage', 'Coup de pouce Chauffage')}), MaPrimeRénov’ verse son forfait PAC, et la dépose de la cuve a son propre forfait. L’écrêtement plafonne toutefois la somme des aides selon vos revenus. Le simulateur, réglé sur une chaudière au fioul, calcule l’ensemble pour votre département.</p>
 <h2>Air/eau ou géothermie ?</h2>
 <p>Une maison chauffée au fioul est souvent à la campagne, avec du terrain : la géothermie peut y être possible. Elle coûte plus cher à poser, mais son rendement plus élevé (${h.num(h.P.rendements.scop.geo, 1)} contre ${h.num(h.P.rendements.scop.air_eau, 1)}) augmente encore l’économie, et ses aides sont plus fortes. Voir ${h.a('pompe-a-chaleur-geothermique', 'PAC géothermique')}.</p>
@@ -98,7 +98,7 @@ ${sensibilite(h)}
 ${litres(h)}
 <p>The oil price changes every week: the site updates it from the Weekly Oil Bulletin, which publishes a national average price including taxes per 1,000 litres. Actual deliveries vary with the quantity ordered and the region.</p>
 <!--mini:fioul-->
-<h2>Grants for the switch</h2>
+<h2>Grants for replacing an oil boiler with a heat pump</h2>
 <p>Oil attracts the strongest grants: the Coup de pouce multiplies the CEE bonus by five (see ${h.a('coup-de-pouce-chauffage', 'Coup de pouce Chauffage')}), MaPrimeRénov’ pays its heat pump flat rate, and tank removal has its own flat rate. The cap nonetheless limits the total according to your income. The calculator, set to an oil boiler, works out the whole for your département.</p>
 <h2>Air-to-water or ground-source?</h2>
 <p>An oil-heated house is often rural, with land: ground-source may be possible. It costs more to fit, but its higher efficiency (${h.num(h.P.rendements.scop.geo, 1)} against ${h.num(h.P.rendements.scop.air_eau, 1)}) increases the saving further, and its grants are larger. See ${h.a('pompe-a-chaleur-geothermique', 'ground-source heat pump')}.</p>

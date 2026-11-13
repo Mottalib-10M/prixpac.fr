@@ -26,7 +26,7 @@ export default defineGuide({
     title: 'Pompe à chaleur géothermique 2026 : aides et reste à charge',
     description: 'Pompe à chaleur géothermique en 2026 : MaPrimeRénov’ jusqu’à 11 000 €, prime CEE de la fiche BAR-TH-172, écrêtement, rendement mesuré de 4,1 et reste à charge.',
     h1: 'Pompe à chaleur géothermique : aides 2026 et reste à charge',
-    intro: 'La géothermie a les forfaits les plus élevés de MaPrimeRénov’ et le meilleur rendement. Son prix, lui, n’est publié par aucune source ouverte : partez de votre devis.',
+    intro: 'La pompe à chaleur géothermique a les forfaits les plus élevés de MaPrimeRénov’ et le meilleur rendement. Son prix, lui, n’est publié par aucune source ouverte : partez de votre devis.',
     resume: (h) => {
       const F = h.P.maprimerenov.forfaits.geo, C = h.P.cee.bar_th_172;
       return `Une pompe à chaleur géothermique puise la chaleur du sol, par des capteurs horizontaux enterrés ou une sonde verticale forée, ou celle d’une nappe d’eau souterraine. Elle alimente un chauffage central comme une PAC air/eau, mais avec une source de chaleur stable toute l’année : l’ADEME a mesuré un rendement annuel moyen de ${h.num(h.P.rendements.scop.geo, 1)}, contre ${h.num(h.P.rendements.scop.air_eau, 1)} pour l’air/eau. En 2026, MaPrimeRénov’ par geste verse ${h.eur(F.bleu)} à un ménage bleu, ${h.eur(F.jaune)} à un jaune et ${h.eur(F.violet)} à un violet, sur une dépense retenue de ${h.eur(F.plafond_depense)} au plus. La prime CEE relève de la fiche BAR-TH-172, réservée aux maisons : ${h.num(C.maison.etas_bas)} kWh cumac si l’efficacité saisonnière est comprise entre 111 et 170 %, ${h.num(C.maison.etas_haut)} au-delà, avant facteurs de surface, de zone et Coup de pouce. Aucune source ouverte ne publie de prix de géothermie : le simulateur part du plafond de dépense, qui n’est pas un prix, et attend votre devis.`;
@@ -36,7 +36,7 @@ export default defineGuide({
       { q: 'Pourquoi la géothermie a-t-elle droit à plus de MaPrimeRénov’ que l’air/eau ?', a: `Parce qu’elle coûte plus cher à installer et rend davantage : le barème 2026 lui accorde jusqu’à ${h.eur(h.P.maprimerenov.forfaits.geo.bleu)} sur une dépense retenue de ${h.eur(h.P.maprimerenov.forfaits.geo.plafond_depense)}, contre ${h.eur(h.P.maprimerenov.forfaits.air_eau.bleu)} et ${h.eur(h.P.maprimerenov.forfaits.air_eau.plafond_depense)} pour l’air/eau. L’écrêtement s’applique de la même façon : les aides ne dépassent jamais la part maximale de la dépense.` },
       { q: 'Une PAC géothermique en appartement a-t-elle une prime CEE ?', a: 'La fiche BAR-TH-172 ne vise que les maisons individuelles existantes. En appartement, la géothermie relève en pratique d’une installation collective, avec d’autres fiches CEE que ce site ne chiffre pas. Le simulateur affiche donc « non chiffrée » si vous choisissez un appartement avec une PAC géothermique.' },
     ],
-    body: (h) => `<h2>Les aides pour un devis donné</h2>
+    body: (h) => `<h2>Les aides pour un devis de pompe à chaleur géothermique</h2>
 <p>Comme il n’existe pas de prix public de référence, voici les aides calculées par le moteur du site sur un devis hypothétique, à remplacer par le vôtre dans le simulateur :</p>
 ${aides(h, 24000)}
 <p>Avec un devis supérieur au plafond de dépense, le reste à charge grimpe vite : l’écrêtement se calcule sur ${h.eur(h.P.maprimerenov.forfaits.geo.plafond_depense)} au plus, et tout ce qui dépasse est payé par le ménage. Pour un ménage violet, MaPrimeRénov’ peut être réduite par une prime CEE élevée, comme l’explique la page ${h.a('ecretement-maprimerenov', 'de l’écrêtement')}.</p>
@@ -62,7 +62,7 @@ ${aides(h, 24000)}
       { q: 'Why does ground-source get more MaPrimeRénov’ than air-to-water?', a: `Because it costs more to install and performs better: the 2026 scale grants it up to ${h.eur(h.P.maprimerenov.forfaits.geo.bleu)} on an eligible expense of ${h.eur(h.P.maprimerenov.forfaits.geo.plafond_depense)}, against ${h.eur(h.P.maprimerenov.forfaits.air_eau.bleu)} and ${h.eur(h.P.maprimerenov.forfaits.air_eau.plafond_depense)} for air-to-water. The cap applies in the same way: grants never exceed the maximum share of the expense.` },
       { q: 'Is there a CEE bonus for a ground-source heat pump in a flat?', a: 'Sheet BAR-TH-172 covers existing individual houses only. In a flat, ground-source heating is in practice a shared installation, under other CEE sheets that this site does not calculate. The calculator therefore shows “not calculated” if you choose a flat with a ground-source heat pump.' },
     ],
-    body: (h) => `<h2>Grants for a given quote</h2>
+    body: (h) => `<h2>Grants for a ground-source heat pump quote</h2>
 <p>As there is no public reference price, here are the grants worked out by the site’s engine on a hypothetical quote, to be replaced by yours in the calculator:</p>
 ${aides(h, 24000)}
 <p>With a quote above the expense ceiling, the out-of-pocket cost climbs fast: the cap is calculated on ${h.eur(h.P.maprimerenov.forfaits.geo.plafond_depense)} at most, and everything above is paid by the household. For a purple household, MaPrimeRénov’ can be cut by a high CEE bonus, as the ${h.a('ecretement-maprimerenov', 'grant cap page')} explains.</p>

@@ -53,7 +53,7 @@ export default defineGuide({
       { q: 'Peut-on éviter l’écrêtement en renonçant à la prime CEE ?', a: 'C’est possible mais rarement intéressant : l’écrêtement réduit MaPrimeRénov’ du montant exact qui dépasse le plafond, donc le total des aides reste le même. Renoncer à la prime CEE fait perdre son montant sans rien gagner. Le cas se discute seulement si la prime CEE proposée est très basse.' },
       { q: 'Un ménage rose est-il concerné par l’écrêtement ?', a: `Le forfait rose est nul pour une pompe à chaleur en 2026, donc il n’y a rien à écrêter. Le plafond de ${h.pct(1 - h.P.ecretement.reste_a_charge_min.rose, 0)} de la dépense existe pour les autres gestes et la rénovation d’ampleur. La prime CEE, elle, n’est jamais réduite par l’écrêtement de MaPrimeRénov’.` },
     ],
-    body: (h) => `<h2>La règle, en une formule</h2>
+    body: (h) => `<h2>L’écrêtement MaPrimeRénov’ en une formule</h2>
 <p>MaPrimeRénov’ versée = le plus petit de deux montants : le forfait de votre couleur, ou (part maximale × dépense éligible) − prime CEE − autres aides. La part maximale vaut ${h.pct(1 - h.P.ecretement.reste_a_charge_min.bleu, 0)}, ${h.pct(1 - h.P.ecretement.reste_a_charge_min.jaune, 0)}, ${h.pct(1 - h.P.ecretement.reste_a_charge_min.violet, 0)} ou ${h.pct(1 - h.P.ecretement.reste_a_charge_min.rose, 0)} selon la couleur. La dépense éligible est le devis TTC, plafonné. La règle vient de l’article 3 du ${h.src('decret2020', 'décret n° 2020-26')}.</p>
 <h2>Cinq cas chiffrés</h2>
 ${exemples(h)}
@@ -92,7 +92,7 @@ ${plafondsAides(h)}
 ${exemples(h)}
 <p>In all five cases, MaPrimeRénov’ is reduced. The blue household has the highest grant ceiling, but also the largest CEE bonus, bought at the “fuel poverty” price: on its own it covers more than half the expense. The purple household with a low quote loses almost all its flat rate, because the CEE bonus with Coup de pouce already fills almost all its ceiling. With a higher quote, the ceiling rises and the cut shrinks. The Coup de pouce therefore makes the cap routine: it is the rule, not the exception.</p>
 <!--mini:mpr-->
-<h2>The grant ceiling, quote by quote</h2>
+<h2>The MaPrimeRénov’ grant cap, quote by quote</h2>
 ${plafondsAides(h)}
 <p>Above the expense ceiling, the grant ceiling stops rising: a dearer quote brings no extra grant. Compare this amount with the CEE bonus shown on the quote to see what will be left of MaPrimeRénov’. For a pink household the ceiling still applies, although it receives no MaPrimeRénov’ for a heat pump: it limits the CEE bonus and any local grant instead. The cap is checked by Anah when it pays the grant, on the final invoice: if the invoice is lower than the quote, the ceiling falls with it and the grant can shrink after the work.</p>
 <h2>What it means for your choice</h2>

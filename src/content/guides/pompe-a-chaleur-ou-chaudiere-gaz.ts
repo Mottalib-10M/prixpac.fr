@@ -39,7 +39,7 @@ export default defineGuide({
     title: 'Pompe à chaleur ou chaudière gaz : facture et coût comparés',
     description: 'Pompe à chaleur ou chaudière gaz en 2026 : prix du kWh de chaleur, facture annuelle par département, aides, TVA à 5,5 % contre 20 %, ce qui fait pencher.',
     h1: 'Pompe à chaleur ou chaudière gaz : la comparaison chiffrée',
-    intro: 'Votre chaudière gaz arrive en fin de vie. La remplacer à l’identique ou passer à la PAC ? Voici l’écart de facture et d’investissement, avec les chiffres du jour.',
+    intro: 'Votre chaudière gaz arrive en fin de vie. La remplacer à l’identique ou passer à la pompe à chaleur ? Voici l’écart de facture et d’investissement, avec les chiffres du jour.',
     resume: (h) => {
       const E = h.P.energie, R = h.P.rendements;
       return `Une chaudière au gaz neuve transforme au mieux environ ${h.pct(R.chaudiere_defaut, 0)} de l’énergie du gaz en chaleur, le minimum imposé par le règlement européen d’écoconception ; une pompe à chaleur air/eau produit en moyenne ${h.num(R.scop.air_eau, 1)} kWh de chaleur par kWh d’électricité, d’après les mesures de l’ADEME. Le kWh d’électricité coûte ${h.num(E.electricite.kwh_ttc, 4)} € au tarif bleu, le kWh de gaz ${h.num(E.gaz.kwh_ttc, 4)} € en moyenne d’après Eurostat. Ramené à la chaleur produite, le gaz revient à ${h.num(E.gaz.kwh_ttc / R.chaudiere_defaut, 4)} € le kWh et la PAC à ${h.num(E.electricite.kwh_ttc / R.scop.air_eau, 4)} €. La PAC coûte donc moins cher à l’usage, d’autant plus que le climat est froid, et permet de résilier l’abonnement au gaz. Mais elle coûte plus cher à l’achat : la PAC bénéficie de la TVA à ${h.pct(h.P.tva.pac, 1)}, de MaPrimeRénov’ et de la prime CEE avec Coup de pouce, alors qu’une chaudière gaz paie ${h.pct(h.P.tva.chaudiere_fossile, 0)} de TVA et n’est pas financée par MaPrimeRénov’. Le choix tient à l’écart entre les deux investissements, comparé à l’économie annuelle.`;
@@ -52,7 +52,7 @@ export default defineGuide({
     body: (h) => `<h2>Le prix du kWh de chaleur</h2>
 ${kwhUtile(h)}
 <p>Un « kWh de chaleur » est l’énergie qui arrive vraiment dans les pièces. C’est la seule unité qui permet de comparer des équipements qui n’utilisent pas la même énergie. Le rendement de ${h.pct(h.P.rendements.chaudiere_defaut, 0)} est le minimum fixé par le règlement européen n° 813/2013 pour une chaudière neuve depuis 2015 ; c’est une valeur favorable à la chaudière, car une vieille chaudière fait souvent moins bien.</p>
-<h2>La facture annuelle selon le climat</h2>
+<h2>Pompe à chaleur ou chaudière gaz : la facture annuelle selon le climat</h2>
 ${factures(h)}
 <!--mini:gaz-->
 <h2>L’investissement</h2>
@@ -80,7 +80,7 @@ ${factures(h)}
     body: (h) => `<h2>The price per kWh of heat</h2>
 ${kwhUtile(h)}
 <p>A “kWh of heat” is the energy that actually reaches the rooms. It is the only unit that lets you compare equipment using different energies. The ${h.pct(h.P.rendements.chaudiere_defaut, 0)} efficiency is the minimum EU Regulation 813/2013 has set for a new boiler since 2015; it favours the boiler, as an old boiler often does worse.</p>
-<h2>The yearly bill by climate</h2>
+<h2>Heat pump vs gas boiler: the yearly bill by climate</h2>
 ${factures(h)}
 <!--mini:gaz-->
 <h2>The outlay</h2>

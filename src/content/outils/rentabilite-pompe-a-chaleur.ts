@@ -29,7 +29,7 @@ export default defineGuide({
     title: 'Rentabilité pompe à chaleur : le temps de retour réel',
     description: 'Rentabilité d’une pompe à chaleur : temps de retour selon l’énergie remplacée (fioul, gaz, électricité), le climat du département, aides 2026 et votre devis.',
     h1: 'Rentabilité d’une pompe à chaleur : en combien d’années ?',
-    intro: 'Le temps de retour, c’est le reste à charge divisé par l’économie annuelle. Les deux dépendent de vous : le simulateur part de votre département.',
+    intro: 'Le temps de retour, mesure de la rentabilité d’une pompe à chaleur, c’est le reste à charge divisé par l’économie annuelle. Les deux dépendent de vous : le simulateur part de votre département.',
     resume: (h) => {
       const f = h.M.simuler({ ...h.M.DEFAUT, energie: 'fioul', rfr: 50000 }), g = h.M.simuler({ ...h.M.DEFAUT, rfr: 50000 });
       return `Une pompe à chaleur est rentable quand l’argent qu’elle fait économiser sur la facture de chauffage rembourse ce qu’elle a coûté, aides déduites, avant la fin de sa vie. Le calcul est simple : reste à charge divisé par l’économie annuelle. Ce qui le rend difficile, c’est que chaque terme varie beaucoup. L’économie dépend de l’énergie remplacée : le fioul et l’électricité directe coûtent cher au kWh de chaleur, le gaz beaucoup moins. Elle dépend aussi du climat : plus il fait froid, plus on chauffe, plus on économise. Le reste à charge dépend du devis et des aides, donc de vos revenus. Pour une maison moyenne de 100 m² dans le Rhône, un ménage violet qui remplace une chaudière au fioul récupère sa mise en ${h.num(f.retourAns ?? 0, 1)} ans environ ; s’il remplace une chaudière au gaz, il lui faut ${h.num(g.retourAns ?? 0, 1)} ans. La durée de vie conventionnelle retenue pour une PAC air/eau par la fiche CEE est de ${h.num(h.P.cee.bar_th_171.duree_vie_ans)} ans. Ce sont des estimations à prix de l’énergie constants.`;
@@ -39,7 +39,7 @@ export default defineGuide({
       { q: 'Faut-il compter l’entretien dans la rentabilité ?', a: 'Oui pour être complet. Une PAC de plus de 4 kW doit être entretenue tous les deux ans par un professionnel, et une chaudière au gaz ou au fioul doit l’être chaque année. Les deux coûts se compensent en partie. Le simulateur ne les compte pas : ajoutez la différence à l’économie si vous la connaissez.' },
       { q: 'Et si le prix de l’électricité augmente ?', a: 'Le calcul suppose des prix constants. Si l’électricité monte plus vite que le gaz ou le fioul, le temps de retour s’allonge, et l’inverse s’il monte moins vite. Dans le simulateur, vous pouvez changer les prix du kWh dans « Affiner » pour tester un scénario, par exemple un gaz plus cher avec la hausse de la fiscalité carbone.' },
     ],
-    body: (h) => `<h2>Le temps de retour selon l’énergie et le climat</h2>
+    body: (h) => `<h2>Le temps de retour d’une pompe à chaleur selon l’énergie et le climat</h2>
 ${retours(h, 50000)}
 <p>Trois départements, du plus doux au plus froid : les Bouches-du-Rhône, le Rhône et le Bas-Rhin. Le fioul et l’électricité directe donnent les retours les plus courts ; le gaz, les plus longs. Le ménage du tableau est violet ; un ménage bleu ou jaune, avec plus d’aides, récupère sa mise plus vite.</p>
 <!--mini:retour-->
@@ -53,7 +53,7 @@ ${retours(h, 50000)}
     title: 'Heat pump payback in France: years to pay off, by fuel type',
     description: 'Heat pump payback in France: years to recoup the cost by energy replaced (oil, gas, electricity), your département’s climate, 2026 grants and your quote.',
     h1: 'Heat pump payback: how many years?',
-    intro: 'Payback is the out-of-pocket cost divided by the yearly saving. Both depend on you: the calculator starts from your département.',
+    intro: 'Heat pump payback is the out-of-pocket cost divided by the yearly saving. Both depend on you: the calculator starts from your département.',
     resume: (h) => {
       const f = h.M.simuler({ ...h.M.DEFAUT, energie: 'fioul', rfr: 50000 }), g = h.M.simuler({ ...h.M.DEFAUT, rfr: 50000 });
       return `A heat pump pays off when the money it saves on the heating bill repays what it cost, grants deducted, before the end of its life. The sum is simple: out-of-pocket cost divided by the yearly saving. What makes it hard is that each term varies a lot. The saving depends on the energy replaced: oil and direct electric heating are expensive per kWh of heat, gas much less so. It also depends on the climate: the colder it is, the more you heat and the more you save. The out-of-pocket cost depends on the quote and grants, so on your income. For an average 100 m² house in the Rhône, a purple household replacing an oil boiler gets its money back in about ${h.num(f.retourAns ?? 0, 1)} years; replacing a gas boiler, it takes ${h.num(g.retourAns ?? 0, 1)} years. The conventional lifetime used for an air-to-water heat pump by the CEE sheet is ${h.num(h.P.cee.bar_th_171.duree_vie_ans)} years. These are estimates at constant energy prices.`;
@@ -63,7 +63,7 @@ ${retours(h, 50000)}
       { q: 'Should servicing be counted?', a: 'Yes, to be thorough. A heat pump above 4 kW must be serviced every two years by a professional, and a gas or oil boiler every year. The two costs partly cancel out. The calculator does not count them: add the difference to the saving if you know it.' },
       { q: 'What if electricity prices rise?', a: 'The calculation assumes constant prices. If electricity rises faster than gas or oil, payback lengthens, and the reverse if it rises more slowly. In the calculator you can change the kWh prices under “Refine” to test a scenario, such as dearer gas as carbon taxation increases.' },
     ],
-    body: (h) => `<h2>Payback by energy and climate</h2>
+    body: (h) => `<h2>Heat pump payback by energy and climate</h2>
 ${retours(h, 50000)}
 <p>Three départements, from mildest to coldest: Bouches-du-Rhône, Rhône and Bas-Rhin. Oil and direct electric heating give the shortest paybacks; gas the longest. The household in the table is purple; a blue or yellow household, with more grants, gets its money back faster.</p>
 <!--mini:retour-->

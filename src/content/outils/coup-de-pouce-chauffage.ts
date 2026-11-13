@@ -66,7 +66,7 @@ ${gain(h)}
       { q: 'How do I know whether a heat pump model is approved?', a: 'Before signing, ask the installer for the model’s approval number under decree no. 2026-413; it must appear on the invoice. For work committed since 1 September 2026, without a model approved at the commitment date, the bonus falls back to the sheet’s basic volume, five times smaller.' },
       { q: 'Can the Coup de pouce be combined with MaPrimeRénov’?', a: `Yes, within the cap: total grants cannot exceed ${h.pct(1 - h.P.ecretement.reste_a_charge_min.violet, 0)} of the expense for a purple household, ${h.pct(1 - h.P.ecretement.reste_a_charge_min.bleu, 0)} for blue. As the Coup de pouce makes the CEE bonus very high, MaPrimeRénov’ is often reduced. The calculator shows both amounts after the cap.` },
     ],
-    body: (h) => `<h2>What the Coup de pouce is worth</h2>
+    body: (h) => `<h2>What the Coup de pouce heating bonus is worth</h2>
 ${gain(h)}
 <p>These are values at the average market price; the real offer depends on the supplier buying your certificates. The fuel-poverty price applies to blue and yellow households. Ground-source, with a higher base volume and a ${h.num(h.P.cee.bar_th_172.duree_vie_ans)}-year conventional lifetime, is worth more.</p>
 <h2>The conditions, in order</h2>

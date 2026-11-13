@@ -29,7 +29,7 @@ export default defineGuide({
     title: 'Pompe à chaleur par département : économie et aides en 2026',
     description: 'Pompe à chaleur dans les 96 départements : degrés-jours Météo-France, zone, consommation, économie annuelle et prime CEE, à trier et filtrer par région.',
     h1: 'Pompe à chaleur : le comparatif des 96 départements',
-    intro: 'Choisissez la surface, l’énergie actuelle et l’isolation : le tableau recalcule l’économie et la prime pour chaque département métropolitain.',
+    intro: 'Choisissez la surface, l’énergie actuelle et l’isolation : le tableau recalcule l’économie et la prime d’une pompe à chaleur pour chaque département métropolitain.',
     resume: (h) => {
       const all = h.M.parDju(), a = all[0], z = all[all.length - 1];
       const ea = h.M.simuler({ ...h.M.DEFAUT, dep: a.code }).economie, ez = h.M.simuler({ ...h.M.DEFAUT, dep: z.code }).economie;
@@ -40,7 +40,7 @@ export default defineGuide({
       { q: 'Le prix des devis change-t-il selon le département ?', a: 'Probablement, mais aucune source ouverte ne publie de prix de PAC par département. Le tableau n’en tient donc pas compte et ne calcule que l’économie et la prime CEE. Saisissez votre propre devis dans le simulateur pour obtenir le reste à charge et le temps de retour réels.' },
       { q: 'Les départements d’outre-mer sont-ils couverts ?', a: 'Non. Le chauffage y est rarement nécessaire, les zones climatiques et les fiches CEE y sont différentes, et MaPrimeRénov’ a d’autres règles. Le site ne couvre que la France métropolitaine, Corse comprise, soit 96 départements. Pour l’outre-mer, adressez-vous à un conseiller France Rénov’ local.' },
     ],
-    body: (h) => `<h2>Les régions, de la plus douce à la plus froide</h2>
+    body: (h) => `<h2>Pompe à chaleur par département : les régions, de la plus douce à la plus froide</h2>
 ${regions(h)}
 <p>Chaque région a des écarts internes importants : la plaine et la montagne, le littoral et l’intérieur. Le tableau interactif ci-dessus donne le détail par département, et les pages ${h.a('pompe-a-chaleur-ile-de-france', 'Île-de-France')}, ${h.a('pompe-a-chaleur-hauts-de-france', 'Hauts-de-France')} et ${h.a('pompe-a-chaleur-paca', 'Provence-Alpes-Côte d’Azur')} détaillent trois régions.</p>
 <h2>D’où viennent les chiffres</h2>
@@ -53,7 +53,7 @@ ${regions(h)}
     title: 'Heat pump by département in France: savings and grants 2026',
     description: 'Heat pumps in all 96 French départements: Météo-France degree-days, climate zone, consumption, yearly saving and CEE bonus, sortable and filterable by region.',
     h1: 'Heat pumps: all 96 départements compared',
-    intro: 'Choose the floor area, current energy and insulation: the table recalculates the saving and bonus for every mainland département.',
+    intro: 'Choose the floor area, current energy and insulation: the table recalculates the heat pump saving and bonus for every mainland département.',
     resume: (h) => {
       const all = h.M.parDju(), a = all[0], z = all[all.length - 1];
       const ea = h.M.simuler({ ...h.M.DEFAUT, dep: a.code }).economie, ez = h.M.simuler({ ...h.M.DEFAUT, dep: z.code }).economie;
@@ -64,7 +64,7 @@ ${regions(h)}
       { q: 'Do quote prices vary by département?', a: 'Probably, but no open source publishes heat pump prices by département. The table therefore ignores them and only works out the saving and CEE bonus. Enter your own quote in the calculator to get the real out-of-pocket cost and payback time.' },
       { q: 'Are the overseas départements covered?', a: 'No. Heating is rarely needed there, climate zones and CEE sheets differ, and MaPrimeRénov’ has other rules. The site covers mainland France only, Corsica included, which is 96 départements. For overseas France, ask a local France Rénov’ adviser, who knows the specific grants that apply there.' },
     ],
-    body: (h) => `<h2>Regions, from mildest to coldest</h2>
+    body: (h) => `<h2>Heat pump by département: regions from mildest to coldest</h2>
 ${regions(h)}
 <p>Each region has large internal gaps: plain and mountain, coast and inland. The interactive table above gives the detail by département, and the ${h.a('pompe-a-chaleur-ile-de-france', 'Île-de-France')}, ${h.a('pompe-a-chaleur-hauts-de-france', 'Hauts-de-France')} and ${h.a('pompe-a-chaleur-paca', 'Provence-Alpes-Côte d’Azur')} pages cover three regions in detail.</p>
 <h2>Where the figures come from</h2>

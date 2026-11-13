@@ -28,7 +28,7 @@ export default defineGuide({
     title: 'Pompe à chaleur air/eau 2026 : prix, aides et reste à charge',
     description: 'Pompe à chaleur air/eau en 2026 : prix médian des devis, MaPrimeRénov’, prime CEE Coup de pouce, reste à charge selon vos revenus et rendement réel mesuré.',
     h1: 'Pompe à chaleur air/eau : prix et reste à charge en 2026',
-    intro: 'La PAC air/eau est la seule, avec la géothermie, à garder MaPrimeRénov’ en 2026. Voici ce qu’elle coûte chez vous, aides déduites.',
+    intro: 'La pompe à chaleur air/eau est la seule, avec la géothermie, à garder MaPrimeRénov’ en 2026. Voici ce qu’elle coûte chez vous, aides déduites.',
     resume: (h) => {
       const P = h.P, F = P.maprimerenov.forfaits.air_eau;
       return `Une pompe à chaleur air/eau capte la chaleur de l’air extérieur et la transmet à l’eau du circuit de chauffage central, radiateurs ou plancher chauffant, souvent aussi au ballon d’eau chaude. C’est l’équipement qui remplace le plus directement une chaudière au fioul ou au gaz. Son prix médian est de ${h.eur(P.prix_installation.air_eau.median_ttc)} TTC sur les devis publiés par l’observatoire ScoreSolaire, un échantillon encore réduit. En 2026, elle ouvre droit à MaPrimeRénov’ par geste (${h.eur(F.bleu)}, ${h.eur(F.jaune)} ou ${h.eur(F.violet)} selon les revenus, sur une dépense retenue de ${h.eur(F.plafond_depense)} au plus) et à la prime CEE de la fiche BAR-TH-171, multipliée par cinq quand elle remplace une chaudière fossile. Les deux aides sont plafonnées ensemble par l’écrêtement. Sur le terrain, l’ADEME a mesuré un rendement annuel moyen de ${h.num(P.rendements.scop.air_eau, 1)} : une PAC air/eau fournit près de trois kilowattheures de chaleur pour un kilowattheure d’électricité.`;
@@ -44,7 +44,7 @@ ${parCouleur(h)}
 <p>Le ménage bleu ne paie pas moins de ${h.pct(h.P.ecretement.reste_a_charge_min.bleu, 0)} de la dépense retenue, le jaune ${h.pct(h.P.ecretement.reste_a_charge_min.jaune, 0)}, le violet ${h.pct(h.P.ecretement.reste_a_charge_min.violet, 0)} : c’est l’effet de l’écrêtement, expliqué sur la page ${h.a('ecretement-maprimerenov', 'dédiée')}. Pour le ménage rose, seule la prime CEE joue.</p>
 <h2>Basse ou haute température</h2>
 <p>Une PAC basse température chauffe l’eau à 35 ou 45 °C : idéale sur un plancher chauffant ou de grands radiateurs, elle a le meilleur rendement. Une PAC haute température monte à 65 °C pour alimenter de vieux radiateurs en fonte, au prix d’une consommation plus forte. Le simulateur retient par défaut le rendement moyen mesuré par l’ADEME ; si votre installateur annonce un SCOP, saisissez-le dans « Affiner », en gardant à l’esprit que les mesures de terrain vont de ${h.num(h.P.rendements.scop.air_eau_min, 1)} à ${h.num(h.P.rendements.scop.air_eau_max, 1)}.</p>
-<h2>Ce qu’un bon devis contient</h2>
+<h2>Ce qu’un bon devis de pompe à chaleur air/eau contient</h2>
 <p>La marque, le modèle et sa puissance ; l’Etas ; la température de départ d’eau prévue ; le ballon d’eau chaude s’il y en a un ; la dépose de l’ancienne chaudière ; le montant de la prime CEE et le nom de l’entreprise qui la verse ; le numéro d’agrément du modèle si le Coup de pouce est appliqué ; la qualification RGE de l’installateur. La ${h.a('consommation-pompe-a-chaleur', 'consommation attendue')} et la ${h.a('puissance-pompe-a-chaleur', 'puissance')} se vérifient sur ce site.</p>`,
   },
   en: {
@@ -70,7 +70,7 @@ ${parCouleur(h)}
 <p>A blue household pays no less than ${h.pct(h.P.ecretement.reste_a_charge_min.bleu, 0)} of the eligible expense, yellow ${h.pct(h.P.ecretement.reste_a_charge_min.jaune, 0)}, purple ${h.pct(h.P.ecretement.reste_a_charge_min.violet, 0)}: that is the effect of the cap, explained on its ${h.a('ecretement-maprimerenov', 'own page')}. For a pink household, only the CEE bonus counts.</p>
 <h2>Low or high temperature</h2>
 <p>A low-temperature heat pump heats water to 35 or 45 °C: ideal with underfloor heating or large radiators, it is the most efficient. A high-temperature unit reaches 65 °C to feed old cast-iron radiators, at the cost of higher consumption. The calculator uses ADEME’s measured average by default; if your installer quotes a SCOP, enter it under “Refine”, bearing in mind that field measurements range from ${h.num(h.P.rendements.scop.air_eau_min, 1)} to ${h.num(h.P.rendements.scop.air_eau_max, 1)}.</p>
-<h2>What a good quote contains</h2>
+<h2>What a good air-to-water heat pump quote contains</h2>
 <p>The make, model and output; the Etas; the planned flow temperature; the hot-water cylinder if any; removal of the old boiler; the CEE bonus amount and the company paying it; the model’s approval number if the Coup de pouce is applied; the installer’s RGE certification. The ${h.a('consommation-pompe-a-chaleur', 'expected consumption')} and the ${h.a('puissance-pompe-a-chaleur', 'output')} can be checked on this site.</p>`,
   },
 });

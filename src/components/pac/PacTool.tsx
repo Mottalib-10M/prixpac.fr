@@ -90,7 +90,7 @@ export default function PacTool({ lang, id, preset = {}, focus = 'rac', methodHr
 
   const form = (
     <>
-      <div className="grid grid-cols-2 gap-x-4 gap-y-4">
+      <div className="grid sm:grid-cols-2 gap-x-4 gap-y-4">
         <SelectField id={`${id}-dep`} label={fr ? 'Département' : 'Département'} value={dep} onChange={(v) => { setDep(v); setStation(''); }} options={depOpts} />
         <NumberField id={`${id}-s`} label={fr ? 'Surface chauffée' : 'Heated floor area'} value={surface} onChange={setSurface} unit="m²" min={10} max={600} lang={lang} />
         <SelectField id={`${id}-e`} label={fr ? 'Chauffage actuel' : 'Current heating'} value={energie} onChange={(v) => setEnergie(v as Energie)} options={[{ value: 'gaz', label: fr ? 'Chaudière gaz' : 'Gas boiler' }, { value: 'fioul', label: fr ? 'Chaudière fioul' : 'Oil boiler' }, { value: 'elec', label: fr ? 'Radiateurs électriques' : 'Electric heaters' }]} />

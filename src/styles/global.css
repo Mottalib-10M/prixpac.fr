@@ -4,7 +4,7 @@
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-var.woff2') format('woff2'); }
 @theme {
   --color-navy-50: #f8fafc; --color-navy-100: #f1f5f9; --color-navy-200: #e2e8f0; --color-navy-300: #cbd5e1; --color-navy-400: #94a3b8; --color-navy-500: #64748b; --color-navy-600: #475569; --color-navy-700: #334155; --color-navy-800: #1e293b; --color-navy-900: #0f172a; --color-navy-950: #020617;
-  --color-accent-50: #edf3f9; --color-accent-100: #d9e6f1; --color-accent-200: #b2cce4; --color-accent-300: #80aad2; --color-accent-400: #4080bb; --color-accent-500: #0055A4; --color-accent-600: #00488b; --color-accent-700: #003b73; --color-accent-800: #002f5a; --color-accent-900: #002445;
+  --color-accent-50: #F0F2F9; --color-accent-100: #E0E5F2; --color-accent-200: #B2BDDF; --color-accent-300: #7386C5; --color-accent-400: #334FAA; --color-accent-500: #002395; --color-accent-600: #002395; --color-accent-700: #00196B; --color-accent-800: #0B1442; --color-accent-900: #0B1442;
   --color-success: #15803d; --color-warning: #b45309; --color-error: #dc2626;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
@@ -72,13 +72,41 @@ h1 { font-weight: 700; } h2 { font-weight: 650; } h3 { font-weight: 600; }
   .clamp-toggle:focus-visible ~ .clamp-more { outline: 2px solid var(--color-accent-500); outline-offset: 3px; }
 }
 
-/* Identité visuelle du 2026-11-24 (refonte favicon, logo et page, couleurs du pays) : en-tête plein (BaseLayout),
-   titres dans la couleur forte, H1 et gros chiffres en #EF4135, encadrés teintés à barre d'accent, raccourcis en boutons pleins. */
-main h1 { color: #EF4135; letter-spacing: -0.02em; }
-main h2, main details summary { color: #0055A4; }
-main .bg-accent-50 { border-left: 5px solid #EF4135; }
-main a[class*="border-accent"], main a[class*="bg-accent-50"] { background: #0055A4; color: #fff; border-color: #0055A4; border-radius: 10px; }
-main a[class*="border-accent"] *, main a[class*="bg-accent-50"] * { color: inherit; }
-main table thead th { color: #0055A4; border-bottom: 2px solid #EF4135; }
-main details[open] > summary, main details > summary:hover { background: #edf3f9; }
-main [class*="text-3xl"], main [class*="text-4xl"] { color: #EF4135; }
+/* === Charte du pays (refonte d'identité validée par l'éditeur, appliquée le 2026-11-25) ===
+   En-tête plein, bandeau héros, simulateur en carte, sections alternées, chiffres-résultats, boutons et pied
+   aux couleurs du pays ; l'échelle --color-accent-* du @theme porte la couleur forte. */
+/* Proposition prixpac.fr — reprise du 2026-11-25 (charte prononcée, couleurs du pays) : rien d’appliqué */
+html, body { overflow-x: clip; }
+header nav[aria-label] { background: #002395 !important; border-bottom: 5px solid #E1000F !important; }
+header nav[aria-label] > div:first-child, header nav[aria-label] > div:first-child a, header nav[aria-label] > div:first-child button, header nav[aria-label] > div:first-child span { color: #FFFFFF !important; }
+header nav[aria-label] > div:first-child a:hover, header nav[aria-label] .nav-dropdown-trigger:hover { background: rgba(255,255,255,.14) !important; }
+header nav[aria-label] .nav-dropdown-panel, header nav[aria-label] .nav-dropdown-panel * { color: #0F172A !important; }
+header nav[aria-label] .nav-dropdown-panel { background: #FFFFFF !important; }
+#mobile-menu { background: #FFFFFF !important; }
+#mobile-menu, #mobile-menu a, #mobile-menu span, #mobile-menu button { color: #0F172A !important; }
+header nav[aria-label] img { background: #FFFFFF; border-radius: 7px; padding: 2px; }
+main > div.max-w-6xl > header:has(h1) { background: #002395 !important; box-shadow: 0 0 0 100vmax #002395; clip-path: inset(0 -100vmax); padding-top: 1.1rem !important; padding-bottom: 1.4rem !important; margin-bottom: 0 !important; border: 0 !important; }
+:is(main > div.max-w-6xl > header:has(h1)), :is(main > div.max-w-6xl > header:has(h1)) :not(svg, svg *) { color: #FFFFFF !important; border-color: rgba(255,255,255,.35) !important; }
+:is(main > div.max-w-6xl > header:has(h1)) a { text-decoration: underline; text-decoration-color: #E1000F; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+:is(main > div.max-w-6xl > header:has(h1)) h1 { letter-spacing: -0.02em; }
+:is(main > div.max-w-6xl > header:has(h1)) :is(a,li,div,span)[class*="bg-"]:not(h1) { background: rgba(255,255,255,.12) !important; }
+:is(main > div.max-w-6xl > header:has(h1)) :is(a,button)[class*="bg-"] { background: #E1000F !important; color: #FFFFFF !important; border-color: #E1000F !important; text-decoration: none; }
+main astro-island > div[class*="rounded"]:first-child { background: #FFFFFF !important; border-top: 6px solid #E1000F !important; }
+main > div.max-w-6xl > :is(section,div.prose,div.clamp):nth-of-type(odd) { background: #E0E5F2; box-shadow: 0 0 0 100vmax #E0E5F2; clip-path: inset(0 -100vmax); padding-top: 1.2rem; padding-bottom: 1.2rem; }
+main h2:not(footer h2) { color: #002395 !important; text-decoration: none; border-bottom: 5px solid #E1000F; padding-bottom: .3rem; width: fit-content; }
+main h3 { color: #002395; }
+main :is([class*="text-navy-400"], [class*="text-navy-500"]) { color: #3B4A5E !important; }
+main :is(button[type="submit"], :is(a,button):is([class~="bg-accent-500"],[class~="bg-accent-600"],[class~="bg-accent-700"],[class~="bg-navy-900"])) { background: #E1000F !important; color: #FFFFFF !important; border-color: #E1000F !important; }
+main :is(button[type="submit"], :is(a,button):is([class~="bg-accent-500"],[class~="bg-accent-600"],[class~="bg-accent-700"])):hover { background: #E1000F !important; }
+main :is(.prose a, p > a, li > a):not([class*="bg-"], footer *, [class*="bg-navy-8"] *, [class*="bg-navy-9"] *, [class*="bg-accent-8"] *, [class*="bg-accent-9"] *) { color: #002395; text-decoration: underline; text-decoration-color: #E1000F; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+main .bg-accent-50 { background: #F0F2F9 !important; border-left: 6px solid #E1000F; }
+main table thead th { color: #002395 !important; border-bottom: 3px solid #E1000F !important; }
+main table tbody tr:first-child > * { border-top: 4px solid #FFFFFF !important; }
+main :is([aria-live], [role="status"], output) :is([class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"]):not(h1,h2) { color: #E1000F !important; font-size: 2.2rem !important; line-height: 1.15 !important; }
+footer { background: #0B1442 !important; border-top: 6px solid #E1000F !important; }
+footer, footer *:not(svg, svg *) { color: #E5E7EB !important; border-color: rgba(255,255,255,.18) !important; }
+footer [class*="bg-"]:not(footer) { background: transparent !important; }
+footer a { text-decoration-color: #E1000F !important; }
+/* bandeau collé à l'en-tête : plus de bande blanche entre la barre du site et le bandeau du titre */
+main > div.max-w-6xl > header:has(h1):first-child { clip-path: inset(-1rem -100vmax 0) !important; }
+/* === fin de la charte du pays === */
